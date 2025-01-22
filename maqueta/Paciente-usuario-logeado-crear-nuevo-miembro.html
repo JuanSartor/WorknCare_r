@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav class="paciente-nav">
+		<div class="container paciente-nav-container">
+			<div class="paciente-nav-usr">
+				<a href="#" class="paciente-nav-trigger">
+					<i class="icon-doctorplus-burger"></i>
+					<img src="imgs/extranet/yannis.png" alt="Usr profile"/>
+					<label>Dr. Yannis Georgandelis</label>
+				</a>
+				<ul class="paciente-nav-usr-menu" id="paciente-menu">
+					<li><a href="#"><i class="icon-doctorplus-profile-sheet"></i> Datos administrador</a></li>
+					<li><a href="#"><i class="icon-doctorplus-lock"></i> Configuración de privacidad</a></li>
+					<li><a href="#"><i class="icon-doctorplus-gear"></i> Configuración de cuenta</a></li>
+					<li><a href="#"><i class="icon-doctorplus-dollar-circular"></i> Estado de cuenta</a></li>
+				</ul>
+			</div>
+
+			<div class="paciente-nav-logo">
+				<a href="#">
+					<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus"/>
+				</a>
+			</div>
+			<div class="paciente-nav-menu">
+				<a class="paciente-nav-menu-burger"><i class="icon-doctorplus-burger"></i></a>
+				<ul class="paciente-nav-menu-rsp" id="burger-menu">
+					<li><a href="#"><i class="icon-doctorplus-onoff"></i><label>Home</label></a></li>
+					<li><a href="#"><i class="icon-doctorplus-home"></i><label>Cerrar sesión</label></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	
+	<section class="filter user-group">
+		<div class="container">
+			<div class="btn-group user-filter" data-toggle="buttons">
+				<label class="btn btn-inverse active">
+					<input type="checkbox" checked> Todos
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Juan Manuel Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Iñaki Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Usted
+				</label>
+				<button class="dp-add-user add-user"></button>
+			</div>
+		</div>
+	</section>
+	
+	<section class="user-actions user-paciente">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+				<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+				<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+				<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+				<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+				<li><a href="#" class="dpp-flag"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	
+	<div class="top-verde-centrado">
+		<h1><i class="icon-doctorplus-user-add-circle"></i> Crear nuevo miembro</h1>
+	</div>
+	
+	<section class="pul-datos-paciente">
+	
+		<div class="mapc-registro-box pul-nuevo-paciente-accordion">
+			
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Datos del paciente
+						</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body">
+						<form name="pul-np">
+						<div class="okm-row">
+							<div class="pul-col-x2 pul-np-image-holder">
+								<figure class="pul-np-image-box">
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="Paciente"/>
+								</figure>
+								<div class="pul-np-upload-box">
+									<label class="file-upload picture dz-clickable" for="picure-upload">Actualizar foto</label>
+
+								</div>
+							</div>
+							<div class="pul-col-x2">
+								<p class="pul-np-form-text">
+									Recuerde que es importante que cargue una foto actualizada. 
+									A los profesionales les gusta ver el rostro del paciente que
+									atenderán
+								</p>
+							</div>
+						</div>
+							
+						<div class="okm-row">
+							<div class="pul-col-x2">
+								<div class="mapc-input-line">
+									<label class="mapc-label">Nombre</label>
+									<input type="text" name="nombre"/>
+								</div>
+							</div>
+							<div class="pul-col-x2">
+								<div class="mapc-input-line">
+									<label class="mapc-label">Apellido</label>
+									<input type="text" name="apellido"/>
+								</div>
+							</div>
+						</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									<div class="mapc-input-line">
+										<label class="mapc-label">Fecha de nacimiento</label>
+										<input type="text" name="fecha-de-nacimiento"/>
+										<button><i class="icon-doctorplus-calendar"></i></button>
+									</div>
+								</div>
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row mapc-switch pul-np-switch">
+										<div class="switch-large mul-sexo-switch">	
+											<input type="checkbox" class="switch-checkbox" data-on-text="MUJER" data-off-text="HOMBRE" />
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row mapc-select pul-np-select">
+										<select name="relacion-paciente" class="form-control select select-primary select-block mbl">
+											<option value="0">Relación con el paciente</option>
+											<option value="1">valor 1</option>
+											<option value="2">valor 2</option>
+											<option value="3">valor 3</option>
+											<option value="4">valor 4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="mapc-registro-form-row">
+									<button class="mapc-form-submit pul-np-form-submit" id="accordion-pul-trg">listo <i class="icon-doctorplus-check-thin"></i></button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Datos cobertura médica *
+						</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">
+						<p class="pul-np-form-text-disclaimer">* Datos no obligatorios</p>
+						
+						<form name="datos-paciente">
+						
+						<div class="okm-row pul-np-option-center">
+							<div class="pul-np-option-col">
+								<label class="radio pul-np-radio">
+									<input type="radio" id="cobertura" name="cobertura-medica" value="cobertura">
+									Cobertura médica
+								</label>
+								
+								<label class="radio pul-np-radio">
+									<input type="radio" id="particular" name="cobertura-medica" value="particular">
+									Particular
+								</label>
+							</div>
+						</div>
+						
+						<div class="okm-row">
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row pul-np-no-label">
+									<div class="mapc-input-line">
+										<input type="text" class="pul-np-oil-text pul-np-dis" name="prepaga" placeholder="Medicina Prepaga / Obra Social"/>
+										<i class="icon-doctorplus-search"></i>
+									</div>
+								</div>
+							</div>
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row">
+									<label class="mapc-label">Nro. de Afiliado</label>
+									<div class="mapc-input-line pul-np-oil-icon">
+										<input type="text" class="pul-np-dis" name="nroafiliado" placeholder=""/>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="okm-row">
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row mapc-select pul-np-select">
+									<select name="plan" class="form-control select select-primary select-block mbl pul-np-dis">
+										<option value="0">Plan</option>
+										<option value="1">valor 1</option>
+										<option value="2">valor 2</option>
+										<option value="3">valor 3</option>
+										<option value="4">valor 4</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						
+							<div class="okm-row">
+								<div class="mapc-registro-form-row">
+									<a href="#" class="pul-np-privacidad-trg"><i class="icon-doctorplus-lock"></i> ¿Quién podrá ver los datos de este paciente?</a>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+									<div class="pul-np-politicas">
+										<p>
+											La  información de registro de su cuenta de usuario se almacenta 
+											encriptada en nuestra base de datos.
+										</p>
+										<p>Consulte nuestra <br> <a  href="#">politica de privacidad</a> y <br><a  href="#"> protección de datos</a></p>
+									</div>
+							</div>
+							
+							
+							
+							<div class="okm-row">
+								<div class="mapc-registro-form-row center">
+									<a href="#" class="btn-alert">Crear miembro</a>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		</div>
+		
+	</section>
+	
+	<section class="footer-soporte">
+		<div class="footer-soporte-top-box">
+			<div class="okm-container">
+				<h3>Soporte Técnico</h3>
+			</div>
+		</div>
+		<div class="okm-container">
+			<div class="soporte-footer-contact-holder">
+				<form name="soporte-footer-contact">
+					<h4 class="footer-soporte-title"><span></span> ¿Cómo podemos ayudarte?</h4>
+					<div class="okm-row soporte-footer-contact-box">
+						<input type="text" name="soporte-contacto" placeholder="Escribe aquí tu consulta"/>
+						<button><i class="icon-doctorplus-search"></i></button> 
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="footer-soporte-top-box">
+			<div class="okm-container">
+				<h3>Pacientes</h3>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	
+	<!-- Modal Privacidad -->
+	<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"><h5>Privacidad</h5></div>
+					<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+				</div>
+				<form action="">
+					<div class="form-content">
+						<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+						<ul class="lista-checks">
+							<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+							<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+							<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+						</ul>
+
+					</div>
+					<div class="modal-btns">
+						<button>guardar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+	$('.switch-checkbox').bootstrapSwitch();
+});
+</script>		
+</body>
+</html>

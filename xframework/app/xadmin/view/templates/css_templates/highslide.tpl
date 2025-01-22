@@ -1,0 +1,1 @@
+<link rel="stylesheet" type="text/css" href="{$url_js_libs}/highslide/highslide.css" />

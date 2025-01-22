@@ -1,0 +1,363 @@
+@import "init.less";
+
+@bg-consultorio-libre: #FFF;
+@bg-consultorio-1: #FBEDC7;
+@bg-consultorio-1-off: lighten(@bg-consultorio-1, 4%);
+@bg-consultorio-2: #DADEF7;
+@bg-consultorio-2-off: lighten(@bg-consultorio-2, 4%);
+@bg-consultorio-3: #d0d0d0;
+@bg-consultorio-3-off: lighten(@bg-consultorio-3, 4%);
+
+@bg-consultorio-4: #d0d0d0;
+@bg-consultorio-5: #d0d0d0;
+@bg-consultorio-6: #d0d0d0;
+@bg-consultorio-7: #d0d0d0;
+@bg-consultorio-8: #d0d0d0;
+@bg-status-libre: #FFF;
+@bg-status-pendiente: #FAA12D;
+@bg-status-confirmado: #00BBA2;
+@bg-status-ausente: #F72541;
+
+
+
+
+
+
+
+.calendario {
+	.table {
+
+		tr {
+		
+			td {
+				border-top:@grey-10 1px solid !important;
+			}
+
+		}
+
+	}
+	font-size: 12px;
+
+	.libre libre {
+		color:@grey-30;
+	}
+	.bg-status-libre {
+		background:@bg-status-libre;
+		& > td {
+			background:@bg-status-libre;
+		}
+	}
+	.bg-status-pendiente {
+		background:@bg-status-pendiente;	
+		& > td {
+			background:@bg-status-pendiente
+		}
+	}
+	.bg-status-confirmado {
+		background:@bg-status-confirmado;
+		& > td {
+			background:@bg-status-confirmado;
+		}
+	}
+	.bg-status-ausente {
+		background:@bg-status-ausente;
+		& > td {
+			background:@bg-status-ausente;
+		}
+	}
+
+
+
+		
+	.consultorio-1 {
+		background-color: @bg-consultorio-1-off !important;
+		& > td {
+			background-color: @bg-consultorio-1-off;
+		}
+		&:hover {
+			background-color: @bg-consultorio-1 !important;
+		}
+
+	} 
+	.consultorio-2 {
+		background-color: @bg-consultorio-2-off !important;
+		& > td {
+			background-color: @bg-consultorio-2-off;
+		}
+		&:hover {
+			background-color: @bg-consultorio-2 !important;
+		}
+	} 
+	.consultorio-3 {
+		background-color: @bg-consultorio-3-off !important;
+		& > td {
+			background-color: @bg-consultorio-3-off;
+		}
+		&:hover {
+			background-color: @bg-consultorio-3 !important;
+		}
+	} 
+	
+
+	&.calendario-semana{
+
+		.dias-header {
+			background-color: @turquoise-base;
+
+		 	.table {
+				margin-bottom: 0px;
+
+				& > thead > tr > th { 
+					border: none !important;
+					padding-top: 28px;
+					color:@white !important;
+					font-size: 14px;
+				}
+			}	
+		}
+
+		.tabla-semana {
+			& > .table {
+				& > tbody > tr > td { 
+					border-top: 0 none !important;
+					background-color: @grey-20;
+					padding: 0px !important;
+					width: 14.2% !important;
+
+					& table.table.undia {
+						background: none !important;
+						tr {
+							padding: 5px 0px;
+							& > td {
+
+								height: 50px;								
+
+								&:first-child {
+									width: 10px !important;
+								}
+								&:not(:first-child) {
+									padding: 5px !important;
+								}
+							}
+						}
+					}
+				}
+
+					
+			}
+				
+		}
+	}
+	.calendario-mensual {
+		.agenda-mensual-dia {
+			width:14%;
+			float:left;
+			min-height:100px;
+			border-right:1px solid #CCC;
+			border-bottom:1px solid #CCC;
+			font-weight:bold;
+			padding:15px 10px;
+
+			.dia-numero {
+				line-height:30px;
+				font-size:14px;
+				text-align:left;	
+			}
+
+			&.domingo{
+				color:#425B71 !important;
+				border-right:none !important;	
+				.dia-numero {
+					color:#C33433  !important;
+				}
+			
+			}
+
+			& > ul {
+				list-style:outside none !important;
+				list-style-type: none !important; 
+				text-align:right;
+
+				& > li  {
+					list-style:outside none !important;
+					text-align:right;
+					list-style-type: none !important; 
+					span {
+						padding-left: 10px;
+						display: inline-block;
+						width: 30px;				
+					}
+					.cantidad {
+						display:inline-block;
+						width:2em;
+						text-align:right;	
+					}
+
+				}
+			}
+
+			&.disable {
+				background-color:#E8E8E8 !important;
+				opacity: 0.6;
+				filter: alpha(opacity=60);
+			} 
+
+
+		}
+
+	}
+
+	
+}
+
+
+#medico_turno_detalle {
+	.subheader-title {		
+			background-color: #EEEEEE;
+		 	h2{
+		 		font-size: 20px;
+		 		&:before {		 		
+			    	font-size: 44px;
+			    	margin-right: 15px;
+			    	color: #465B64 !important;
+		    	}
+		    }
+	}
+
+	.paginador {
+		
+		padding: 20px 0px; 
+		a {
+			color: #465B64 !important;
+		}
+	}
+	.turno-detalle {	
+		font-size: 14px;
+		background-color: #F6F6F6;
+		margin-top: 20px;
+
+		ul  {
+			list-style: outside none;
+			li {
+
+			}
+		}
+		& [class*=dp-]:before {
+			color: #465B64 !important;
+			font-size: 24px;
+		}
+		#estado_turno {
+			& [class*=dp-]:before {
+				color: #FFF !important;
+				font-size: 24px;
+			}	
+		}
+
+		.inner {
+			padding: 20px;
+		}
+
+
+		.table td{
+			border:none;
+		}
+
+		textarea{
+			background:#fff;
+			border:1px #999 solid;
+			width:100%;
+			height:214px;
+			font-size: 12px !important;
+			padding-left: 20px;
+		}
+
+		.fecha-hora{
+			font-size:18px;
+			color:#E21313;
+			text-align:center;
+			line-height:40px;
+			padding:0;
+		}
+
+		 .estado{
+			background:#0EC2A1;
+			padding:2% 6%;
+			margin:0 0 20px;
+			p{
+				color:#fff;
+				font-size:18px;
+				margin:0;
+			}
+			span{
+				float:right;
+			}
+
+		}
+		.numero-turno{
+			margin:0 0 20px;
+		}
+
+		
+		.tipo-visita{
+			border:1px #898989 solid;
+			text-align:center;
+			padding:4%;
+		}
+
+		.separador{
+			height:1px;
+			margin:20px 0;
+			background:#000;
+		}
+
+		.editar-estado 
+			.select2-container  {
+					width: 100% !important;
+			}
+			button{
+				background:#C0C0C0;
+				
+			}
+		}
+
+		.lista-estados{
+			margin:20px 0 0;
+			padding:2%;
+			border:1px #ccc solid;
+			font-size: 12px;
+		}
+
+		.lista-estados li{
+			display:block;
+			padding:20px 0 0;
+			line-height:25px;
+			span{
+				font-size:24px;
+				float:left;
+				margin:0 10px 0 0;
+			}
+			&:nth-child(1) span{
+			color:#1ABCA1;
+			}
+
+			&:nth-child(2) span{
+				color:#F6A800;
+			}
+
+			&:nth-child(3) span{
+				color:#AF142E;
+			}
+
+			&:nth-child(4) span{
+				color:#F33243;
+			}
+
+			&:nth-child(5) span{
+				color:#06A9EF;
+			}
+		}
+
+		
+
+		
+	}

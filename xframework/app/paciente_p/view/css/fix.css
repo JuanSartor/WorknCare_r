@@ -1,0 +1,179 @@
+.block-profile img {
+    width:50px; 
+    height:50px;	
+}
+.w100 {
+    width:100% !important	
+}
+
+label.dz-clickable {
+    position:relative !important
+
+}
+
+.dl-menuwrapper ul {
+    padding:0px !important;
+}
+
+
+.dl-menuwrapper .dl-menu.dl-menuopen {
+    top:59px !important;
+    left:0px !important;
+}
+
+.notifyjs-corner {
+    z-index: 11000 !important;
+}
+
+div.spinner{
+    position:fixed !important;
+}
+div.overlay{
+    z-index:10000!important;  
+}
+
+
+/* dropzone add more*/
+.dropzone{
+    padding: 10px;
+}
+.dropzone.dz-clickable.dz-started {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+.dropzone .dz-message {
+    margin: 0px;
+}
+.dropzone.dz-started .dz-message {
+    display: block;
+    width:100%;
+
+}
+
+.dropzone.dz-started .dz-message > i{
+    display: none;
+}
+.dropzone.dz-started .dz-message > h3{
+    display: none;
+}
+.dropzone.dz-started .dz-message > small{
+    display: none;
+}
+.dz-message .add-more-container{
+    display: none;
+}
+.dropzone.dz-started .dz-message .add-more-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.dropzone.dz-started .dz-message .add-more-btn{
+    font-size: 14px;
+    color: #78909c;
+    padding: 5px 15px;
+    border: solid 1px #ccc;
+    border-radius:5px;
+}
+.dropzone.dz-started .dz-message .add-more-btn i{
+    font-size: 16px;
+}
+@media(max-width:600px){
+    .dropzone .dz-preview .dz-image {
+
+        width: 60px;
+        height: 60px;
+    }
+    .dropzone .dz-preview {
+        margin: 8px; 
+        min-height: 60px;
+    }
+    .dropzone .dz-preview .dz-details {
+        display: none;
+    }
+}
+
+/*fix custom scrollbar*/
+.mCSB_dragger_bar,.mCSB_draggerRail{
+    width:12px !important;
+}
+.mCSB_scrollTools {
+    width: 20px !important;
+}
+
+/*Fix compra credito*/
+@media (max-width: 600px){
+    .mapc-mi-cuenta .mapc-select-box .price-select {
+        min-width: 177px;
+    }
+}
+
+/*Fix espacios home usuarios*/
+.slick-slider {
+    margin-bottom:5px !important;
+}
+.pul-pi-box h2 {
+    margin-top: 0px;
+}
+
+
+/*Fix botones*/
+.btn.btn-inverse:hover { 
+    color: #fff  !important;;
+    background: #90a4ae !important;
+}
+.btn.btn-inverse{
+    color: #fff  !important;;
+    background: #455a64  !important;;
+    min-width: 100px;
+}
+
+/*Fix dropzone - Iconos PDF*/
+.dropzone .dz-pdf img{
+    width: 80%;
+    margin: auto;
+    margin-top: 10%
+}
+
+/*Fix paginate*/
+.paginas {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.paginas a {
+    padding: 2px 10px !important;
+    font-size: 18px !important;
+}
+@media (max-width: 320px){
+    .paginas {
+        text-align: right; 
+    }
+    .paginas>a:first-of-type {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 480px){
+    .paginas>span {
+        display: inline-block;
+    }
+}
+/*Fix width notify*/
+[class*=notify] .nt-content span, [class^=notify] .nt-content span {
+    max-width: 500px;
+}
+/*Fix preview upload imagenes*/
+@media (max-width: 600px){
+    label.file-upload.picture:before {
+        line-height: 78px;
+        padding-top: 0px;
+    }
+
+    label.file-upload {
+        font-size: 12px!important;
+        height: 78px!important;
+        padding: 0px!important;
+    }
+}

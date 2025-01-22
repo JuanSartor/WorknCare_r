@@ -1,0 +1,14 @@
+.paginate-top, .paginate-bottom,#paginate {
+	font-size:11px;
+	text-align:center;
+	color:#666666;
+}
+
+/* ##### PAGINATE ##### */
+.paginate-bottom .paginate, .paginate-top .paginate, #paginate .paginate { font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; text-decoration:none; color:#666666; margin-left:3px; margin-right:3px;}
+.paginate-bottom .paginate:hover, .paginate-top .paginate:hover, #paginate .paginate:hover { text-decoration:underline;}
+.paginate-bottom .paginate:actual, .paginate-top .paginate_actual, #paginate .paginate_actual {font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; text-decoration:none; color:#666666; font-weight:bold;  margin-left:3px; margin-right:3px;}
+
+.paginate-bottom .paginate_middle, .paginate-top .paginate_middle, #paginate .paginate_middle {font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; text-decoration:none; color:#336633}
+.paginate-bottom .paginate_middle:hover, .paginate-top .paginate_middle:hover, #paginate .paginate_middle:hover { text-decoration:underline;}
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<div class="main-content home">
+		<section class="free account-type container text-center">
+			<h1>Cuenta Gratuita</h1>
+			<h2>Sin demos ni períodos de prueba. Una cuenta gratuita para siempre</h2>
+			<div class="row highlights">
+				<div class="col-sm-3">
+					<figure>
+						<img src="imgs/graphic-free-account.svg" alt="" class="img-responsive" />
+					</figure>
+					<div class="highlight-box text-center">
+						<div class="price">
+							<span>Gratis</span>
+						</div>
+						<a href="#" role="button">Adquirir</a>
+					</div>
+					<div class="box-shadow-image"></div>
+				</div>
+				<div class="col-sm-8 col-sm-offset-1 plan-highlights">
+					<p>¡Comience a disfrutar de todas las funcionalidades ya!</p>
+					<button class="toggle-features visible-xs">Ver Características</button>
+					<div class="row special-features">
+						<div class="col-md-4">
+							<ul>
+								<li><span class="dp-agenda">Agenda de Turnos on line</span></li>
+								<li><span class="dp-alarm">Recordatorios o cancelaciones de turnos por email</span></li>
+								<li><span class="dp-sms">Recordatorios o cancelaciones de turnos por SMS</span></li>
+								<li><span class="dp-info">Acceso a la Info de Salud de sus pacientes desde cualquier dispositivo</span></li>
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<ul>
+								<li><span class="dp-express">Consulta Express (1)</span></li>
+								<li><span class="dp-video">Video Consulta (1)</span></li>
+								<li><span class="dp-support">Soporte Técnico por chat y email</span></li>
+								<li><span class="dp-stats">Registro de sus consultas médicas a distancia</span></li>
+							</ul>
+						</div>
+						<small>(1) La comisión que percibe DoctorPlus por el servicio de Consulta Express y Video Consulta corresponde a un 25% (IVA incluído) sobre el valor definido de consulta.</small>					</div>
+					
+				</div>
+			</div>
+		</section>
+		<section class="professional features">
+			<div class="container">
+				<h3 class="text-center">Funcionalidades que le encantarán</h3>
+				<div id="app-features" class="carousel slide" data-interval="false">
+					<!-- Indicators -->
+					<ol class="carousel-indicators icon-indicators">
+						<li class="dp-express active" data-target="#app-features" data-slide-to="0"></li>
+						<li class="dp-video" data-target="#app-features" data-slide-to="1"></li>
+						<li class="dp-stats" data-target="#app-features" data-slide-to="2"></li>
+						<li class="dp-alarm" data-target="#app-features" data-slide-to="3"></li>
+						<li class="dp-info" data-target="#app-features" data-slide-to="4"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="row">
+								<div class="col-md-3 col-md-offset-2 col-xs-12">
+									<img class="img-responsive" src="imgs/doctor_smartphone.jpg" alt="Consulta Express">
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Consulta Express</h4>
+										<p>
+											La innovadora herramienta de consulta a distancia que le permitirá capitalizar sus consejos y consultas médicas fuera de su consultorio.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-md-3 col-md-offset-2 col-xs-12">
+									<img class="img-responsive" src="imgs/doctor_smartphone.jpg" alt="Consulta Express">
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Videoconsulta</h4>
+										<p>
+											Gane más libertad personal, ejerciendo su profesión
+											desde el lugar de su elección.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-md-3 col-md-offset-2 col-xs-12">
+									<img class="img-responsive" src="imgs/graphic-stats.svg" alt="Estadísticas de sus Consultas">
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Estadísticas de sus Consultas</h4>
+										<p>
+											Sepa qué prepagas son las más utilizadas. <br>
+											Reportes de sus turnos, estadísticas de ausentismo,
+											qué pacientes han faltado a su consulta, etc.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-md-3 col-md-offset-2 col-xs-12">
+									<img class="img-responsive" src="imgs/graphic-envelope.svg" alt="Recordatorio de turnos">
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Recordatorio de turnos</h4>
+										<p>
+											Reduzca el ausentismo de sus pacientes gracias
+											a los recordatorios de los turnos médicos que se
+											envían automáticamente días previos a la cita.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-md-3 col-md-offset-2 col-xs-12">
+									<img class="img-responsive" src="imgs/graphic-computer.svg" alt="Consulta Express">
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">El Perfil de Salud de sus Pacientes</h4>
+										<p>
+											Acceda fácilmente a la Info de Salud sus Pacientes tanto desde su Consultorio como desde cualquier otro lugar, utilizando una computadora o dispositivo móvil (Consultorio Online).
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ol class="carousel-indicators default-indicators">
+						<li data-target="#app-features" data-slide-to="0" class="active"></li>
+						<li data-target="#app-features" data-slide-to="1"></li>
+						<li data-target="#app-features" data-slide-to="2"></li>
+						<li data-target="#app-features" data-slide-to="3"></li>
+						<li data-target="#app-features" data-slide-to="4"></li>
+					</ol>
+					<!-- Controls -->
+				</div>
+			</div>
+		</section>
+		<section class="more-features">
+			<div class="container">
+				<div class="row">
+					<h3 class="section-title">¡Reduzca el ausentismo!</h3>
+					<img class="img-responsive centered" src="imgs/graphic-sms.png" alt="Alertas SMS">
+					<div class="col-md-6 col-md-offset-6 benefits">
+						<div class="dp-sms"></div>
+						<h3>Envíe confirmaciones y recordatorios de turnos <br>por SMS  a sus pacientes</h3>
+						<p>
+							Una de las principales causas de ausentismo de pacientes es el olvido de su turno médico.<br />
+							Mediante el envío automático de recordatorios de turnos por SMS, los pacientes recibirán una notificación de DoctorPlus en su celular horas antes de su turno disminuyendo asi la tasa de ausentismo en su consultorio.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="order free-account">
+			<div class="container text-center">
+				<h5>Sin demos ni períodos de prueba. <br /> ¡Una cuenta gratuita para siempre!</h5>
+
+				<div class="account-type">
+					<div>
+						<span>Cuenta Gratuita</span>
+					</div>
+				</div>
+				<a href="#" class="uppercase next small" role="button">Adquirir</a>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h4>Servicios</h4>
+					<ul>
+						<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+						<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+						<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+						<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+						<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<h4>Atención al Cliente</h4>
+					<ul>
+						<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+						<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+						<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+						<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+						<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<h4>Institucional</h4>
+							<ul>
+								<li><a href="#" title="Términos legales">Términos legales</a></li>
+								<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+								<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="footer-logo">
+								<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+								<ul>
+									<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+									<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

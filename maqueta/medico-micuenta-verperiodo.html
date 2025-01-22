@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<div class="main-content">
+
+		<!--▼▼ MODALS ▼▼-->
+
+		<div class="modal fade" id="get-payment">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header green">
+						<div class="dp-logo pull-left"></div>
+						<div class="modal-action pull-right">
+							<span>Solicitud de pago</span>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="modal-body">
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active fade in" id="step-01">
+								<section class="detail-box billing-total">
+									<div class="row">
+										<div class="col-md-6">
+											<h4>Importe</h4>
+											<span>$2300</span>
+										</div>
+										<div class="col-md-6">
+											<h4>Correspondientes al período</h4>
+											<span>Febrero 2015</span>
+										</div>
+									</div>
+								</section>
+								<section class="small-list">
+									<div class="clearfix">
+										<div class="col-md-7 col-center">
+											<ul>
+												<li>Razón Social: DOCTORPLUS S.A.</li>
+												<li>Domicilio: Simulado simulador simulado</li>
+												<li>IVA: Responsable Inscripto</li>
+												<li>CUIT: 22-22222222-0</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<hr>
+								<section class="attachment">
+									<label for="file-upload" class="file-upload">Adjuntar Factura</label>
+									<input type="file" id="file-upload">
+								</section>
+								<a class="btn btn-danger" href="#step-02" role="tab" data-toggle="tab">Enviar y solicitar pago</a>
+								<hr />
+								<section class="disclaimer">
+									<p>
+										<small>
+											Estimado Profesional:
+											En caso que Ud. no cuente con factura electrónica, podrá enviarnos su factura escaneada de modo tal que pueda
+											agilizar sus cobros. Sin perjuicio de ello, resultará indispensable que, dentro del plazo de treinta (30) días
+											nos haga llegar el original a nuestras oficinas (domicilio……).
+											IMPORTANTE: Recuerde que transcurridos dos (2) períodos consecutivos sin la presentación de dicha documentación,
+											nos veremos obligados a retener el pago en cuestión.
+										</small>
+									</p>
+								</section>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="step-02">
+								<div class="row">
+									<div class="col-md-6 col-center">
+										<p>Ud. solicitó pago por transferencia a la cuenta bancaria.</p>
+									</div>
+								</div>
+								<section class="detail-box small-list wire-transfer">
+									<div class="row">
+										<div class="col-md-6 col-center">
+											<ul>
+												<li>Número de Cuenta: 504-00000025198/5</li>
+												<li>Banco: Santander Río</li>
+												<li>Titular: JAVIER MIGUEL MARIA MENOYO</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<br />
+								<section class="total border-dashed text-center billing-total">
+									<span>Importe</span>&nbsp;<span class="red">$2300</span>
+								</section>
+								<br />
+								<section class="actions text-center">
+									<a class="btn btn-danger" href="#" data-dismiss="modal" role="button">Cancelar</a>
+									<a class="btn btn-danger" href="#step-03" role="tab" data-toggle="tab">Confirmar</a>
+								</section>
+								<hr />
+								<section class="disclaimer">
+									<p>
+										<small>
+											Estimado Profesional:
+											En caso que Ud. no cuente con factura electrónica, podrá enviarnos su factura escaneada de modo tal que pueda
+											agilizar sus cobros. Sin perjuicio de ello, resultará indispensable que, dentro del plazo de treinta (30) días
+											nos haga llegar el original a nuestras oficinas (domicilio……).
+											IMPORTANTE: Recuerde que transcurridos dos (2) períodos consecutivos sin la presentación de dicha documentación,
+											nos veremos obligados a retener el pago en cuestión.
+										</small>
+									</p>
+								</section>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="step-03">
+								<table class="table table-striped table-responsive">
+									<tr><td>Su solicitud ha sido enviada.</td></tr>
+									<tr><td>Fecha 27 JUN 2015</td></tr>
+									<tr><td>Número de solicitud de pago: 304-00005879</td></tr>
+									<tr><td>PAGO POR TRANSFERENCIA BANCARIA</td></tr>
+								</table>
+								<section class="small-list wire-transfer ml-15">
+									<ul>
+										<li>Número de Cuenta: 504-00000025198/5</li>
+										<li>Banco: Santander Río</li>
+										<li>Titular: JAVIER MIGUEL MARIA MENOYO</li>
+									</ul>
+								</section>
+								<section class="total border-dashed text-center billing-total">
+									<span>Importe</span>&nbsp;<span class="red">$2300</span>
+								</section>
+								<section class="actions text-center">
+									<a class="btn btn-danger" href="#" data-dismiss="modal" role="button">Cerrar</a>
+									<a class="dp-print" href="#" role="button"></a>
+								</section>
+								<hr />
+								<section class="disclaimer">
+									<p>
+										<small>
+											Estimado Profesional:
+											En caso que Ud. no cuente con factura electrónica, podrá enviarnos su factura escaneada de modo tal que pueda
+											agilizar sus cobros. Sin perjuicio de ello, resultará indispensable que, dentro del plazo de treinta (30) días
+											nos haga llegar el original a nuestras oficinas (domicilio……).
+											IMPORTANTE: Recuerde que transcurridos dos (2) períodos consecutivos sin la presentación de dicha documentación,
+											nos veremos obligados a retener el pago en cuestión.
+										</small>
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="consult-details">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header green">
+				<div class="modal-title pull-left">
+					<h1>Resumen de consultas express</h1>
+				</div>
+				<div class="modal-action pull-right">
+					<button class="close" data-dismiss="modal"></button>
+					<button class="print"></button>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6 table-wrapper">
+						<table class="resume table table-striped table-responsive">
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6 table-wrapper">
+						<table class="resume table table-striped table-responsive">
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Carla Moresco<br><small>FN 13/03/1973</small></td>
+								<td class="date">5 feb</td>
+							</tr>
+							<tr>
+								<td class="user-img"><img class="img-circle img-responsive" src="imgs/extranet/tmp_foto_miembro.jpg" alt="Nombre-usuario"></td>
+								<td class="user-info">Juan Manuel Menoyo<br><small>FN 13/03/1973</small></td>
+								<td class="date">10 feb</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<nav>
+					<ul class="pagination">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="user-actions">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+			<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+			<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+			<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+			<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+			<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+
+<section class="filter-table-header account">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-1 col-xs-6">
+				<h1 class="section-header my-account">Mi Cuenta</h1>
+			</div>
+			<div class="col-md-2 hidden-xs">
+				<p>Facturas Pendientes</p>
+			</div>
+			<div class="col-md-2 hidden-xs">
+				<p>Pagos</p>
+			</div>
+			<div class="col-md-2 col-xs-6">
+				<select class="form-control select select-primary select-block mbl">
+					<optgroup label="Buscar Período">
+						<option value="0">Título</option>
+						<option value="1">Ordenar</option>
+						<option value="2">Fecha</option>
+						<option value="3">Nombre</option>
+						<option value="4">etc</option>
+					</optgroup>
+				</select>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="billing-details">
+	<div class="container">
+		<h1 class="date">Febrero 2015</h1>
+		<div class="row">
+			<div class="col-md-4 col-xs-4">
+				<div class="billing-type express">
+					<h2>30</h2>
+					<a href="#" data-target="consult-details" role="button" class="modal-btn grey-button">Ver detalle</a>
+					<p class="sub-total">$1850</p>
+				</div>
+				<div class="tax">
+					<span>Comisión DoctorPlus</span>
+					<span>$150</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-4">
+				<div class="billing-type video">
+					<h2>30</h2>
+					<a href="#" role="button" class="grey-button">Ver detalle</a>
+					<p class="sub-total">$1850</p>
+				</div>
+				<div class="tax">
+					<span>Comisión DoctorPlus</span>
+					<span>$150</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-4">
+				<div class="billing-type sms">
+					<h2>30</h2>
+					<a href="#" role="button" class="grey-button">Ver detalle</a>
+					<p class="sub-total">$1850</p>
+				</div>
+				<div class="tax">
+					<span>Consumos SMS</span>
+					<span>$150</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-5 col-center">
+			<div class="total">
+				<span>Total del período</span>
+				<span>$2300</span>
+			</div>
+		</div>
+		<a class="btn btn-danger modal-btn" href="#" data-target="get-payment" role="button">Solicitar Pago</a>
+	</div>
+</section>
+<hr />
+<section class="disclaimer">
+	<div class="container">
+		<p>
+			Los profesionales podrán solicitar los pagos de los resumenes a partir del primer día hábil siguiente al período (mes) reclamado, mediante la presentación de la pertinente
+			factura ORIGINAL en DoctorPlus S.A. (domicilio) o de la remisión de una COPIA de la misma a través del sistema (PRESENTACIÓN PROVISORIA)
+		</p>
+		<p>
+			Los pagos -emisión de cheque o depósito en cuenta bancaria- se encontrarán a disposición del interesado dentro del plazo de diez (10) días hábiles desde la recepción y eventual
+			conformidad de dicha factura (ORIGINAL o COPIA)
+		</p>
+		<p>
+			Los cheques deberán ser retirados los días ……….. de ………a…………….en (domicilio).
+		</p>
+		<p>
+			Le recordamos que en caso de falta de presentación de factura ORIGINAL durante dos períodos, consecutivos o no, los pagos en cuestión serán retenidos hasta tanto dicha situación
+			sea regularizada.
+		</p>
+	</div>
+</section>
+</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

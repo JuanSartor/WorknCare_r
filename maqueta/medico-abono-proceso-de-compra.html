@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<div class="main-content">
+		<div class="container">
+
+			<div class="modal fade  modal-inside">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<button type="button" class="dp-dismiss custom close" data-dismiss="modal" aria-label="Close"></button>
+						<div class="modal-body"></div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+			<section class="sign-up">
+				<ul id="signup-steps" class="nav nav-tabs" role="tablist">
+					<li class="active"><span class="dp-cart">Mi compra</span></li>
+					<li><span class="dp-user-dr">Identificación</span></li>
+					<li><span class="dp-pin">Pago</span></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active fade in" id="product">
+		<section class="order">
+			<div class="container text-center">
+				<p class="uppercase">Detalle del abono</p>
+
+				<div class="account-type pro">
+					<div>
+						<span>Cuenta Profesional</span>
+						<span class="price">$250<span>+ IVA / MES</span></span>
+					</div>
+				</div>
+
+				<p class="disclaimer text-center uppercase">Precios expresados en pesos argentinos + iva</p>
+				<a href="#registration" class="step-btn uppercase next" data-toggle="tab" role="button">Continuar</a>
+			</div>
+		</section>						
+						<br />
+						<br />
+						<section class="professional account-type container text-center">
+							<h2>¡Todas las funcionalidades sin descuentos por omisión!</h2>
+							<div class="row highlights">
+								<div class="col-md-8 col-center col-sm-12 plan-highlights">
+									<p class="text-center">
+										Ideal para profesionales con alta demanda y requerimiento de <br /> sus pacientes fuera del consultorio
+									</p>
+									<button class="toggle-features visible-xs">Ver Características</button>
+									<div class="row special-features">
+										<div class="col-md-4 col-md-offset-2">
+											<ul>
+												<li><span class="dp-agenda">Agenda de Turnos</span></li>
+												<li><span class="dp-alarm">Recordatorios o cancelaciones de Turnos por email</span></li>
+												<li><span class="dp-sms">Recordatorios o cancelaciones de Turnos por SMS</span></li>
+												<li><span class="dp-info">Info de Salud de sus pacientes</span></li>
+											</ul>
+										</div>
+										<div class="col-md-4 col-md-offset-1">
+											<ul>
+												<li><span class="dp-express">Consulta Express</span></li>
+												<li><span class="dp-video">Video Consulta</span></li>
+												<li><span class="dp-support">Soporte Técnico por email</span></li>
+												<li><span class="dp-stats">Estadísticas de atención</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="registration">
+						<div>
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#existing-user" aria-controls="existing-user" role="tab" data-toggle="tab">Ingrese sus datos de cliente</a></li>
+								<li role="presentation"><a href="#new-user" aria-controls="new-user" role="tab" data-toggle="tab">Registrarme como usuario</a></li>
+							</ul>
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="existing-user">
+									<div class="col-md-4 col-center">
+										<form class="form">
+											<div class="form-group data-field dp-user">
+												<input type="email" class="form-control" placeholder="ejemplo@mail.com">
+											</div>
+											<div class="form-group data-field dp-lock">
+												<input type="password" class="form-control" placeholder="Contraseña">
+											</div>
+											<a href="#billing" class="step-btn uppercase next" data-toggle="tab" role="button">Continuar</a>
+											<br />
+										</form>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="new-user">
+									<div class="col-md-4 col-center">
+										<form class="form">
+											<div class="form-group data-field">
+												<input type="text" class="form-control" placeholder="Nombre">
+											</div>
+											<div class="form-group data-field">
+												<input type="text" class="form-control" placeholder="Apellido">
+											</div>
+											<div class="form-inline">
+												<p>Sexo</p>
+												<div class="form-group data-field">
+													<input type="radio" class="form-control" name="gender" id="female" value="femenino" />
+													<label for="female">Femenino</label>
+												</div>
+												<div class="form-group data-field">
+													<input type="radio" class="form-control" name="gender" id="male" value="masculino" />
+													<label for="male">Masculino</label>
+												</div>
+											</div>
+											<div class="form-group data-field">
+												<select class="form-control select select-primary select-block mbl" name="speciality" id="speciality">
+													<option value="especialidad">Especialidad</option>
+												</select>
+											</div>
+											<div class="form-group data-field">
+												<select class="form-control select select-primary select-block mbl" name="sub-speciality" id="sub-speciality">
+													<option value="sub-especialidad">Sub-specialidad</option>
+												</select>
+											</div>
+											<div class="form-group data-field dp-email">
+												<input type="email" class="form-control" placeholder="Ingrese su e-mail">
+											</div>
+											<div class="form-group data-field dp-email">
+												<input type="email" class="form-control" placeholder="Ingrese nuevamente su e-mail">
+											</div>
+											<div class="form-group data-field dp-lock">
+												<input type="password" class="form-control" placeholder="Contraseña">
+											</div>
+											<div class="form-group data-field dp-lock">
+												<input type="password" class="form-control" placeholder="Repita su contraseña">
+											</div>
+											<p class="disclaimer text-center">
+												<small>
+													Al crear una cuenta de cliente de DoctorPlus estará aceptando los <br /><a href="#">Términos y condiciones de uso del servicio</a> - <a href="#">Política de Protección de Datos</a>
+												</small>
+											</p>
+											<a href="#billing" class="step-btn uppercase next" data-toggle="tab" role="button">Continuar</a>
+											<br />
+										</form>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="billing">
+						<h5 class="uppercase light">Pago</h5>
+						<div class="purchase-summary">
+							<div class="row">
+								<div class="col-md-9">
+									<div class="table-responsive">
+									<table>
+										<tr>
+											<th>Detalle</th>
+											<th>Medio de pago</th>
+											<th>Precio</th>
+											<th>Subtotal</th>
+										</tr>
+										<tr>
+											<td>Abono Cuenta Profesional</td>
+											<td>
+												<select class="form-control select select-primary select-block mbl" name="speciality" id="speciality">
+													<option value="especialidad">Especialidad</option>
+												</select>
+											</td>
+											<td>$250,00 / mes</td>
+											<td class="stotal">$250,00<br></td>
+										</tr>
+										<tr>
+											<td><a class="promo-code-btn" href="#">Tengo un código promocional</a></td>
+											<td></td>
+											<td></td>
+											<td class="total">$250,00</td>
+										</tr>
+										<tr>
+											<td colspan="4" style="padding:0">
+												<div class="promo-code">
+													<input type="text" placeholder="Ingrese su Código Promocional"><a role="button" id="promo-code">Aplicar</a>
+												</div>
+											</td>
+										</tr>
+									</table>
+									</div>
+								</div>
+								<div class="col-md-2 col-md-offset-1 text-center total">
+									<p>Total a pagar</p>
+									<p class="price">$250<sup>00</sup></p>
+									<p class="uppercase">Pesos Argentinos</p>
+									<p><small>IVA incluído</small></p>
+									<br />
+									<a href="#" class="uppercase next" data-toggle="tab" role="button">Continuar</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<hr />
+							<h5 class="light">Pago con Tarjetas de Crédito</h5>
+							<div class="payment-options">
+								<div class="row">
+									<div class="col-md-4 col-sm-6 col-xs-12">
+                                    	<div class="hidden-xs">
+										<button class="card"><img class="img-responsive" src="imgs/amex_logo.png" alt="American Express"></button>
+										<button class="card"><img class="img-responsive" src="imgs/visa_logo.png" alt="Visa"></button>
+                                        <button class="card"><img class="img-responsive" src="imgs/mastercard_logo.png" alt="Mastercard"></button>
+                                        </div>
+                                        <div class="visible-xs text-center">
+										<button class="card"><img class="img-responsive" src="imgs/amex_logo.png" alt="American Express"></button>
+										<button class="card"><img class="img-responsive" src="imgs/visa_logo.png" alt="Visa"></button>
+                                        <button class="card"><img class="img-responsive" src="imgs/mastercard_logo.png" alt="Mastercard"></button>
+                                        </div>
+                                        
+									</div>
+                                    <div class="col-md-5 col-sm-6 col-xs-12">
+										<a href="#billing" class="step-btn uppercase next pull-right hidden-xs"	 data-toggle="tab" role="button">Pagar</a>
+                                        <a href="#billing" class="step-btn uppercase next visible-xs " data-toggle="tab" role="button">Pagar</a>
+                                        <p>&nbsp;</p>
+									</div>
+                                    
+									<!--<div class="col-md-4">
+										<p>Transferencias / Depósitos Bancarios</p>
+										<button data-modal="yes" class="wire-transfer"><img src="imgs/santander_logo.png" alt="Santander Río" class="img-responsive"></button>
+										<div class="modal-payment-information hidden">
+											<div class="payment-information">
+												<div class="col-md-8 grey-15 payment-details box">
+													<div>
+														<img src="imgs/santander_logo.png" alt="Santander Río" width="150" class="img-responsive">
+														<p>Podés abonar tus pagos por Depósito o Transferencia Bancaria:</p>
+														<br />
+														<div>Datos para depósito y/o transferencia:</div>
+														<div>Entidad Bancaria: <strong>Banco Santander Río</strong></div>
+														<div>Titular de la cuenta: <strong>DoctorPlus S.A.</strong></div>
+														<div>Tipo de cuenta: <strong>Cuenta Corriente</strong></div>
+														<div>Nro. de cuenta: <strong>895749</strong></div>
+														<div>Sucursal: <strong>359</strong></div>
+														<div>CBU: <strong>0010000000000111100000011</strong></div>
+														<div>CUIT: <strong>30-25879364-3</strong></div>
+													</div>
+												</div>
+												<div class="col-md-4 grey-10 requisites box">
+													<div>
+														<p class="dp-file">Requiere informar el pago</p>
+													</div>
+													<hr >
+													<div>
+														<p class="dp-time">Acreditación 72hs.</p>
+													</div>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<p>Débito en Cuenta Bancaria</p>
+										<button data-modal="yes" class="dp-add-pin"></button>
+										<div class="modal-bank-credit hidden">
+											<div class="payment-information">
+												<div class="col-md-8 grey-15 payment-details box">
+													<div>
+														<span class="dp-add-pin"></span>
+														<p>El débito automático es sólo para cuentas bancarias. No realizamos débitos de tarjetas de crédito con este medio de pago.</p>
+														<br />
+														<p>Para pagar por débito automático siga estos pasos:</p>
+													</div>
+												</div>
+												<div class="col-md-4 grey-10 requisites box">
+													<div>
+														<p class="dp-file">Requiere informar el pago</p>
+													</div>
+													<hr >
+													<div>
+														<p class="dp-time">5 días hábiles.</p>
+													</div>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h4>Servicios</h4>
+					<ul>
+						<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+						<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+						<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+						<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+						<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<h4>Atención al Cliente</h4>
+					<ul>
+						<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+						<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+						<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+						<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+						<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<h4>Institucional</h4>
+							<ul>
+								<li><a href="#" title="Términos legales">Términos legales</a></li>
+								<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+								<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="footer-logo">
+								<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+								<ul>
+									<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+									<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

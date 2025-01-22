@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+
+	<div class="modal fade modal-inside">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body"></div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+
+	<section class="filter user-group">
+		<div class="container">
+			<div class="btn-group user-filter" data-toggle="buttons">
+				<label class="btn btn-inverse active">
+					<input type="checkbox" checked> Todos
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Juan Manuel Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Iñaki Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Usted
+				</label>
+				<button class="dp-add-user add-user"></button>
+			</div>
+		</div>
+	</section>
+<section class="user-actions user-paciente">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+			<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+			<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+			<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+			<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+			<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+	<nav class="section-header patient pediatric profile settings">
+		<div class="container">
+			<div class="user-select pull-left">
+				<div class="active-user">
+					<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+					<div class="perfil-dropdown">
+						<ul>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+						</ul>
+						<span><i class="dp-arrow-down"></i></span>
+					</div>					
+				</div>
+				<h1 class="section-name">Perfil de Salud Pediátrico</h1>
+			</div>
+			<div class="settings pull-right">
+				<ul>
+					<li><a href="#"><i class="icon-doctorplus-plus-21"></i>Configurar Tablero</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-20"></i>Notificaciones</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-26"></i>Configurar</a></li>
+				</ul>
+			</div
+			<div class="clearfix"></div>
+		</div>
+	</nav>
+
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href="">
+					<figure class="tablero-boton-grid">
+						<i class="icon-doctorplus-grid"></i>
+					</figure>
+				</a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+	
+<!-- /menu slider -->	
+	<section class="ok-container pps-prox">
+		<div class="pps-prox-header">
+			<figure><i class="icon-doctorplus-auditivo"></i></figure>
+			<h1>Control auditivo</h1>
+		</div>
+		<div class="pps-prox-content-box">
+			<h4>Próximamente</h4>
+			<p>¡Estamos trabajando para ofrecerle nuevos controles para cuidar mejor de su salud!</p>
+		</div>
+	</section>
+
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

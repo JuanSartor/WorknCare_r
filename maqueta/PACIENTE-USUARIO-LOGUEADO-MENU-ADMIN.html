@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+
+	<div class="modal fade modal-inside">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body"></div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+
+	<section class="filter user-group">
+		<div class="container">
+			<div class="btn-group user-filter" data-toggle="buttons">
+				<label class="btn btn-inverse active">
+					<input type="checkbox" checked> Todos
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Juan Manuel Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Iñaki Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Usted
+				</label>
+				<button class="dp-add-user add-user"></button>
+			</div>
+		</div>
+	</section>
+	
+	<section class="pul-menu-admin">
+		<div class="pul-menu-admin-header">
+			<div class="okm-container">
+				<h1>Administración de Cuenta</h1>
+			</div>
+		</div>
+		<div class="pul-menu-admin-box">
+			<div class="pul-menu-admin-container">
+				<div class="okm-row">
+					<div class="pul-menu-admin-action-col">
+						<a href="#" class="active">
+							<figure>
+								<i class="icon-doctorplus-profile-sheet"></i>
+							</figure>
+							<div>Datos administrador</div>
+						</a>
+					</div>
+					<div class="pul-menu-admin-action-col">
+						<a href="#">
+							<figure>
+								<i class="icon-doctorplus-dollar-circular"></i>
+							</figure>
+							<div>Estado de Cuenta</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!--	datos administrador-->
+	<div class="mul-datos-administrador-box visible">
+
+		<section class="notification-settings form edit white">
+			<div class="container">
+				<div class="okm-row">
+					<h2 class="text-center">Datos para uso del sistema</h2>
+					<p class="mul-alert">Estos datos no serán visibles para el paciente</p>
+				</div>	
+				<div class="okm-row">	
+					<div class="col-md-5 col-md-offset-1">
+						<div class="field-edit border email">
+							<input type="text" maxlength="50" placeholder="andrea@estudioaysa.com">
+							<button class="edit-field hidden">Editar email</button>
+						</div>
+						<small class="mul-input-error">Debe ingresar un email válido</small>
+					</div>
+					<div class="col-md-5">
+						<div class="field-edit border smartphone">
+							<input type="text" maxlength="50" placeholder="11 66699346">
+							<button class="edit-field hidden">Editar celular</button>
+						</div>
+						<small class="mul-input-error">Debe ingresar un celular válido</small>
+						<p class="mul-input-disclaimer">
+							El número debe ingresarse con el código de área sin el 0 ni el 15. <br />
+							Es decir, si para llamar marcás 0351+15+3131234, deberás ingresar 3513101234
+						</p>
+					</div>
+				</div>
+
+				<a href="#" id="mul-validar-cel-tgr">validar-cel </a> <br>
+				<a href="#" id="mul-validar-mail-tgr">validar-mail </a> <br>
+				<a href="#" id="mul-validar-cel-revalidar-tgr">validar-cel-revalidar </a>
+
+
+				<div class="okm-row mul-slide-validar-box" id="mul-validar-cel">
+					<div class="validar-cell-box">
+						<h2>Validar celular <a class="mul-validar-close-triger" href="#"><i class="icon-doctorplus-cruz"></i></a></h2>
+						<div class="validar-cell-content">
+							<span class="validar-cell-telefono">Le enviamos un mensaje de texto (SMS) al número 3424675331 con el código de validación de su celular.
+							</span>
+							<p>
+								Deberá ingresarlo para un correcto funcionamiento del sistema.
+								El mismo puede demorar unos minutos en llegar, aguarde.
+								Si quiere generar el código nuevamente  <a href="#">click aquí</a> 
+							</p>
+							<div class="validar-cell-action-box">
+								<input type="text" class="codigo-cell" name="codigo_cell" placeholder="INGRESE CODIGO">
+							</div>
+							<div class="validar-cell-action-box">
+								<a href="#" class="btn-secondary-square">confirmar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="okm-row mul-slide-validar-box" id="mul-validar-mail">
+					<div class="validar-cell-box">
+						<h2>Validar casilla de correo <a class="mul-validar-close-triger" href="#"><i class="icon-doctorplus-cruz"></i></a></h2>
+						<div class="validar-cell-content">
+							<span class="validar-cell-telefono">Le enviamos un email a la casilla andrea@estudioasya.com
+							</span>
+							<p>
+								Siga las instrucciones para validar su casilla de correo. El mail puede demorar unos minutos en llegar, aguarde.
+								Recuerde revisar la bandeja de correo no deseado. Algunos servidores de correo pueden llegar a interpretar estos correos automáticos de forma incorrecta.
+							</p>
+							<p>
+								Si quiere que le enviemos nuevamente el mail <a href="#">click aquí</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="okm-row mul-slide-validar-box" id="mul-validar-cel-revalidar">
+					<div class="validar-cell-box">
+						<h2>Validar celular <a class="mul-validar-close-triger" href="#"><i class="icon-doctorplus-cruz"></i></a></h2>
+						<div class="validar-cell-content">
+							<span class="validar-cell-telefono">Celular: +54 3424675331</span>
+							<p class="mul-red">
+								Su número de celular aún no se encuentra validado y no podrá recibir notificaciones. 						</p>
+							<p>
+								Si quiere generar el código nuevamente <a href="#">click aquí</a> 
+							</p>
+							<div class="validar-cell-action-box">
+								<input type="text" class="codigo-cell" name="codigo_cell" placeholder="INGRESE CODIGO">
+							</div>
+							<div class="validar-cell-action-box">
+								<a href="#" class="btn-secondary-square">confirmar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="okm-row">
+					<div class="mul-submit-box">
+						<button class="save-data">Guardar</button>
+						<p class="disclaimer text-center">Consulte nuestra <span><a href="">política de privacidad</a> y <a href="">protección de datos</a></span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="password-change form edit">
+			<div class="container">
+				<h2 class="text-center">Contraseña</h1>
+				<div class="row">
+
+					<div class="col-md-5 col-md-offset-1" id="password-block">
+						<p class="mul-disclaimer-input">
+							Recuerde que la clave debe contener mínimo 6 dígitos.
+						</p>
+						<div class="mul-input-clave-box">
+							<div class="field-edit dp-lock">
+								<input type="password" maxlength="50" placeholder="Establecer nueva contraseña">
+							</div>
+							<small class="validate error">La clave debe contener como mínimo 6 dígitos <br></small>
+						</div>
+						<div class="mul-input-clave-box">
+							<div class="field-edit dp-lock">
+								<input type="password" maxlength="50" placeholder="Repita la nueva contraseña">
+							</div>
+							<small class="validate error">Las claves no coinciden</small>
+						</div>
+					</div>
+
+					<div class="col-md-5 disclaimer mul-clave-disclaimer">
+						<p>
+							A la hora de elegir una clave, tenga en cuenta lo siguiente:
+							<br />
+						</p>
+						<ul>
+							<strong>Clave Segura</strong>
+							<li>- Única. No utilice siempre las mismas.</li>
+							<li>- Difícil de suponer y fácil de recordar.</li>
+							<li>- Largas, difíciles de deducir.</li>
+							<li>- Cámbiela con frecuencia.</li>
+							<li>- No las guarde en su PC. Memorícelas o use aplicaciones especificas.</li>
+							<li>Existen aplicaciones para smartphones y tablets que sirven para almacenar y cuidar todas las claves de modo seguro.</li>
+						</ul>
+						<p>
+						</p>
+						<ul>
+							<strong>Clave Vulnerable</strong>
+							<li>No deben tener:</li>
+							<li>- Tres o cuatro dígitos iguales.</li>
+							<li>- Los cuatro primeros o últimos dígitos de su documento.</li>
+							<li>- Números correlativos, ascendentes ni descendentes.</li>
+							<li>- Dos pares de números iguales.</li>
+							<li>- Claves que comiencen con 19 o 20.</li>
+							<li>- Números relacionados con fechas importantes</li>
+						</ul>
+					</div>	
+
+				</div>
+			</div>
+			<div class="mul-submit-box">
+				<button class="save-data">Guardar</button>
+			</div>
+		</section>
+	</div>	
+
+	
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

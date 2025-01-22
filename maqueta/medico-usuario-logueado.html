@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<div class="main-content home logged-in">
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+		<section class="user-welcome text-center">
+			<h1>Bienvenido Dr. Yannis Georgandelis</h1>
+			<h2>DoctorPlus, la red de e-Salud más importante del país!</h2>
+			<h3>Informatice su consultorio en pocos minutos</h3>
+		</section>
+		<section class="user-summary-panel">
+			<div class="container">
+				<div class="col-md-3 col-md-offset-1">
+					<h1 class="dp-vcard">Información Profesional</h1>
+					<span class="circle">999%</span>
+				</div>
+				<div class="col-md-3">
+					<h1 class="dp-branch">Consultorios, tarifas y coberturas médicas</h1>
+					<span class="circle">2</span>
+				</div>
+				<div class="col-md-3">
+					<h1 class="dp-billing active">Datos Comerciales</h1>
+					<span class="circle">-</span>
+				</div>
+			</div>
+		</section>
+		<section class="service-highlights medico-usuario-highlights">
+			<div class="container ">
+				<div class="row">
+					<div class="col-sm-6">
+						<img class="medico-usuario-img-doctor" src="imgs/medicos-genericos.jpg" alt="Informatice su consultorio en pocos minutos">
+					</div>
+					<div class="col-sm-6">
+						<article class="article-rsp">
+							<h4>Informatice su consultorio en pocos minutos</h4>
+							<ul class="tick tick-responsive">
+								<li>Consiga nuevos pacientes.</li>
+								<li>Optimice su agenda de turnos.</li>
+								<li>Ofrezca turnos online.</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<article class="article-rsp">
+							<h4 class="red">Capitalice sus consultas telefónicas y a distancia</h4>
+							<div class="icon-left icon-left-rsp">
+								<img src="imgs/capitalize.svg" alt="Capitalice sus consultas telefónicas y a distancia" class="img-responsive">
+							</div>
+							<ul>
+								<li>Incremente sus ingresos</li>
+								<li>Reduzca las consultas telefónicas</li>
+								<li>Atienda a sus pacientes a distancia</li>
+							</ul>
+						</article>
+					</div>
+					<div class="col-sm-6 doctor-smartphone-img">
+						<img src="imgs/doctor_smartphone.jpg"  class="medico-usuario-img-doctor" alt="Capitalice sus consultas telefónicas y a distancia">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="account-order">
+			<div class="container">
+				<h1 class="text-center">Tipos de cuentas</h1>
+				<h2 class="text-center">Los planes más convenientes de acuerdo a sus necesidades</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<img src="imgs/graphic-computer.svg" alt="Tipos de cuenta">
+					</div>
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="highlight-box text-center">
+									<small>Cuenta Básica</small>
+									<div class="price">
+										<span>Gratis</span>
+										<span></span>
+									</div>
+									<a href="#" role="button">Adquirir</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="highlight-box text-center">
+									<small>Cuenta Básica</small>
+									<div class="price">
+										<span>$250</span>
+										<span>+ IVA/MES</span>
+									</div>
+									<a href="#" role="button">Adquirir</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-center">
+							<button id="compare-btn" class="uppercase">Comparar planes</button>
+						</div>
+					</div>
+				</div>
+				<div id="comparison-table" class="comparison-table">
+					<table class="table table-rsp">
+						<tr>
+							<th>Tipo de cuenta</th>
+							<th><span>Cuenta Básica</span></th>
+							<th><span>Cuenta Profesional</span></th>
+						</tr>
+						<tr>
+							<td>Agenda de Turnos</td>
+							<td><span class="check"></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Recordatorios de Turnos por email</td>
+							<td><span class="check"></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Recordatorios de Turnos por SMS</td>
+							<td><span class="check"></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Acceso a la Info de Salud de sus pacientes</td>
+							<td><span class="check"></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Consulta Express</td>
+							<td><span class="red">25% comisión<sup>(1)</sup></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Video Consulta</td>
+							<td><span class="red">25% comisión<sup>(1)</sup></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Estadísticas de Atención</td>
+							<td><span class="check"></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+						<tr>
+							<td>Soporte Técnico por email</td>
+							<td><span class="check"></span></td>
+							<td><span class="check"></span></td>
+						</tr>
+					</table>
+					<small class="pull-right"><sup>(1)</sup>La comisión que percibe DoctorPlus por el servicio de Consulta Express y Video Consulta corresponde a un 25%+ IVA  sobre el valor de la consulta.</small>
+				</div>
+			</div>
+		</section>
+		
+		<section class="referrals">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h1 class="uppercase">Promo colega amigo</h1>
+						<p>
+							Si Ud. ya es usuario, recomiende DoctorPlus a un colega
+							<em>y obtenga un 10% de descuento en su abono del mes próximo.</em>
+						</p>
+						<p class="small">* Para ser beneficiario del descuento, su colega deberá suscribirse al sitio.</p>
+					</div>
+					<div class="col-md-4 col-md-offset-1">
+						<div class="image">
+							<img src="imgs/doctor-vector.svg" alt="Promo colega amigo" class="img-responsive" />
+						</div>
+						<a href="#" role="button">Recomendar</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="professional features">
+			<div class="container">
+				<div id="app-features" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators icon-indicators">
+						<li class="medico-abono-icon-slide active" data-target="#app-features" data-slide-to="0" class="active"><i class="icon-doctorplus-chat"></i></li>
+						<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="1"><i class="icon-doctorplus-pacientes"></i></li>
+						<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="2"><i class="icon-doctorplus-calendar"></i></li>
+						<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="3"><i class="icon-doctorplus-video-call"></i></li>
+						<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="4"><i class="icon-doctorplus-pharmaceutics"></i></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="row">
+								<div class="col-sm-6  col-xs-12">
+									<img class="img-responsive" src="imgs/medico/abono/slide-1.png" alt="Consulta Express">
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Consulta Express</h4>
+										<p>
+											La innovadora herramienta de consulta a distancia
+											que le permitirá capitalizar sus consejos y 
+											consultas médicas fuera de su consultorio
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<img class="img-responsive" src="imgs/medico/abono/slide-2.png" alt="Gestión de pacientes">
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Gestión de pacientes</h4>
+										<p>
+											Interactúe con sus pacientes sin necesidad de llamadas telefónicas:
+										</p>
+										<p>
+											Notificaciones por renovación de recetas.
+											Solicitud de certificados y aptos médicos
+											Recordatorios de próxima consulta, controles y chequeos
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<img class="img-responsive" src="imgs/medico/abono/slide-3.png" alt="Administre su Agenda de Turnos">
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Administre su Agenda de Turnos</h4>
+										<p>
+											¡Ofrezca sus turnos online las 24 hs todos los días! 
+											Reduzca el ausentismo con recordatorios automáticos a sus pacientes
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<img class="img-responsive" src="imgs/medico/abono/slide-4.png" alt="Video Consulta">
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">Video Consulta</h4>
+										<p>
+											Capitalice las consultas que recibe fuera de su consultorio 
+											y atienda a sus pacientes a distancia pudiendo consultar su 
+											historial de visitas, prescripciones, tratamientos y más!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<img class="img-responsive" src="imgs/medico/abono/slide-5.png" alt="El Perfil de Salud de sus Pacientes">
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<div class="content-wrapper">
+										<h4 class="slide-title">El Perfil de Salud de sus Pacientes</h4>
+										<p>
+											Acceda fácilmente al Perfil de Salud sus pacientes tanto desde 
+											su Consultorio como desde cualquier otro lugar, 
+											utilizando una computadora o dispositivo móvil (Consultorio Online)
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ol class="carousel-indicators default-indicators">
+						<li data-target="#app-features" data-slide-to="0" class="active"></li>
+						<li data-target="#app-features" data-slide-to="1"></li>
+						<li data-target="#app-features" data-slide-to="2"></li>
+						<li data-target="#app-features" data-slide-to="3"></li>
+						<li data-target="#app-features" data-slide-to="4"></li>
+					</ol>
+					<!-- Controls -->
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h4>Servicios</h4>
+					<ul>
+						<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+						<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+						<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+						<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+						<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<h4>Atención al Cliente</h4>
+					<ul>
+						<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+						<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+						<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+						<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+						<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<h4>Institucional</h4>
+							<ul>
+								<li><a href="#" title="Términos legales">Términos legales</a></li>
+								<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+								<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="footer-logo">
+								<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+								<ul>
+									<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+									<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+    
+    <script language="javascript">
+    
+	$(document).ready(function() {
+		$('#app-features').carousel({
+		  interval: 5000
+		})
+	})
+    </script>
+</body>
+</html>

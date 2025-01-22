@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+<section class="dc-header">
+
+		<div class="dc-header-box">
+			<div class="okm-container">
+				<h1>Perfil profesional y comercial</h1>
+			</div>
+		</div>
+
+		<div class="dc-main-menu-box">
+			<div class="okm-container">
+				<div class="okm-row dc-main-menu-row">
+					<div class="dc-main-menu-col">
+						<a href="#" class="section-swap-trg" data-info="profesional">
+							<figure class="dc-main-menu-icon">
+								<i class="icon-doctorplus-ficha-tecnica"></i>
+							</figure>
+							<span>Información<br>
+								profesional</span>
+							<figure class="dc-main-menu-number">
+								<span>20%</span>
+							</figure>
+						</a>
+					</div>
+					<div class="dc-main-menu-col">
+						<a href="#" class="active">
+							<figure class="dc-main-menu-icon">
+								<i class="icon-doctorplus-map-plus-rounded"></i>
+							</figure>
+							<span>Consultorios, tarifas y<br>	
+								coberturas médicas</span>
+							<figure class="dc-main-menu-number">
+								<span>99</span>
+							</figure>
+						</a>
+					</div>
+					<div class="dc-main-menu-col">
+						<a href="#" class="section-swap-trg" data-info="comercial">
+							<figure class="dc-main-menu-icon">
+								<i class="icon-doctorplus-pc-add"></i>
+							</figure>
+							<span>Datos comerciales</span>
+							<figure class="dc-main-menu-number">
+								<span>-</span>
+							</figure>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</section>
+	
+
+	
+<div id="info-consultorios" class="mul-form-type">
+	
+	<div class="dc-panels-box">
+		<div class="dc-panels okm-container">
+			<ul>
+				<li><a href="#" class="consultorios-trg active" data-src="#consultorios"><i class="icon-doctorplus-map-plus-rounded"></i> Consultorios<span></span></a></li>
+				<li><a href="#" class="consultorios-trg" data-src="#tarifas"><i class="icon-doctorplus-dollar-circular"></i> Tarifas y servicios<span></span></a></li>
+				<li><a href="#" class="consultorios-trg" data-src="#cobertura"><i class="icon-doctorplus-pharmaceutics"></i> Coberturas Médicas<span></span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<section class="form edit info-profesional-form dc-form-white consultorios-src" id="consultorios">
+		
+		<div class="container">
+			<h2 class="text-center">Definir intervalo de turnos</h2>
+			
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="dc-disclaimer">
+						<p>IMPORTANTE: Su configuración de intervalo de turnos se aplicará para todos los consultorios que cree por igual.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row intervalo-spacer">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="dc-intervalo-holder">
+					
+					<div class="dc-intervalo-box">
+						Configurar intervalo de turnos cada
+					</div>
+					<div class="dc-intervalo-select-box">
+						<div class="okm-select-plus-box mdc-style" id="idiomas-input">
+						<div class="okm-select">
+							<select class="form-control select select-primary select-block mbl" name="intervalo" id="intervalo">
+								<option value="15">15 min</option>
+								<option value="25">20 min</option>
+								<option value="30">30 min</option>
+								<option value="40">40 min</option>
+								<option value="60">1 hora</option>
+							</select>
+						</div>
+					</div>
+					</div>
+					
+					</div>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="mul-picture-disclaimer-action-box">
+						<a href="#" class="btn-oil-large">listo <i class="icon-doctorplus-check-thin"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<h2 class="text-center">Definir consultorios</h2>
+			</div>
+			
+		</div>
+		
+		<div class="dc-consultorio-banner">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="dc-consultorio-banner-holder">
+						<div class="dc-consultorio-banner-img">
+							<img src="imgs/medico/consultorios/consultorios.svg" alt="Consultorios"/>
+						</div>
+						<p>
+							Ud. podrá crear y configurar la agenda de hasta 
+							2 Consultorios Físicos y 1 Consultorio Virtual 
+							con días y horarios definidos en donde podrá atender a sus pacientes a distancia a través del servicio de Video Consulta.
+						</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		
+		<div class="okm-container">
+			<div class="okm-row dc-consultorios-list">
+			
+				<div class="dc-consultorio-item-box">
+					<div class="dc-consultorio-item">
+							<figure>
+								<i class="icon-doctorplus-map-plus-rounded"></i>
+							</figure>
+							<h4>Aristobulo del Valle</h4>
+							
+							<div class="okm-row dc-consultorio-action-row">
+								<div class="dc-consultorio-action-col">
+									<a href="#" data-toggle="tooltip" data-placement="bottom" title="editar datos">
+										<i class="icon-doctorplus-pen"></i>
+									</a>
+								</div>
+								<div class="dc-consultorio-action-col">
+									<a href="#" class="dc-modal-del" data-toggle="tooltip" data-placement="bottom" title="eliminar">
+										<i class="icon-doctorplus-trash"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+				</div>
+				
+				<div class="dc-consultorio-item-box empty">
+					<a href="#">
+					<div class="dc-consultorio-item">
+						<figure>
+							<i class="icon-doctorplus-map-plus-rounded"></i>
+						</figure>
+						<h4>Consultorio Físico 2</h4>
+
+						<div class="okm-row dc-consultorio-action-row">
+							<i class="icon-doctorplus-circle-plus"></i>
+						</div>
+					</div>
+					</a>
+				</div>
+				
+				
+				<div class="dc-consultorio-item-box empty">
+					<a href="#">
+						<div class="dc-consultorio-item">
+							<figure>
+								<i class="icon-doctorplus-video-call"></i>
+							</figure>
+							<h4>Consultorio Virtual</h4>
+
+							<div class="okm-row dc-consultorio-action-row">
+								<i class="icon-doctorplus-circle-plus"></i>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<h4 class="mul-form-tittle">Dirección</h4>
+				</div>
+			</div>
+			
+			<div class="dc-form-spacer">
+			
+			<div class="row">
+				<div class="col-md-5 col-md-offset-1">
+				<div class="row">
+				<div class="col-md-12">
+					<div class="field-edit dp-edit mul-border dc-no-label dc-icon-inicio">
+						<i class="icon-doctorplus-map-plus-rounded"></i>
+						<input type="text" maxlength="50" placeholder="Nombre del consultorio">
+					</div>
+					<span class="dc-input-disclaimer">* Máximo 25 caracteres</span>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-12">
+					<div class="field-edit dp-edit mul-border dc-no-label">
+						<input type="text" maxlength="50" placeholder="Domicilio">
+					</div>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12">	
+					<div class="okm-select-plus-box mdc-style mul-select-spacer dc-no-label" id="idiomas-input">
+					<div class="okm-select">
+						<select class="form-control select select-primary select-block mbl" name="provincia" id="provincia">
+							<option value="prov-ejer">Provincia</option>
+							<option value="dato2">Buenos Aires</option>
+						</select>
+					</div>
+				</div>
+				</div>
+			</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="okm-select-plus-box mdc-style mul-select-spacer dc-no-label" id="idiomas-input">
+						<div class="okm-select">
+							<select class="form-control select select-primary select-block mbl" name="provincia" id="provincia">
+								<option value="prov-ejer">Ciudad</option>
+								<option value="dato2">CABA</option>
+							</select>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12">
+					<div class="field-edit dp-edit mul-border dc-no-label">
+						<input type="text" maxlength="50" placeholder="Código postal">
+					</div>
+				</div>
+				</div>
+				</div>
+				<div class="col-md-5">
+					<div class="dc-form-spacer">
+					<div class="row">
+						<div class="col-md-12">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13137.021033279469!2d-58.43446874999999!3d-34.5977063!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1487019139636" width="100%" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="cd-map-text">
+								Indique la dirección de su consultorio. Puede ayudarse del zoom.
+								Haga click sobre la misma para establecer la marca.
+								Marcar su consultorio en el mapa es importante para que operen el resto de las funcionalidades del sitio.
+							</p>
+						</div>
+					</div>	 
+					</div>
+				</div>
+			</div>
+				
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="mul-picture-disclaimer-action-box">
+						<a href="#" class="btn-oil-large" id="dc-modal-notificacion-pacientes-trg">listo <i class="icon-doctorplus-check-thin"></i></a>
+					</div>
+				</div>
+			</div>
+		
+			</div>
+		
+		
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<h4 class="mul-form-tittle">Días y horarios de atención</h4>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="dc-horarios-check-holder">
+						
+						<div class="dc-horarios-check-box-row">
+							<div class="dc-horarios-item">
+								<label class="checkbox">
+									<input type="checkbox" value="horario-lunes" data-toggle="checkbox">
+									Lunes
+								</label>
+							</div>
+							<div class="dc-horarios-item">
+								<label class="checkbox">
+									<input type="checkbox" value="horario-martes" data-toggle="checkbox">
+									Martes
+								</label>
+							</div>
+							<div class="dc-horarios-item">
+								<label class="checkbox">
+									<input type="checkbox" value="horario-miercoles" data-toggle="checkbox">
+									Miércoles
+								</label>
+							</div>
+						</div>
+						<div class="dc-horarios-check-box-row">
+							<div class="dc-horarios-item">
+								<label class="checkbox">
+									<input type="checkbox" value="horario-jueves" data-toggle="checkbox">
+									Jueves
+								</label>
+							</div>
+							<div class="dc-horarios-item">
+								<label class="checkbox">
+									<input type="checkbox" value="horario-viernes" data-toggle="checkbox">
+									Viernes
+								</label>
+							</div>
+							<div class="dc-horarios-item">
+								<label class="checkbox">
+									<input type="checkbox" value="horario-sabado" data-toggle="checkbox">
+									Sábado
+								</label>
+							</div>
+						</div>
+					
+					</div>
+					
+					<hr>
+					
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<p class="dc-horarios-disclaimer">
+						Si ud. tienen en un mismo día y consultorio horarios de atención fragmentado
+						(por ej. de 08:00 a 12 hs y de 16:00 a 20 hs.)
+						debe agregar primero el horario de 8 a 12 y luego el de 16 a 20 hs.
+					</p>
+				</div>
+			</div>
+			
+
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="dc-horario-add-row">
+
+						<div class="dc-horario-add-item">
+							<div class="mapc-registro-form-row mapc-select">
+								<select name="horario-add-ini" class="form-control select select-primary select-block mbl">
+									<option value="0800">08:00</option>
+									<option value="0830">08:30</option>
+									<option value="0900">09:00</option>
+									<option value="0930">09:30</option>
+									<option value="1000">10:00</option>
+								</select>
+							</div>
+						</div>
+
+						<span class="dc-horaio-add-divider">a</span>
+
+						<div class="dc-horario-add-item">
+							<div class="mapc-registro-form-row mapc-select">
+								<select name="horario-add-end" class="form-control select select-primary select-block mbl">
+									<option value="1800">18:00</option>
+									<option value="1830">18:30</option>
+									<option value="1900">19:00</option>
+									<option value="1930">19:30</option>
+									<option value="2000">10:00</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="dc-horario-add-action-box">
+							<a href="#" class="btn-default-square">Agregar horario</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<h4 class="mul-form-tittle dc-horarios-consultorio-title"><i class="icon-doctorplus-map-plus-rounded dc-title-icon"></i> Aristobulo del Valle</h4>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<ul class="dc-horarios-tab okm-row">
+						<li>
+							<div class="dc-horarios-tab-header">Lunes</div>
+							<div class="dc-horarios-tab-day-content">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="horario-lunes-1" class="tagsinput tag-trg" data-role="tagsinput" value="8:00 a 16:00,
+																																															 8:00 a 16:00,
+																																															 8:00 a 16:00
+																																															 " />
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="dc-horarios-tab-header">Martes</div>
+							<div class="dc-horarios-tab-day-content">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="horario-lunes-1" class="tagsinput tag-trg" data-role="tagsinput" value="8:00 a 16:00,
+																																															 8:00 a 16:00,
+																																															 8:00 a 16:00
+																																															 " />
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="dc-horarios-tab-header">Miércoles</div>
+							<div class="dc-horarios-tab-day-content">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="horario-lunes-1" class="tagsinput tag-trg" data-role="tagsinput" value="8:00 a 16:00,
+																																															 8:00 a 16:00,
+																																															 8:00 a 16:00
+																																															 " />
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="dc-horarios-tab-header">Jueves</div>
+							<div class="dc-horarios-tab-day-content">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="horario-lunes-1" class="tagsinput tag-trg" data-role="tagsinput" value="8:00 a 16:00,
+																																															 8:00 a 16:00,
+																																															 8:00 a 16:00
+																																															 " />
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="dc-horarios-tab-header">Viernes</div>
+							<div class="dc-horarios-tab-day-content">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="horario-lunes-1" class="tagsinput tag-trg" data-role="tagsinput" value="8:00 a 16:00,
+																																															 8:00 a 16:00,
+																																															 8:00 a 16:00
+																																															 " />
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="dc-horarios-tab-header">Sábado</div>
+							<div class="dc-horarios-tab-day-content">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="horario-lunes-1" class="tagsinput tag-trg" data-role="tagsinput" value="8:00 a 16:00,
+																																															 8:00 a 16:00,
+																																															 8:00 a 16:00
+																																															 " />
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+					
+					<hr>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="dc-horarios-add-action-box">
+							<a href="#" class="btn-oil-large">listo <i class="icon-doctorplus-check-thin"></i></a>
+						<div class="dc-horarios-add-action-box-divider">
+							<a href="#" class="btn-alert-large">Crear consultorio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			</div>
+			
+	</section>
+
+	<section class="form edit info-profesional-form dc-form-white consultorios-src" id="tarifas">
+		<div class="container">
+			<h2 class="text-center">Definir tarifas a consumidor final y en pesos argentinos</h2>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					
+					<div class="okm-row">
+						<div class="dc-tarifas-label-col">
+							<i class="icon-doctorplus-chat"></i>
+							<span>Consulta Express</span>
+						</div>
+						<div class="dc-tarifas-val-col">
+							<span>$</span>
+							<input type="text" name="ce-tarifa">
+						</div>
+						<small class="dc-input-disclaimer tarifas">*Importe mínimo $ 50,- </small>
+					</div>
+					
+					<div class="okm-row">
+						<div class="dc-tarifas-label-col">
+							<i class="icon-doctorplus-video-call"></i>
+							<span>Video Consulta con turno</span>
+						</div>
+						<div class="dc-tarifas-val-col">
+							<span>$</span>
+							<input type="text" name="ce-tarifa">
+						</div>
+					</div>
+					
+					<div class="okm-row">
+						<div class="dc-tarifas-label-col">
+							<i class="icon-doctorplus-video-call"></i>
+							<span>Video Consulta sin turno</span>
+						</div>
+						<div class="dc-tarifas-val-col">
+							<span>$</span>
+							<input type="text" name="ce-tarifa">
+						</div>
+					</div>
+					
+					<div class="okm-row">
+						<div class="dc-tarifas-label-col">
+							<i class="icon-doctorplus-estetoscopio"></i>
+							<span>Consulta presencial
+								<small>Dato no obligatorio</small></span>
+						</div>
+						<div class="dc-tarifas-val-col">
+							<span>$</span>
+							<input type="text" name="ce-tarifa">
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="dc-disclaimer tarifas">
+						<p>Por reglas de competencia leal se establece un importe mínimo de tarifa de $ 50,-  </p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="mul-mis-servicios-wraper tarifas">
+			<section class="okm-container mul-mis-servicios">
+				<h2>Mis servicios</h2>
+				<h3>¿A quién desea ofrecer sus servicios?</h3>
+
+				<div class="mul-card-row">
+					<div class="mul-mis-servicios-card-col">
+						<div class="mul-mis-servicios-card">
+							<h4>Consulta Express</h4>
+							<figure>
+								<i class="icon-doctorplus-chat"></i>
+							</figure>
+							<form name="mul-consulta-express-card">
+								<label class="radio">
+									Sólo a mis pacientes
+									<input type="radio" name="pacientes" value="misPacientes"/>
+								</label>
+								<label class="radio">
+									Todos los pacientes registrados
+									<input type="radio" name="pacientes" value="pacientesRegistrados"/>
+								</label>
+							</form>
+						</div>
+					</div>
+
+					<div class="mul-mis-servicios-card-col">
+						<div class="mul-mis-servicios-card">
+							<h4>Video Consulta</h4>
+							<figure>
+								<i class="icon-doctorplus-video-call"></i>
+							</figure>
+							<form name="mul-video-express-card">
+								<label class="radio">
+									Sólo a mis pacientes
+									<input type="radio" name="pacientes" value="misPacientes"/>
+								</label>
+								<label class="radio">
+									Todos los pacientes registrados
+									<input type="radio" name="pacientes" value="pacientesRegistrados"/>
+								</label>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="okm-row">
+					<p class="mul-mis-servicios-disclaimer">Ofrecer sus servicios a todos los pacientes registrados en DoctorPlus 
+						le dará la posibilidad de que lo contacten y recomienden pacientes nuevos</p>
+				</div>
+
+
+			</section>							
+		</div>
+
+	</section>
+
+	<section class="form edit info-profesional-form dc-form-white consultorios-src" id="cobertura">
+		<div class="container">
+			<h2 class="text-center">Prepagas y Obras Sociales</h2>
+			
+			<div class="row">
+					<form name="coberturas" method="post">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="okm-row">
+							<div class="dc-cobertura-sugest-box">
+								<div class="field-edit dp-edit tagsinput-primary mul-required-box mul-border" id="especialidad-input">
+									<input name="prepaga" type="text" class="especialidad-input"  placeholder="Medicina Prepaga / Obra Social">
+									<span class="mul-input-icon">
+										<i class="icon-doctorplus-search"></i>
+									</span>
+								</div>
+							</div>
+							<div class="dc-cobertura-sugest-action-box">
+								<a class="btn-default-square">Agregar</a>
+							</div>
+							</div>
+							<div class="okm-row">
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="OSDE, otra obra social" />
+								</div>
+							</div>
+							<div class="okm-row">
+								<div class="dc-horarios-add-action-box">
+									<a href="#" class="btn-oil-large">listo <i class="icon-doctorplus-check-thin"></i></a>
+								</div>
+							</div>
+						</div>
+				
+					</form>
+					
+			
+			</div>
+			
+		</div>
+	</section>
+</div>
+
+
+
+<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+	
+	<div id="dc-modal-con-del" class="modal fade bs-example-modal-lg vc-modal-interrupcion vc-refund-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			
+			<div class="modal-content" id="dc-del-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<figure class="modal-icon consultorios"><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<h4 class="modal-title">¿Está seguro que desea eliminar el consultorio?</h4>
+					<p class="dc-consultorio-modal">consultorio 1</p>
+				</div>
+				<div class="modal-body">
+					<div class="modal-action-row">
+						<a href="#" class="btn-alert"><i class="icon-doctorplus-cruz"></i> cancelar</a>
+						<a href="#" class="btn-default" id="dc-del-content-trg"><i class="icon-doctorplus-check-thin"></i> aceptar</a>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="modal-content" id="dc-del-disclaimer">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<figure class="modal-icon consultorios"><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<h4 class="modal-title modal-consulorios-disclaimer">En el caso de que tuviese pacientes con turnos confirmados
+						les notificaremos que los mismos quedan cancelados. </h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-action-row">
+						<a href="#" class="btn-default" data-dismiss="modal" aria-label="Close"><i class="icon-doctorplus-cruz"></i> cerrar</a>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+	
+	
+	<div id="dc-modal-info-pacientes" class="modal fade bs-example-modal-lg vc-modal-interrupcion vc-refund-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<figure class="modal-icon consultorios"><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<h4 class="modal-title modal-consulorios-disclaimer">
+						Le notificaremos a los pacientes con turnos confirmados
+						el cambio de domicilio.
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-action-row">
+						<a href="#" class="btn-alert" data-dismiss="modal" aria-label="Close"><i class="icon-doctorplus-cruz"></i> cancelar</a>
+						<a href="#" class="btn-default"><i class="icon-doctorplus-check-thin"></i> aceptar</a>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+	
+	<div id="dc-modal-info-pacientes-cancelados" class="modal fade bs-example-modal-lg vc-modal-interrupcion vc-refund-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<figure class="modal-icon consultorios"><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<h4 class="modal-title modal-consulorios-disclaimer">
+						En el caso de que tuviese pacientes con turnos confirmados
+						en los días y horarios cancelados
+						les notificaremos que los mismos quedan cancelados. 
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-action-row">
+						<a href="#" class="btn-alert" data-dismiss="modal" aria-label="Close"><i class="icon-doctorplus-cruz"></i> cancelar</a>
+						<a href="#" class="btn-default"><i class="icon-doctorplus-check-thin"></i> aceptar</a>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	
+	
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script>
+		$(function(){
+			$('.switch-checkbox').bootstrapSwitch();
+			$(':checkbox').radiocheck();
+			$(':radio, :checkbox').radiocheck();
+			$('[data-toggle="tooltip"]').tooltip();
+		
+
+			
+		});
+	</script>
+</body>
+</html>

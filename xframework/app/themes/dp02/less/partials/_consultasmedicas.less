@@ -1,0 +1,99 @@
+.circle-icon-consultas-medicas{
+	.circle-icon(@turquoise-60,'../imgs/icons/header/icon-consults.svg',51px);
+	margin: 0 auto;
+}
+.consultas{
+	
+	&-grid-block-holder{
+		
+		& ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			margin-bottom: 24px;
+			
+			& li{
+				display: inline-block;
+				&:first-of-type{
+					margin-right: 16px;
+				}
+				
+				& a{
+					font-size: 24px;
+					color: @greey;
+					.trans-all();
+					
+					&:hover{
+						color: @grey-30;
+					}
+				}
+			}
+		}
+	}
+	
+	//cards
+	
+	&-card-left{
+		padding-right: 25px;
+		margin-bottom: 24px;
+	}
+	&-card-mid{
+		padding: 0 25px;
+		margin-bottom: 24px;
+	}
+	&-card-right{
+		padding-left: 25px;
+		margin-bottom: 24px;
+	}
+	&-card{
+		width: 100%;
+		background: @turquoise-05;
+		padding: 16px;
+		padding-bottom: 0px;
+		position: relative;
+		
+		
+		& h3{
+			color: @oil;
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+			margin-bottom: 8px;
+		}
+		
+		& label{
+			color: @turquoise-20;
+			font-size: 12px;
+			font-style: italic;
+		}
+		
+		&-diagnostico{
+			display: block;
+			width: 100%;
+			
+		}
+		
+		& p{
+			color: @oil;
+			display: block;
+			font-size: 14px;
+			line-height: 16px;
+			min-height: 82px;
+			width: 100%;
+			padding-right: 64px;
+		}
+		
+		& span{
+			font-size: 14px;
+			margin-left: 8px;
+		}
+		
+		&-btn{
+			border-radius: 0;
+			display: block;
+			width: 100%;
+		}
+	}
+	
+}

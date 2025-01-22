@@ -1,0 +1,90 @@
+nav.navbar-default.mnu-extranet {
+	.navbar-toggle:before {
+		color: @white;
+	}
+	.navbar-toggle .icon-bar {
+		background-color: @white;
+	}
+	.container {
+		padding: 0;
+	}
+	background-color: @red-50;
+	height: 65px;
+	padding: 0 10px;
+	& > div {
+		position: relative;
+	}
+	a.extranet-logo {
+		display: block;
+		padding: 5px 0;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 1;
+	}
+	.block-profile {
+		/*padding: 6px 0;*/
+		position: absolute;
+		width: 100%;
+		z-index: 10;
+		> .navbar-toggle {
+			float: left;
+			margin: 0;
+			margin-right: 10px;
+			padding: 0;
+		}
+		.dl-menuwrapper > *:not(.navbar-toggle) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		img {
+			display: initial;
+			margin-right: 10px;
+		}
+	}
+	.block-profile .user {
+		color: @white;
+		font-size: 14px;
+		
+	}
+	.logout, .home {
+		padding: 10px;
+		
+	}
+
+	.logout:before {
+		.icon(24px);
+		content: 'I';
+		&:hover {
+
+			text-decoration: none !important;
+		}
+	}
+	.home:before {
+		.icon(24px);
+		content: 'A';
+		&:hover {
+
+			text-decoration: none !important;
+		}
+	}
+}
+
+
+
+
+
+.striped-green {
+	a {
+		color:#46525e;
+		text-decoration: none !important;
+	}
+
+	[class^="icon-"],
+	[class*=" icon-"] {
+	 color: #65AAAB !important;
+	text-decoration: none;
+	 }
+	
+
+}

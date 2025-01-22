@@ -1,0 +1,773 @@
+Options +FollowSymlinks -Indexes
+RewriteEngine on
+RewriteOptions inherit
+
+RewriteCond %{HTTP_HOST} ^passbienetre\.eu$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^doctorplus\.eu$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.doctorplus\.eu$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^doctorplus\.fr$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.doctorplus\.fr$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.passbienetre\.eu$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/$1 [R=301,L]
+
+
+
+RewriteCond %{HTTP_HOST} ^passbienetre\.eu/ordonnance/$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/ordonance/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^passbienetre\.eu/ordonnance$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/ordonance/$1 [R=301,L]
+
+
+RewriteCond %{HTTP_HOST} ^doctorplus\.eu/ordonnance/$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/ordonance/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^doctorplus\.eu/ordonnance$ [NC]
+RewriteRule ^(.*)$ https://www.workncare.io\/ordonance/$1 [R=301,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 day"
+ExpiresByType image/jpeg "access plus 1 day"
+ExpiresByType image/gif "access plus 1 day"
+ExpiresByType image/png "access plus 1 day"
+ExpiresByType image/svg "access plus 1 day"
+ExpiresByType text/css "access plus 1 hour"
+ExpiresByType application/pdf "access plus 1 day"
+ExpiresByType text/x-javascript "access plus 1 hour"
+ExpiresByType application/x-shockwave-flash "access plus 1 day"
+ExpiresByType image/x-icon "access plus 1 day"
+ExpiresDefault "access plus 2 days"
+</IfModule>
+<IfModule mod_headers.c>
+    Header append Cache-Control "public"
+</IfModule>
+## EXPIRES CACHING ##
+## COMPRESS ##
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+## COMPRESS ##
+
+#INDEX
+RewriteRule ^$ frontend_2.php [L]
+RewriteRule ^login$ xadmin.php [L]
+RewriteRule ^xadmin$ xadmin.php [L]
+RewriteRule ^farmacia$ farmacia.php [L]
+
+
+
+# REGLAS GENERALES PARA LOS CONTROLADORS
+RewriteRule ^(.+)xadmin.php$ xadmin.php [L]
+RewriteRule ^(.+)medico.php$ medico.php [L]
+RewriteRule ^(.+)paciente_p.php$ paciente_p.php [L]
+RewriteRule ^(.+)common.php$ common.php [L]
+RewriteRule ^(.+)frontend_2.php$ frontend_2.php [L]
+RewriteRule ^(.+)farmacia.php$ farmacia.php [L]
+RewriteRule ^(.+)extranet.php$ extranet.php [L]
+RewriteRule ^(.+)empresa.php$ empresa.php [L]
+
+#Farmacia
+RewriteRule ^ordonnance$ farmacia.php?modulo=home&submodulo=index [L]
+RewriteRule ^ordonnance/$ farmacia.php?modulo=home&submodulo=index [L]
+RewriteRule ^ordonnance/(.+)$ farmacia.php?modulo=home&submodulo=index&codigo=$1 [L]
+RewriteRule ^imprimer_ordonnance.do$ farmacia.php?action=1&modulo=home&submodulo=get_receta_farmacia [L,QSA]
+RewriteRule ^preview_ordonnance.do$ farmacia.php?action=1&modulo=home&submodulo=get_preview_receta [L,QSA]
+
+#XADMIN
+RewriteRule ^obrasocial_autosuggest_x.do$ xadmin.php?action=1&modulo=pacientes&submodulo=obrasocial_autosuggest [QSA,L]
+
+#TURNOS
+RewriteRule ^panel-paciente/busqueda-profesional/reservar-turno.html$ paciente_p.php?modulo=turno&submodulo=sacar_turno_step_1 [QSA,L]
+RewriteRule ^panel-paciente/busqueda-profesional/reservar-turno-([0-9]*).html$ paciente_p.php?modulo=turno&submodulo=sacar_turno_step_1&turno=$1 [QSA,L]
+RewriteRule ^reservar.do$ paciente_p.php?action=1&modulo=turno&submodulo=reservar [L]
+RewriteRule ^cancelar_from_creacion.do$ paciente_p.php?action=1&modulo=turno&submodulo=cancelar_turno_from_creacion [L]
+RewriteRule ^confirmar_turno.do$ paciente_p.php?action=1&modulo=turno&submodulo=confirmar_turno [L]
+RewriteRule ^confirmar_pago_turno.do$ paciente_p.php?action=1&modulo=turno&submodulo=confirmar_pago_turno_vc [L]
+RewriteRule ^verificar_turno_disponible.do$ paciente_p.php?action=1&modulo=turno&submodulo=verificar_turno_disponible [L]
+RewriteRule ^panel-paciente/busqueda-profesional/reservar-turno-video-llamada.html$ paciente_p.php?modulo=turno&submodulo=sacar_turno_vc_step_1 [QSA,L]
+RewriteRule ^panel-paciente/busqueda-profesional/reservar-turno-video-llamada-([0-9]*).html$ paciente_p.php?modulo=turno&submodulo=sacar_turno_vc_step_1&turno=$1 [QSA,L]
+RewriteRule ^panel-paciente/detalle-turno.html$ paciente_p.php?modulo=turno&submodulo=turno_detalle [QSA,L]
+# ESTATICAS
+RewriteRule ^crear-cuenta.html$ frontend_2.php?modulo=home&submodulo=crear-cuenta [L]
+RewriteRule ^activacion/(.*).html$ frontend_2.php?modulo=statics&submodulo=activacion&hash=$1 [L]
+RewriteRule ^recuperacion_contrasenia/(.*).html$ frontend_2.php?modulo=statics&submodulo=recuperacion_contrasenia&hash=$1 [L]
+RewriteRule ^logout.do$ frontend_2.php?action=1&modulo=login&submodulo=logout [L]
+RewriteRule ^recherche-medecin/$ frontend_2.php?modulo=busqueda&submodulo=busqueda_profesional_resultado [QSA,L]
+RewriteRule ^recherche-medecin/professionnels/([0-9]*)-(.*).html$ frontend_2.php?modulo=profesionalesfrecuentes&submodulo=detalle_profesionales_frecuentes&idmedico=$1 [QSA,L]
+
+# PACIENTES
+RewriteRule ^paciente/registro-paciente.html$ frontend_2.php?modulo=paciente&submodulo=registro_paciente [L]
+RewriteRule ^paciente/$ frontend_2.php?modulo=paciente&submodulo=home_paciente [L]
+RewriteRule ^obrasocial_autosuggest_f.do$ frontend_2.php?action=1&modulo=home&submodulo=obrasocial_autosuggest [QSA,L]
+
+# NUEVAS FRANCIA
+RewriteRule ^creer-un-compte.html$ frontend_2.php?modulo=home&submodulo=crear-cuenta [L]
+RewriteRule ^patient/creer-un-compte.html$ frontend_2.php?modulo=paciente&submodulo=registro_paciente [L]
+RewriteRule ^patient/$ frontend_2.php?modulo=paciente&submodulo=home_paciente [L]
+RewriteRule ^medecin-ou-professionnel/creer-un-compte.html$ frontend_2.php?modulo=medico&submodulo=registro_medico [L,QSA]
+RewriteRule ^medecin-ou-professionnel/$ frontend_2.php?modulo=medico&submodulo=home_medico [L,QSA]
+
+
+# PROFESIONALES
+RewriteRule ^profesional/registro-medico.html$ frontend_2.php?modulo=medico&submodulo=registro_medico [L,QSA]
+RewriteRule ^profesional/crear-cuenta-medico.html$ frontend_2.php?modulo=medico&submodulo=registro_medico_seleccionar_cuenta [L]
+RewriteRule ^profesional/$ frontend_2.php?modulo=medico&submodulo=home_medico [L,QSA]
+RewriteRule ^profesional/detalle_cuenta_gratuita.html$ frontend_2.php?modulo=abono&submodulo=detalle_cuenta_gratuita [L]
+RewriteRule ^profesional/detalle_cuenta_profesional.html$ frontend_2.php?modulo=abono&submodulo=detalle_cuenta_profesional [L]
+RewriteRule ^profesional/consulta-express.html$ frontend_2.php?modulo=medico&submodulo=medico_consulta_express [L]
+#RewriteRule ^profesional/abono-proceso-compra.html$ frontend_2.php?modulo=medico&submodulo=registracion_abono [L]
+#RewriteRule ^profesional/abono-proceso-compra-([0-9]*).html$ frontend_2.php?modulo=medico&submodulo=registracion_abono&id=$1 [L]
+#RewriteRule ^profesional/abono-proceso-compra-back.html$ frontend_2.php?modulo=medico&submodulo=proceso_pago_exito [L]
+
+
+
+RewriteRule ^profesional/utilisation-des-services.html$ frontend_2.php?modulo=statics&submodulo=terminos&medico=1 [L,QSA]
+RewriteRule ^paciente/utilisation-des-services.html$ frontend_2.php?modulo=statics&submodulo=terminos&medico=0 [L,QSA]
+RewriteRule ^utilisation-des-services.html$ frontend_2.php?modulo=statics&submodulo=terminos [L,QSA]
+RewriteRule ^profesional/consentement.html$ frontend_2.php?modulo=statics&submodulo=consentimiento&medico=1 [L,QSA]
+RewriteRule ^paciente/consentement.html$ frontend_2.php?modulo=statics&submodulo=consentimiento&medico=0 [L,QSA]
+RewriteRule ^consentement.html$ frontend_2.php?modulo=statics&submodulo=consentimiento [L,QSA]
+
+RewriteRule ^profesional/cookies.html$ frontend_2.php?modulo=statics&submodulo=cookie&medico=1 [L,QSA]
+RewriteRule ^paciente/cookies.html$ frontend_2.php?modulo=statics&submodulo=cookie&medico=0 [L,QSA]
+RewriteRule ^cookies.html$ frontend_2.php?modulo=statics&submodulo=cookie [L,QSA]
+
+
+#ACTIONS
+RewriteRule ^login_step1.do$ frontend_2.php?action=1&modulo=login&submodulo=login_step1 [L]
+RewriteRule ^login_step2.do$ frontend_2.php?action=1&modulo=login&submodulo=login_step2 [L]
+RewriteRule ^reset_password.do$ frontend_2.php?action=1&modulo=home&submodulo=reset_pass_drop_down [L]
+RewriteRule ^clear_user.do$ frontend_2.php?action=1&modulo=home&submodulo=clear_user [L]
+RewriteRule ^enviar_mail_contacto.do$ frontend_2.php?action=1&modulo=home&submodulo=enviarMailContacto [L]
+RewriteRule ^medico_registracion.do$ frontend_2.php?action=1&modulo=medico&submodulo=medico_registracion [L]
+RewriteRule ^crear_suscripcion_frontend.do$ frontend_2.php?action=1&modulo=medico&submodulo=crear_suscripcion [L]
+RewriteRule ^validar_paciente_prestador.do$ frontend_2.php?action=1&modulo=paciente&submodulo=validar_paciente_prestador [L]
+RewriteRule ^registrar_email_teaser.do$ frontend_2.php?action=1&modulo=home&submodulo=registrar_email_teaser [L]
+
+
+
+
+
+
+
+#PACIENTES PRIVADOS
+RewriteRule ^panel-paciente/$ paciente_p.php?modulo=home&submodulo=home_new [L]
+RewriteRule ^panel-paciente/home.html$ paciente_p.php?modulo=home&submodulo=home_new [L]
+RewriteRule ^panel-paciente/guia-de-uso/$ paciente_p.php?modulo=home&submodulo=guia_uso [L]
+RewriteRule ^panel-paciente/miembros/$ paciente_p.php?modulo=pacientes&submodulo=miembros_list [L]
+#fix eliminar compra credito
+#RewriteRule ^panel-paciente/credito-proceso-compra/$ paciente_p.php?modulo=credito&submodulo=proceso_compra [L,QSA]
+RewriteRule ^panel-paciente/credito-proceso-compra/$ paciente_p.php?modulo=home&submodulo=home_new [L,QSA]
+
+RewriteRule ^panel-paciente/datos-administrador/$ paciente_p.php?modulo=home&submodulo=administracion_cuenta&mod=1 [L]
+RewriteRule ^panel-paciente/estado-cuenta/$ paciente_p.php?modulo=home&submodulo=administracion_cuenta&mod=2 [L]
+RewriteRule ^panel-paciente/privacidad/$ paciente_p.php?modulo=home&submodulo=administracion_cuenta&mod=3 [L]
+RewriteRule ^panel-paciente/alta-miembro-grupo-familiar/$ paciente_p.php?modulo=pacientes&submodulo=alta_miembro_grupo_familiar [L]
+RewriteRule ^panel-paciente/alta-mascota-grupo-familiar/$ paciente_p.php?modulo=pacientes&submodulo=alta_mascota_grupo_familiar [L]
+RewriteRule ^panel-paciente/informacion-paciente-([0-9]*)-(.*)/$ paciente_p.php?modulo=pacientes&submodulo=editar_paciente&id=$1 [L]
+RewriteRule ^panel-paciente/informacion-paciente/$ paciente_p.php?modulo=pacientes&submodulo=editar_paciente [QSA,L]
+RewriteRule ^panel-paciente/busqueda-profesional/$ paciente_p.php?modulo=busqueda&submodulo=busqueda_profesional [QSA,L]
+RewriteRule ^panel-paciente/busqueda-profesional/resultado/$ paciente_p.php?modulo=busqueda&submodulo=busqueda_profesional_resultado [L,QSA]
+RewriteRule ^panel-paciente/reembolso/$ paciente_p.php?modulo=reembolso_beneficiario&submodulo=administracion_reembolso [L]
+
+RewriteRule ^panel-paciente/purchase-ok.html$ paciente_p.php?modulo=statics&submodulo=compra_ok [L]
+RewriteRule ^panel-paciente/purchase-ko.html$ paciente_p.php?modulo=statics&submodulo=compra_ko [L]
+RewriteRule ^panel-medico/purchase-ok.html$ medico.php?modulo=statics&submodulo=compra_ok [L]
+RewriteRule ^panel-medico/purchase-ko.html$ medico.php?modulo=statics&submodulo=compra_ko [L]
+RewriteRule ^panel-paciente/checkrtc.html$ paciente_p.php?modulo=check_rtc&submodulo=checkRTC [QSA,L]
+RewriteRule ^panel-medico/checkrtc.html$ medico.php?modulo=check_rtc&submodulo=checkRTC [QSA,L]
+RewriteRule ^patient/checkrtc.html$ paciente_p.php?modulo=check_rtc&submodulo=checkRTC [QSA,L]
+
+#Paciente ACTIONS
+RewriteRule ^alta-miembro-grupo-familiar.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=alta_miembro_grupo_familiar [L]
+RewriteRule ^cambiar-datos-paciente.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=update_paciente [L]
+RewriteRule ^cambiar-datos-paciente-cel-email.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=update_paciente_celular_email [L]
+RewriteRule ^guardar-comentario.do$ paciente_p.php?action=1&modulo=turno&submodulo=guardar_comentario [L]
+RewriteRule ^crop_image_and_save.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=crop_and_change_image [L]
+RewriteRule ^crop_image_and_save_hash.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=crop_and_change_image_hash [L]
+RewriteRule ^save_image_paciente.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=guardar_imagen [L]
+RewriteRule ^panel-paciente/change_member.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=change_member [L]
+RewriteRule ^panel-paciente/change_member_go_home.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=change_member_go_home [L]
+RewriteRule ^panel-paciente/change_member_session.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=change_member_session [L]
+RewriteRule ^panel-paciente/get_browser_info.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=get_browser_info [L]
+RewriteRule ^no_completar_perfil_salud.do$ paciente_p.php?action=1&modulo=home&submodulo=no_completar_perfil_salud [L]
+RewriteRule ^get_banco_xp_iban.do$ paciente_p.php?action=1&modulo=home&submodulo=get_banco_xp_iban [L]
+RewriteRule ^actualizar_iban_reembolso.do$ paciente_p.php?action=1&modulo=home&submodulo=actualizar_iban_reembolso [L]
+RewriteRule ^eliminar_iban.do$ paciente_p.php?action=1&modulo=home&submodulo=eliminar_iban [L]
+
+
+
+
+
+
+#PACIENTE Profesionales-Frecuentes
+RewriteRule ^panel-paciente/profesionales-frecuentes/$ paciente_p.php?modulo=profesionalesfrecuentes&submodulo=profesionales_frecuentes&page=1 [L]
+RewriteRule ^panel-paciente/profesionales/([0-9]*)-(.*).html$ paciente_p.php?modulo=profesionalesfrecuentes&submodulo=detalle_profesionales_frecuentes&idmedico=$1 [QSA,L]
+
+
+
+
+
+#Médicos privados
+
+RewriteRule ^panel-medico/$ medico.php?modulo=home&submodulo=home [L]
+RewriteRule ^panel-medico/datos-administrador/$ medico.php?modulo=usuario&submodulo=administracion_cuenta&mod=1 [L]
+RewriteRule ^panel-medico/configuracion/$ medico.php?modulo=usuario&submodulo=administracion_cuenta&mod=2 [L]
+RewriteRule ^panel-medico/pagos-vencimientos/$ medico.php?modulo=usuario&submodulo=administracion_cuenta&mod=3 [L]
+RewriteRule ^panel-medico/abono-detalle-cuenta-gratuita.html$ medico.php?modulo=abono&submodulo=detalle_cuenta_gratuita [L]
+RewriteRule ^panel-medico/abono-detalle-cuenta-profesional.html$ medico.php?modulo=abono&submodulo=detalle_cuenta_profesional [L]
+RewriteRule ^panel-medico/abono-proceso-compra/$ medico.php?modulo=abono&submodulo=proceso_compra [L]
+RewriteRule ^panel-medico/micuenta-facturas/$ medico.php?modulo=cuenta&submodulo=facturas [L]
+RewriteRule ^panel-medico/mi-cuenta/$ medico.php?modulo=cuenta&submodulo=ver_periodo [L]
+RewriteRule ^panel-medico/mi-cuenta/([0-9]*)/$ medico.php?modulo=cuenta&submodulo=ver_periodo&idperiodoPago=$1 [L]
+RewriteRule ^panel-medico/mi-cuenta/([0-9]*)-resumen-periodo-(.*).pdf$ medico.php?action=1&modulo=cuenta&submodulo=resumen_periodo_pdf&idperiodoPago=$1 [L]
+RewriteRule ^panel-medico/mi-cuenta/facturar_reintegro_consulta.do$ medico.php?action=1&modulo=cuenta&submodulo=facturar_reintegro_consulta [L]
+
+RewriteRule ^panel-medico/consejos.html$ medico.php?modulo=home&submodulo=consejos [L]
+
+RewriteRule ^panel-medico/perfil-profesional/$ medico.php?modulo=usuario&submodulo=datos_info_profesional [L]
+RewriteRule ^panel-medico/perfil-profesional/datos-comerciales/$ medico.php?modulo=usuario&submodulo=datos_comerciales [L]
+RewriteRule ^panel-medico/perfil-profesional/consultorios/$ medico.php?modulo=usuario&submodulo=datos_consultorios [L,QSA]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/mis-registros-consultas-medicas/$ medico.php?modulo=pacientes&submodulo=registros_consultas_medicas&idpaciente=$1 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/mis-registros-consultas-medicas/([0-9]+)$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_detalle&idpaciente=$1&idperfilSaludConsulta=$3&mis_registros_consultas_medicas=1 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/mis-registros-consultas-medicas/consultanueva.html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=$1&mis_registros_consultas_medicas=1 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/mis-registros-consultas-medicas/consultanueva-express-([0-9]+).html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=$1&mis_registros_consultas_medicas=1&idconsultaExpress=$3 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/mis-registros-consultas-medicas/consultanueva-videoconsulta-([0-9]+).html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=$1&mis_registros_consultas_medicas=1&idvideoconsulta=$3 [L]
+
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/mis-registros-consultas-medicas/imprimir/([0-9]+)$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_imprimir&print=1&idperfilSaludConsulta=$3&mis_registros_consultas_medicas=1 [L]
+
+RewriteRule ^panel-medico/mis-pacientes/$ medico.php?modulo=pacientes&submodulo=mis_pacientes [L]
+
+RewriteRule ^panel-medico/notificaciones/$ medico.php?modulo=notificaciones&submodulo=notificaciones [L]
+RewriteRule ^panel-medico/agenda/$ medico.php?modulo=agenda&submodulo=agenda_diaria [L,QSA]
+RewriteRule ^panel-medico/agenda/agenda-diaria/$ medico.php?modulo=agenda&submodulo=agenda_diaria [L,QSA]
+RewriteRule ^panel-medico/agenda/agenda-semanal/$ medico.php?modulo=agenda&submodulo=agenda_semanal [L,QSA]
+RewriteRule ^panel-medico/agenda/agenda-mensual/$ medico.php?modulo=agenda&submodulo=agenda_mensual [L,QSA]
+RewriteRule ^panel-medico/agenda/detalle-turno-([0-9]*).html$ medico.php?modulo=turno&submodulo=turno&id=$1 [L]
+RewriteRule ^panel-medico/agenda/imprimir-detalle-turno-([0-9]*).html$ medico.php?modulo=turno&submodulo=turno_detalle_imprimir&print=1&id=$1 [L]
+RewriteRule ^panel-medico/agenda/detalle-turno-([0-9]*)-(.*).html$ medico.php?modulo=turno&submodulo=turno_detalle&id=$1&from=$2 [L]
+RewriteRule ^panel-medico/agenda/agenda-diaria/([0-9]*)-([0-9]*)-([0-9]*)/$ medico.php?modulo=agenda&submodulo=agenda_diaria&fecha=$1/$2/$3 [L,QSA]
+RewriteRule ^panel-medico/agenda/agenda-semanal/([0-9]*)-([0-9]*)-([0-9]*)/$ medico.php?modulo=agenda&submodulo=agenda_semanal&fecha=$1/$2/$3 [L,QSA]
+RewriteRule ^panel-medico/agenda/agenda-mensual/([0-9]*)-([0-9]*)-([0-9]*)/$ medico.php?modulo=agenda&submodulo=agenda_mensual&fecha=$1/$2/$3 [L,QSA]
+RewriteRule ^panel-medico/agenda/tomar_turno.html$ medico.php?modulo=agenda&submodulo=agenda_tomar_turno [QSA,L]
+RewriteRule ^panel-medico/([0-9]*)-(.*).html$ medico.php?modulo=profesionalesfrecuentes&submodulo=detalle_profesionales_frecuentes&idmedico=$1 [QSA,L]
+RewriteRule ^panel-medico/profesionales/([0-9]*)-(.*).html$ medico.php?modulo=profesionalesfrecuentes&submodulo=detalle_profesionales_frecuentes&idmedico=$1 [QSA,L]
+RewriteRule ^panel-medico/busqueda-profesional/$ medico.php?modulo=busqueda&submodulo=busqueda_profesional [L]
+RewriteRule ^panel-medico/busqueda-profesional/resultado/$ medico.php?modulo=busqueda&submodulo=busqueda_profesional_resultado [L,QSA]
+RewriteRule ^professionnel/agenda/vacances.html$ medico.php?modulo=agenda&submodulo=vacaciones_form [QSA,L]
+
+
+#PERFIL-SALUD "médico"
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/medicamentos.html$ medico.php?modulo=perfil_salud&submodulo=medicamentos&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/registro-consultas-medicas.html$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas&idpaciente=$1  [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/medicamentos.html$ medico.php?modulo=perfil_salud&submodulo=medicamentos&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/consultanueva.html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/consultanueva-([0-9]*).html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=$1&idperfilSaludConsulta=$3 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/tablero.html$ medico.php?modulo=perfil_salud&submodulo=tablero_perfil_salud&idpaciente=$1  [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/datos-biometricos.html$ medico.php?modulo=perfil_salud&submodulo=perfil_datos_biometricos&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/enfermedades-patologias.html$ medico.php?modulo=perfil_salud&submodulo=perfil_patologias&idpaciente=$1  [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/antecedentes.html$ medico.php?modulo=perfil_salud&submodulo=perfil_antecedentes&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/ginecologico-obstetrico.html$ medico.php?modulo=perfil_salud&submodulo=perfil_ginecologico&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/alergias-intolerancias.html$ medico.php?modulo=perfil_salud&submodulo=perfil_alergias&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/cirugias-protesis.html$ medico.php?modulo=perfil_salud&submodulo=perfil_cirugias_protesis&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/estilo-vida.html$ medico.php?modulo=perfil_salud&submodulo=perfil_estilo_vida&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/vacunas.html$ medico.php?modulo=perfil_salud&submodulo=vacunas&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/estudios-imagenes.html$ medico.php?modulo=perfil_salud&submodulo=perfil_estudios_imagenes&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/controles-chequeos.html$ medico.php?modulo=perfil_salud&submodulo=perfil_controles_chequeos&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/registros_consultas_medicas_imprimir/([0-9]+)$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_imprimir&print=1&idpaciente=$1&idperfilSaludConsulta=$3 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/registros_consultas_medicas_imprimir/$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_imprimir&print=1&rango=1&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/registros-consultas-medicas-detalle/([0-9]+)$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_detalle&idpaciente=$1&idperfilSaludConsulta=$3 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/control-visual.html$ medico.php?modulo=perfil_salud&submodulo=perfil_visual&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/control-dental.html$ medico.php?modulo=perfil_salud&submodulo=perfil_dental&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/control-auditivo.html$ medico.php?modulo=perfil_salud&submodulo=perfil_auditivo&idpaciente=$1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/$ medico.php?modulo=perfil_salud&submodulo=registros_consultas_medicas&idpaciente=$1 [QSA,L]
+
+
+#consulta express medico
+RewriteRule ^panel-medico/consultaexpress/$ medico.php?modulo=consultaexpress&submodulo=bandeja_entrada [L]
+RewriteRule ^panel-medico/consultaexpress/abiertas-([0-9]+).html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^professionnel/consultation-express/en-cours-detail-professionnel-([0-9]+).html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^panel-medico/consultaexpress/pendientes-([0-9]+).html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_pendientes_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^panel-medico/consultaexpress/abiertas.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas&do_reset=1 [L]
+RewriteRule ^panel-medico/consultaexpress/abiertas_ta.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas_ta&do_reset=1 [L]
+RewriteRule ^panel-medico/consultaexpress/pendientes.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_pendientes&do_reset=1 [L]
+RewriteRule ^professionnel/consultation-express/recues.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_pendientes&do_reset=1 [L]
+
+RewriteRule ^panel-medico/consultaexpress/finalizadas.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_finalizadas&do_reset=1 [L]
+RewriteRule ^panel-medico/consultaexpress/declinadas.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_rechazadas&do_reset=1 [L]
+RewriteRule ^panel-medico/consultaexpress/vencidas.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_vencidas&do_reset=1 [L]
+RewriteRule ^panel-medico/consultaexpress/red.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_red&do_reset=1 [QSA,L]
+RewriteRule ^professionnel/consultation-express/publiees-sur-la-plateforme.html$ medico.php?modulo=consultaexpress&submodulo=consultaexpress_red&do_reset=1 [QSA,L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/consultanueva-express-([0-9]+).html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=1&idconsultaExpress=$3 [L]
+RewriteRule ^panel-medico/mis-pacientes/(.*)/$ medico.php?modulo=pacientes&submodulo=mis_pacientes&query_str=$1 [L]
+
+#PERFIL-SALUD "médico" ACTIONS
+RewriteRule ^save_medicamentos.do$ medico.php?action=1&modulo=perfil_salud&submodulo=prescripcion_form [L]
+RewriteRule ^save_consulta_form.do$ medico.php?action=1&modulo=perfil_salud&submodulo=consulta_form [L]
+RewriteRule ^add_receta_medico.do$ medico.php?action=1&modulo=perfil_salud&submodulo=add_receta_medico [L]
+RewriteRule ^add_adjunto_medico.do$ medico.php?action=1&modulo=perfil_salud&submodulo=add_adjunto_medico [L]
+RewriteRule ^cancelar_receta_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=cancelar_receta_medico [L]
+RewriteRule ^add_estudio_image_medico.do$ medico.php?action=1&modulo=perfil_salud&submodulo=perfil_salud_upload_image [L]
+RewriteRule ^eliminar_imagen_estudio_medico.do$ medico.php?action=1&modulo=perfil_salud&submodulo=drop_perfil_salud_estudios [L]
+RewriteRule ^eliminar_multiple_imagen_estudio_medico.do$ medico.php?action=1&modulo=perfil_salud&submodulo=drop_multiple_perfil_salud_estudios [L]
+RewriteRule ^eliminar_multiple_medicamento_medico.do$ medico.php?action=1&modulo=perfil_salud&submodulo=drop_multiple_perfil_salud_medicamento [L]
+RewriteRule ^busqueda_compartir.do$ medico.php?action=1&modulo=perfil_salud&submodulo=busqueda_medico_compartir [L]
+RewriteRule ^send_consulta.do$ medico.php?action=1&modulo=perfil_salud&submodulo=send_consulta [L]
+RewriteRule ^panel-medico/change_member.do medico.php?action=1&modulo=perfil_salud&submodulo=change_member [L]
+RewriteRule ^save_presion_arterial_form_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=presion_arterial_form [L]
+RewriteRule ^save_masa_corporal_form_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=masa_corporal_form [L]
+RewriteRule ^save_colesterol_form_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=colesterol_form [L]
+RewriteRule ^save_glucemia_form_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=glucemia_form [L]
+RewriteRule ^save_miscelaneas_form_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=miscelaneas_form [L]
+RewriteRule ^save_antecedentes_personales_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=antecedentes_personales_form [L]
+RewriteRule ^process_control_visual_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=process_control_visual [L]
+RewriteRule ^save_control_visual_oftalmologico_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=control_visual_oftalmologico [L]
+RewriteRule ^save_control_visual_anteojos_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=control_visual_anteojos [L]
+RewriteRule ^add_control_visual_antecedentes_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=add_control_visual_antecedentes [L]
+RewriteRule ^delete_control_visual_antecedentes_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_control_visual_antecedentes [L]
+RewriteRule ^add_control_visual_patologia_actual_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=add_control_visual_patologia_actual [L]
+RewriteRule ^delete_control_visual_patologia_actual_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_control_visual_patologia_actual [L]
+RewriteRule ^delete_control_visual_all_patologias_actuales_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_control_visual_all_patologias_actuales [L]
+RewriteRule ^save_enfermedades_actuales_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=enfermedades_actuales_form [L]
+RewriteRule ^save_patologias_actuales_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=patologias_actuales_form [L]
+RewriteRule ^save_perfil_antecedentes_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=perfil_antecedentes_form [L]
+RewriteRule ^add_patologia_familiar_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=add_patologia_familiar [L]
+RewriteRule ^delete_patologia_familiar_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_antecedente_patologia [L]
+RewriteRule ^save_perfil_ginecologico_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=perfil_ginecologico [L]
+RewriteRule ^save_perfil_alergias_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=perfil_alergias [L]
+RewriteRule ^change_cuenta_gratuita.do$ medico.php?action=1&modulo=abono&submodulo=change_cuenta_gratuita [L]
+RewriteRule ^crop_image_medico_and_save.do$ medico.php?action=1&modulo=usuario&submodulo=crop_and_change_image [L]
+RewriteRule ^panel-medico/solicitud_modificacion_datos_profesionales.do$ medico.php?action=1&modulo=usuario&submodulo=solicitud_modificacion_datos_profesionales [L]
+RewriteRule ^panel-medico/get_browser_info.do$ medico.php?action=1&modulo=videoconsulta&submodulo=get_browser_info [L]
+RewriteRule ^panel-medico/obtener_contador_videoconsultas_socket.do$ medico.php?action=1&modulo=videoconsulta&submodulo=obtener_contador_videoconsultas_socket [L]
+RewriteRule ^panel-medico/obtener_contador_consultasexpress_socket.do$ medico.php?action=1&modulo=consultaexpress&submodulo=obtener_contador_consultasexpress_socket [L]
+RewriteRule ^save_cirugias_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=cirugias_form [L]
+RewriteRule ^save_modificaciones_cirugias_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=cirugias_modificaciones_form [L]
+RewriteRule ^delete_cirugias_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_cirugias [L]
+RewriteRule ^delete_all_cirugias_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_all_cirugias [L]
+RewriteRule ^save_protesis_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=protesis_form [L]
+RewriteRule ^save_modificaciones_protesis_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=protesis_modificaciones_form [L]
+RewriteRule ^delete_protesis_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_protesis [L]
+RewriteRule ^delete_all_protesis_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_all_protesis [L]
+RewriteRule ^drop_multiple_recetas.do$ medico.php?action=1&modulo=perfil_salud&submodulo=drop_multiple_recetas [L]
+RewriteRule ^drop_multiple_adjuntos.do$ medico.php?action=1&modulo=perfil_salud&submodulo=drop_multiple_adjuntos [L]
+RewriteRule ^send_motivo_cancelacion.do$ medico.php?action=1&modulo=perfil_salud&submodulo=motivo_cancelacion [L]
+RewriteRule ^renovar_receta.do$ medico.php?action=1&modulo=perfil_salud&submodulo=renovar_receta [L]
+RewriteRule ^setear_agenda_consultorio.do$ medico.php?action=1&modulo=usuario&submodulo=setear_agenda_consultorio [L]
+
+
+RewriteRule ^crear_suscripcion.do$ medico.php?action=1&modulo=abono&submodulo=crear_suscripcion [L]
+RewriteRule ^cancelar_suscripcion.do$ medico.php?action=1&modulo=abono&submodulo=eliminar_suscripcion [L]
+RewriteRule ^modificar_intervalos_turnos.do$ medico.php?action=1&modulo=usuario&submodulo=modificar_intervalos_turnos [L]
+Rewriterule ^panel-medico/agenda/exportar_agenda_xls.do$ medico.php?action=1&modulo=agenda&submodulo=exportar_agenda_xls [QSA,L]
+RewriteRule ^get_notificacion_alerta_sistema_m.do$ medico.php?action=1&modulo=notificaciones&submodulo=get_notificacion_alerta_sistema [L]
+
+#ACTION Médicos NEW
+RewriteRule ^panel-medico/perfil-profesional/eliminarEspecialidad.do/([0-9]*)/$ medico.php?action=1&modulo=usuario&submodulo=eliminarEspecialidad&especialidad_idespecialidad=$1 [L]
+RewriteRule ^panel-medico/perfil-profesional/agregarEspecialidad.do/([0-9]*)/$ medico.php?action=1&modulo=usuario&submodulo=addEspecialidad&especialidad_idespecialidad=$1 [L]
+RewriteRule ^panel-medico/perfil-profesional/agregarSubEspecialidad.do/([0-9]*)-([0-9]*)/$ medico.php?action=1&modulo=usuario&submodulo=addSubEspecialidad&subEspecialidad_idsubEspecialidad=$1&especialidad_idespecialidad=$2 [L]
+RewriteRule ^panel-medico/perfil-profesional/eliminarSubEspecialidad.do/([0-9]*)-([0-9]*)/$ medico.php?action=1&modulo=usuario&submodulo=eliminarSubEspecialidad&subEspecialidad_idsubEspecialidad=$1&especialidad_idespecialidad=$2 [L]
+RewriteRule ^panel-medico/perfil-profesional/eliminarIdioma.do/([0-9]*)/$ medico.php?action=1&modulo=usuario&submodulo=eliminarIdioma&ididioma=$1 [L]
+RewriteRule ^panel-medico/perfil-profesional/agregarIdioma.do/([0-9]*)/$ medico.php?action=1&modulo=usuario&submodulo=addIdioma&ididioma=$1 [L]
+RewriteRule ^panel-medico/perfil-profesional/consultorios/agregarObraSocial.do$ medico.php?action=1&modulo=usuario&submodulo=addObraSocial [L]
+RewriteRule ^panel-medico/perfil-profesional/consultorios/eliminarObraSocial.do$ medico.php?action=1&modulo=usuario&submodulo=eliminarObraSocial [L]
+RewriteRule ^panel-medico/perfil-profesional/editarEmail.do/(.*)/$ medico.php?action=1&modulo=usuario&submodulo=modificarEmail&email=$1 [L]
+RewriteRule ^save_medico.do$ medico.php?action=1&modulo=usuario&submodulo=medico_info_personal [L]
+RewriteRule ^save_info_preferencia.do$ medico.php?action=1&modulo=usuario&submodulo=medico_email_preferencia_form [L]
+RewriteRule ^panel-medico/datos-administrador/cambiar_password.do$ medico.php?action=1&modulo=usuario&submodulo=change_password [L]
+RewriteRule ^panel-medico/datos-administrador/guardar_celular_email.do$ medico.php?action=1&modulo=usuario&submodulo=guardar_celular_email [L]
+RewriteRule ^informacion-comercial-medico.do$ medico.php?action=1&modulo=usuario&submodulo=datos_comerciales_form [L]
+RewriteRule ^consultorio-medico.do$ medico.php?action=1&modulo=usuario&submodulo=consultorio_form [L]
+RewriteRule ^direccion-consultorio-medico.do$ medico.php?action=1&modulo=usuario&submodulo=direccion_consultorio_form [L]
+RewriteRule ^consultorio-virtual-medico.do$ medico.php?action=1&modulo=usuario&submodulo=consultorio_virtual_form [L]
+RewriteRule ^panel-medico/perfil-profesional/consultorios/get-coordenadas-consultorios.do$ medico.php?action=1&modulo=usuario&submodulo=get_coordenadas_consultorios [L]
+RewriteRule ^eliminar_consultorio.do$ medico.php?action=1&modulo=usuario&submodulo=delete_consultorio&id=$1 [L]
+RewriteRule ^registrar_aranceles.do$ medico.php?action=1&modulo=usuario&submodulo=registrar_aranceles [L]
+RewriteRule ^eliminar_horario.do$ medico.php?action=1&modulo=usuario&submodulo=eliminar_horario [L]
+RewriteRule ^registrar-horario.do$ medico.php?action=1&modulo=usuario&submodulo=medico_perfil_horarios_form [L]
+RewriteRule ^panel-medico/mis-pacientes/agregar-paciente-medico.do$ medico.php?action=1&modulo=pacientes&submodulo=agregar_paciente_medico [L]
+RewriteRule ^panel-medico/mis-pacientes/eliminar-paciente-medico.do$ medico.php?action=1&modulo=pacientes&submodulo=eliminar_paciente_medico [L]
+RewriteRule ^panel-medico/mis-pacientes/invitar-paciente.do$ medico.php?action=1&modulo=pacientes&submodulo=invitar_pacientes [L]
+RewriteRule ^save_medico_factura.do$ medico.php?action=1&modulo=cuenta&submodulo=factura_medico_form [L]
+RewriteRule ^generate_solicitud_medico.do$ medico.php?action=1&modulo=cuenta&submodulo=solicitud_medico_form [L]
+RewriteRule ^registrar_preferencia_servicios.do$ medico.php?action=1&modulo=usuario&submodulo=registrar_preferencia_servicios [L]
+RewriteRule ^registrar_preferencia_notificacion.do$ medico.php?action=1&modulo=usuario&submodulo=registrar_preferencia_notificacion [L]
+RewriteRule ^registrar_renovacion_automatica.do$ medico.php?action=1&modulo=usuario&submodulo=registrar_renovacion_automatica [L]
+RewriteRule ^cambiar_turno.do$ medico.php?action=1&modulo=turno&submodulo=cambiar_turno [L]
+RewriteRule ^reservar_turno_medico.do$ medico.php?action=1&modulo=agenda&submodulo=reservar_turno_medico [L]
+RewriteRule ^paciente_nuevo_reservar_turno.do$ medico.php?action=1&modulo=agenda&submodulo=paciente_nuevo_reservar_turno [L]
+RewriteRule ^habilitar_turno.do$ medico.php?action=1&modulo=turno&submodulo=habilitar_turno [L]
+RewriteRule ^validar_codigo_celular_m.do$ medico.php?action=1&modulo=usuario&submodulo=validate_codigo_celular [L]
+RewriteRule ^generar_codigo_celular_m.do$ medico.php?action=1&modulo=usuario&submodulo=generate_codigo_celular [L]
+RewriteRule ^validar_codigo_email_m.do$ medico.php?action=1&modulo=usuario&submodulo=validate_codigo_email [L]
+RewriteRule ^generar_codigo_email_m.do$ medico.php?action=1&modulo=usuario&submodulo=generate_codigo_email [L]
+RewriteRule ^medico_vacuna_form_paciente.do$ medico.php?action=1&modulo=perfil_salud&submodulo=vacuna_form [L]
+RewriteRule ^save_estilo_vida_medico_form.do$ medico.php?action=1&modulo=perfil_salud&submodulo=perfil_estilo_vida_form [L]
+RewriteRule ^marcar_leido.do$ medico.php?action=1&modulo=notificaciones&submodulo=marcar_leido_notificacion [L]
+RewriteRule ^eliminar_notificaciones.do$ medico.php?action=1&modulo=notificaciones&submodulo=delete_notificaciones [L]
+RewriteRule ^autossugest_agregar_paciente.do$ medico.php?action=1&modulo=pacientes&submodulo=paciente_autossugest&query=$1 [QSA]
+RewriteRule ^get_cantidad_notificaciones_m.do$ medico.php?action=1&modulo=notificaciones&submodulo=get_cant_notificaciones [L]
+RewriteRule ^get_status_perfilsalud_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=get_status_perfilsalud [L]
+RewriteRule ^responder_mensaje.do$ medico.php?action=1&modulo=notificaciones&submodulo=responder_mensaje [L]
+RewriteRule ^invitar-paciente.do$ medico.php?action=1&modulo=pacientes&submodulo=invitar_pacientes [L]
+RewriteRule ^eliminar_paciente_mis_pacientes.do$ medico.php?action=1&modulo=pacientes&submodulo=eliminar_paciente_mis_pacientes [L]
+RewriteRule ^eliminar_invitacion_mis_pacientes.do$ medico.php?action=1&modulo=pacientes&submodulo=eliminar_invitacion_mis_pacientes [L]
+RewriteRule ^enviar_mensaje_from_mis_pacientes.do$ medico.php?action=1&modulo=pacientes&submodulo=enviar_mensaje_from_mis_pacientes [L]
+RewriteRule ^marcar_visto_consulta.do$ medico.php?action=1&modulo=consultaexpress&submodulo=marcar_visto_consulta [L]
+RewriteRule ^delete_enfermedades_actuales_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=delete_enfermedades_actuales [L]
+RewriteRule ^add_enfermedades_actuales_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=add_enfermedades_actuales [L]
+RewriteRule ^especialidades_autosuggest_m.do$ medico.php?action=1&modulo=home&submodulo=especialidad_autosuggest [QSA,L]
+RewriteRule ^prestador_autosuggest_m.do$ medico.php?action=1&modulo=home&submodulo=prestador_autosuggest [QSA,L]
+RewriteRule ^obrasocial_autosuggest_m.do$ medico.php?action=1&modulo=home&submodulo=obrasocial_autosuggest [QSA,L]
+RewriteRule ^comprobante-(.*).do$ medico.php?action=1&modulo=usuario&submodulo=get_comprobante_cuota&hash=$1 [L]
+RewriteRule ^factura-comisiones.do$ medico.php?action=1&modulo=cuenta&submodulo=get_comprobante_factura_comisiones [L,QSA]
+RewriteRule ^actualizar_paciente_sincargo.do$ medico.php?action=1&modulo=pacientes&submodulo=actualizar_paciente_sincargo [L]
+RewriteRule ^respuesta_invitacion_prestador.do$ medico.php?action=1&modulo=notificaciones&submodulo=respuesta_invitacion_prestador [L]
+RewriteRule ^agregar_prestador_medico.do$ medico.php?action=1&modulo=usuario&submodulo=agregar_prestador_medico [L]
+RewriteRule ^cancelar_imagen_estudio_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=cancelar_perfil_salud_estudios [L]
+RewriteRule ^eliminar_asociacion_prestador.do$ medico.php?action=1&modulo=usuario&submodulo=eliminar_asociacion_prestador [L]
+RewriteRule ^get_banco_x_iban.do$ medico.php?action=1&modulo=usuario&submodulo=get_banco_x_iban [L]
+RewriteRule ^reenviar-invitacion-paciente.do$ medico.php?action=1&modulo=pacientes&submodulo=reenviar-invitacion-paciente [L]
+RewriteRule ^cancelar-invitacion-paciente.do$ medico.php?action=1&modulo=pacientes&submodulo=cancelar-invitacion-paciente [L]
+
+#Perfil paciente...
+RewriteRule ^panel-paciente/perfil-salud/$ paciente_p.php?modulo=perfil_salud&submodulo=registros_consultas_medicas [L]
+RewriteRule ^panel-paciente/perfil-salud/ginecologico-obstetrico.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_ginecologico [L]
+RewriteRule ^panel-paciente/perfil-salud/estudios-imagenes.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_estudios&page=1&do_reset=1 [QSA,L]
+RewriteRule ^panel-paciente/perfil-salud/estudios-imagenes/([0-9]*)/$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_estudios&page=$1 [L]
+RewriteRule ^panel-paciente/perfil-salud/estudios-imagenes/$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_estudios&page=1&do_reset=1 [L]
+RewriteRule ^panel-paciente/perfil-salud/alergias-intolerancias.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_alergias [L]
+RewriteRule ^panel-paciente/perfil-salud/antecedentes.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_antecedentes [L]
+RewriteRule ^panel-paciente/perfil-salud/enfermedades-patologias.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_patologias [L]
+RewriteRule ^panel-paciente/perfil-salud/controles-chequeos.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_controles_chequeos [L]
+RewriteRule ^panel-paciente/perfil-salud/datos-biometricos.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_datos_biometricos [L]
+RewriteRule ^panel-paciente/perfil-salud/cirugias-protesis.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_cirugias_protesis [L]
+RewriteRule ^panel-paciente/perfil-salud/tablero.html$ paciente_p.php?modulo=tablero&submodulo=tablero [L]
+RewriteRule ^panel-paciente/perfil-salud/medicacion.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_medicamentos [L]
+RewriteRule ^panel-paciente/perfil-salud/estilo-vida.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_estilo_vida [L]
+RewriteRule ^panel-paciente/perfil-salud/vacunas.html$ paciente_p.php?modulo=perfil_salud&submodulo=vacunas [L]
+RewriteRule ^panel-paciente/notificaciones/$ paciente_p.php?modulo=notificaciones&submodulo=notificaciones [L]
+RewriteRule ^panel-paciente/perfil-salud/registro-consultas-medicas.html$ paciente_p.php?modulo=perfil_salud&submodulo=registros_consultas_medicas [L]
+RewriteRule ^panel-paciente/perfil-salud/registros_consultas_medicas_imprimir/([0-9]*)$ paciente_p.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_imprimir&print=1&idperfilSaludConsulta=$1 [L]
+RewriteRule ^panel-paciente/perfil-salud/registros-consultas-medicas-detalle/([0-9]*)$ paciente_p.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_detalle&idperfilSaludConsulta=$1 [L]
+RewriteRule ^patient/profil-de-sante/consultations-realisees-detail/([0-9]*)$ paciente_p.php?modulo=perfil_salud&submodulo=registros_consultas_medicas_detalle&idperfilSaludConsulta=$1 [L]
+RewriteRule ^pass-bienetre/factures.html$ paciente_p.php?modulo=contable&submodulo=facturas_listado [L]
+
+
+RewriteRule ^panel-paciente/perfil-salud/control-visual.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_visual [L]
+RewriteRule ^panel-paciente/perfil-salud/control-dental.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_dental [L]
+RewriteRule ^panel-paciente/perfil-salud/control-auditivo.html$ paciente_p.php?modulo=perfil_salud&submodulo=perfil_auditivo [L]
+RewriteRule ^panel-paciente/wizard_perfil_salud/$ paciente_p.php?modulo=wizard_perfil_salud&submodulo=index [L]
+RewriteRule ^panel-paciente/modal_inicio_sesion/$ paciente_p.php?modulo=home&submodulo=modal_inicio_sesion [L]
+
+#ACTIONS Perfil Paciente
+RewriteRule ^get_receta.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=get_receta [L,QSA]
+RewriteRule ^get_receta_prof.do$ medico.php?action=1&modulo=perfil_salud&submodulo=get_receta [L,QSA]
+RewriteRule ^get_banco_xp_iban.do$ paciente_p.php?action=1&modulo=reembolso_beneficiario&submodulo=get_banco_xp_iban [L]
+
+RewriteRule ^save_perfil_ginecologico.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=perfil_ginecologico [L]
+RewriteRule ^save_perfil_ginecologico_card.do$ paciente_p.php?action=1&modulo=tablero&submodulo=perfil_ginecologico_card [L]
+RewriteRule ^add_estudio_image.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=perfil_salud_upload_image [L]
+RewriteRule ^eliminar_imagen_estudio.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=drop_perfil_salud_estudios [L]
+RewriteRule ^cancelar_imagen_estudio.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=cancelar_perfil_salud_estudios [L]
+RewriteRule ^save_perfil_alergias.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=perfil_alergias [L]
+RewriteRule ^eliminar_patologia.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_antecedente_patologia [L]
+RewriteRule ^delete_patologia_familiar.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_antecedente_patologia [L]
+RewriteRule ^add_patologia_familiar.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=add_patologia_familiar [L]
+RewriteRule ^save_perfil_antecedentes.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=perfil_antecedentes_form [L]
+RewriteRule ^save_antecedentes_personales.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=antecedentes_personales_form [L]
+RewriteRule ^process_control_visual.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=process_control_visual [L]
+RewriteRule ^save_control_visual_oftalmologico.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=control_visual_oftalmologico [L]
+RewriteRule ^save_control_visual_anteojos.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=control_visual_anteojos [L]
+RewriteRule ^add_control_visual_antecedentes.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=add_control_visual_antecedentes [L]
+RewriteRule ^add_control_visual_patologia_actual.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=add_control_visual_patologia_actual [L]
+RewriteRule ^delete_control_visual_patologia_actual.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_control_visual_patologia_actual [L]
+RewriteRule ^delete_control_visual_all_patologias_actuales.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_control_visual_all_patologias_actuales [L]
+RewriteRule ^delete_control_visual_antecedentes.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_control_visual_antecedentes [L]
+RewriteRule ^save_patologias_actuales.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=patologias_actuales_form [L]
+RewriteRule ^save_enfermedades_actuales.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=enfermedades_actuales_form [L]
+RewriteRule ^save_presion_arterial_form.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=presion_arterial_form [L]
+RewriteRule ^save_colesterol_form.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=colesterol_form [L]
+RewriteRule ^save_glucemia_form.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=glucemia_form [L]
+RewriteRule ^save_miscelaneas_form.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=miscelaneas_form [L]
+RewriteRule ^save_masa_corporal_form.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=masa_corporal_form [L]
+RewriteRule ^save_cirugias.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=cirugias_form [L]
+RewriteRule ^save_modificaciones_cirugias.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=cirugias_modificaciones_form [L]
+RewriteRule ^delete_cirugias.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_cirugias [L]
+RewriteRule ^delete_all_cirugias.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_all_cirugias [L]
+RewriteRule ^save_protesis.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=protesis_form [L]
+RewriteRule ^save_modificaciones_protesis.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=protesis_modificaciones_form [L]
+RewriteRule ^delete_protesis.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_protesis [L]
+RewriteRule ^delete_multiple_medicamento.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_multiple_medicamento [L]
+RewriteRule ^delete_all_protesis.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_all_protesis [L]
+RewriteRule ^save_tablero_form.do$ paciente_p.php?action=1&modulo=tablero&submodulo=save_configuracion_tablero [L]
+RewriteRule ^save_medicamentos_paciente.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=perfil_medicamentos_form [L]
+RewriteRule ^save_estilo_vida_form.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=perfil_estilo_vida_form [L]
+RewriteRule ^vacuna_form_paciente.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=vacuna_form [L]
+RewriteRule ^save_privacidad.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=save_privacidad [L]
+RewriteRule ^solicitar_renovacion_receta.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=renovar_receta_paciente [L]
+RewriteRule ^eliminar_imagenes_estudios.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=eliminar_imagenes_estudios [L]
+RewriteRule ^marcar_leido_p.do$ paciente_p.php?action=1&modulo=notificaciones&submodulo=marcar_leido_notificacion [L]
+RewriteRule ^eliminar_notificaciones_p.do$ paciente_p.php?action=1&modulo=notificaciones&submodulo=delete_notificaciones [L]
+RewriteRule ^get_cantidad_notificaciones.do$ paciente_p.php?action=1&modulo=notificaciones&submodulo=get_cant_notificaciones [L]
+RewriteRule ^get_status_perfilsalud.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=get_status_perfilsalud [L]
+RewriteRule ^add_enfermedades_actuales.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=add_enfermedades_actuales [L]
+RewriteRule ^get_notificacion_alerta_sistema_p.do$ paciente_p.php?action=1&modulo=notificaciones&submodulo=get_notificacion_alerta_sistema [L]
+RewriteRule ^get_notificaciones_menu_p.do$ paciente_p.php?action=1&modulo=notificaciones&submodulo=get_notificaciones_menu [L]
+RewriteRule ^delete_enfermedades_actuales.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=delete_enfermedades_actuales [L]
+RewriteRule ^eliminar_from_vencidas_paciente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=eliminar_from_vencidas [L]
+RewriteRule ^extender_from_vencidas_paciente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=extender_from_vencidas_paciente [L]
+RewriteRule ^republicar_from_vencidas_paciente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=republicar_from_vencidas_paciente [L]
+RewriteRule ^obrasocial_autosuggest.do$ paciente_p.php?action=1&modulo=home&submodulo=obrasocial_autosuggest [QSA,L]
+RewriteRule ^prestador_autosuggest.do$ paciente_p.php?action=1&modulo=home&submodulo=prestador_autosuggest [QSA,L]
+RewriteRule ^basic_update.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=basic_update [L]
+RewriteRule ^especialidades_autosuggest.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=especialidades_autosuggest [QSA,L]
+RewriteRule ^save_recomendacion_profesional.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=recomendar_profesional [L]
+RewriteRule ^save_obra_social.do$ paciente_p.php?action=1&modulo=turno&submodulo=save_obra_social [L]
+RewriteRule ^get_informacion_paciente.do$ paciente_p.php?action=1&modulo=turno&submodulo=get_informacion_paciente [L]
+RewriteRule ^comprar_credito.do$ paciente_p.php?action=1&modulo=credito&submodulo=comprar_credito [L]
+RewriteRule ^validar_cupon_promocional_credito.do$ paciente_p.php?action=1&modulo=credito&submodulo=validar_cupon_promocional_credito [L]
+RewriteRule ^invitar-medico.do$ paciente_p.php?action=1&modulo=home&submodulo=invitar-medico [L]
+RewriteRule ^reenviar-invitacion-medico.do$ paciente_p.php?action=1&modulo=home&submodulo=reenviar-invitacion-medico [L]
+RewriteRule ^cancelar-invitacion-medico.do$ paciente_p.php?action=1&modulo=home&submodulo=cancelar-invitacion-medico [L]
+RewriteRule ^enviar_recetas.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=enviar_recetas [L]
+RewriteRule ^respuesta_invitacion_medico.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=respuesta_invitacion_medico [L]
+RewriteRule ^invitar-paciente.do$ medico.php?action=1&modulo=pacientes&submodulo=invitar_pacientes [L]
+RewriteRule ^medico-paciente-mensaje.do$ medico.php?action=1&modulo=pacientes&submodulo=medico_paciente_mensaje [L]
+RewriteRule ^panel-paciente/count_members.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=count_members [L]
+RewriteRule ^no_antecedente_familiar_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=no_antecedente_familiar [L]
+RewriteRule ^no_antecedente_familiar.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=no_antecedente_familiar [L]
+RewriteRule ^posee_cirugias_protesis_m.do$ medico.php?action=1&modulo=perfil_salud&submodulo=posee_cirugias_protesis [L]
+RewriteRule ^posee_cirugias_protesis.do$ paciente_p.php?action=1&modulo=perfil_salud&submodulo=posee_cirugias_protesis [L]
+RewriteRule ^panel-paciente/dropMiembro.do$ paciente_p.php?action=1&modulo=pacientes&submodulo=dropMiembro [L]
+RewriteRule ^marcar_leida_consulta_express.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=marcar_leido_mensaje_consulta [L]
+RewriteRule ^send_mensaje_consulta_express.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=send_mensaje [L]
+RewriteRule ^cancelar_turno.do$ paciente_p.php?action=1&modulo=turno&submodulo=cancelar_turno [L]
+RewriteRule ^panel-paciente/datos-administrador/guardar_celular_email.do$ paciente_p.php?action=1&modulo=home&submodulo=guardar_celular_email [L]
+RewriteRule ^panel-paciente/datos-administrador/cambiar_password.do$ paciente_p.php?action=1&modulo=home&submodulo=change_password [L]
+RewriteRule ^actualizar_primer_inicio_sesion.do$ paciente_p.php?action=1&modulo=home&submodulo=actualizar_primer_inicio_sesion [L]
+
+#consulta express paciente
+RewriteRule ^panel-paciente/consultaexpress/$ paciente_p.php?modulo=consultaexpress&submodulo=bandeja_entrada [QSA,L]
+RewriteRule ^panel-paciente/consultaexpress/abiertas-([0-9]+).html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^panel-paciente/consultaexpress/pendientes-([0-9]+).html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_pendientes_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^patient/consultation-express/en-cours-detail-patient-([0-9]+).html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^panel-paciente/consultaexpress/abiertas.html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_abiertas&do_reset=1 [L]
+RewriteRule ^panel-paciente/consultaexpress/vencidas-([0-9]*).html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_vencidas_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^patient/consultation-express/expirees-([0-9]*).html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_vencidas_detalle&idconsultaExpress=$1 [L]
+RewriteRule ^panel-paciente/consultaexpress/pendientes.html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_pendientes&do_reset=1 [L]
+RewriteRule ^panel-paciente/consultaexpress/finalizadas.html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_finalizadas&do_reset=1 [L]
+RewriteRule ^panel-paciente/consultaexpress/declinadas.html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_rechazadas&do_reset=1 [L]
+RewriteRule ^patient/consultation-express/declinees.html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_rechazadas&do_reset=1 [L]
+
+RewriteRule ^panel-paciente/consultaexpress/vencidas.html$ paciente_p.php?modulo=consultaexpress&submodulo=consultaexpress_vencidas&do_reset=1 [L]
+RewriteRule ^panel-paciente/consultaexpress/nuevaconsulta.html$ paciente_p.php?modulo=consultaexpress&submodulo=nuevaconsulta [QSA,L]
+
+
+
+
+#consulta express paciente action
+RewriteRule ^nuevaconsulta_step1.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=nuevaconsulta_step1 [L]
+RewriteRule ^nuevaconsulta_step2_profesionalfrecuente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=nuevaconsulta_step2_profesionalfrecuente [L]
+RewriteRule ^nuevaconsulta_step2_profesionalred.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=nuevaconsulta_step2_profesionalred [L]
+
+RewriteRule ^cancelar_pago.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=cancelar_pago [L]
+RewriteRule ^confirmar_pago.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=confirmar_pago [L]
+RewriteRule ^back_paso_2.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=back_paso_2 [L]
+RewriteRule ^back_step_ce.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=back_step_ce [L]
+RewriteRule ^crear_consultaexpress_medico.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=crear_consultaexpress_medico [L]
+RewriteRule ^cancelar_consultaexpress_pendiente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=cancelar_consultaexpress_pendiente [L]
+RewriteRule ^cancelar_republicar_consultaexpress_pendiente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=cancelar_republicar_consultaexpress_pendiente [L]
+RewriteRule ^eliminar_medicos_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=eliminarMedicosVideoConsulta [L]
+RewriteRule ^publicar_consulta.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=publicar_consulta [L]
+
+RewriteRule ^busqueda_profesionales_red.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=busqueda_profesionales_red[L]
+RewriteRule ^lock_multiple_profesionales_frecuentes.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=bloquearMultipleProfesionalesFrecuentes [L]
+RewriteRule ^unlock_profesional_frecuente.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=desbloquearProfesionalFrecuente [L]
+
+RewriteRule ^delete_multiple_profesionales_frecuentes.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=deleteMultipleProfesionalesFrecuentes [L]
+RewriteRule ^eliminar_medico_cabecera.do$ paciente_p.php?action=1&modulo=home&submodulo=eliminar_medico_cabecera [L]
+RewriteRule ^agregar_medico_cabecera.do$ paciente_p.php?action=1&modulo=home&submodulo=agregar_medico_cabecera [L]
+RewriteRule ^marcar_favorito.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=marcarFavorito [L]
+RewriteRule ^eliminar_medicos_consultaexpress.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=eliminarMedicosConsultaExpress [L]
+RewriteRule ^delete_consultaexpress_borrador.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=delete_consultaexpress_borrador [L]
+RewriteRule ^set_medico_consultaexpress.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=set_medico_consultaexpress [L]
+RewriteRule ^delete_filtros_busqueda.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=delete_filtros_busqueda [L]
+RewriteRule ^save_filtros_busqueda.do$ paciente_p.php?action=1&modulo=consultaexpress&submodulo=save_filtros_busqueda [L]
+RewriteRule ^generar_codigo_celular.do$ paciente_p.php?action=1&modulo=home&submodulo=generate_codigo_celular [L]
+RewriteRule ^validar_codigo_celular.do$ paciente_p.php?action=1&modulo=home&submodulo=validate_codigo_celular [L]
+RewriteRule ^validar_codigo_email.do$ paciente_p.php?action=1&modulo=home&submodulo=validate_codigo_email [L]
+RewriteRule ^generar_codigo_email.do$ paciente_p.php?action=1&modulo=home&submodulo=generate_codigo_email [L]
+RewriteRule ^no_mostrar_teaser_home.do$ paciente_p.php?action=1&modulo=home&submodulo=no_mostrar_teaser_home [L]
+
+
+RewriteRule ^generar_codigo_celular_registro_p.do$ frontend_2.php?action=1&modulo=home&submodulo=generar_codigo_celular_registro_p&contexto=rp [L]
+RewriteRule ^generar_codigo_celular_registro_m.do$ frontend_2.php?action=1&modulo=home&submodulo=generar_codigo_celular_registro_m&contexto=rm [L]
+RewriteRule ^generar_codigo_celular_login.do$ frontend_2.php?action=1&modulo=home&submodulo=generar_codigo_celular_login&contexto=l [L]
+
+
+
+
+
+#consulta express medico action
+RewriteRule ^tomar_consultaexpress.do$ medico.php?action=1&modulo=consultaexpress&submodulo=tomar_consultaexpress [L]
+RewriteRule ^send_audio_file.do$ common.php?action=1&modulo=upload&submodulo=save_audio_stream [L]
+RewriteRule ^rechazar_toma_consultaexpress.do$ medico.php?action=1&modulo=consultaexpress&submodulo=rechazar_toma_consultaexpress [L]
+RewriteRule ^marcar_leido_mensaje_consulta_all_m.do$ medico.php?action=1&modulo=consultaexpress&submodulo=marcar_leido_mensaje_consulta_all [L]
+RewriteRule ^marcar_leido_notificaciones_consultaexpress_m.do$ medico.php?action=1&modulo=consultaexpress&submodulo=marcar_leido_notificaciones_consultaexpress [L]
+RewriteRule ^send_mensaje_consulta_express_m.do$ medico.php?action=1&modulo=consultaexpress&submodulo=send_mensaje [L]
+RewriteRule ^rechazar_consulta_express_m.do$ medico.php?action=1&modulo=consultaexpress&submodulo=rechazar_consulta_express [L]
+RewriteRule ^eliminar_from_vencidas.do$ medico.php?action=1&modulo=consultaexpress&submodulo=eliminar_from_vencidas [L]
+RewriteRule ^panel-medico/finalizar_consultaexpress.do$ medico.php?action=1&modulo=consultaexpress&submodulo=finalizar_consultaexpress [L]
+
+#videoconsulta paciente
+
+RewriteRule ^panel-paciente/videoconsulta/$ paciente_p.php?modulo=videoconsulta&submodulo=bandeja_entrada [QSA,L]
+RewriteRule ^panel-paciente/videoconsulta/sala-espera.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_sala_espera&do_reset=1 [L]
+RewriteRule ^panel-paciente/videoconsulta/sala/$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta [QSA,L]
+RewriteRule ^patient/video-consultation/salle-virtuelle/$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta [QSA,L]
+RewriteRule ^panel-paciente/videoconsulta/pendientes-([0-9]+).html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_pendientes_detalle&idvideoconsulta=$1 [L]
+RewriteRule ^panel-paciente/videoconsulta/pendientes.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_pendientes&do_reset=1 [L]
+RewriteRule ^panel-paciente/videoconsulta/finalizadas.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_finalizadas&do_reset=1 [L]
+RewriteRule ^panel-paciente/videoconsulta/declinadas.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_rechazadas&do_reset=1 [L]
+RewriteRule ^patient/video-consultation/declinees.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_rechazadas&do_reset=1 [L]
+RewriteRule ^panel-paciente/videoconsulta/vencidas.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_vencidas&do_reset=1 [L]
+RewriteRule ^panel-paciente/videoconsulta/vencidas-([0-9]*).html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_vencidas_detalle&idvideoconsulta=$1 [L]
+RewriteRule ^patient/video-consultation/expirees-([0-9]*).html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_vencidas_detalle&idvideoconsulta=$1 [L]
+RewriteRule ^patient/video-consultation/salle-attente.html$ paciente_p.php?modulo=videoconsulta&submodulo=videoconsulta_sala_espera&do_reset=1 [L]
+RewriteRule ^panel-paciente/videoconsulta/nuevavideoconsulta.html$ paciente_p.php?modulo=videoconsulta&submodulo=nuevavideoconsulta [QSA,L]
+RewriteRule ^panel-paciente/videoconsulta/nuevavideoconsulta-front.html$ paciente_p.php?modulo=videoconsulta&submodulo=nuevavideoconsulta&continue=true [QSA,L]
+
+#videoconsulta paciente -actions
+RewriteRule ^nuevavideoconsulta_step1.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=nuevavideoconsulta_step1 [L]
+RewriteRule ^nuevavideoconsulta_step2_profesionalfrecuente.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=nuevavideoconsulta_step2_profesionalfrecuente [L]
+RewriteRule ^nuevavideoconsulta_step2_profesionalred.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=nuevavideoconsulta_step2_profesionalred [L]
+
+
+RewriteRule ^cancelar_pago_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=cancelar_pago_videoconsulta [L]
+RewriteRule ^confirmar_pago_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=confirmar_pago_videoconsulta [L]
+RewriteRule ^back_paso_2_vc.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=back_paso_2_vc [L]
+RewriteRule ^back_step_vc.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=back_step_vc [L]
+RewriteRule ^crear_videoconsulta_medico.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=crear_videoconsulta_medico [L]
+RewriteRule ^cancelar_videoconsulta_pendiente.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=cancelar_videoconsulta_pendiente [L]
+RewriteRule ^cancelar_republicar_videoconsulta_pendiente.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=cancelar_republicar_videoconsulta_pendiente [L]
+
+
+RewriteRule ^publicar_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=publicar_videoconsulta [L]
+RewriteRule ^send_mensaje_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=send_mensaje [L]
+RewriteRule ^delete_videoconsulta_borrador.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=delete_videoconsulta_borrador [L]
+RewriteRule ^set_medico_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=set_medico_videoconsulta [L]
+RewriteRule ^delete_filtros_busqueda_vc.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=delete_filtros_busqueda [L]
+RewriteRule ^save_filtros_busqueda_vc.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=save_filtros_busqueda [L]
+RewriteRule ^marcar_leida_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=marcar_leida_videoconsulta [L]
+RewriteRule ^eliminar_videoconsulta_from_vencidas_paciente.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=eliminar_videoconsulta_from_vencidas_paciente [L]
+RewriteRule ^republicar_videoconsulta_from_vencidas_paciente.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=republicar_videoconsulta_from_vencidas_paciente [L]
+RewriteRule ^extender_videoconsulta_from_vencidas_paciente.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=extender_videoconsulta_from_vencidas_paciente [L]
+RewriteRule ^cancelar_videoconsulta_pendiente_finalizacion.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=cancelar_videoconsulta_pendiente_finalizacion [L]
+RewriteRule ^acceder_consultorio_virtual.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=acceder_consultorio_virtual [L]
+RewriteRule ^get_estado_videoconsulta.do$ paciente_p.php?action=1&modulo=videoconsulta&submodulo=get_estado_videoconsulta [L]
+#videoconsulta medico
+
+RewriteRule ^panel-medico/videoconsulta/$ medico.php?modulo=videoconsulta&submodulo=bandeja_entrada [QSA,L]
+RewriteRule ^panel-medico/videoconsulta/sala-espera.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_sala_espera&do_reset=1 [L]
+RewriteRule ^panel-medico/videoconsulta/sala/$ medico.php?modulo=videoconsulta&submodulo=videoconsulta [QSA,L]
+RewriteRule ^panel-medico/videoconsulta/pendientes-([0-9]+).html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_pendientes_detalle&idvideoconsulta=$1 [L]
+RewriteRule ^panel-medico/videoconsulta/pendientes.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_pendientes&do_reset=1 [L]
+RewriteRule ^professionnel/video-consultation/recues.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_pendientes&do_reset=1 [L]
+RewriteRule ^panel-medico/videoconsulta/finalizadas.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_finalizadas&do_reset=1 [L]
+RewriteRule ^panel-medico/videoconsulta/declinadas.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_rechazadas&do_reset=1 [L]
+RewriteRule ^panel-medico/videoconsulta/vencidas.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_vencidas&do_reset=1 [L]
+RewriteRule ^panel-medico/videoconsulta/vencidas-([0-9]*).html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_vencidas_detalle&idvideoconsulta=$1 [L]
+RewriteRule ^panel-medico/mis-pacientes/([0-9]*)-(.*)/consultanueva-videoconsulta-([0-9]+).html$ medico.php?modulo=perfil_salud&submodulo=consulta_nueva&idpaciente=1&idvideoconsulta=$3 [L]
+RewriteRule ^panel-medico/videoconsulta/red.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_red [QSA,L]
+RewriteRule ^professionnel/video-consultation/publiees-sur-la-plateforme.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_red [QSA,L]
+RewriteRule ^professionnel/video-consultation/salle-attente.html$ medico.php?modulo=videoconsulta&submodulo=videoconsulta_sala_espera&do_reset=1 [L]
+
+#videoconsulta medico -actions
+RewriteRule ^send_mensaje_videoconsulta_m.do$ medico.php?action=1&modulo=videoconsulta&submodulo=send_mensaje [L]
+RewriteRule ^notificar_medico_ingreso_sala.do$ medico.php?action=1&modulo=videoconsulta&submodulo=notificar_medico_ingreso_sala [L]
+RewriteRule ^marcar_leida_videoconsulta_m.do$ medico.php?action=1&modulo=videoconsulta&submodulo=marcar_leida_videoconsulta_m [L]
+RewriteRule ^rechazar_videoconsulta_m.do$ medico.php?action=1&modulo=videoconsulta&submodulo=rechazar_videoconsulta [L]
+RewriteRule ^eliminar_from_vencidas_vc.do$ medico.php?action=1&modulo=videoconsulta&submodulo=eliminar_from_vencidas [L]
+RewriteRule ^aceptar_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=aceptar_videoconsulta [L]
+RewriteRule ^posponer_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=posponer_videoconsulta [L]
+RewriteRule ^devolucion_dinero_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=devolucion_dinero_videoconsulta [L]
+RewriteRule ^marcar_visto_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=marcar_visto_videoconsulta [L]
+RewriteRule ^tomar_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=tomar_videoconsulta [L]
+RewriteRule ^setear_inicio_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=setear_inicio_videoconsulta [L]
+RewriteRule ^terminar_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=terminar_videoconsulta [L]
+RewriteRule ^vencimiento_espera_videoconsulta.do$ medico.php?action=1&modulo=videoconsulta&submodulo=vencimiento_espera_videoconsulta [L]
+RewriteRule ^acceder_consultorio_virtual_m.do$ medico.php?action=1&modulo=videoconsulta&submodulo=acceder_consultorio_virtual [L]
+RewriteRule ^404.html$ frontend_2.php?modulo=error&submodulo=404 [L]
+
+## Programa salud - Frontend
+RewriteRule ^programmes-bienetre/(.+)/([0-9]+)-(.+).html$ frontend_2.php?modulo=programa_salud&submodulo=medicos_programa&idprograma_categoria=$2 [QSA,L]
+RewriteRule ^programmes-bienetre/([0-9]+)-(.+).html$ frontend_2.php?modulo=programa_salud&submodulo=listado_categorias&idprograma_salud=$1 [QSA,L]
+RewriteRule ^pass-bienetre/particulier.html$ frontend_2.php?modulo=programa_salud_registro&submodulo=registro_form&particular=1 [QSA,L]
+RewriteRule ^pass-bienetre/adhesion.html$ frontend_2.php?modulo=programa_salud_registro&submodulo=registro_form [QSA,L]
+RewriteRule ^programmes-bienetre/adhesion.html$ frontend_2.php?modulo=programa_salud_registro&submodulo=registro_form [QSA,L]
+RewriteRule ^programmes-bienetre/checkout_ok.html$ frontend_2.php?modulo=programa_salud_registro&submodulo=checkout_ok [QSA,L]
+RewriteRule ^programmes-bienetre/checkout_ko.html$ frontend_2.php?modulo=programa_salud_registro&submodulo=checkout_ko [QSA,L]
+RewriteRule ^programmes-bienetre/activation/(.*).html$ frontend_2.php?modulo=statics&submodulo=activacion_pass_esante&hash=$1 [L]
+RewriteRule ^programmes-bienetre/beneficiaire/(.*).html$ frontend_2.php?modulo=programa_salud_registro&submodulo=bienvenida_container&hash=$1 [L]
+RewriteRule ^beneficiaire/creer-un-compte.html$ frontend_2.php?modulo=paciente&submodulo=registro_beneficiario [L,QSA]
+RewriteRule ^entreprise/reset_pass/(.*).html$ frontend_2.php?modulo=statics&submodulo=recuperacion_contrasenia_empresa&hash=$1 [L]
+RewriteRule ^programmes-bienetre/participants/(.*).html$ frontend_2.php?modulo=programa_salud_registro&submodulo=bienvenida_cuestionario&hash=$1 [L]
+## Programa salud - Paciente
+RewriteRule ^patient/programmes-bienetre.html$ paciente_p.php?modulo=home&submodulo=home_sante [L]
+RewriteRule ^patient/programmes-bienetre/(.+)/([0-9]+)-(.+).html$ paciente_p.php?modulo=programa_salud&submodulo=medicos_programa&idprograma_categoria=$2 [QSA,L]
+RewriteRule ^patient/programmes-bienetre/([0-9]+)-(.+).html$ paciente_p.php?modulo=programa_salud&submodulo=listado_categorias&idprograma_salud=$1 [QSA,L]
+
+## Programa salud - Empresas
+RewriteRule ^entreprises/$ empresa.php?modulo=home&submodulo=home [L]
+RewriteRule ^entreprises/compte.html$ empresa.php?modulo=usuarios&submodulo=perfil_form [L]
+RewriteRule ^entreprises/utilisateurs.html$ empresa.php?modulo=usuarios&submodulo=usuarios_listado [L]
+RewriteRule ^entreprises/beneficiaires.html$ empresa.php?modulo=home&submodulo=beneficiarios_listado [L]
+RewriteRule ^entreprises/factures.html$ empresa.php?modulo=contable&submodulo=facturas_listado [L]
+RewriteRule ^entreprises/abonnement.html$ empresa.php?modulo=home&submodulo=actualizar_suscripcion [L]
+RewriteRule ^entreprises/programmes.html$ empresa.php?modulo=home&submodulo=programas_listado [L]
+RewriteRule ^entreprises/programmes.html$ empresa.php?modulo=home&submodulo=programas_listado [L]
+RewriteRule ^entreprises/rapports.html$ empresa.php?modulo=home&submodulo=reporte&print=1 [L]
+RewriteRule ^entreprises/paypack.html$ empresa.php?modulo=contable&submodulo=checkout_pack_form 
+RewriteRule ^entreprises/paymonth.html$ empresa.php?modulo=contable&submodulo=checkout_form 
+RewriteRule ^entreprises/questionnaires.html$ empresa.php?modulo=gestion&submodulo=quest_challenges [L]
+RewriteRule ^entreprises/questionnairelist/([0-9]*).html$ empresa.php?modulo=gestion&submodulo=lista_cuestionarios&id_familia_cuestionario=$1 [QSA,L]
+RewriteRule ^entreprises/questionnaireslist/personalizar/([0-9]*).html$ empresa.php?modulo=gestion&submodulo=personalizar&cuestionarios_idcuestionario=$1 [QSA,L]
+RewriteRule ^entreprises/questionnaireslist/parametres/([0-9]*).html$ empresa.php?modulo=gestion&submodulo=parametros_encuesta&cuestionarios_idcuestionario=$1 [QSA,L]
+RewriteRule ^entreprises/questionnaireslist/pay/([0-9]*).html$ empresa.php?modulo=gestion&submodulo=pay&cuestionarios_idcuestionario=$1 [QSA,L]
+RewriteRule ^entreprises/questionnairesready/(.*).html$ empresa.php?modulo=gestion&submodulo=cuestionario_listo&id=$1 [QSA,L]
+RewriteRule ^entreprises/questionnairelistacheve.html$ empresa.php?modulo=gestion&submodulo=lista_cuestionarios_finalizados
+
+RewriteRule ^cargar_icono.do$ empresa.php?action=1&modulo=home&submodulo=cargar_icono [L]
+RewriteRule ^crop_image_and_save_empresa.do$ empresa.php?action=1&modulo=home&submodulo=crop_and_change_image_empresa [L]
+## Reembolso Paciente-Beneficiario
+RewriteRule ^cargar_adjuntos.do$ paciente_p.php?action=1&modulo=reembolso_beneficiario&submodulo=cargar_adjuntos [L]
+RewriteRule ^enviar_mail_soporte.do$ paciente_p.php?action=1&modulo=reembolso_beneficiario&submodulo=enviar_mail_soporte [L]
+
+#######################
+# 404
+#######################
+ErrorDocument 404 https://www.doctorplus.eu/404.html

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="js/scrollbars/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile" aria-expanded="false">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+
+		<section class="user-actions">
+			<div class="container">
+				<ul>
+					<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+					<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+					<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+					<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+					<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+					<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+					<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- /accesso directos menu -->
+		
+		<section class="agenda-header td-agenda-header">
+			<div class="container">
+				<div class="calendar-sort pull-left">
+					<ul class="sort">
+						<li><button class="dp-day day"></button></li>
+						<li><button class="dp-week week"></button></li>
+						<li><button class="dp-month month"></button></li>
+					</ul>
+				</div>
+				<div class="header-title text-center">
+					<h1 class="dp-agenda td-header">Agenda</h1>
+				</div>
+				<div class="actions pull-right" id="agenda-menu">
+					<button class="action dotted-menu td-agenda-menu" data-toggle-menu="action-menu">
+						<i class="icon-doctorplus-three-dots"></i>
+					</button>
+					<section class="action-menu">
+						<ul class="main-menu">
+							<li class="color-header">Agenda</li>
+							<li class="action item">
+								Exportar Agenda
+								<ul class="sub-menu">
+									<li class="color-header action back">Exportar Agenda</li>
+									<li><a href="#">Día de hoy</a></li>
+									<li><a href="#">Próximos 7 días</a></li>
+									<li><a href="#">Próximos 15 días</a></li>
+									<li><a href="#">Próximos 30 días</a></li>
+								</ul>
+							</li>
+							<li class="action item">
+								<a href="#">Imprimir</a>
+							</li>
+							<li class="action item">
+								Referencias
+								<ul class="sub-menu">
+									<li class="color-header action back">Referencias</li>
+									<li class="dp-branch no-link">Larroque</li>
+									<li class="dp-branch no-link">Mitre</li>
+									<li class="dp-confirmed no-link">Confirmado</li>
+									<li class="dp-pending no-link">Pendiente</li>
+									<li class="dp-declined no-link">Declinado</li>
+									<li class="dp-canceled no-link">Cancelado</li>
+									<li class="dp-absent no-link">Ausente</li>
+								</ul>
+							</li>
+							<li class="action item">
+								Resumen
+
+								
+								<ul class="sub-menu summary property ">
+									
+									<li class="color-header action back">Resumen</li>
+									<div class="agenda-resumen-scroll">
+										<ul>
+									<li class="color-header disabled dp-branch">Larroque</li>
+									<li>
+										<div class="row">
+											<table class="table">
+												<tr>
+													<td class="dp-confirmed">Confirmados <strong>20</strong></td>
+													<td class="dp-canceled">Cancelados <strong>20</strong></td>
+												</tr>
+												<tr>
+													<td class="dp-pending">Pendientes <strong>10</strong></td>
+													<td class="dp-attention">Ausentes <strong>0</strong></td>
+												</tr>
+												<tr>
+													<td class="dp-declined">Ausentes <strong>0</strong></td>
+													<td class="dp-available">Disponibles <strong>5</strong></td>
+												</tr>
+											</table>
+										</div>
+									</li>
+									<li class="color-header disabled dp-branch">Mitre</li>
+									<li>
+										<div class="row">
+											<table class="table">
+												<tr>
+													<td class="dp-confirmed">Confirmados <strong>20</strong></td>
+													<td class="dp-canceled">Cancelados <strong>20</strong></td>
+												</tr>
+												<tr>
+													<td class="dp-pending">Pendientes <strong>10</strong></td>
+													<td class="dp-attention">Ausentes <strong>0</strong></td>
+												</tr>
+												<tr>
+													<td class="dp-declined">Ausentes <strong>0</strong></td>
+													<td class="dp-available">Disponibles <strong>5</strong></td>
+												</tr>
+											</table>
+										</div>
+									</li>
+
+										</ul>
+									</div>
+								</ul>
+							
+
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+		
+		<section class="container td-content">
+			<div class="okm-row">
+				<h1 class="td-title">Detalle de Turno</h1>
+				<a href="#" class="td-print-action"><i class="icon-doctorplus-print"></i></a>
+			</div>
+			<div class="okm-row td-slide-holder">
+				
+				<div class="swipe-icon-box td-swipe-icon">	
+					<figure class="swipe-icon">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 64 64" enable-background="new 0 0 42 42" xml:space="preserve">
+							<polygon fill="#000" points="8.7,14.8 1.3,7.4 8.7,0 8.7,4.9 16.1,5 16.1,9.8 8.7,9.9 "/>
+							<polygon fill="#000" points="33.3,14.8 40.7,7.4 33.3,0 33.3,4.9 25.9,5 25.9,9.8 33.3,9.9 "/>
+							<path id="swipe-hand" fill="#000" d="M35.8,22.2c-1.4,0-2.5,1.1-2.5,2.5v-2.5c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5v-2.5
+																									 c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5V9.9c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5v16.6c-1.1-0.8-2-1.5-2.5-1.8
+																									 c-2.9-2.3-7.4,0-7.4,0L18.5,42h14.8c0.2,0,0.5,0,1.2,0c2,0,3.7-1.7,3.7-3.7V37V24.7C38.3,23.3,37.2,22.2,35.8,22.2z"/>
+						</svg>	
+					</figure>	
+				</div>
+				
+				
+				<div class="td-slide-box">
+					
+					<div class="td-slide-item">
+						<h2 class="td-slide-title-consultorio">Consultorio Larroque <span>/</span> Turno 12563</h2>
+						<h3 class="td-slide-title confirmacion">Turno pendiente de confirmación <i class="icon-doctorplus-contrast-circle"></i></h3>
+					
+						<div class="okm-row">
+							
+							<div class="td-slide-paciente-row">
+								<figure>
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="paciente"/>
+								</figure>
+								
+								<h4>Juan Manuel Menoyo</h4>
+<!--								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-masc-symbol"></i> FN 21/06/2009</span> -->
+								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-fem-symbol"></i> FN 21/06/2009</span>
+								
+							</div>
+							
+							<div class="td-slide-turno-row">
+								<figure>
+									<i class="icon-doctorplus-calendar"></i>
+								</figure>
+								<span class="td-slide-turno-fecha">Mier 26  Nov 2017</span>
+								<span class="td-slide-turno-hora">15:45 hs</span>
+							</div>
+							
+							<div class="okm-row td-slide-turno-action-box">
+								<div class="td-turno-btn-holder">
+									<a href="#" class="confirmar">
+										<figure>
+											<i class="icon-doctorplus-check-thin"></i>
+										</figure>
+										<span>Confirmar</span>
+									</a>
+									
+								</div>
+								<div class="td-turno-btn-holder">
+									<a href="#" class="declinar">
+										<figure>
+											<i class="icon-doctorplus-minus"></i>
+										</figure>
+										<span>Declinar</span>
+									</a>
+									<a href="#" class="td-tooltip-btn" title="Decline el turno si por algún motivo no puede atenderlo. Le notificaremos al paciente por mail y por SMS y le ofreceremos un nuevo turno.">?</a>
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+						<div class="okm-row td-turno-datos-paciente-box">
+							<a href="#" class="td-turno-datos-paciente-trg">
+								<h4><i class="icon-doctorplus-user"></i> Datos del paciente <span class="arrow"></span></h4>
+							</a>
+							
+							<div class="td-turno-datos-paciente-collapse">
+									<div class="okm-row">
+										<div class="td-turno-datos-paciente-collapse-col-1">
+											<label><span class="td-label">Email</span><span class="td-icon"><i class="icon-doctorplus-envelope"></i></span></label>
+											<p>
+												juan.manuel.menoyo@hotmail.com
+											</p>
+										</div>
+										<div class="td-turno-datos-paciente-collapse-col-2">
+											<label><span class="td-label">Tel</span><span class="td-icon"><i class="icon-doctorplus-cel"></i></span></label>
+											<p>
+												4297-8977
+											</p>
+										</div>
+									</div>
+								<div class="okm-row">
+										<div class="td-turno-datos-paciente-collapse-row">
+											<label><span class="td-label">Cobertura</span><span class="td-icon"><i class="icon-doctorplus-pharmaceutics"></i></span></label>
+											<p>
+												OBRA SOCIAL DE COLOCADORES DE AZULEJOS, MOSAICOS, GRANITEROS, LUSTRADORES Y PORCELANEROS 
+											</p>
+										</div>
+									</div>
+									<div class="okm-row">
+										<div class="td-turno-datos-paciente-collapse-row">
+											<label><span class="td-label">Plan</span></label>
+											<p>
+												Corporativo
+											</p>
+										</div>
+									</div>
+									<div class="okm-row">
+										<div class="td-turno-datos-paciente-collapse-row">
+											<label><span class="td-label">Nro de afiliado</span><span class="td-icon"><i class="icon-doctorplus-ficha-tecnica"></i></span></label>
+											<p>
+												342780/03
+											</p>
+										</div>
+									</div>
+								</div>
+							
+							<div class="td-turno-datos-paciente">
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-motivo">
+										<label>Motivo de la consulta:</label>
+										<p>
+											Enfermedad / dolencia
+										</p>
+									</div>
+								</div>
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-comentarios">
+										<label>Comentarios del paciente</label>
+										<p>
+											Por favor presente el número en la recepción al concurrir al turno Texto adicional para el medico campo de texto adicional.<br>
+											Esta es la vista para el casio que se hay ingresado comentario adicional
+										</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					
+					</div>
+					
+					<div class="td-slide-item">
+						<h2 class="td-slide-title-consultorio">Consultorio Larroque <span>/</span> Turno 12563</h2>
+						<h3 class="td-slide-title cancelado">Turno cancelado <i class="icon-doctorplus-cruz"></i></h3>
+
+						<div class="okm-row">
+
+							<div class="td-slide-paciente-row">
+								<figure>
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="paciente"/>
+								</figure>
+
+								<h4>Juan Manuel Menoyo</h4>
+								<!--								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-masc-symbol"></i> FN 21/06/2009</span> -->
+								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-fem-symbol"></i> FN 21/06/2009</span>
+
+							</div>
+
+							<div class="td-slide-turno-row">
+								<figure>
+									<i class="icon-doctorplus-calendar"></i>
+								</figure>
+								<span class="td-slide-turno-fecha">Mier 26  Nov 2017</span>
+								<span class="td-slide-turno-hora">15:45 hs</span>
+							</div>
+						</div>
+						
+						<div class="okm-row td-turno-datos-paciente-box">
+							<a href="#" class="td-turno-datos-paciente-trg">
+								<h4><i class="icon-doctorplus-user"></i> Datos del paciente <span class="arrow"></span></h4>
+							</a>
+							
+							<div class="td-turno-datos-paciente-collapse">
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-collapse-col-1">
+										<label><span class="td-label">Email</span><span class="td-icon"><i class="icon-doctorplus-envelope"></i></span></label>
+										<p>
+											juan.manuel.menoyo@hotmail.com
+										</p>
+									</div>
+									<div class="td-turno-datos-paciente-collapse-col-2">
+										<label><span class="td-label">Tel</span><span class="td-icon"><i class="icon-doctorplus-cel"></i></span></label>
+										<p>
+											4297-8977
+										</p>
+									</div>
+								</div>
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-collapse-row">
+										<label><span class="td-label">Cobertura</span><span class="td-icon"><i class="icon-doctorplus-pharmaceutics"></i></span></label>
+										<p>
+											OBRA SOCIAL DE COLOCADORES DE AZULEJOS, MOSAICOS, GRANITEROS, LUSTRADORES Y PORCELANEROS 
+										</p>
+									</div>
+								</div>
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-collapse-row">
+										<label><span class="td-label">Plan</span></label>
+										<p>
+											Corporativo
+										</p>
+									</div>
+								</div>
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-collapse-row">
+										<label><span class="td-label">Nro de afiliado</span><span class="td-icon"><i class="icon-doctorplus-ficha-tecnica"></i></span></label>
+										<p>
+											342780/03
+										</p>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="td-turno-datos-paciente">
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-motivo">
+										<label>Motivo de la consulta:</label>
+										<p>
+											Enfermedad / dolencia
+										</p>
+									</div>
+								</div>
+								<div class="okm-row">
+									<div class="td-turno-datos-paciente-comentarios">
+										<label>Comentarios del paciente</label>
+										<p>
+											Por favor presente el número en la recepción al concurrir al turno Texto adicional para el medico campo de texto adicional.<br>
+											Esta es la vista para el casio que se hay ingresado comentario adicional
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						
+					</div>
+
+					<div class="td-slide-item">
+						<h2 class="td-slide-title-consultorio">Consultorio Larroque <span>/</span> Turno 12563</h2>
+						<h3 class="td-slide-title ausente">Paciente ausente <i class="icon-doctorplus-alert"></i></h3>
+
+						<div class="okm-row">
+
+							<div class="td-slide-paciente-row">
+								<figure>
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="paciente"/>
+								</figure>
+
+								<h4>Juan Manuel Menoyo</h4>
+								<!--								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-masc-symbol"></i> FN 21/06/2009</span> -->
+								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-fem-symbol"></i> FN 21/06/2009</span>
+
+							</div>
+
+							<div class="td-slide-turno-row">
+								<figure>
+									<i class="icon-doctorplus-calendar"></i>
+								</figure>
+								<span class="td-slide-turno-fecha">Mier 26  Nov 2017</span>
+								<span class="td-slide-turno-hora">15:45 hs</span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="td-slide-item">
+						<h2 class="td-slide-title-consultorio">Consultorio Larroque <span>/</span> Turno 12563</h2>
+						<h3 class="td-slide-title declinado">Turno declinado <i class="icon-doctorplus-minus"></i></h3>
+
+						<div class="okm-row">
+
+							<div class="td-slide-paciente-row">
+								<figure>
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="paciente"/>
+								</figure>
+
+								<h4>Juan Manuel Menoyo</h4>
+								<!--								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-masc-symbol"></i> FN 21/06/2009</span> -->
+								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-fem-symbol"></i> FN 21/06/2009</span>
+
+							</div>
+
+							<div class="td-slide-turno-row">
+								<figure>
+									<i class="icon-doctorplus-calendar"></i>
+								</figure>
+								<span class="td-slide-turno-fecha">Mier 26  Nov 2017</span>
+								<span class="td-slide-turno-hora">15:45 hs</span>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="td-slide-item">
+						<h2 class="td-slide-title-consultorio">Consultorio Larroque <span>/</span> Turno 12563</h2>
+						<h3 class="td-slide-title confirmado">Turno confirmado <i class="icon-doctorplus-check-thin"></i></h3>
+
+						<div class="okm-row">
+
+							<div class="td-slide-paciente-row">
+								<figure>
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="paciente"/>
+								</figure>
+
+								<h4>Juan Manuel Menoyo</h4>
+								<!--								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-masc-symbol"></i> FN 21/06/2009</span> -->
+								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-fem-symbol"></i> FN 21/06/2009</span>
+
+							</div>
+
+							<div class="td-slide-turno-row">
+								<figure>
+									<i class="icon-doctorplus-calendar"></i>
+								</figure>
+								<span class="td-slide-turno-fecha">Mier 26  Nov 2017</span>
+								<span class="td-slide-turno-hora">15:45 hs</span>
+							</div>
+
+							<div class="okm-row td-slide-turno-action-box">
+								<div class="td-turno-btn-holder">
+									<a href="#" class="cancelar">
+										<figure>
+											<i class="icon-doctorplus-cruz"></i>
+										</figure>
+										<span>Cancelar</span>
+									</a>
+								</div>
+								<div class="td-turno-btn-holder">
+									<a href="#" class="declinar">
+										<figure>
+											<i class="icon-doctorplus-minus"></i>
+										</figure>
+										<span>Declinar</span>
+									</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="td-slide-item">
+						<h2 class="td-slide-title-consultorio">Consultorio Larroque <span>/</span> Turno 12563</h2>
+						<h3 class="td-slide-title confirmado">Turno confirmado <i class="icon-doctorplus-check-thin"></i></h3>
+
+						<div class="okm-row">
+
+							<div class="td-slide-paciente-row">
+								<figure>
+									<img src="imgs/temp/foto-perfil-110.jpg" alt="paciente"/>
+								</figure>
+
+								<h4>Juan Manuel Menoyo</h4>
+								<!--								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-masc-symbol"></i> FN 21/06/2009</span> -->
+								<span class="td-slide-paciente-fn"><i class="icon-doctorplus-fem-symbol"></i> FN 21/06/2009</span>
+
+							</div>
+
+							<div class="td-slide-turno-row">
+								<figure>
+									<i class="icon-doctorplus-calendar"></i>
+								</figure>
+								<span class="td-slide-turno-fecha">Mier 26  Nov 2017</span>
+								<span class="td-slide-turno-hora">15:45 hs</span>
+							</div>
+
+							<div class="okm-row td-slide-turno-action-box">
+								<div class="td-turno-btn-holder">
+									<a href="#" class="ausente">
+										<figure>
+											<i class="icon-doctorplus-alert"></i>
+										</figure>
+										<span>Paciente ausente</span>
+									</a>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				
+				<a href="#" class="td-slide-arrow left"><i class="icon-doctorplus-left-arrow"></i></a>
+				<a href="#" class="td-slide-arrow right"><i class="icon-doctorplus-right-arrow"></i></a>
+				
+			</div>
+		</section>
+	
+	<section class="td-tuernos-referencias">
+		<div class="td-tuernos-referencias-box">
+			<h2>Referencias</h2>
+			<ul>
+				<li>
+					<figure class="confirmado"><i class="icon-doctorplus-check-circle"></i></figure>
+					<p>Confirmar Turno: El profesional avisa al paciente que su turno es aceptado</p>
+				</li>
+				<li>
+					<figure class="confirmacion"><i class="icon-doctorplus-contrast-circle"></i></figure>
+					<p>Pendiente: El turno fue solicitado por el paciente y está pendiente de confirmación por parte del profesional.</p>
+				</li>
+				<li>
+					<figure class="cancelado"><i class="icon-doctorplus-close-circle"></i></figure>
+					<p>Cancelado: El turno ha sido cancelado por el paciente. El turno pasa a estar disponible en la agenda.</p>
+				</li>
+				<li>
+					<figure class="ausente"><i class="icon-doctorplus-alert-round"></i></figure>
+					<p>Ausente: El paciente no se presentó a su turno médico.</p>
+				</li>
+				<li>
+					<figure class="declinado"><i class="icon-doctorplus-minus-circle"></i></figure>
+					<p>Declinado: El profesional no puede antender en ese horario. DoctorPlus notificá al paciente por mail y por SMS y se le ofrecerá un nuevo turno.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+			
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+	
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scrollbars/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+	<script src="js/scripts.js"></script>
+		<script>
+		$(function(){
+			$(".agenda-resumen-scroll").mCustomScrollbar({
+			theme:"dark-3"
+			});
+			
+			$('.td-tooltip-btn').tooltipster({
+				theme: 'tooltipster-light'
+			});
+			
+		});
+			
+			
+			
+			
+		</script>
+</body>
+</html>

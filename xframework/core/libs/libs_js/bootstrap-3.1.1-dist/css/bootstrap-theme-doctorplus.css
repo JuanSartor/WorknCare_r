@@ -1,0 +1,113 @@
+
+/* CSS Document */
+.btn-bold {
+	font-weight:600;	
+	font-size:1.1em;
+}
+
+
+.btn.red {
+	color:#FFF;
+}
+.btn-rosa {
+
+  background-image: -webkit-linear-gradient(top, #F33243 0%, #F33243 100%);
+  background-image:         linear-gradient(to bottom, #F33243 0%, #F33243 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F33243', endColorstr='#F33243', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+ /* border-color: #51740A;*/
+  color:#FFF !important;
+  border-color:transparent !important;
+  
+}
+.btn-rosa:hover,
+.btn-rosa:focus {
+	background-color:#c33433 !important;
+	background-image:none !important;
+/*	background-image: -webkit-linear-gradient(top, #F33243 0%, #c33433 100%) !important;
+  	background-image:         linear-gradient(to bottom, #F33243 0%, #c33433 100%) !important;
+  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F33243', endColorstr='#c33433', GradientType=0) !important;
+  	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  
+  background-repeat: repeat-x;*/
+	/*background-position: 0 -15px;
+	border-color:transparent !important;*/
+	
+}
+.btn-rosa:active,
+.btn-rosa.active {
+	background-color: #c33433;
+	border-color:transparent !important;
+}
+
+.btn-acceso-registro {
+	background-image: -webkit-linear-gradient(top, #F33243 0%, #F33243 100%);
+	background-image:         linear-gradient(to bottom, #F33243 0%, #F33243 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F33243', endColorstr='#F33243', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	/* border-color: #51740A;*/
+	color:#FFF !important;
+	border-color:transparent !important;
+	min-width:230px;
+	margin:10px 20px;
+	height:80px;
+	font-size:1.4em;
+	line-height:70px;
+	/*  vertical-align:middle !important;
+
+	display: table-cell !important;*/
+	display:inline-block;
+	
+}
+.btn-acceso-registro.doble {
+	line-height:35px;
+}
+
+.btn-acceso-registro:hover,
+.btn-acceso-registro:focus {
+	background-color: #AE0C0C;
+	background-image:none !important;
+/*	background-position: 0 -15px;*/
+	/*border-color:transparent !important;*/
+}
+.btn-acceso-registro:active,
+.btn-acceso-registro.active {
+	background-color: #AE0C0C;
+	border-color:transparent !important;
+}
+
+
+.navbar-default.navbar-dp .navbar-nav > .dropdown > a .caret {
+    border-bottom-color: #FFF;
+    border-top-color: #FFF;
+}
+
+a.btn {
+  -webkit-transition:none;
+  transition:none;
+}
+
+.radio, .checkbox {
+	display:inline;
+}
+
+.form-group .form-inline-inner {
+	
+}
+
+.form-group .form-inline-inner .col-sm-2, .form-group .form-inline-inner .col-sm-4, .form-group .form-inline-inner .col-sm-6, .form-group .form-inline-inner .col-sm-8, .form-group .form-inline-inner .col-sm-10, .form-group .form-inline-inner .col-sm-12 {
+	padding:0px !important;	
+}
+/*
+.form-group .form-inline-inner .col-sm-2 .form-control, .form-group .form-inline-inner .col-sm-4 .form-control, .form-group .form-inline-inner .col-sm-6 .form-control, .form-group .form-inline-inner .col-sm-8 .form-control, .form-group .form-inline-inner .col-sm-10 .form-control, .form-group .form-inline-inner .col-sm-12 .form-control{
+	width:100% !important;
+	display:inline !important;
+	
+}*/
+
+.form-group .form-inline-inner input {
+	display:inline !important;
+	
+}

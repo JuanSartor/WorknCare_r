@@ -1,0 +1,1446 @@
+.pass-sante-registro-planes{
+    margin: 30px auto;
+    @media(max-width:600px){
+        p{
+            font-size: 16px;
+        }
+    }
+    .header-container{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        .logo-container{
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            & .label-logo{
+                text-align: center;
+                width: 100%;
+                font-size: 13px;
+                position: absolute;
+                bottom: -15px;
+                right: 0;
+                font-weight: 700;
+                font-style: italic;
+                line-height: 1;
+                color: #02b8c1;
+            }
+        }
+        img{
+            width:300px
+        }
+        h1{
+            font-size:26px;
+            color: #3EBAC7;
+        }
+        h2{
+            font-size:24px;
+            color: #EB599B;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .planes-wrapper .listado-planes{
+        margin-top: 95px;
+        display: flex;
+        justify-content: center;
+        @media(max-width:600px){
+            flex-direction:column;
+            margin-top: 0px;
+
+        }
+
+        & .item-plan{
+            position: relative;
+            width: 19%; 
+            border:solid 1px #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin:5px;
+            text-align:center;
+            box-shadow: 2px 2px 10px 0 #666;
+            background: white;
+            &:hover{
+                transform: scale(1.05);
+                z-index:1;
+            }
+
+            &.plan-contratado{
+                background:#dbeeef;
+                &:hover{
+                    transform: none;
+                }
+            }
+            &.plan-no-disponible{
+                &:hover{
+                    transform: none;
+                }
+            }
+            &.selected {
+                transform: scale(1.04);
+            }
+            @media(max-width:600px){
+                width: 90%;
+                margin:5px auto;
+            }
+
+            & .plan-title{
+                font-size: 24px;
+                font-weight: 600;
+            }
+            & .plan-precio{
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 1.2;
+                margin-top:5px;
+                margin-bottom:15px;
+                & .label{
+                    color:#415b70;
+                    font-size:14px;
+                    font-weight: 400;
+                }
+
+                & .precio-tachado{
+                    position:relative;
+                    color:#cccccc;
+                    hr{
+                        position: absolute;       
+                        z-index: 2;
+                        border: solid 2px #e1938d;
+                        background:#e1938d;
+                        width: 36px;
+                        right: -8px;
+                        top: 10px;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            & .btn-suscribir{
+                color:#ffffff;
+                border-radius:10px;
+                padding: 2px 25px;
+                background: #ccc;
+                &:hover,&visited{
+                    transform: scale(1.02);
+                    opacity: 0.9;
+                }
+
+            }
+            & .suscripcion-activa{
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #34495e;
+                line-height: 34px;
+            }
+
+            /*            &:nth-child(1){
+                            .plan-title,.plan-precio{
+                                color:#82B9EE;
+                            }
+                            .btn-suscribir{
+                                background-color: #82B9EE;
+                            }
+                            .destacado-planes{
+                                right: 10px;
+                                position: relative;
+                                width: 210px;
+                                height: 0px;
+                                border-top: 10px solid #82B9EE;
+                                border-bottom: 10px solid #82B9EE;
+                                border-right: 10px solid transparent;
+                            }
+                        }*/
+            &:nth-child(1){
+                .plan-title,.plan-precio{
+                    color:#82B9EE;
+                }
+                .btn-suscribir{
+                    background-color: #82B9EE;
+                }
+                .destacado-planes{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #82B9EE;
+                    border-bottom: 10px solid #82B9EE;
+                    border-right: 10px solid transparent;
+                }
+            }
+            &:nth-child(2){
+                .plan-title,  .plan-precio{
+                    color:#3EBAC7;
+                }
+                .btn-suscribir{
+                    background-color: #3EBAC7;
+                }
+                .destacado-planes{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #3EBAC7;
+                    border-bottom: 10px solid #3EBAC7;
+                    border-right: 10px solid transparent;
+                }
+            }
+            &:nth-child(3){
+                .plan-title,  .plan-precio{
+                    color:#EE7A9F;
+                }
+                .btn-suscribir{
+                    background-color: #EE7A9F;
+                }
+                .destacado-planes{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #EE7A9F;
+                    border-bottom: 10px solid #EE7A9F;
+                    border-right: 10px solid transparent;
+                }
+            }
+            &:nth-child(4){
+                .plan-title,  .plan-precio{
+                    color:#FDCA6F;
+                }
+                .btn-suscribir{
+                    background-color: #FDCA6F;
+                }
+                .destacado-planes{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #FDCA6F;
+                    border-bottom: 10px solid #FDCA6F;
+                    border-right: 10px solid transparent;
+                }
+            }
+            /*            &:nth-child(1){
+                            .plan-title-particular,.plan-precio-particular{
+                                color:#82B9EE;
+                            }
+                            .btn-suscribir-particular{
+                                background-color: #82B9EE;
+                            }
+                            .destacado-planes-particular{
+                                right: 10px;
+                                position: relative;
+                                width: 210px;
+                                height: 0px;
+                                border-top: 10px solid #82B9EE;
+                                border-bottom: 10px solid #82B9EE;
+                                border-right: 10px solid transparent;
+                            }
+                        }*/
+            &:nth-child(1){
+                .plan-title-particular,  .plan-precio-particular{
+                    color:#3EBAC7;
+                }
+                .btn-suscribir-particular{
+                    background-color: #3EBAC7;
+                }
+                .destacado-planes-particular{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #3EBAC7;
+                    border-bottom: 10px solid #3EBAC7;
+                    border-right: 10px solid transparent;
+                }
+            }
+            &:nth-child(2){
+                .plan-title-particular,  .plan-precio-particular{
+                    color:#EE7A9F;
+                }
+                .btn-suscribir-particular{
+                    background-color: #EE7A9F;
+                }
+                .destacado-planes-particular{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #EE7A9F;
+                    border-bottom: 10px solid #EE7A9F;
+                    border-right: 10px solid transparent;
+                }
+            }
+            &:nth-child(3){
+                .plan-title-particular,  .plan-precio-particular{
+                    color:#FDCA6F;
+                }
+                .btn-suscribir-particular{
+                    background-color: #FDCA6F;
+                }
+                .destacado-planes-particular{
+                    right: 10px;
+                    position: relative;
+                    width: 210px;
+                    height: 0px;
+                    border-top: 10px solid #FDCA6F;
+                    border-bottom: 10px solid #FDCA6F;
+                    border-right: 10px solid transparent;
+                }
+            }
+
+            & .consultas-incluidas{
+                margin:10px auto;
+                text-align:left;
+                color: #415b70;
+                font-size: 14px;
+                font-weight: 400;
+                & h3{
+                    color: #e74c3c;
+                    font-size: 20px;
+                    text-align: center;
+                }
+                & p {
+                    margin-bottom: 0px;
+                    text-align: center;
+                    font-size:15px;
+                }
+            }
+
+            & .cupon-descuentos{
+                margin:10px auto;
+                text-align:left;
+                color: #415b70;
+                font-size: 14px;
+                font-weight: 400;
+                & h3{
+                    color: #eb599b;
+                    font-size: 20px;
+                    text-align: center;
+                    margin-bottom: 0px;
+                    margin-bottom: 5px;
+
+                    i{
+                        transform: rotate(90deg);
+                    }
+                }
+                & p {
+                    margin-bottom: 0px;
+                    text-align: center;
+                    font-size:16px;
+                }
+            }
+            & .descripcion-content{
+                margin:10px auto;
+                text-align:left;
+                color: #415b70;
+                font-size: 14px;
+                font-weight: 400;
+
+                & p {
+                    text-align: center;
+                    background-color: #f3f3f3;
+                    font-size: 14px;
+                    margin: 4px 0;
+                    padding: 6px 0;
+                }
+            }
+            & hr{
+                border: 0;
+                border-top: 1px solid #cccccc;
+                margin: 10px;
+            }
+
+            //plan recomendado
+            & .plan-recomendado{
+                color: #ffffff;
+                background: #3EBAC7;
+                position: absolute;
+                top: -39px;
+                left: 0px;
+                right: 0px;
+                margin: 0 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                padding: 10px 10px;   
+                @media(max-width:896px){
+                    top: -58px;
+                }
+                @media(max-width:600px){
+                    top: -39px;
+                    font-size:14px;
+                }
+                span{
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                    line-height: 1.2;
+                    font-size:15px;
+                }
+            }
+            //fix espacio banner programa recomendado
+            &:nth-child(1){
+                @media(max-width:600px){
+                    margin-top: 25px;
+                }
+            }
+            &:nth-child(2){
+                @media(max-width:600px){
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+    }
+    & .btn-switch-planes{
+        background: #80c2cb !important;
+        border-color: #80c2cb !important; 
+        &.active{
+            background: #1497a8 !important;
+            border-color: #1497a8 !important;  
+        }
+    }
+    & .aclaracion-impuestos{
+        font-size: 14px;
+        text-align: right;
+    }    
+    & .plogin-mensaje-registro{
+        padding-top:16px;
+    }
+
+
+    .form-wrapper{
+        display:none;
+
+        &.mapc-registro-box {
+            margin: 0px auto;
+        }
+        .mapc-politicas-box {
+            margin: 12px auto;
+        }
+        .label-aclaracion{
+            display: block;
+            font-size: 14px;
+            line-height: 16px;
+            padding-left: 8px;
+            span{
+                position: absolute;
+                left: 0;
+            }
+        }
+        .cupon-descuento{
+            .input-group-addon{
+                border: 1px #eb599b solid;
+                background-color: #eb599b;
+                i{
+                    transform: rotate(90deg);
+                }
+            }
+            input{
+                border: 1px #eb599b solid;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+        .tipo-cuenta-box{
+            max-width: 568px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 0 24px;
+            position: relative;
+            & .radio{
+                padding-left: 50px;
+            }
+        }
+        .precio-total-pack{
+            line-height: 58px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+            border: 1px #69aaac solid;
+            color: #415b70;
+        }
+
+
+        .mapc-politicas-box .mapc-politicas p{
+            color: #415b70;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 10px;
+        }
+        .btn-siguiente, .btn-crear-cuenta, .btn-volver{
+            min-width: 150px;
+        }
+        .btn-volver:hover{
+            background: #b6b6b6 !important;
+        }
+        @media (max-width: 600px){
+            .plogin-registro-accordios-title {
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+        .mapc-select {
+            margin-top: 0px;
+        }
+        .mapc-select .mbl{
+            margin-bottom: 0px;
+        }
+        .plogin-mensaje-registro p {
+            background: #eeeeee;
+            padding: 10px 20px;
+            margin: 24px auto;
+        }
+        .plogin-mensaje-registro .plogin-mensaje-registro-actions{
+            margin-bottom: 24px;
+        }
+        /*mostrar contraseña*/
+        .mapc-input-line>.btnShowPassword{
+            font-size: 24px;
+            line-height: 22px;
+            display: inline-block;
+            position: absolute;
+            top: 19px;
+            right: 22px;
+            /*color: #d8d8d8;*/
+        }
+
+        .btnShowPassword i {
+            cursor:pointer;
+        }
+    }
+
+    .checkout-form{
+        display:none;
+        max-width: 600px;
+        margin:10px auto;
+        margin-bottom: 60px;
+        & h3{
+            font-size: 26px;
+            color: #415b70;
+            text-align: center;
+        }
+        & h4.nombre-plan{
+            font-size: 20px; 
+            margin-top: 0px;
+        }
+        & .plan-contratado{
+            padding: 24px;
+            margin: 20px auto 40px;
+            background: #f3f3f3;
+            font-size:16px;
+            & p{
+                margin-top:0;
+                margin-bottom:0;
+
+            }
+            @media(min-width:600px){
+                max-width: 450px;
+                height: fit-content;
+            }
+        }
+
+        & .aclaracion-debito {
+            margin-top:20px;
+            p{
+                font-size: 16px;
+                margin-bottom: 0px;
+                &.ejemplo{
+                    color: #e74c3c;
+                }
+            }
+
+        }
+        & .payment-form{
+            margin:30px 0;
+            & .okm-row{
+                margin-bottom:25px;
+            }
+            & .mapc-label {
+                margin-bottom: 10px;
+            }
+            & .payment-element{
+                padding:15px 10px;
+                box-shadow: 2px 2px 10px 0 #666;
+                background: #ffffff !important;
+                background-color: #ffffff !important;
+
+
+            }
+
+        }
+
+
+        & .card-element-errors{
+            color: #e74c3c;
+            margin-top: 10px;
+
+
+        }
+
+        & .tabs-metodo-pago{
+            & .nav-tabs{
+                li{
+                    width:50%;
+                    i{
+                        margin-right:10px;
+                    }
+                    &.active{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        & .btn-process-checkout.disabled{
+            &:hover{
+                cursor:not-allowed !important; 
+                background-color: #bdc3c7 !important;
+                border-color: #bdc3c7 !important;
+            }
+        }
+    }
+
+    & .card-pass-sante{
+        max-width: 600px;
+        margin:10px auto;
+
+        & .header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & h2{
+                font-size: 26px;
+                color: #415b70;
+                text-align: center;
+                margin:0;
+                padding-left:10px;
+            }
+        }
+
+        & .card{
+            padding: 24px;
+            margin: 20px auto 40px;
+            background: #f3f3f3;
+            font-size:16px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px 0 #666;
+            height: fit-content;
+            min-height: 250px;
+            & .title{
+                font-size: 22px;
+                color: #415b70;
+                text-align: center;
+            }
+            .card-logo{
+                @media(max-width:600px){
+                    display: flex;
+                    justify-content: center;
+                }
+                img{
+                    width:140px;
+                    height: 32px;
+                }
+            }
+
+            & .codigo{
+                width:100%;
+                font-size: 24px;
+                background-color: #007d8b;
+                color: #ffffff;
+                text-align: center;
+                width: fit-content;
+                padding: 10px 40px;
+                margin: 10px auto;
+                font-weight: 600;
+                letter-spacing:8px;
+
+                &::placeholder {
+                    color: #ffffff;
+                    font-size: 1.5em;
+                    font-weight: 700;
+                }
+            }
+            & p{
+                margin-top:0;
+                margin-bottom:0;
+                text-align: center;
+
+            }
+            @media(min-width:600px){
+                max-width: 450px;
+            }
+            @media(max-width:600px){
+                padding: 10px;
+            }
+
+        }
+
+    }
+
+    &.bienvenida-preview{
+        margin: 0px auto;
+        margin-top: 30px;
+        & .container-header{
+            padding-top: 30px;
+            padding-bottom: 20px;
+            background:#02b8c1;
+            h2{
+                font-size:24px;
+                color: #ffffff;
+                margin-bottom: 20px;
+                max-width: 1024px;
+                margin: 0 auto;
+                text-align: center;
+                @media(max-width:600px){
+                    font-size: 18px;
+                    padding: 0 15px;
+                }
+            }
+            .buttons{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 1024px;
+                margin: 0 auto;
+                margin-top: 20px;
+                .btn-default{
+                    color: #fff;
+
+                    margin: 10px;
+                    display:flex;
+                    align-items:center;
+                    justify-content: center;
+                    width: fit-content;
+                    margin: 10px auto;
+                    border-radius: 15px;
+                    padding: 12px 48px; 
+                    &.btn-conectarme{
+                        background:transparent  !important;
+                        border: solid 1px;
+                        &:hover{
+                            background: #0ea0a7  !important;
+                        }
+                    }
+
+                    &.btn-copy-link{
+                        box-shadow: 2px 2px 10px 0 #fff;
+                        background: #007d8b  !important;
+                        &:hover{
+                            background: #415b70 !important;
+                        }
+                        & i{
+                            margin: 0 10px;
+                        }
+                    }
+
+
+                    &.btn-download{
+                        box-shadow: 2px 2px 10px 0 #fff;
+                        background: #ec407a !important;
+                        &:hover{
+                            background: #b52857 !important;
+                        }
+                        & i{
+                            margin: 0 10px;
+                        }
+                    }
+
+
+
+                }
+
+            }
+        }
+
+        & .modal-compartir-pass{
+
+
+
+            & .modal-body{
+                padding: 20px 10px;
+                @media(min-width:600px){
+                    padding: 20px
+                }
+                @media(max-width:280px){
+                    & img.qr-code{
+                        width:150px;
+                    }
+                }
+
+                /*.table-width{
+                    width: 680px;
+                    @media(max-width:800px)  and (min-width:701px){
+                        width:600px;
+                    }
+                    @media(max-width:700px)  and (min-width:601px){
+                        width:500px;
+                    }
+                    @media(max-width:600px)  and (min-width:501px){
+                        width:400px;
+                    }
+                    @media(max-width:500px)  and (min-width:401px){
+                        width:300px;
+                    }
+                    @media(max-width:400px)  and (min-width:351px){
+                        width:280px;
+                    }
+                    @media(max-width:350px)  and (min-width:281px){
+                        width:250px;
+                    }
+                   
+
+                }*/
+                h5.modal-title{
+                    margin-bottom: 10px;
+                    @media(max-width:600px){
+                        font-size: 18px;
+                    }
+                }
+                .pass-logo img{
+                    width: 200px;
+                    margin: auto;
+                }
+                .pass-logo-socio img{
+                    width: 70px;
+                    margin: auto;
+                }
+                .link-wrapper{
+                    background: #eeeeee;
+                    padding: 10px;
+                    text-align: center;
+                    overflow-x: scroll;
+                    white-space: nowrap;
+                    margin-bottom: 20px;
+
+                }
+                .qr-code{
+                    margin: 0 auto;
+                }
+            }
+            & .modal-header{
+
+                a.btn-copy-contenido{
+                    border-radius: 50px;
+                    background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+                    box-shadow: 0px 10px 9px 0px #d7cdcd;
+                    padding: 12px 12px;
+                    @media(max-width:600px){
+
+                        margin-bottom: 0px;
+                        font-size: 14px !important;
+                        text-transform: uppercase !important;
+                        font-weight: 600 !important;
+                    }
+                    @media(min-width:600px){
+                        width: 100% !important;
+                        font-size: 24px !important;
+                        text-transform: uppercase !important;
+                        font-weight: 600 !important;
+                    }
+                }
+            }
+
+        }
+
+        & .disclaimer{
+            background: transparent;
+            color:#ffffff;
+            top: -35px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            font-weight: 500;
+            @media(max-width:600px){
+                font-size: 17px;
+            }
+
+            & .btn-preview-mensaje{
+                background: #02868c;
+                padding: 5px 30px;
+                border-radius: 21px;
+                width: auto !important;
+                @media(min-width:600px){
+                    margin-left: 20px;
+                } 
+                @media(max-width:600px){
+                    display: block;
+                    margin: 15px auto;
+                }
+
+            }
+        }
+
+        & .preview-container{
+            max-width: 1024px;
+            margin: 0 auto;
+            //top: -60px;
+            position: relative;
+            box-shadow: 2px 2px 10px 0 #666;
+            background: #ffffff;
+            @media(max-width:600px){
+                //top: -40px;
+                margin: 5px;
+            }
+
+
+
+            &  .header-container{
+                margin: 0;
+                background-image: url("../imgs/banner_workncare.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                min-height: 300px;
+                display: flex;
+                align-items: flex-end;
+                @media(max-width:600px){
+                    min-height:150px;
+                }
+
+                h1{
+                    /*font-size:64px;
+                    color: #ffffff;
+                    margin: 0 100px;
+                    margin-bottom: 20px;
+                    margin: 0 auto;
+                    width:100%;*/
+                    align-items: center;
+                    margin: 0 auto;
+                    width: 400px;
+                    height: 300px;
+                    text-align: center;
+                    font-size: 36px;
+                    color: #009688;
+                    display: flex;
+                    & span{
+                        box-shadow: -1px 0px 20px 20px rgba(255,255,255,0.7);
+                        border-radius: 20%;
+                        background: rgba(255,255,255,0.7);;
+                    }
+                    @media(max-width:600px){
+                        height: 200px;
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                }
+
+
+            }
+            & .description-content{
+                padding: 30px 100px;
+                @media(max-width:600px){
+                    padding: 20px;
+                }
+                & h5 {
+                    margin: 40px 0;
+                    color: #02b8c1;
+                    font-size:22px;
+                    font-weight: 600;
+                }
+
+                & .resaltador{
+                    font-weight: 600;
+                    background: rgba(0,125,139,0.4);
+                }
+
+                & .firma {
+                    margin-top: 20px;
+                    p{
+                        margin:0px;
+                    }
+                }
+            }
+
+            & .mensaje-complementario {
+                padding: 10px 20px;
+                @media(max-width:600px){
+                    padding:0px;
+                }
+                & textarea {
+                    width: 100%;
+                    resize: vertical;
+                    font-size: 18px;
+                    background: #f3f6f7;
+                }
+                .aclarion-mensaje{
+                    font-size:16px;
+                    color:#63757d;
+                }
+                .btn-guardar-mensaje{
+                    float: right;
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .resumen-pass{
+                padding: 20px 100px 0 100px;
+                @media(max-width:600px){
+                    padding:12px;
+                }
+                & h4 {
+                    color: #02b8c1;
+                    font-size:24px;
+                    font-weight: 600;
+                    &.saber-mas{
+                        margin-top: 0px;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                & a {
+                    display:block;
+                    width: 100%;
+
+                    font-size:28px;
+                    font-weight: 600;
+                    cursor:pointer;
+                    margin: 10px 0;
+                    &.saber-mas{
+                        color: #02b8c1;
+                    }
+                    &.link-video{
+                        color: #007d8b
+                    }
+                    &:hover{
+                        text-decoration:underline;
+                        color:#122b40
+                    }
+                    &.link-brochure{
+                        margin-bottom: 50px;
+                        margin-top: 20px;
+                        font-weight: 400;
+
+                        &:hover{
+                            text-decoration:none;
+                            transform: scale(1.1);
+
+                        }
+                        @media(max-width:600px){
+                            font-size: 20px;
+                            margin-right: 0px;
+                        }
+                        & img{
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                & iframe{
+                    margin-bottom: 60px;
+                    margin-top: 30px;
+                }
+
+            }
+            & .btn-incribirme{
+                width:50%;
+                font-weight: 600;
+                @media(max-width:600px){
+                    width:100%;
+                }
+            }
+
+            & .button-container{
+                padding-bottom: 60px;
+                & a{
+                    background:#31a592; 
+                    @media(max-width:600px){
+                        width:fit-content;
+                    }
+                }
+            }
+        }
+
+        & .link-container{
+            text-align: center;
+            margin-bottom: 20px;
+            & input{
+                color: #fff;
+                cursor: default;
+                font-size: 1px;
+                border: none;
+                background: transparent;
+            }
+        }
+
+    }
+}
+.btn-inscripcion-nuevo{
+    border-radius: 15px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    @media(max-width:600px){
+        font-size: 16px;
+    }
+}
+.margen-information{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    @media(max-width:600px){
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+.header-container-nuevo{
+    @media(max-width:600px){
+        min-height: 110px !important;
+    }
+}
+.resaltado-mobile{
+    @media(max-width:600px){
+        font-size: 16px;
+    }
+}
+.h5-mobile{
+    @media(max-width:600px){
+        font-size: 18px !important;
+    }
+}
+.h4-mobile{
+    @media(max-width:600px){
+        font-size: 18px !important;
+    }
+}
+.texto-link-brochure{
+    @media(max-width:600px){
+        font-size: 10px !important;
+    }
+}
+.margen-right-brochure-mobile{
+    @media(max-width:600px){
+        margin-right: 5px !important;
+        width: 200px !important;
+    }
+}
+.span-dest-planes{
+    position: relative;
+    bottom: 17px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.btn-info-invitacion-beneficiario{
+    width: 200px !important;
+    height: 50px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    font-size: 25px !important;
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
+    &:hover{
+        color: white !important;
+    }
+    @media(max-width:600px){
+        width: 180px !important;
+    }
+}
+.btn-enterprise-500{
+    margin-top: 10px;
+}
+.btn-adhesion{
+    @media(min-width:600px){
+        width: 130px;
+    }
+}
+.margen-500{
+    @media(min-width:600px){
+        margin-top: 60px !important;
+    }
+}
+.icono-empresa-socia{
+    width: 70px !important;
+    height: 70px;
+    margin-right: 75% !important;
+    @media(max-width:600px){
+        position:relative;
+        right: 60%;
+    }
+}
+.margen-logo-pass{
+    margin-left: 55%!important;
+    @media(max-width:600px){
+        margin-left: 0px !important;
+        position: relative;
+        left: 10px;
+    }
+}
+.box-tipo-empresas{
+    display: flex;
+    margin-top: 30px !important; 
+    margin-bottom: 30px !important;
+    background-color: aliceblue !important;
+    height: 80px;
+    align-items: center;
+}
+.modal-compartir-cuestionario{
+
+    & .modal-body{
+        padding: 20px 10px;
+        @media(min-width:600px){
+            padding: 20px
+        }
+        @media(max-width:280px){
+            & img.qr-code{
+                width:150px;
+            }
+        }
+
+        /*.table-width{
+            width: 680px;
+            @media(max-width:800px)  and (min-width:701px){
+                width:600px;
+            }
+            @media(max-width:700px)  and (min-width:601px){
+                width:500px;
+            }
+            @media(max-width:600px)  and (min-width:501px){
+                width:400px;
+            }
+            @media(max-width:500px)  and (min-width:401px){
+                width:300px;
+            }
+            @media(max-width:400px)  and (min-width:351px){
+                width:280px;
+            }
+            @media(max-width:350px)  and (min-width:281px){
+                width:250px;
+            }
+           
+
+        }*/
+        h5.modal-title{
+            margin-bottom: 10px;
+            @media(max-width:600px){
+                font-size: 18px;
+            }
+        }
+        .pass-logo img{
+            width: 200px;
+            margin: auto;
+        }
+        .pass-logo-socio img{
+            width: 70px;
+            margin: auto;
+        }
+        .link-wrapper{
+            background: #eeeeee;
+            padding: 10px;
+            text-align: center;
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 20px;
+
+        }
+        .qr-code{
+            margin: 0 auto;
+        }
+    }
+    & .modal-header{
+
+        a.btn-copy-contenido{
+            border-radius: 50px;
+            background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+            box-shadow: 0px 10px 9px 0px #d7cdcd;
+            padding: 12px 12px;
+            @media(max-width:600px){
+
+                margin-bottom: 0px;
+                font-size: 14px !important;
+                text-transform: uppercase !important;
+                font-weight: 600 !important;
+            }
+            @media(min-width:600px){
+                width: 100% !important;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+}
+.btn-flayer{
+    box-shadow: 2px 2px 10px 0 #fff;
+    background: #F5C370 !important;
+    @media(min-width:600px){
+        width: 293px !important;
+    }
+}
+.btn-enviar-invitacion{
+    @media(min-width:600px){
+        width: 293px !important;  
+    }
+}
+.modal-compartir-capsula{
+
+    & .modal-body{
+        padding: 20px 10px;
+        @media(min-width:600px){
+            padding: 20px
+        }
+        @media(max-width:280px){
+            & img.qr-code{
+                width:150px;
+            }
+        }
+
+        /*.table-width{
+            width: 680px;
+            @media(max-width:800px)  and (min-width:701px){
+                width:600px;
+            }
+            @media(max-width:700px)  and (min-width:601px){
+                width:500px;
+            }
+            @media(max-width:600px)  and (min-width:501px){
+                width:400px;
+            }
+            @media(max-width:500px)  and (min-width:401px){
+                width:300px;
+            }
+            @media(max-width:400px)  and (min-width:351px){
+                width:280px;
+            }
+            @media(max-width:350px)  and (min-width:281px){
+                width:250px;
+            }
+           
+
+        }*/
+        h5.modal-title{
+            margin-bottom: 10px;
+            @media(max-width:600px){
+                font-size: 18px;
+            }
+        }
+        .pass-logo img{
+            width: 200px;
+            margin: auto;
+        }
+        .pass-logo-socio img{
+            width: 70px;
+            margin: auto;
+        }
+        .link-wrapper{
+            background: #eeeeee;
+            padding: 10px;
+            text-align: center;
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 20px;
+
+        }
+        .qr-code{
+            margin: 0 auto;
+        }
+    }
+    & .modal-header{
+
+        a.btn-copy-contenido{
+            border-radius: 50px;
+            background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+            box-shadow: 0px 10px 9px 0px #d7cdcd;
+            padding: 12px 12px;
+            @media(max-width:600px){
+
+                margin-bottom: 0px;
+                font-size: 14px !important;
+                text-transform: uppercase !important;
+                font-weight: 600 !important;
+            }
+            @media(min-width:600px){
+                width: 100% !important;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+}
+
+.modal-flyer-capsula{
+
+    & .modal-body{
+        padding: 20px 10px;
+        @media(min-width:600px){
+            padding: 20px
+        }
+        @media(max-width:280px){
+            & img.qr-code{
+                width:150px;
+            }
+        }
+
+        /*.table-width{
+            width: 680px;
+            @media(max-width:800px)  and (min-width:701px){
+                width:600px;
+            }
+            @media(max-width:700px)  and (min-width:601px){
+                width:500px;
+            }
+            @media(max-width:600px)  and (min-width:501px){
+                width:400px;
+            }
+            @media(max-width:500px)  and (min-width:401px){
+                width:300px;
+            }
+            @media(max-width:400px)  and (min-width:351px){
+                width:280px;
+            }
+            @media(max-width:350px)  and (min-width:281px){
+                width:250px;
+            }
+           
+
+        }*/
+        h5.modal-title{
+            margin-bottom: 10px;
+            @media(max-width:600px){
+                font-size: 18px;
+            }
+        }
+        .pass-logo img{
+            width: 200px;
+            margin: auto;
+        }
+        .pass-logo-socio img{
+            width: 70px;
+            margin: auto;
+        }
+        .link-wrapper{
+            background: #eeeeee;
+            padding: 10px;
+            text-align: center;
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 20px;
+
+        }
+        .qr-code{
+            margin: 0 auto;
+        }
+    }
+    & .modal-header{
+
+        a.btn-copy-contenido{
+            border-radius: 50px;
+            background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+            box-shadow: 0px 10px 9px 0px #d7cdcd;
+            padding: 12px 12px;
+            @media(max-width:600px){
+
+                margin-bottom: 0px;
+                font-size: 14px !important;
+                text-transform: uppercase !important;
+                font-weight: 600 !important;
+            }
+            @media(min-width:600px){
+                width: 100% !important;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+}

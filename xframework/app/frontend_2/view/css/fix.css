@@ -1,0 +1,50 @@
+div.spinner{
+    position:fixed !important;
+}
+
+div.overlay{
+    z-index:10000!important;  
+}
+.highlight-box a[role=button]:after {
+    content: '';
+}
+
+/*Fix comparación abonos*/
+@media(min-width:600px){
+    .comparison-table table>tbody>tr>th:not(:first-child) span {
+        height: 80px;
+    }
+    .comparison-table table>tbody>tr>th:nth-child(2) span {
+        line-height: 50px; 
+    }
+}
+/*Fix preview upload imagenes*/
+@media (max-width: 600px){
+    label.file-upload.picture:before {
+        line-height: 78px;
+        padding-top: 0px;
+    }
+
+    label.file-upload {
+        font-size: 12px!important;
+        height: 78px!important;
+        padding: 0px!important;
+    }
+}
+
+/*loading animacion*/
+.loading-label-animation:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 2000ms infinite;      
+    animation: ellipsis steps(4,end) 2000ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}

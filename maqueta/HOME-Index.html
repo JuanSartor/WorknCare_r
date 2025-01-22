@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Consulta Express</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="js-rsp">
+	<nav class="hom-nav">
+		<div class="okm-container">
+			<div class="okm-row">
+				<div class="hom-nav-logo">
+					<a href="/">
+						<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Doctor Plus">
+					</a>
+				</div>
+				<div class="hom-nav-menu">
+					<a href="#" id="hom-nav-rsp-trg" class="hom-nav-burger"><i class="icon-doctorplus-burger"></i></a>
+					<ul id="hom-nav-rsp-get">
+						<li><a data-lnk="hom-DoctorPlus" href="#">Sobre DoctorPlus</a></li>
+						<li><a data-lnk="hom-quienes-somos" href="#">Quienes somos</a></li>
+						<li><a data-lnk="hom-funcionalidades" href="#">Funcionalidades</a></li>
+						<li><a data-lnk="hom-contacto" href="#">Contáctenos</a></li>
+						<li><a href="#">Crear una cuenta</a></li>
+						<li><a href="#" id="loginbtn">Iniciar sesión</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	
+	
+	<!--Modales login	-->
+
+
+	<div class="modal fade usrlogin login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					
+				</div>
+				<div class="modal-body" id="login">
+					<h4 class="modal-title">Iniciar sesión</h4>
+					<form name="login">
+						<div class="login-form-row">
+							<input type="text" name="user" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+							
+						</div>
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<div class="login-recordar">
+								<label class="checkbox">
+									<input type="checkbox" name="recordar" id="recordarme">
+									Recordarme
+								</label>
+							</div>
+							<div class="olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+						
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						
+					</form>
+					<div class="login-registro-row">
+						<span>¿No tenés una cuenta?</span>
+						<a href="#">Registrate</a>
+					</div>
+				</div>
+				
+				
+				<div class="modal-body" id="timeout">
+					<h4 class="modal-title-small">Para continuar confirma que eres</h4>
+					<span class="modal-user-name">Andrea</span>
+
+					<img src="imgs/temp/foto-perfil-110.jpg" class="modal-usr-picture" alt="usr"/>
+					<div class="modal-user-name-small">Andrea Sachse</div>
+					<div class="modal-user-mail">andrea@estudioasya.com</div>
+
+					<form name="login">
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						<div class="login-form-row">
+							<div class="olvide-pass timeout-olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				
+				
+<!--				recuperar contraseña-->
+				<div class="modal-body" id="passrecovery">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+					<form name="pass-recovery">
+						<div class="login-form-row">
+							<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+						</div>
+						<div class="login-form-row">
+							<p>
+								Introduce la dirección de correo electrónico 
+								asociada a tu cuenta y te enviaremos un enlace 
+								para restablecer tu contraseña. 
+							</p>
+						</div>
+						<div class="login-form-row">
+							
+							<input type="submit" id="sendpass" value="Enviar enlace"/>
+							
+<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+						</div>
+
+					</form>
+				</div>
+				
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="recoverytext">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+
+						<div class="login-form-row">
+							<p>
+								Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+								Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+							</p>
+						</div>
+						<div class="login-form-row">
+							<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+						</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+	
+<!--timeout-->
+	
+	
+	
+	
+<!--	Funciond emostrar ocultar en script.js linea 1303-->
+	
+	<!--Modales login	-->
+
+	<div class="hp-home-wrapper" id="hom-DoctorPlus">
+	<section class="hp-home">
+		<div class="okm-row hin-slide-outer-box">
+			
+			<div class="hin-slide-box hp-quienes-somos-slide-box">
+				<div class="hin-slide-item hin-slide-1">
+					<img id="hin-img-rsp-swap" src="imgs/medico/doctorplus-home-wide.jpg" data-altimg-1200="imgs/medico/doctorplus-home.jpg" data-altimg-big="imgs/medico/doctorplus-home-wide.jpg" alt="De. Plus"/>
+					<div class="hin-slide-data-box ">
+					  <h2>Conectados</h2>
+						<h3>cuidamos mejor la salud</h3>
+						<p>Una solución integral para la comunicación entre
+							médicos y pacientes fuera del consultorio</p>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="hin-slide-bottom-action-box">
+				
+				<div class="hin-action-bottom-box">
+					<a href="#" class="hin-soy-paciente">Soy un paciente</a>
+					<a href="#" class="hin-soy-profesional">Soy un profesional</a>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</section>
+</div>
+	
+<section class="hp-quines-somos">
+	<div class="okm-container">
+		<h2 id="hom-quienes-somos">Quienes somos</h2>
+		<p class="hp-quienes-somos-txt">
+			DoctorPlus S.A. es una empresa argentina desarrollada por jóvenes 
+			profesionales que viniendo del sector de las nuevas tecnologías pusimos
+			nuestros conocimientos al servicio de la e-salud. Buscando mejorar la calidad
+			laboral y la eficiencia en el servicio de los profesionales de la medicina
+			facilitando el acceso  y la comunicación con los pacientes desde cualquier
+			punto de nuestro país.
+		</p>
+		<p class="hp-quienes-somos-txt-high">
+			Y porque creemos que el acceso al cuidado de la salud no es un 
+			tema que deba esperar
+			ponemos DoctorPlus al alcance de todos.
+		</p>
+		<div class="hp-staff-box">
+			<div class="okm-row">
+				
+				<div class="hp-staff-col">
+					<div itemscope itemtype="http://schema.org/Person">
+						<img itemprop="image" src="imgs/staff/Yannis-Georgandelis.jpg" alt="Yannis Georgandelis"/>
+						<span itemprop="name">Yannis Georgandelis</span>
+						<span itemprop="jobTitle">Founder</span>
+						<span class="hp-staff-job" itemprop="jobTitle">Business Management</span>
+						<a itemprop="email" href="mailto:usr@mail.com"><i class="icon-doctorplus-envelope"></i></a>
+					</div>
+				</div>
+				
+				<div class="hp-staff-col">
+					<div itemscope itemtype="http://schema.org/Person">
+						<img itemprop="image" src="imgs/staff/Andrea-Sachse.jpg" alt="Andrea Sachse"/>
+						<span itemprop="name">Andrea Sachse</span>
+						<span itemprop="jobTitle">Co-founder</span>
+						<span class="hp-staff-job" itemprop="jobTitle"> Chief Executive Officer<br>(CEO)</span>
+						<a itemprop="email" href="mailto:usr@mail.com"><i class="icon-doctorplus-envelope"></i></a>
+					</div>
+				</div>
+				
+				<div class="hp-staff-col">
+					<div itemscope itemtype="http://schema.org/Person">
+						<img itemprop="image" src="imgs/staff/Sebastian-Balestrini.jpg" alt="Sebastián Balestrini"/>
+						<span itemprop="name">Sebastián Balestrini</span>
+						<span itemprop="jobTitle">Co-founder</span>
+						<span class="hp-staff-job" itemprop="jobTitle">Chief Technology Officer</span>
+						<a itemprop="email" href="mailto:usr@mail.com"><i class="icon-doctorplus-envelope"></i></a>
+					</div>
+				</div>
+				
+				<div class="hp-staff-col">
+					<div itemscope itemtype="http://schema.org/Person">
+						<img itemprop="image" src="imgs/staff/Belen-Garcia-Vago.jpg" alt="Belén García Vago"/>
+						<span itemprop="name">Belén García Vago</span>
+						<span class="hp-staff-job" itemprop="jobTitle">Marketing & CRM</span>
+						<a itemprop="email" href="mailto:usr@mail.com"><i class="icon-doctorplus-envelope"></i></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+	
+	
+<section class="okm-container hp-quienes-somos-solucion">
+	<h3 id="hom-funcionalidades">Una solución integral para las consultas fuera del consultorio</h3>
+	
+	<p>
+		El 80% de los pacientes descuida su salud por lo engorroso que resulta el sistema: 
+		días y horarios específicos para solicitar turnos, agendas de turnos con alta demora de espera, 
+		consultorios y guardias colapsadas, etc.
+	</p>
+	
+	<p>
+		Los pacientes de hoy están acostumbrados a utilizar internet para solucionar todas las necesidades 
+		de su vida cotidiana, inclusive las relacionadas con su salud.
+	</p>
+	
+	<p>
+		Las redes y el avance de la tecnología de los dispotivos móviles proporcionan rapidez, inmediatez, 
+		comodidad y la posibilidad de resolver o, en todo caso, la ayuda para resolver 
+		cada vez más las cuestiones de la vida cotidiana.
+	</p>
+	
+	<div class="hp-quienes-somos-solucion-divider">
+		<i class="icon-doctorplus-arrow-down"></i>
+	</div>
+	
+	<h3>Una solución integral para las consultas fuera del consultorio</h3>
+	
+	<p class="hp-quienes-somos-text-2">
+		DoctorPlus le ofrece su Agenda de Turnos, el Perfil de Salud de sus pacientes y la posibilidad de realizar 
+		Consultas Médicas pagas por Video o Chat  en un solo espacio de trabajo.
+	</p>
+	
+</section>	
+	
+	
+	<section class="okm-container hom-contacto">
+		<h4 id="hom-contacto">Contáctenos</h4>
+		<div class="hom-servicios-bottom-action-box">
+			<i class="icon-doctorplus-arrow-down"></i>
+		</div>
+		<div class="hom-contacto-box">
+			<div id="hom-contacto-box" class="hom-contacto-box">
+				<form id="hom-contacto" name="hom-contacto" action="#" method="get">
+					<div class="hom-form-row">
+						<div class="hom-form-col-x2">
+							<label>Nombre<span>*</span></label>
+							<input type="text" name="nombre">
+							<small class="error">Este campo es obligatorio</small>
+						</div>
+
+						<div class="hom-form-col-x2">
+							<label>Apellido<span>*</span></label>
+							<input type="text" name="apellido">
+							<small class="error">Este campo es obligatorio</small>
+						</div>
+
+					</div>
+
+					<div class="hom-form-row">
+						<div class="hom-form-col-x2">
+							<label>Correo electrónico<span>*</span></label>
+							<input type="text" name="mail">
+							<small class="error">Debe ingresar una dirección de correo válida</small>
+							<small class="error">Este campo es obligatorio</small>
+						</div>
+
+						<div class="hom-form-col-x2">
+							<label>Teléfono</label>
+							<input type="text" name="telefono">
+							<small class="error">Este campo es obligatorio</small>
+						</div>
+
+					</div>
+
+					<div class="hom-form-row">
+						<div class="hom-form-col-x1">
+							<label>Mensaje</label>
+							<textarea name="mensaje"></textarea>
+						</div>
+					</div>
+
+					<div class="hom-form-row hom-form-action">
+						<input class="btn-default" type="submit" value="Enviar">
+					</div>
+
+				</form>
+			</div>
+			<div id="hom-contacto-msg" class="hom-contacto-msg">
+				<p>
+					Su consulta ha sido enviada.<br>
+					Nos pondremos en contacto con usted a la brevedad
+				</p>
+				<p>
+					El equipo de DoctorPlus
+				</p>
+			</div>
+		</div>
+	</section>	
+
+	<div class="footer-2">
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="mailto:info@doctorplus.com.ar">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Doctor Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+<!-- /footer -->
+
+<!-- Modal Privacidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Privacidad</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content">
+			<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+			<ul class="lista-checks">
+			<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+			<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+			<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+			</ul>
+
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>	
+
+	
+	
+
+<!-- Modal Configurar Tablero -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="configurar-tablero">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Configurar Tablero</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content ">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+			    	<div class="panel-heading" role="tab" id="headingOne">
+			  			<span class="dp-arrow-down collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></span>
+			    		<label for="db-0" class="checkbox" ><input type="checkbox" checked id="db-0"> Datos biométricos</label>
+			    	</div>
+			    	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			    		 <div class="panel-body">
+				      		<label for="db-1" class="checkbox"><input type="checkbox" id="db-1">Peso y altura</label>
+				      		<label for="db-2" class="checkbox"><input type="checkbox" id="db-2">Presión arterial</label>
+				      		<label for="db-3" class="checkbox"><input type="checkbox" id="db-3">Colesterol</label>
+				      		<label for="db-5" class="checkbox"><input type="checkbox" id="db-5">Glucemia</label>
+				      		<label for="db-4" class="checkbox"><input type="checkbox" id="db-4">Misceláneas</label>
+				      	</div>
+				    </div>
+			    </div>
+				<div class="panel-heading">
+					<label for="ai-1" class="checkbox"><input type="checkbox" id="ai-1">Alergias e intolerancias</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ci-1" class="checkbox"><input type="checkbox" id="ci-1">Cirugías e intervenciones</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ep-1" class="checkbox"><input type="checkbox" id="ep-1">Enfermadades y Patologías </label>
+				</div>
+				<div class="panel-heading">
+					<label for="gi-1" class="checkbox"><input type="checkbox" id="gi-1">Ginecológicos &amp; Obstétricos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="me-1" class="checkbox"><input type="checkbox" id="me-1">Medicamentos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cd-1" class="checkbox"><input type="checkbox" id="cd-1">Cuidado Dental</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ca-1" class="checkbox"><input type="checkbox" id="ca-1">Cuidado Auditivo</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cv-1" class="checkbox"><input type="checkbox" id="cv-1">Cuidado Visual</label>
+				</div>																												
+				<div class="panel-heading">
+					<label for="va-1" class="checkbox"><input type="checkbox" id="va-1">Vacunas</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ev-1" class="checkbox"><input type="checkbox" id="ev-1">Estilo de vida</label>
+				</div>	
+			</div>
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>
+
+
+	
+	
+	
+	
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="js/enquire.min.js"></script>
+<script src="js/scripts.js"></script>
+
+	<script>
+		
+		$(function(){
+
+			
+			
+		$(':checkbox').radiocheck();
+		$(':radio').radiocheck();
+		
+					
+
+
+	
+
+		
+
+		
+
+			
+			
+			
+		});
+	</script>
+	
+</body>
+</html>

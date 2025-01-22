@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Perfil de Salud Pediatrico - Estudios e imagenes</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+		
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>	
+
+<section class="user-actions user-paciente">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+			<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+			<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+			<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+			<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+			<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+    
+<section class="filter-table-header patients">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<h1 class="section-header">Mis Pacientes</h1>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pull-right">
+				<div class="search-combo">
+					<input type="text" class="form-control flat" placeholder="Buscar paciente" />
+					<button>f</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /header mis pacientes -->    
+		
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+	<section class="container-fluid" id="info-pacientes">
+	<div class="container">
+		<div class="fold">
+		<div class="detalles-paciente">
+			<ul>
+				<li class="pad-top-5">Juan Manuel Menoyo <span>FN 28/08/1969</span></li>
+				<li class="pad-top-5">PSHB <span class="dp-vcard">5443546546</span></li>
+				<li><a href=""><span class="dp-info"></span><small>Certificados y consejos</small></a></li>
+				<li><a href=""><span class="dp-print"></span><small>Impresi&oacute;n Perfil de Salud</small></a></li>
+			</ul>
+		</div>
+
+		<div class="tagsinput-primary">
+			<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="hepatitis, levotiroxina 100 mg, asma, rubeola, hepatitis, levotiroxina 100 mg, asma, rubeola" />
+			<a href="" class="toggle-ver"><span class="fui-plus"></span></a>
+		</div>
+		</div>
+		<a href="" class="toggle-ver toggle-info-box">Ocultar menú</a>		
+	</div>
+	</section>	
+
+
+
+
+
+	<section class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Mis Pacientes</a></li>
+					<li><a href="#">Perfil de Salud</a></li>
+					<li><a href="#">Juan Manuel Menoyo</a></li>
+					<li class="active">Medicamentos</li>
+				</ol>
+			</div>
+			</div>
+		</div>
+	</section>	
+	
+	<section class="module-header medicamentos-header container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+			<figure class="circle-icon-images"></figure>
+			<h1>Medicamentos</h1>
+
+			<p class="notice">Ud. no ingreso aún ninguna prescipción para el paciente</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-sm-4 col-sm-offset-2">
+				<a href="#" class="modal-btn border-box dp-plus" data-target="agregar-prescripcion" role="button"><span>Agregar Prescripci&oacute;n</span></a>	
+				<!-- Modal Agregar Descripción -->
+				<div class="modal fade  modal-type-1" id="agregar-prescripcion">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="modal-title pull-left">
+									<h5 class="dp-medicine">Agregar medicación</h5>
+								</div>
+								<div class="modal-action pull-right">
+									<button class="btn btn-block btn-lg btn-primary dp-search">Vademecum</button>	
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="modal-body">
+								<form action="" method="">
+								
+								<div class="form-content">
+									<p><input type="text" placeholder="Medicamento" name=""></p>
+									<p><input type="text" placeholder="Posolog&iacute;a" name=""></p>
+									<p>
+										<select name="" id="" class="form-control select select-primary select-block">
+											<option value="">Unica toma</option>
+											<option value="">Tratamiento Prolongado</option>
+											<option value="">Crónica</option>
+											<option value="">Temporal</option>
+										</select>
+									</p>
+									<div class="date-holder">
+										<input type="text" placeholder="Fecha de inicio" />
+										<input type="text" placeholder="Fecha de fin" />
+										<img src="imgs/icons/icon-calendar.svg" alt="Calendario"/>
+									</div>
+								</div>
+								<div class="modal-btns">
+									<button data-dismiss="modal">cancelar</button>
+									<button>agregar</button>
+								</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>	
+
+			</div>
+			<div class="col-sm-12 col-sm-4 col-sm-offset-0">
+				<a href="#" class="border-box border-box-solid dp-add-user"><span>Mis Prescripciones</span></a>	
+			</div>
+		</div>
+	</section>
+		
+	<section class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<div class="module-subheader">
+					<h3>Medicaci&oacute;n actual del paciente</h3>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-striped table-medicamentos">
+						<thead>
+							<tr>
+								<td>Rp/</td>
+								<td>Medicamento</td>
+								<td>Posolog&iacute;a</td>
+								<td class="date">Inicio</td>
+								<td class="date">Fin</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="#" class="modal-btn" data-target="ver-info-doctor-1" role="button">Cardiologo</a></td>
+								<td>Jarabe para la tos</td>
+								<td>5 veces por dia, 7 dias.</td>
+								<td>5/12/2014</td>
+								<td>7/12/2014</td>
+							</tr>
+							<tr>
+								<td><a href="#" class="modal-btn" data-target="ver-info-doctor-1" role="button">Cardiologoa</a></td>
+								<td>Acivlovir Filaxis 200mg caps. x10</td>
+								<td>3 veces por dia, 10 dias.</td>
+								<td>2/12/2014</td>
+								<td>11/12/2014</td>
+							</tr>
+							<tr>
+								<td> 
+									<a href="#" class="modal-btn" data-target="ver-info-doctor-1" role="button"><span>Dr. Antonio Comforti</span>Dermatologo experto en...</a>
+									<!-- Modal ver info doctor -->
+									<div class="modal fade" id="ver-info-doctor-1">
+										<div class="modal-dialog">
+											<div class="modal-content">
+											    <div class="tab-content view-doctor">
+												<div role="tabpanel" id="doctor-info" class="w tab-pane active fade in">
+													<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+													<div class="doctor-info">
+														<img src="imgs/temp/info-doctor.gif" height="106" width="105" alt="">
+														<h4>Dr. Yannis Georgandelis</h4>
+														<p>
+															M.N. 104464 - M.P. 227454 <br>
+															GINECOLOGIA  OBSTETRICIA <br>
+															Experto en <br>PARTOS DE RIEGO
+														</p>
+													</div>
+													<div class="options">
+														<a href="#enviar-mensaje" role="tab" data-toggle="tab" class="dp-email" title="Enviar Mensaje"></a>
+														<a href="#" class="dp-vcard" target="_blank" title="Ver ficha"></a>
+													</div>
+												</div>
+												<div id="enviar-mensaje" role="tabpanel" class="w tab-pane fade">
+													<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+													<form action="" method="">
+													<h5 class="modal-header">Mensaje</h5>
+
+													<div class="form-content">
+														<p class="to">A: <span>Dr. Osvaldo Ruffo</span></p>
+														<p><textarea name="" id=""  placeholder="Escriba aqui su consulta"></textarea></p>
+													</div>
+													<div class="modal-btns">
+														<button></button>
+													</div>
+													</form>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</td>
+								<td>Jarabe para la tos</td>
+								<td>5 veces por dia, 7 dias.</td>
+								<td>5/12/2014</td>
+								<td>7/12/2014</td>
+							</tr>								
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="paginas">
+					<span>de 1 al 10 / 200</span>
+					<a href=""><span class="fui-arrow-left"></span></a>
+					<a href=""><span class="fui-arrow-right"></span></a>
+				</div>   
+				<!-- /paginador -->			
+			</div>
+		</div>
+		<!--@tabla -->
+	</section>
+
+
+	<section class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<div class="module-subheader">
+					<h3>Mis prescripciones</h3>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-striped table-mis-prescripciones">
+						<thead>
+							<tr>
+								<td class="col-wide">Medicamento</td>
+								<td>Posolog&iacute;a</td>
+								<td class="date">Inicio</td>
+								<td class="date">Fin</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Jarabe para la tos</td>
+								<td>5 veces por dia, 7 dias.</td>
+								<td>5/12/2014</td>
+								<td>7/12/2014</td>
+							</tr>
+							<tr>
+								<td>Acivlovir Filaxis 200mg caps. x10</td>
+								<td>3 veces por dia, 10 dias.</td>
+								<td>2/12/2014</td>
+								<td>11/12/2014</td>
+							</tr>
+							<tr>
+								<td>Jarabe para la tos</td>
+								<td>5 veces por dia, 7 dias.</td>
+								<td>5/12/2014</td>
+								<td>7/12/2014</td>
+							</tr>								
+						</tbody>
+					</table>
+				</div>
+
+				<div class="paginas">
+					<span>de 1 al 10 / 200</span>
+					<a href=""><span class="fui-arrow-left"></span></a>
+					<a href=""><span class="fui-arrow-right"></span></a>
+				</div>   
+				<!-- /paginador -->				
+				
+			</div>
+		</div>
+		<!--@tabla -->
+	</section>	
+
+	<div class="clearfix"></div>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h4>Servicios</h4>
+					<ul>
+						<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+						<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+						<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+						<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+						<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<h4>Atención al Cliente</h4>
+					<ul>
+						<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+						<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+						<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+						<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+						<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<h4>Institucional</h4>
+							<ul>
+								<li><a href="#" title="Términos legales">Términos legales</a></li>
+								<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+								<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="footer-logo">
+								<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+								<ul>
+									<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+									<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+		
+
+		
+<!--		scripts-->
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<!--		@scripts-->
+
+
+	
+		
+
+		
+	</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Consulta Express</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="modal fade modal-inside">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body"></div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Mensajes</p> <span>1</span></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+			</ul>
+		</div>
+	</section>
+<!-- /accesso directos menu -->
+
+	<nav class="section-header ce-ca-top profile">
+		<div class="container">
+			<div class="user-select pull-left user-select-sonsulta-express-rsp">
+
+				<h1 class="section-name"><i class="icon-doctorplus-chat"></i><a class="consulta-express-tittle-lnk" href="#">Consulta Express</a></h1>
+			</div>
+			<div class="settings consulta-express-pull-right">
+				<div class="dropdown dropdown-express medico-dropdown-express">
+
+					<select class="form-control select select-primary select-block mbl ce-nc-p2-res-list-select" style="width:100%">
+						<option value="0">Consultas</option>
+						<option value="1">Nueva consulta</option>
+						<option value="2">Abiertas</option>
+						<option value="3">Finalizadas</option>
+						<option value="4">Rechazadas</option>
+						<option value="4">Vencidas</option>
+					</select>
+
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</nav>
+ 
+
+
+
+
+<section class="module-header">
+	<h1 class="section-header">Consultas</h1>
+</section>
+
+<section class="consulta-express-submenu">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 consulta-express-submenu-icon-holder-lg">
+				<a href="#">
+					<div>
+						<figure><i class="icon-doctorplus-chat-comment"></i></figure>
+						<span>12</span>
+					</div>
+					<span>ABIERTAS</span>
+				</a>
+				<a href="#">
+					<div>
+						<figure><i class="icon-doctorplus-coffee-cup"></i></figure>
+					</div>
+					<span>PENDIENTES</span>
+				</a>
+				<a href="#">
+					<div>
+						<figure class="nueva-consulta-btn"><i class="icon-doctorplus-chat-rss consulta-portada-lg-icon"></i></figure>
+						<span>1356</span>
+					</div>
+					<span>PUBLICADAS EN LA RED</span>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 consulta-express-submenu-icon-holder-sm">
+				<a href="#">
+					<div>
+						<figure><i class="icon-doctorplus-ficha-check"></i></figure>
+					</div>
+					<span>FINALIZADAS</span>
+				</a>
+				<a href="#">
+					<div>
+						<figure><i class="icon-doctorplus-hi-five"></i></figure>
+						<span>123</span>
+					</div>
+					<span>RECHAZADAS</span>
+				</a>
+				<a href="#">
+					<div>
+						<figure><i class="icon-doctorplus-cloud-download"></i></figure>
+						<span>1224</span>
+					</div>
+					<span>VENCIDAS</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+	
+	
+<section class="consulta-express-slider-holder">
+
+			<div id="consulta-express-slider" class="carousel slide" data-ride="carousel">
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+
+						
+					<div class="item active portada-item-1">
+						<div class="item active portada-item-1-inner">
+							<div class="portada-item-1-card">
+								<h2>Consulta Express</h2>
+								<p>La innovadora herramienta de consulta a distancia
+									que le permite capitalizar sus consejos y 
+									consultas médicas fuera de su consultorio</p>
+								<div class="lnk-holder">
+									<a href="#">MAS INFORMACION</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					<div class="item portada-item-2">
+						<div class="item active portada-item-2-inner">
+							<div class="portada-item-2-card">
+								<h2>¡Aumente su capacidad 
+									productiva!</h2>
+								<p>Ofrezca sus servicios de Consulta Express a
+									todos los pacientes registrados en DoctorPlus</p>
+								<p class="bajada">Ud. atienda la consulta. 
+									DoctorPlus se encarga de gestionar su cobro.</p>
+								<div class="lnk-holder">
+									<a href="#">
+										<figure><i class="icon-doctorplus-people-add"></i></figure>
+										<span>PROFESIONALES EN LA RED</span>
+									</a>
+								</div>
+							
+							</div>
+						</div>
+						</div>
+					
+	
+						
+					
+
+
+				</div>
+				<ol class="carousel-indicators default-indicators consulta-express-indicators consulta-portada">
+					<li data-target="#consulta-express-slider" data-slide-to="0" class="active"></li>
+					<li data-target="#consulta-express-slider" data-slide-to="1"></li>
+				</ol>
+				<!-- Controls -->
+			</div>
+	
+			<div class="consulta-portada-shadow"></div>
+	
+</section>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Modal Privacidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Privacidad</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content">
+			<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+			<ul class="lista-checks">
+			<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+			<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+			<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+			</ul>
+
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>	
+
+
+<!-- Modal Configurar Tablero -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="configurar-tablero">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Configurar Tablero</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content ">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+			    	<div class="panel-heading" role="tab" id="headingOne">
+			  			<span class="dp-arrow-down collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></span>
+			    		<label for="db-0" class="checkbox" ><input type="checkbox" checked id="db-0"> Datos biométricos</label>
+			    	</div>
+			    	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			    		 <div class="panel-body">
+				      		<label for="db-1" class="checkbox"><input type="checkbox" id="db-1">Peso y altura</label>
+				      		<label for="db-2" class="checkbox"><input type="checkbox" id="db-2">Presión arterial</label>
+				      		<label for="db-3" class="checkbox"><input type="checkbox" id="db-3">Colesterol</label>
+				      		<label for="db-5" class="checkbox"><input type="checkbox" id="db-5">Glucemia</label>
+				      		<label for="db-4" class="checkbox"><input type="checkbox" id="db-4">Misceláneas</label>
+				      	</div>
+				    </div>
+			    </div>
+				<div class="panel-heading">
+					<label for="ai-1" class="checkbox"><input type="checkbox" id="ai-1">Alergias e intolerancias</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ci-1" class="checkbox"><input type="checkbox" id="ci-1">Cirugías e intervenciones</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ep-1" class="checkbox"><input type="checkbox" id="ep-1">Enfermadades y Patologías </label>
+				</div>
+				<div class="panel-heading">
+					<label for="gi-1" class="checkbox"><input type="checkbox" id="gi-1">Ginecológicos &amp; Obstétricos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="me-1" class="checkbox"><input type="checkbox" id="me-1">Medicamentos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cd-1" class="checkbox"><input type="checkbox" id="cd-1">Cuidado Dental</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ca-1" class="checkbox"><input type="checkbox" id="ca-1">Cuidado Auditivo</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cv-1" class="checkbox"><input type="checkbox" id="cv-1">Cuidado Visual</label>
+				</div>																												
+				<div class="panel-heading">
+					<label for="va-1" class="checkbox"><input type="checkbox" id="va-1">Vacunas</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ev-1" class="checkbox"><input type="checkbox" id="ev-1">Estilo de vida</label>
+				</div>	
+			</div>
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

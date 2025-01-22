@@ -1,0 +1,13 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:300,300italic, 400,700');
+@font-face {
+  font-family: 'doctorplus';
+  src: url('../fonts/doctorplus/doctorplusicons.eot') format('embedded-opentype'), url('../fonts/doctorplus/doctorplusicons.woff') format('woff'), url('../fonts/doctorplus/doctorplusicons.svg') format('svg'), url('../fonts/doctorplus/doctorplusicons.truetype') format('truetype');
+}
+@font-face {
+  font-family: 'Flat-UI-Icons';
+  src: url('../fonts/glyphicons/flat-ui-icons-regular.eot') format('embedded-opentype'), url('../fonts/glyphicons/flat-ui-icons-regular.woff') format('woff'), url('../fonts/glyphicons/flat-ui-icons-regular.svg') format('svg'), url('../fonts/glyphicons/flat-ui-icons-regular.truetype') format('truetype');
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.otf') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype');
+}

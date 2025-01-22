@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Consulta Express</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="js/scrollbars/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="js/timecircle/TimeCircles.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="modal fade modal-inside">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body"></div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<section class="filter user-group">
+	<div class="container">
+		<div class="btn-group user-filter" data-toggle="buttons">
+			<label class="btn btn-inverse active">
+				<input type="checkbox" checked> Todos
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Juan Manuel Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Iñaki Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Usted
+			</label>
+			<button class="dp-add-user add-user"></button>
+		</div>
+	</div>
+</section>
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+
+	<nav class="section-header ce-ca-top profile">
+		<div class="container">
+			<div class="user-select pull-left user-select-sonsulta-express-rsp">
+
+				<h1 class="section-name"><i class="icon-doctorplus-chat"></i><a class="consulta-express-tittle-lnk" href="#">Consulta Express</a></h1>
+			</div>
+			<div class="settings consulta-express-pull-right">
+				<div class="dropdown dropdown-express medico-dropdown-express">
+
+					<select class="form-control select select-primary select-block mbl ce-nc-p2-res-list-select" style="width:100%">
+						<option value="0">Consultas</option>
+						<option value="1">Nueva consulta</option>
+						<option value="2">Abiertas</option>
+						<option value="3">Finalizadas</option>
+						<option value="4">Rechazadas</option>
+						<option value="4">Vencidas</option>
+					</select>
+
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</nav>
+	
+
+	
+<div class="cs-nc-section-holder">
+	
+	<section class="container ceprr-header">
+		<div class="cs-nc-p2-header">
+			<figure>
+				<i class="icon-doctorplus-chat-rss"></i>
+			</figure>
+			<h2>Consultas en la red</h2>
+			
+			<div class="ceprr-filtro-menu">
+				<ul>
+					<li><a href="#" class="ceprr-todas-trigger"><i class="fui-list-small-thumbnails"></i><span>Todas</span></a></li>
+					<li><a href="#" class="ceprr-especialidad-trigger"><i class="fui-list-numbered"></i><span>Mi especialidad</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="container ceprr-todas">
+		<ul>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Dermatología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>3</figure>
+					Kinesiología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Otorrinolaringología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Dermatología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>3</figure>
+					Kinesiologíassss
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Dermatologíaa
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Dermatología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>3</figure>
+					Kinesiología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Otorrinolaringología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Dermatología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>3</figure>
+					Kinesiología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Otorrinolaringología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>9999</figure>
+					Dermatología
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<figure>3</figure>
+					Kinesiología
+				</a>
+			</li>
+
+			<li>
+				<a href="#" class="ceprr-ver-mas">
+					Ver más especialidades
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	
+<div class="ceprr-accordion-section-holder">	
+	
+	
+	<section class="container ceprr-buscador-con-filtros">
+		<div class="ceprr-filtros-btn-holder">
+			<div class="ceprr-accordion-header">
+				<div class="ceprr-mi-especialidad-header">
+					<a href="#"><i class="icon-doctorplus-left-arrow"></i></a>
+					<figure>3</figure>
+					Kinesiología
+				</div>
+			</div>
+			<a href="#" class="ceprr-filtros-btn-trigger"><i class="icon-doctorplus-search"></i>Buscador con filtros</a>
+		</div>
+		<div class="ceprr-filtros-holder">
+			<div class="ceprr-filtros-holder-inner">
+			<form name="cs-nc-p2-profesionales-en-la-red" id="cs-nc-p2-profesionales-en-la-red">
+			<div class="container-fluid">
+				<div class="row cs-nc-p2-row-divider">
+					<div class="col-sm-4">
+						<div class="cs-nc-p2-input-holder cs-nc-p2-input-text-holder">
+							<input type=text name="cs-nc-p2-pr-profesional" placeholder="Especialidad"/>
+							<button><i class="icon-doctorplus-search"></i></button>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="cs-nc-p2-input-holder">
+							<select class="form-control select select-primary select-block mbl">
+								<option value="0">Subespecialidad</option>
+								<option value="1">valor 1</option>
+								<option value="2">valor 2</option>
+								<option value="3">valor 3</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="cs-nc-p2-input-holder">
+							<div class="cs-nc-p2-input-holder cs-nc-p2-input-text-holder">
+								<input type=text name="cs-nc-p2-pr-cobertura" placeholder="Obra Social / Medicina Prepaga"/>
+								<button class="search-btn"><i class="icon-doctorplus-search"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="ceprr-tags-row">
+						<div class="col-sm-12 ceprr-tags-cell">
+							<div class="tagsinput-primary ceprr-tags">
+								<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="Cardiología, Cirugía cardiovascular, Cirugía cardiovascular coronaria y si hay mas..., OSDE, Sindicato de Camioneros" />
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row cs-nc-p2-row-divider">
+					<div class="col-sm-12">
+						<div class="cs-nc-p2-range-holder cprr-slidebar">
+						<div class="cs-nc-p2-bg-bars">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li style="height: 5px;"></li>
+								<li style="height: 10px;"></li>
+								<li style="height: 25px;"></li>
+								<li style="height: 2px;"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+
+							</ul>
+						</div>
+						<div class="cs-nc-p2-range">
+							<div id="slider-range" class="cs-ui-range"></div>
+
+							<div class="cs-ui-range-values">
+
+								<input type="text" id="amount-min" class="cs-ui-range-value min" readonly>
+
+								<div class="cs-ui-range-values-promedio">
+									<div class="cs-ui-range-values-promedio-box">
+										<span>$250 promedio</span>
+										<div class="cs-ui-range-values-promedio-arrow"></div>
+									</div>
+
+								</div>
+
+								<input type="text" id="amount-max" class="cs-ui-range-value max" readonly>
+							</div>
+						</div>
+						</div></div>
+				</div>
+			</div>
+			</form>
+			</div>
+			<div class="ceprr-filtros-action-holder">
+				<a href="#" class="cancelar">Cancelar</a>
+				<a href="#" class="aplicar">Aplicar filtros</a>
+			</div>
+		</div>
+	</section>
+	
+<!--	primer accordion-->
+	
+<section class="container ceprr-accordion">
+
+		<div class="cs-ca-consultas-holder">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-default">
+					<div class="panel-heading paciente-consulta-express-acc-header" role="tab">
+						<div class="ce-ca-toolbar" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+							<div class="row">
+								<div class="colx3 pce-dr-col">
+									<div class="cs-ca-colx3-inner dr-col">
+										<div class="cs-ca-usr-avatar">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<figure>
+												<i class="icon-doctorplus-pharmaceutics"></i>
+											</figure>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<h2>Dr. Angela Mackenzi</h2>
+											<span>Ginecologia - Obstetricia</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="colx3 ceprr-pariente-col">
+									<div class="cs-ca-colx3-inner">
+										<div class="cs-ca-usr-avatar cs-ca-usr-avatar-sm">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<span>Padre del paciente</span>
+											<h2>Juan Manuel Menoyo</h2>
+										</div>
+									</div>
+								</div>
+								<div class="cs-ca-tiempo-respuesta-holder">
+									<div class="cs-ca-tiempo-respuesta-inner">
+										<span class="cs-ca-tiempo-respuesta-label">Respuesta aproximada en</span>
+										<div class="cs-ca-tiempo-respuesta">
+											<span class="cs-ca-clock-icon"><i class="icon-doctorplus-clock"></i></span><span class="cs-ca-tiempo-respuesta-num" id="timer-1"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row ce-ca-toolbar-row pce-header-low-row">
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-label">Consulta Express</span>
+										<span class="cs-ca-numero-consulta">Nº 201-521697</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-motivo-label">Motivo:</span>
+										<span class="cs-ca-numero-consulta">Resultados estudios</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-date-tools">
+										<span class="cs-ca-numero-consulta-date-label">Iniciada</span>
+										<span class="cs-ca-fecha">20 Feb 2016 -08:14</span>
+										<div class="cs-ca-date-tools-holder">
+											<a href="#"><i class="icon-doctorplus-minus"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="collapse-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+						<div class="panel-body">
+							
+							<div class="ceprr-consulta-fuera-row">
+								<div class="ceprr-consulta-fuera-motivo">
+									<div class="ceprr-consulta-fuera-icon-holder">
+										<i class="icon-doctorplus-usr-add"></i>
+										<span></span>
+									</div>
+									<p>Ud. no se encuentra incluído 
+										dentro de los parámetros de 
+										esta búsqueda</p>
+								</div>
+								<div class="ceprr-consulta-fuera-content">
+									<div class="ceprr-consulta-fuera-content-holder">
+										<div class="ceprr-consulta-fuera-content-window">
+											<div class="ceprr-consulta-fuera-content-inner">
+												<span>25 Ene 2016 - 17:14 hs</span>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+
+												<span>26 Ene 2016 - 17:14 hs</span>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+
+
+												<span>26 Ene 2016 - 17:14 hs</span>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+												<div class="chat-content-attach">
+													<a href="#" class="modal-btn" data-target="ver-archivo" role="button">
+														<i class="icon-doctorplus-camera"></i>
+														<span class="attach-name">+5</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="ceprr-consulta-fuera-content-action">
+											<a data-inicio="true" class="ceprr-consulta-fuera-content-leer-mas-trigger" href="#">Leer más</a>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading paciente-consulta-express-acc-header" role="tab">
+						<div class="ce-ca-toolbar" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true" aria-controls="collapse-1">
+							<div class="row">
+								<div class="colx3 pce-dr-col">
+									<div class="cs-ca-colx3-inner dr-col">
+										<div class="cs-ca-usr-avatar">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<figure>
+												<i class="icon-doctorplus-pharmaceutics"></i>
+											</figure>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<h2>Dr. Angela Mackenzi</h2>
+											<span>Ginecologia - Obstetricia</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="colx3 ceprr-pariente-col-empty">
+									<div class="cs-ca-colx3-inner">
+										
+									</div>
+								</div>
+								<div class="cs-ca-tiempo-respuesta-holder">
+									<div class="cs-ca-tiempo-respuesta-inner">
+										<span class="cs-ca-tiempo-respuesta-label">Respuesta aproximada en</span>
+										<div class="cs-ca-tiempo-respuesta">
+											<span class="cs-ca-clock-icon"><i class="icon-doctorplus-clock"></i></span><span class="cs-ca-tiempo-respuesta-num" id="timer-2"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row ce-ca-toolbar-row pce-header-low-row">
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-label">Consulta Express</span>
+										<span class="cs-ca-numero-consulta">Nº 201-521697</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-motivo-label">Motivo:</span>
+										<span class="cs-ca-numero-consulta">Segunda opinión</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-date-tools">
+										<span class="cs-ca-numero-consulta-date-label">Iniciada</span>
+										<span class="cs-ca-fecha">20 Feb 2016 -08:14</span>
+										<div class="cs-ca-date-tools-holder">
+											<a href="#"><i class="icon-doctorplus-minus"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+						<div class="panel-body">
+
+							<div class="ceprr-consulta-fuera-row">
+								<div class="ceprr-consulta-fuera-motivo">
+									<div class="ceprr-consulta-fuera-icon-holder">
+										<i class="icon-doctorplus-dollar-circular"></i>
+										<span></span>
+									</div>
+									<small>$50 - $ 250</small>
+									<p>Fuera de su rango de tarifa</p>
+								</div>
+								<div class="ceprr-consulta-fuera-content">
+									<div class="ceprr-consulta-fuera-content-holder">
+										<div class="ceprr-consulta-fuera-content-window">
+											<div class="ceprr-consulta-fuera-content-inner">
+												<span>25 Ene 2016 - 17:14 hs</span>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+
+												<span>26 Ene 2016 - 17:14 hs</span>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+
+
+											</div>
+										</div>
+										<div class="ceprr-consulta-fuera-content-action">
+											<a data-inicio="true" class="ceprr-consulta-fuera-content-leer-mas-trigger" href="#">Leer más</a>
+										</div>
+									</div>
+								</div>
+								<div class="ceprr-mod-tarifa-row">
+									<div class="ceprr-mod-tarifa-content">
+										<p>Para poder responder esta Consulta Express deberá modificar su tarifa</p>
+										<a href="#"><i class="icon-doctorplus-dollar-circular"></i> Modificar tarifa</a>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+
+	</section>
+	
+<!--	@primer accordion-->	
+<section class="container">
+	
+	<div class="row">
+		<div class="col-xs-5">
+			<div class="show-cant-items">
+			<span class="question small big-font">mostrar</span>
+			<select name="mostrar" id="mostrar" class="form-control select select-primary select-block mbl medium ib">
+				<option value="10">10</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+			</div>
+		</div>
+		<div class="col-xs-7">
+			<div class="paginas">
+				<span>de 1 al 10 / 200</span>
+				<a href=""><span class="fui-arrow-left"></span></a>
+				<a href=""><span class="fui-arrow-right"></span></a>
+			</div>
+		</div>
+	</div>
+	
+</section>
+	
+
+	<!--	segundo accordion-->
+
+	<section class="container ceprr-buscador-con-filtros">
+		<div class="ceprr-filtros-btn-holder">
+			<div class="ceprr-accordion-header">
+				<div class="ceprr-mi-especialidad-header">
+					<a class="ceprr-tags-back" href="#"><i class="icon-doctorplus-left-arrow"></i></a>
+					<div class="tagsinput-primary ceprr-tags">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="Cardiología, Cirugía cardiovascular, Cirugía cardiovascular coronaria y si hay mas..., OSDE, Sindicato de Camioneros" />
+					</div>
+				</div>
+			</div>
+			<a href="#" class="ceprr-filtros-btn-trigger"><i class="icon-doctorplus-search"></i>Buscador con filtros</a>
+		</div>
+		<div class="ceprr-filtros-holder">
+			<div class="ceprr-filtros-holder-inner">
+				<form name="cs-nc-p2-profesionales-en-la-red" id="cs-nc-p2-profesionales-en-la-red">
+					<div class="container-fluid">
+						<div class="row cs-nc-p2-row-divider">
+							<div class="col-sm-4">
+								<div class="cs-nc-p2-input-holder cs-nc-p2-input-text-holder">
+									<input type=text name="cs-nc-p2-pr-profesional" placeholder="Especialidad"/>
+									<button><i class="icon-doctorplus-search"></i></button>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="cs-nc-p2-input-holder">
+									<select class="form-control select select-primary select-block mbl">
+										<option value="0">Subespecialidad</option>
+										<option value="1">valor 1</option>
+										<option value="2">valor 2</option>
+										<option value="3">valor 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="cs-nc-p2-input-holder">
+									<div class="cs-nc-p2-input-holder cs-nc-p2-input-text-holder">
+										<input type=text name="cs-nc-p2-pr-cobertura" placeholder="Obra Social / Medicina Prepaga"/>
+										<button class="search-btn"><i class="icon-doctorplus-search"></i></button>
+									</div>
+								</div>
+							</div>
+							<div class="ceprr-tags-row">
+								<div class="col-sm-12 ceprr-tags-cell">
+									<div class="tagsinput-primary ceprr-tags">
+										<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="Cardiología, Cirugía cardiovascular, Cirugía cardiovascular coronaria y si hay mas..., OSDE, Sindicato de Camioneros" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row cs-nc-p2-row-divider">
+							<div class="col-sm-12">
+								<div class="cs-nc-p2-range-holder cprr-slidebar">
+									<div class="cs-nc-p2-bg-bars">
+										<ul>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li style="height: 5px;"></li>
+											<li style="height: 10px;"></li>
+											<li style="height: 25px;"></li>
+											<li style="height: 2px;"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+
+										</ul>
+									</div>
+									<div class="cs-nc-p2-range">
+										<div id="slider-range-2" class="cs-ui-range"></div>
+
+										<div class="cs-ui-range-values">
+
+											<input type="text" id="amount-min-2" class="cs-ui-range-value min" readonly>
+
+											<div class="cs-ui-range-values-promedio">
+												<div class="cs-ui-range-values-promedio-box">
+													<span>$250 promedio</span>
+													<div class="cs-ui-range-values-promedio-arrow"></div>
+												</div>
+
+											</div>
+
+											<input type="text" id="amount-max-2" class="cs-ui-range-value max" readonly>
+										</div>
+									</div>
+								</div></div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="ceprr-filtros-action-holder">
+				<a href="#" class="cancelar">Cancelar</a>
+				<a href="#" class="aplicar">Aplicar filtros</a>
+			</div>
+		</div>
+	</section>
+	
+	
+	<section class="container ceprr-accordion">
+
+		<div class="cs-ca-consultas-holder">
+			<div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-default">
+					<div class="panel-heading paciente-consulta-express-acc-header" role="tab">
+						<div class="ce-ca-toolbar" role="button" data-toggle="collapse" data-parent="#accordion-2" href="#collapse-b1" aria-expanded="true" aria-controls="collapse-b1">
+							<div class="row">
+								<div class="colx3 pce-dr-col">
+									<div class="cs-ca-colx3-inner dr-col">
+										<div class="cs-ca-usr-avatar">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<figure>
+												<i class="icon-doctorplus-pharmaceutics"></i>
+											</figure>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<h2>Dr. Angela Mackenzi</h2>
+											<span>Ginecologia - Obstetricia</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="colx3 ceprr-pariente-col">
+									<div class="cs-ca-colx3-inner">
+										<div class="cs-ca-usr-avatar cs-ca-usr-avatar-sm">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<span>Padre del paciente</span>
+											<h2>Juan Manuel Menoyo</h2>
+										</div>
+									</div>
+								</div>
+								<div class="cs-ca-tiempo-respuesta-holder">
+									<div class="cs-ca-tiempo-respuesta-inner">
+										<span class="cs-ca-tiempo-respuesta-label">Respuesta aproximada en</span>
+										<div class="cs-ca-tiempo-respuesta">
+											<span class="cs-ca-clock-icon"><i class="icon-doctorplus-clock"></i></span><span class="cs-ca-tiempo-respuesta-num" id="timer-3"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row ce-ca-toolbar-row pce-header-low-row">
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-label">Consulta Express</span>
+										<span class="cs-ca-numero-consulta">Nº 201-521697</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-motivo-label">Motivo:</span>
+										<span class="cs-ca-numero-consulta">Resultados estudios</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-date-tools">
+										<span class="cs-ca-numero-consulta-date-label">Iniciada</span>
+										<span class="cs-ca-fecha">20 Feb 2016 -08:14</span>
+										<div class="cs-ca-date-tools-holder">
+											<a href="#"><i class="icon-doctorplus-minus"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="collapse-b1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
+						<div class="panel-body">
+
+							<div class="ceprr-consulta-fuera-row">
+
+								<div class="ceprr-consulta-fuera-content col-1">
+									<div class="ceprr-consulta-fuera-content-holder">
+										<span>25 Ene 2016 - 17:14 hs</span>
+										<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+											Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+											Me hice baños con agua y solucioón fisiológica. 
+											Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+									</div>
+								</div>
+							</div>
+
+							
+						<div class="row">
+							<div class="audio-actions-panel ceprr-audio-panel">
+								<!--									slide-->
+								<div class="audio-reccord-holder-chat">
+
+									<form name="chat-msg" id="chat-msg">
+										<div class="audio-reccord-holder">
+											<div class="chat-msg-holder">
+												<div class="chat-msg-input-holder">
+													<textarea data-autoresize rows="1" name="chat-msg-txt" placeholder="Escribir mensaje"></textarea>
+												</div>
+											</div>
+											<div class="chat-msg-holder-btn-holder">
+												<button class="file-trigger" type="submit"><i class="icon-doctorplus-camera"></i></button>
+												<a class="chat-mic-rec" href="#"><i class="icon-doctorplus-microphone"></i></a>
+												<!--<a class="chat-mic-rec grabando" href="#"><i class="icon-doctorplus-stop"></i></a>-->
+												<input class="mic-trigger" type="file" accept="audio/*;capture=microphone">
+											</div>
+										</div>
+
+										<div class="audio-reccord-holder">
+											<div class="chat-img-upld">
+												<div class="upload-widget">
+													<div class="dz-message needsclick">
+														<i class="icon-doctorplus-plus"></i>
+														<h3>Agregar exámen, estudio o foto</h3>
+														<small>Ud. podrá subir archivos jpg, pdf, png.</small>
+													</div>
+												</div>
+												<span class="upload-widget-disclaimer">Las fotos o archivos no deben pesar más de 8 MB.</span>
+											</div>
+										</div>
+										<div class="audio-action-holder">
+											<a href="#" class="ce-ca-cancelar"><i class="icon-doctorplus-cruz"></i>Cancelar</a>
+											<a href="#" data-toggle="modal" data-target=".modal-perfil-completo" class="ce-ca-responder" ><i class="icon-doctorplus-brujula-arrow"></i> Enviar respuesta</a>
+										</div>
+									</form>
+								</div>
+								<div class="audio-action-holder btn-slide-holder">
+									<a href="#" class="ce-ca-enviar-consulta"><i class="icon-doctorplus-chat-add"></i>Aceptar y enviar respuesta</a>
+								</div>
+							</div>
+						</div>
+							
+						<div class="ceprr-consulta-aviso-row">
+							<div class="ceprr-consulta-aviso-inner">
+								<div class="ceprr-consulta-aviso-content">
+<!--									<p class="ceprr-consulta-aviso-content-time-left">Ud. dispone de 10 min para enviarle su respuesta al paciente.</p>-->
+									<div class="ceprr-consulta-aviso-doctor">
+										<img src="imgs/extranet/yannis.png" alt="user">
+										<div class="ceprr-consulta-aviso-doctor-data-holder">
+											<span>El Dr. Fulano<span class="ceprr-write-anim-3"> está </span><span class="ceprr-write-anim-4">escribiendo</span><span class="ceprr-write-anim-5">...</span></span>
+											<span>Tiene 10 minutos para enviar su respuesta</span>
+										</div>
+									
+									</div>
+									<p class="ceprr-consulta-aviso-content-time-disclaimer">Transcurrido dicho plazo, y en caso de no haber contestado, 
+										la Consulta Express volverá a estar disponible para 
+										los Profesionales en la Red de DoctorPlus</p>
+								</div>
+								<div class="ceprr-consulta-aviso-timer">
+									<span class="cs-ca-tiempo-respuesta-num" id="timer-1">130</span> min
+								</div>
+							</div>
+						</div>
+						
+							<div class="ceprr-consulta-aviso-row">
+								<div class="ceprr-consulta-aviso-inner">
+									<div class="ceprr-consulta-aviso-content">
+										<p class="ceprr-consulta-aviso-content-time-left">Ud. dispone de 10 min para enviarle su respuesta al paciente.</p>
+
+										<p class="ceprr-consulta-aviso-content-time-disclaimer">Transcurrido dicho plazo, y en caso de no haber contestado, 
+											la Consulta Express volverá a estar disponible para 
+											los Profesionales en la Red de DoctorPlus</p>
+									</div>
+									<div class="ceprr-consulta-aviso-timer">
+										<span class="cs-ca-tiempo-respuesta-num" id="timer-1">130</span> min
+									</div>
+								</div>
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading paciente-consulta-express-acc-header" role="tab">
+						<div class="ce-ca-toolbar" role="button" data-toggle="collapse" data-parent="#accordion-2" href="#collapse-b2" aria-expanded="true" aria-controls="collapse-b2">
+							<div class="row">
+								<div class="colx3 pce-dr-col">
+									<div class="cs-ca-colx3-inner dr-col">
+										<div class="cs-ca-usr-avatar">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<figure>
+												<i class="icon-doctorplus-pharmaceutics"></i>
+											</figure>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<h2>Dr. Angela Mackenzi</h2>
+											<span>Ginecologia - Obstetricia</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="colx3 ceprr-pariente-col">
+									<div class="cs-ca-colx3-inner">
+										<div class="cs-ca-usr-avatar cs-ca-usr-avatar-sm">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+										</div>
+										<div class="cs-ca-usr-data-holder">
+											<span>Padre del paciente</span>
+											<h2>Juan Manuel Menoyo</h2>
+										</div>
+									</div>
+								</div>
+								<div class="cs-ca-tiempo-respuesta-holder">
+									<div class="cs-ca-tiempo-respuesta-inner">
+										<span class="cs-ca-tiempo-respuesta-label">Respuesta aproximada en</span>
+										<div class="cs-ca-tiempo-respuesta">
+											<span class="cs-ca-clock-icon"><i class="icon-doctorplus-clock"></i></span><span class="cs-ca-tiempo-respuesta-num" id="timer-4"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row ce-ca-toolbar-row pce-header-low-row">
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-label">Consulta Express</span>
+										<span class="cs-ca-numero-consulta">Nº 201-521697</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-numero-consulta-holder">
+										<span class="cs-ca-numero-consulta-motivo-label">Motivo:</span>
+										<span class="cs-ca-numero-consulta">Segunda opinión</span>
+									</div>
+								</div>
+								<div class="pce-colx3">
+									<div class="cs-ca-date-tools">
+										<span class="cs-ca-numero-consulta-date-label">Iniciada</span>
+										<span class="cs-ca-fecha">20 Feb 2016 -08:14</span>
+										<div class="cs-ca-date-tools-holder">
+											<a href="#"><i class="icon-doctorplus-minus"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="collapse-b2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-b2">
+						<div class="panel-body">
+
+							<div class="ceprr-consulta-fuera-row">
+
+								<div class="ceprr-consulta-fuera-content col-1">
+									<div class="ceprr-consulta-fuera-content-holder">
+										<span>25 Ene 2016 - 17:14 hs</span>
+										<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+											Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+											Me hice baños con agua y solucioón fisiológica. 
+											Hoy sábado amanecí con el ojo casi cerrado y me cuesta...</p>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="audio-actions-panel ceprr-audio-panel">
+									<!--									slide-->
+									<div class="audio-reccord-holder-chat">
+
+										<form name="chat-msg" id="chat-msg">
+											<div class="audio-reccord-holder">
+												<div class="chat-msg-holder">
+													<div class="chat-msg-input-holder">
+														<textarea data-autoresize rows="1" name="chat-msg-txt" placeholder="Escribir mensaje"></textarea>
+													</div>
+												</div>
+												<div class="chat-msg-holder-btn-holder">
+													<button class="file-trigger" type="submit"><i class="icon-doctorplus-camera"></i></button>
+													<a class="chat-mic-rec" href="#"><i class="icon-doctorplus-microphone"></i></a>
+													<!--<a class="chat-mic-rec grabando" href="#"><i class="icon-doctorplus-stop"></i></a>-->
+													<input class="mic-trigger" type="file" accept="audio/*;capture=microphone">
+												</div>
+											</div>
+
+											<div class="audio-reccord-holder">
+												<div class="chat-img-upld">
+													<div class="upload-widget">
+														<div class="dz-message needsclick">
+															<i class="icon-doctorplus-plus"></i>
+															<h3>Agregar exámen, estudio o foto</h3>
+															<small>Ud. podrá subir archivos jpg, pdf, png.</small>
+														</div>
+													</div>
+													<span class="upload-widget-disclaimer">Las fotos o archivos no deben pesar más de 8 MB.</span>
+												</div>
+											</div>
+											<div class="audio-action-holder">
+												<a href="#" class="ce-ca-cancelar"><i class="icon-doctorplus-cruz"></i>Cancelar</a>
+												<a href="#" data-toggle="modal" data-target=".modal-perfil-completo" class="ce-ca-responder" ><i class="icon-doctorplus-brujula-arrow"></i> Enviar respuesta</a>
+											</div>
+										</form>
+									</div>
+									<div class="audio-action-holder btn-slide-holder">
+										<a href="#" class="ce-ca-enviar-consulta"><i class="icon-doctorplus-chat-add"></i>Aceptar y enviar respuesta</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="ceprr-consulta-aviso-row">
+								<div class="ceprr-consulta-aviso-inner">
+									<div class="ceprr-consulta-aviso-content">
+										<!--									<p class="ceprr-consulta-aviso-content-time-left">Ud. dispone de 10 min para enviarle su respuesta al paciente.</p>-->
+										<div class="ceprr-consulta-aviso-doctor">
+											<img src="imgs/extranet/yannis.png" alt="user">
+											<div class="ceprr-consulta-aviso-doctor-data-holder">
+												<span>El Dr. Fulano<span class="ceprr-write-anim-3"> está </span><span class="ceprr-write-anim-4">escribiendo</span><span class="ceprr-write-anim-5">...</span></span>
+												<span>Tiene 10 minutos para enviar su respuesta</span>
+											</div>
+
+										</div>
+										<p class="ceprr-consulta-aviso-content-time-disclaimer">Transcurrido dicho plazo, y en caso de no haber contestado, 
+											la Consulta Express volverá a estar disponible para 
+											los Profesionales en la Red de DoctorPlus</p>
+									</div>
+									<div class="ceprr-consulta-aviso-timer">
+										<span class="cs-ca-tiempo-respuesta-num" id="timer-1">130</span> min
+									</div>
+								</div>
+							</div>
+
+							<div class="ceprr-consulta-aviso-row">
+								<div class="ceprr-consulta-aviso-inner">
+									<div class="ceprr-consulta-aviso-content">
+										<p class="ceprr-consulta-aviso-content-time-left">Ud. dispone de 10 min para enviarle su respuesta al paciente.</p>
+
+										<p class="ceprr-consulta-aviso-content-time-disclaimer">Transcurrido dicho plazo, y en caso de no haber contestado, 
+											la Consulta Express volverá a estar disponible para 
+											los Profesionales en la Red de DoctorPlus</p>
+									</div>
+									<div class="ceprr-consulta-aviso-timer">
+										<span class="cs-ca-tiempo-respuesta-num" id="timer-1">130</span> min
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</section>
+
+	<!--	@segundo accordion-->	
+	
+	</div>
+
+
+
+	
+</div>
+	
+	
+	
+	<div class="sin-registros">
+		<i class="icon-doctorplus-coffee-cup"></i>
+		<h6>¡La sección está vacía!</h6>
+		 
+		<p>No existen Consultas Express publicadas para <strong>Profesionales en la Red</strong>.</p>
+	</div>
+	<div class="cs-nc-precios-holder">	
+		<section class="container ce-nc-consulta-precios">
+		<div class="row">
+			<h2>Estado de cuenta</h2>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1">
+			<div class="row">
+			<div class="col-xs-6">
+				<div class="ce-nc-consulta-precios-holder">
+					<figure class="saldo">
+						<i class="icon-doctorplus-dollar"></i>
+					</figure>
+					<h4>SALDO DISPONIBLE</h4>
+					<span><small>$</small> 250 <small>ARS</small></span>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="ce-nc-consulta-precios-holder">
+					<a href="#">
+						<figure>
+							<i class="icon-doctorplus-dollar-add"></i>
+						</figure>
+						<h4>CARGAR CREDITO</h4>
+						<span class="fecha-carga">Ultima carga 10/12/2015</span>
+					</a>
+				</div>
+			</div>
+		</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1">
+				<div class="ce-nc-consulta-precios-tabla-titulo">
+					<h4>Más información <a href="#" class="ce-ultimos-consumos">ver últimos consumos<span></span></a></h4>
+				</div>
+				<div class="ce-nc-consulta-precios-tabla-holder">
+					<div class="nc-tabla-precios">
+						<div class="nc-header">
+							<div class="nc-td">Fecha</div>
+							<div class="nc-td">Detalle</div>
+							<div class="nc-td">Profesional</div>
+							<div class="nc-td">Valor</div>
+						</div>
+						<div class="nc-row">
+							<div class="nc-td"><i class="icon-doctorplus-circle-add"></i> 23/07/2016</div>
+							<div class="nc-td" data-type="tipo">Consulta Express</div>
+							<div class="nc-td">Dr. Antonio Conforti</div>
+							<div class="nc-td">$ 50 ARS</div>
+						</div>
+						<div class="nc-row-small">
+							<div class="nc-td">Detalle</div>
+							<div class="nc-td"></div>
+						</div>
+						<div class="nc-row">
+							<div class="nc-td"><i class="icon-doctorplus-circle-add"></i> 03/07/2016</div>
+							<div class="nc-td"  data-type="tipo">Diferencia de tarifa</div>
+							<div class="nc-td">Dra. Nilda Llacer</div>
+							<div class="nc-td">$ 60 ARS</div>
+						</div>
+						<div class="nc-row-small">
+							<div class="nc-td">Detalle</div>
+							<div class="nc-td"></div>
+						</div>
+						<div class="nc-row">
+							<div class="nc-td"><i class="icon-doctorplus-circle-add"></i> 03/07/2016</div>
+							<div class="nc-td"  data-type="tipo">Consulta Express</div>
+							<div class="nc-td"></div>
+							<div class="nc-td saldo-menor">$ 60 ARS</div>
+						</div>
+						<div class="nc-row-small">
+							<div class="nc-td">Detalle</div>
+							<div class="nc-td"></div>
+						</div>
+					</div>
+					<span class="ce-nc-consulta-precios-tabla-footer">Los valores negativos (-) marcados en verde, corresponden a devoluciones realizadas en su cuenta por diferencia de tarifa</span>
+					<div class="ce-nc-footer-table-lnk">
+						<a href="#" class="ce-nc-footer-table-lnk-action">ver consumos anteriores</a>
+					</div>
+					<div class="paginas ce-nc-pagination">
+						<span>de 1 al 10 / 200</span>
+						<a href="javascript:void(0)"><span class="fui-arrow-left"></span></a>
+						<a href="javascript:void(0)"><span class="fui-arrow-right"></span></a>
+					</div>
+				</div>
+			
+		</div>
+		</div>
+		
+			
+	
+		
+		
+</section>	
+	</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Modal Privacidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Privacidad</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content">
+			<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+			<ul class="lista-checks">
+			<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+			<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+			<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+			</ul>
+
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>	
+
+
+<!-- Modal Configurar Tablero -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="configurar-tablero">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Configurar Tablero</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content ">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+			    	<div class="panel-heading" role="tab" id="headingOne">
+			  			<span class="dp-arrow-down collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></span>
+			    		<label for="db-0" class="checkbox" ><input type="checkbox" checked id="db-0"> Datos biométricos</label>
+			    	</div>
+			    	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			    		 <div class="panel-body">
+				      		<label for="db-1" class="checkbox"><input type="checkbox" id="db-1">Peso y altura</label>
+				      		<label for="db-2" class="checkbox"><input type="checkbox" id="db-2">Presión arterial</label>
+				      		<label for="db-3" class="checkbox"><input type="checkbox" id="db-3">Colesterol</label>
+				      		<label for="db-5" class="checkbox"><input type="checkbox" id="db-5">Glucemia</label>
+				      		<label for="db-4" class="checkbox"><input type="checkbox" id="db-4">Misceláneas</label>
+				      	</div>
+				    </div>
+			    </div>
+				<div class="panel-heading">
+					<label for="ai-1" class="checkbox"><input type="checkbox" id="ai-1">Alergias e intolerancias</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ci-1" class="checkbox"><input type="checkbox" id="ci-1">Cirugías e intervenciones</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ep-1" class="checkbox"><input type="checkbox" id="ep-1">Enfermadades y Patologías </label>
+				</div>
+				<div class="panel-heading">
+					<label for="gi-1" class="checkbox"><input type="checkbox" id="gi-1">Ginecológicos &amp; Obstétricos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="me-1" class="checkbox"><input type="checkbox" id="me-1">Medicamentos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cd-1" class="checkbox"><input type="checkbox" id="cd-1">Cuidado Dental</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ca-1" class="checkbox"><input type="checkbox" id="ca-1">Cuidado Auditivo</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cv-1" class="checkbox"><input type="checkbox" id="cv-1">Cuidado Visual</label>
+				</div>																												
+				<div class="panel-heading">
+					<label for="va-1" class="checkbox"><input type="checkbox" id="va-1">Vacunas</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ev-1" class="checkbox"><input type="checkbox" id="ev-1">Estilo de vida</label>
+				</div>	
+			</div>
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>
+
+	<!-- Modal Privacidad -->
+	<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"><h5>Privacidad</h5></div>
+				</div>
+				<form action="">
+					<div class="form-content">
+						<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+						<ul class="lista-checks">
+							<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+							<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+							<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+						</ul>
+
+					</div>
+					<div class="modal-btns">
+						<button>guardar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>	
+	
+
+	
+	
+	
+	<!-- Modal VER Archivo -->
+	<div class="modal fade modal-type-1" id="ver-archivo">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div class="modal-title">
+						<h5>Radiografia de torax, Control</h5>
+					</div>
+
+				</div>
+				<div class="modal-body">
+					<div>
+						<div class="slider slider-for">
+							<div><img src="imgs/temp/slider-1.jpg" alt="" ></div>
+							<div><img src="imgs/temp/slider-2.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-3.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-4.jpg" alt=""></div>
+						</div>
+						<div class="slider slider-nav-carrousel">
+							<div><img src="imgs/temp/slider-1-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-2-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-3-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-4-thumb.jpg" alt=""></div>
+						</div>						
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--	ALETAS - Perfil de Salud completo - felicitaciones	-->
+
+
+	<div class="modal fade bs-example-modal-lg modal-perfil-completo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<p>
+						Respuesta enviada al paciente
+						Deberá seguir el desarrollo de esta consulta
+						en su bandeja de Consultas Abiertas
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="js/scrollbars/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="js/countid.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+	
+	$(function(){
+		$('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			centerMode: false,
+			fade: true,
+			asNavFor: '.slider-nav-carrousel',
+			draggable: true,
+			adaptiveHeight: true
+		});
+		$('.slider-nav-carrousel').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: true,
+			draggable: true
+		});
+		
+	$(".cs-ca-chat-holder").mCustomScrollbar({
+		theme:"dark-3"
+	});
+
+
+		$('.ce-ca-mdl-fin-consulta').on('click', function(e){
+			e.preventDefault();
+			$('#final-consulta-mdl').modal('show')
+		});
+		$('.ce-ca-enviar-consulta').on('click',function(e){
+			e.preventDefault();
+			$(this).parent('.btn-slide-holder').hide();
+			if($(this).parent().siblings('.audio-reccord-holder-chat').is(':hidden')){
+				$(this).parent().siblings('.audio-reccord-holder-chat').slideDown();
+			}
+		});
+
+
+		$('.ce-ca-cancelar').on('click', function(e){
+			e.preventDefault();
+			$(this).parent().parent().parent('.audio-reccord-holder-chat').siblings('.btn-slide-holder').fadeIn();
+			if($(this).parent().siblings('.audio-reccord-holder').children('.chat-img-upld').is(":visible")){
+				$(this).parent().siblings('.audio-reccord-holder').children('.chat-img-upld').slideUp();
+			}
+			$(this).parent().parent().parent('.audio-reccord-holder-chat').slideUp();
+		});
+
+
+
+		$('.file-trigger').on('click', function(e){
+			e.preventDefault();
+
+			if($(this).parent().parent().siblings('.audio-reccord-holder').children('.chat-img-upld').is(":hidden")){
+				$(this).parent().parent().siblings('.audio-reccord-holder').children('.chat-img-upld').slideDown();
+
+
+			}else{
+				$(this).parent().parent().siblings('.audio-reccord-holder').children('.chat-img-upld').slideUp();
+
+			}
+
+		});	
+		jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+			var offset = this.offsetHeight - this.clientHeight;
+
+			var resizeTextarea = function(el) {
+				jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+			};
+			jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+		});	
+		
+		
+		// timer
+
+		Date.prototype.addSeconds= function(h){
+			this.setSeconds(this.getSeconds()+h);
+			return this;
+		}
+
+		var date1 = new Date().addSeconds(5) / 1000;
+		var date2 = new Date().addSeconds(120) / 1000;
+		var date3 = new Date().addSeconds(60) / 1000;
+		var date4 = new Date().addSeconds(30) / 1000;
+
+		$('#timer-1').countid({
+			clock: true,
+			dateTime: date1,
+			dateTplRemaining: "%H:%M:%S",
+			dateTplElapsed: 'Finalizada',
+			complete: function( el ){
+				el.css({color:'#415b70'});
+				el.siblings('.cs-ca-clock-icon').addClass('cs-ca-clock-icon-end');
+			}
+		});
+		$('#timer-2').countid({
+			clock: true,
+			dateTime: date2,
+			dateTplRemaining: "%H:%M:%S",
+			dateTplElapsed: 'Finalizada',
+			complete: function( el ){
+				el.css({color:'#415b70'});
+				el.siblings('.cs-ca-clock-icon').addClass('cs-ca-clock-icon-end');
+			}
+		});
+		$('#timer-3').countid({
+			clock: true,
+			dateTime: date3,
+			dateTplRemaining: "%H:%M:%S",
+			dateTplElapsed: 'Finalizada',
+			complete: function( el ){
+				el.css({color:'#415b70'});
+				el.siblings('.cs-ca-clock-icon').addClass('cs-ca-clock-icon-end');
+			}
+		});
+		$('#timer-4').countid({
+			clock: true,
+			dateTime: date4,
+			dateTplRemaining: "%H:%M:%S",
+			dateTplElapsed: 'Finalizada',
+			complete: function( el ){
+				el.css({color:'#415b70'});
+				el.siblings('.cs-ca-clock-icon').addClass('cs-ca-clock-icon-end');
+			}
+		});
+
+		/// todas
+
+		$('.ceprr-todas-trigger').on('click',function(e){
+			e.preventDefault();
+			if($('.ceprr-todas').is(':hidden')){
+				$('.ceprr-todas').stop().slideDown();
+			}else if($('.ceprr-todas').is(':visible')){
+				$('.ceprr-todas').stop().slideUp();
+			}
+
+		});
+
+
+		/// especialidad
+
+		$('.ceprr-especialidad-trigger').on('click',function(e){
+			e.preventDefault();
+			if($('.ceprr-accordion-section-holder').is(':hidden')){
+				$('.ceprr-accordion-section-holder').stop().slideDown();
+			}else if($('.ceprr-accordion-section-holder').is(':visible')){
+				$('.ceprr-accordion-section-holder').stop().slideUp();
+			}
+
+		});
+
+
+
+		$('.ceprr-filtros-btn-trigger').on('click',function(e){
+			e.preventDefault();
+			if($(this).parent().siblings('.ceprr-filtros-holder').is(':hidden')){
+				$(this).parent().siblings('.ceprr-filtros-holder').stop().slideDown();
+			}else if($(this).parent().siblings('.ceprr-filtros-holder').is(':visible')){
+				$(this).parent().siblings('.ceprr-filtros-holder').stop().slideUp();
+			}
+		});
+
+			//slide range
+
+			$( "#slider-range" ).slider({
+				range: true,
+				min: 50,
+				max: 300,
+				values: [ 50, 300 ],
+				slide: function( event, ui ) {
+					$( "#amount-min" ).val( "$" + ui.values[ 0 ]);
+					$( "#amount-max" ).val( "$" + ui.values[ 1 ]);
+				}
+			});
+			$( "#amount-min" ).val( "$" + $( "#slider-range" ).slider( "values", 0 )); 
+			$( "#amount-max" ).val( "$" + $( "#slider-range" ).slider( "values", 1 )); 
+
+
+			$( "#slider-range-2" ).slider({
+				range: true,
+				min: 50,
+				max: 300,
+				values: [ 50, 300 ],
+				slide: function( event, ui ) {
+					$( "#amount-min" ).val( "$" + ui.values[ 0 ]);
+					$( "#amount-max" ).val( "$" + ui.values[ 1 ]);
+				}
+			});
+			$( "#amount-min-2" ).val( "$" + $( "#slider-range-2" ).slider( "values", 0 )); 
+			$( "#amount-max-2" ).val( "$" + $( "#slider-range-2" ).slider( "values", 1 )); 
+
+
+		//$('.ceprr-consulta-fuera-content-leer-mas-trigger').data('inicioFlag',true);
+		$('.ceprr-consulta-fuera-content-leer-mas-trigger').on('click',function(e){
+			e.preventDefault();
+			
+			
+			var altura = $(this).parent().siblings('.ceprr-consulta-fuera-content-window').children('.ceprr-consulta-fuera-content-inner').height();
+			if($(this).data('inicio')){
+				alturaInicial = $(this).parent().siblings('.ceprr-consulta-fuera-content-window').height();
+				$(this).parent().siblings('.ceprr-consulta-fuera-content-window').animate({
+					height: altura
+				});
+				$(this).data('inicio',false);
+				$(this).html('Leer menos');
+			}else{
+				$(this).parent().siblings('.ceprr-consulta-fuera-content-window').animate({
+					height: alturaInicial
+				});
+				$(this).data('inicio',true);
+				$(this).html('Leer más');
+			}
+
+		});
+		
+		//////////////////
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,780 @@
+#pass_sante_masonry {
+    margin-top: -30px !important;
+
+    .masonry {
+        /* margin: 1.5em 0;
+         padding: 0;
+         -moz-column-gap: 1.5em;
+         -webkit-column-gap: 1.5em;
+         column-gap: 1em;
+         //row-gap:1em;
+         font-size: .85em;*/
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    .item {
+        position:relative;
+        cursor: pointer;
+        background: white;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid white;
+        padding: 0;
+        //margin-bottom: 1em;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
+        border-radius: 5px;
+        -moz-border-radius: 3px;
+        //display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        flex: auto;
+        height: 250px;
+        min-width: 300px;
+        margin: 0 8px 8px 0;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        & .img-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+
+            & .title-holder {
+                padding: 0 15px;
+                background: rgba(255,255,255,0.8);
+                width: 100%;
+                color: #333333;
+                font-family: sans-serif;
+                font-size: 20px;
+                text-align: center;
+                font-weight: bold;
+                transition-property: background-color, color, height, font-size;
+                transition-duration: .5s;
+                -webkit-transition-property: background-color, color, height, font-size;
+                -webkit-transition-duration: .5s;
+                -o-transition-property: background-color, color, height, font-size;
+                -o-transition-duration: .5s;
+
+            }
+
+            &:hover {
+                & .title-holder {
+                    justify-content: center;
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+                    font-size: 24px;
+
+                    background: rgba(0,125,139,0.7);
+                    color: #ffffff;
+                }
+
+            }
+        }
+
+        &:nth-child(6n+1) {
+
+            width: 300px;
+
+        }
+        &:nth-child(6n+2) {
+
+            width: 350px;
+
+        }
+
+        &:nth-child(6n+3) {
+
+            width: 320px;
+
+        }
+
+        &:nth-child(6n+4) {
+
+            width: 340px;
+
+        }
+
+        &:nth-child(6n+5) {
+
+            width: 310px;
+
+        }
+
+        &:nth-child(6n+6) {
+
+            width: 330px;
+
+        }
+
+    }
+
+    .wrapper {
+        width: 95%;
+        margin: 1.5em auto;
+    }
+
+    .background {
+        align-items: center;
+        background-image: url("../imgs/back_grid_pass_esante.png");
+        background-repeat: no-repeat;
+        background-color: #efefef;
+
+    }
+    @media only screen and (min-width: 700px) {
+        .masonry {
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+        }
+    }
+    @media only screen and (min-width: 900px) {
+        .masonry {
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+        }
+    }
+    @media only screen and (min-width: 1100px) {
+        .masonry {
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+        }
+    }
+    @media only screen and (min-width: 1280px) {
+        .wrapper {
+            width: 1260px;
+        }
+    }
+
+    .section-title h2 {
+        background: -webkit-linear-gradient(left , #ff0073, #e8f340);
+        background: -o-linear-gradient(right , #ff0073,  #e8f340);
+        background: -moz-linear-gradient(right , #ff0073,  #e8f340);
+        background: linear-gradient(to right , #ff0073,  #e8f340 ); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // color: #007d8b;
+        display: block;
+        width: 100%;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        margin: 0;
+        padding: 36px 16px 16px;
+    }
+
+}
+
+#listado_categorias_container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    .categorias-wrapper {
+        margin: auto;
+        padding: 20px 0;
+        @media only screen and (min-width: 1280px) {
+            width: 1260px;
+        }
+    }
+
+    .programa-background {
+        //background: rgba(255,255,255,0.6);
+        position: relative;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    & .icon-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+            width: 80px;
+            height: 80px;
+            @media (max-width: 600px) {
+                width: 60px;
+                height: 60px;
+            }
+
+        }
+    }
+
+    & .title-holder {
+        padding: 15px;
+        color: #333333;
+        font-family: sans-serif;
+        font-size: 26px;
+        text-align: center;
+        font-weight: bold;
+        @media (max-width: 600px) {
+            font-size: 24px;
+        }
+    }
+
+    & .descripcion-holder {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #333333;
+        margin-top: 65px;
+        @media (max-width: 600px) {
+            padding: 16px;
+            padding-top: 0px;
+            font-size: 16px;
+            margin-top: 0px;
+
+        }
+
+        & .descripcion-larga-btn {
+
+            max-width: fit-content;
+            padding: 6px 12px;
+            border-radius: 25px;
+            display: block;
+            margin: 15px auto;
+            background: #02b8c1;
+            color: #ffffff;
+            line-height: 1;
+
+            &:hover {
+                background: #007d8b;
+            }
+            @media (max-width: 600px) {
+                font-size: 14px;
+                padding: 9px 14px;
+            }
+        }
+    }
+
+    .categorias-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top:40px;
+        & .categoria-item {
+            @media (min-width: 900px) {
+                width: 33%;
+            }
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+
+            .categoria-detail {
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                margin: 20px 50px;
+                padding: 10px 20px;
+                position: relative;
+                height:200px;
+                padding: 0 !important;
+                background: #1eb0c3;
+                @media (max-width: 600px) {
+                    margin: 20px;
+                }
+                &.image{
+
+                    background-size: cover !important;
+                    background-position: center !important;
+
+                }
+                & .icon {
+                    position:absolute;
+                    padding:10px;
+                    background:#3db9c6;
+                    border-radius:50%;
+                    top:-20px;
+                    left:-20px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    @media (max-width: 600px) {
+                        left:-15px;
+                    }
+                }
+
+                .content{
+                    display: flex;
+                    position: absolute;
+                    bottom: 0px;
+                    width: 100%;
+                    padding: 10px 20px;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    background: rgba(64,144,142,0.7);
+
+
+                    .title {
+                        color: #ffffff;
+                        font-family: sans-serif;
+                        font-size: 16px;
+                        text-align: center;
+
+                        font-weight: 700;
+
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+    & .video-container {
+        margin: 30px auto;
+        text-align: center;
+
+        iframe {
+            @media (min-width: 600px) {
+                width: 600px;
+                height: 300px;
+            }
+        }
+    }
+}
+.reveal-categoria-item {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);;
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -ms-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-in-out;
+    transform-origin: left top;
+}
+.reveal-categoria-item.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+#modal_descripcion_larga {
+    .descripcion-content {
+        padding: 20px 50px;
+        font-size: 16px;
+    }
+    @media (max-width: 600px) {
+        padding: 20px 10px;
+        font-size: 15px;
+    }
+}
+
+.listado_medicos_wrapper {
+    background: #F6F6F6;
+
+    .title-holder {
+
+        color: #3DB9C6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & .icon {
+            img {
+                width: 40px;
+                height: 40px;
+                @media (max-width: 600px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        & .title {
+            font-size: 26px;
+            margin: 20px;
+            font-weight: 800;
+            @media (max-width: 600px) {
+
+                margin: 15px 0 15px 5px;
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    .categoria-detail {
+        min-height: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media (max-width: 600px) {
+            background-position: 100%;
+        }
+
+        .descripcion-holder {
+            position: relative;
+        }
+
+        & .descripcion {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333333;
+            @media (max-width: 600px) {
+                width: 100%;
+                text-align:center;
+                margin: 0;
+                padding: 10px;
+                color: #333333;
+                font-size: 16px;
+            }
+
+            & .btn-ver-mas {
+
+                max-width: fit-content;
+                padding: 10px 20px;
+                border-radius: 25px;
+                display: block;
+                margin: 15px auto;
+                background: #007d8b;
+                color: #ffffff;
+                line-height: 1;
+
+                &:hover {
+                    background: #02b8c1;
+                }
+                @media (max-width: 600px) {
+                    font-size: 14px;
+                    padding: 9px 14px;
+                }
+            }
+        }
+
+    }
+}
+
+
+.medico-destacado-tag-complementario {
+    color: #fff;
+    position: relative;
+    border-top: 12px solid #f5c370;
+    border-bottom: 12px solid #f5c370;
+    border-right: 15px solid #ffffff;
+    max-width: 190px;
+    margin-left: -16px;
+    background: #f5c370;
+    span {
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+}
+.medico-destacado-tag-referente {
+    color: #fff;
+    position: relative;
+    border-top: 12px solid #ee6593;
+    border-bottom: 12px solid #ee6593;
+    border-right: 15px solid #ffffff;
+    max-width: 190px;
+    margin-left: -16px;
+    background: #ee6593;
+    span {
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+}
+
+.programa-destacado-tag {
+    /*position:absolute;
+    color: #fff;
+    width:110px;
+    border-top: 12px solid #ffa912;
+    border-bottom: 12px solid #ffa912;
+    border-right: 15px solid #ffffff;
+    max-width: 110px;
+    background: #ffa912;
+    margin-top:10px;
+    width:100px;*/
+    //display:none;
+    width: 0px;
+    height: 0px;
+    background-color: #ffa912;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    //animation:drop forwards .8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:before{
+        width:110px;
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        border-top: 16px solid #00e2d6;
+        border-bottom: 16px solid #00e2d6;
+        border-right: 16px solid transparent;
+        @media (max-width: 600px) {
+            width: 100px;
+            border-top: 13px solid #00e2d6;
+            border-bottom: 13px solid #00e2d6;
+        }
+    }
+    span {
+        color: #fff;
+        position: absolute;
+        font-weight: 700;
+        left: 15px;
+        top: 6px;
+        font-size: 18px;
+        line-height: 1;
+        z-index: 3;
+        @media (max-width: 600px) {
+            font-size:15px;
+            left: 5px;
+        }
+    }
+}
+.programa-destacado-reembolso-tag{
+    &:before{
+        width:170px; 
+        border-top: 16px solid #f5a373;
+        border-bottom: 16px solid #f5a373;
+        @media (max-width: 600px) {
+            width: 110px;
+            border-top: 13px solid #f5a373;
+            border-bottom: 13px solid #f5a373;
+        }
+    }
+    span{
+        @media (max-width: 600px) {
+            font-size:12px;
+            left: 5px;
+        }
+    }
+
+}
+.programa-destacado-recompensa-tag {
+    width: 0px;
+    height: 0px;
+    background-color: #ffa912;
+    position: absolute;
+    left: 0px;
+    top: 267px;
+    @media (max-width: 600px) { top: 0px;}
+    //animation:drop forwards .8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:before{
+        width:135px;
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        border-top: 16px solid #ED799E;
+        border-bottom: 16px solid #ED799E;
+        border-right: 16px solid transparent;
+        @media (max-width: 600px) {
+            width: 100px;
+            border-top: 13px solid #ED799E;
+            border-bottom: 13px solid #ED799E;
+        }
+    }
+    span {
+        color: #fff;
+        position: absolute;
+        font-weight: 700;
+        left: 15px;
+        top: 6px;
+        font-size: 18px;
+        line-height: 1;
+        z-index: 3;
+        @media (max-width: 600px) {
+            font-size:15px;
+            left: 5px;
+        }
+    }
+}
+
+.btn-volver-home-sante {
+    position: relative;
+    top: 10px;
+    left: 15px;
+    color: #333333;
+    font-size: 16px;
+    text-align: center;
+    padding: 4px 12px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    @media (max-width: 600px) {
+        left: 5px;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: rgba(255,255,255,0.9);
+    }
+}
+/*icono home*/
+#home-iconos-container{
+    .pass-sante-icon-holder figure{
+        & img.white{
+            display:none;
+        }
+        &:hover{
+            img.orig{
+                display:none;
+            }
+            img.white{
+                display:inline;
+            }
+        }
+
+    }
+
+}
+
+#banner-pass-esante{
+    position:relative;
+    background-color: #e5e9ed;
+    .background {
+        align-items: center;
+        background-image: url("../imgs/pass_esante_banner_home.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100%;
+        width: 100%
+
+    }
+    .wrapper{
+        @media (max-width: 1300px) {
+            background-color: rgba(229, 233, 237, 0.6);
+        }
+    }
+    .banner-container{
+        text-align: center;
+        padding: 40px 0px;
+        //background-color: rgba(229,233,237,0.6);
+
+        .logo_pass_esante{
+            margin:0 auto;
+            max-width: 200px;
+        }
+        h2{
+            font-size: 26px;
+            color:#007d8b;
+        }
+        h3{
+            font-size: 26px;
+            color:#007d8b;
+        }
+        h4{
+            font-size: 20px;
+            color:#f45b63;
+        }
+
+        .button-container {
+            display:flex;
+            justify-content:center;
+            .btn{
+                color:#ffffff;
+                border-radius: 10px;
+                margin: 15px;
+                min-width: 150px;
+                cursor:pointer;
+                &.btn-adquirir{
+                    background: #f9b443;
+                    &:hover{
+                        background: #ff8b22;
+                    }
+                }
+                &.btn-saber-mas{
+                    background: #3EBAC7;
+                    &:hover{
+                        background: #69aaac;
+                    }
+                } 
+                &.btn-extra{
+                    background: #e5e9ed;
+                    color: #e95096;
+                    border: solid 2px #e95096;
+                    font-weight: 600;
+                    margin-top: 0px;
+                    &:hover{
+                        background: #fdd6e8;
+                    }
+                } 
+            }
+
+        }
+    }
+}
+.ubicacion-modal-condiciones{
+    @media (min-width: 600px) {
+        position: relative;
+        top: 50px;
+    }
+}
+.img-excepcion-categoria-yves {
+    width: 360px !important;
+    height: 100px !important;
+    @media (max-width: 600px) {
+        width: 340px !important;
+    }
+}
+.img-excepcion-categoria-esthetic {
+    width: 280px !important;
+    @media (max-width: 600px) {
+        width: 170px !important;
+    }
+}
+.margen-top-yves-esthetic{
+    @media (max-width: 600px) {
+        margin-top: 60px;
+    }
+}
+.iframe-excepcion{
+    width: 91% !important;
+}
+.btn-ajuste-volver-empresa-front{
+    left: -200px !important;
+    top: -30px !important; 
+    @media (max-width: 600px) {
+        top: -5px !important; 
+        left: 0px !important;
+    }
+}
+.btn-volver-planes{
+    top: 15px;
+    left: 0px;
+    @media (max-width: 600px) {
+        top: -35px;
+    }
+}
+.ilustracion-categoria{
+    height: 300px;
+}

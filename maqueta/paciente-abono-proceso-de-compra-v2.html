@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<nav class="hom-nav">
+		<div class="okm-container">
+			<div class="okm-row">
+				<div class="hom-nav-logo">
+					<a href="/">
+						<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus">
+					</a>
+				</div>
+				<div class="hom-nav-menu">
+					<a href="#" id="hom-nav-rsp-trg" class="hom-nav-burger"><i class="icon-doctorplus-burger"></i></a>
+					<ul id="hom-nav-rsp-get">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Solución</a></li>
+						<li><a href="#">Funcionalidades</a></li>
+						<li><a href="#">Planes</a></li>
+						<li><a href="#">Contáctenos</a></li>
+						<li><a href="#">Soporte</a></li>
+						<li><a href="#">Crear una cuenta</a></li>
+						<li><a href="#" id="loginbtn">Iniciar sesión</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+
+	
+	<!--Modales login	-->
+
+	<div class="modal fade usrlogin login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+				</div>
+				<div class="modal-body" id="login">
+					<h4 class="modal-title">Iniciar sesión</h4>
+					<form name="login">
+						<div class="login-form-row">
+							<input type="text" name="user" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+
+						</div>
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<div class="login-recordar">
+								<label class="checkbox">
+									<input type="checkbox" name="recordar" id="recordarme">
+									Recordarme
+								</label>
+							</div>
+							<div class="olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+
+					</form>
+					<div class="login-registro-row">
+						<span>¿No tenés una cuenta?</span>
+						<a href="#">Registrate</a>
+					</div>
+				</div>
+
+
+				<div class="modal-body" id="timeout">
+					<h4 class="modal-title-small">Para continuar confirma que eres</h4>
+					<span class="modal-user-name">Andrea</span>
+
+					<img src="imgs/temp/foto-perfil-110.jpg" class="modal-usr-picture" alt="usr"/>
+					<div class="modal-user-name-small">Andrea Sachse</div>
+					<div class="modal-user-mail">andrea@estudioasya.com</div>
+
+					<form name="login">
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						<div class="login-form-row">
+							<div class="olvide-pass timeout-olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="passrecovery">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+					<form name="pass-recovery">
+						<div class="login-form-row">
+							<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+						</div>
+						<div class="login-form-row">
+							<p>
+								Introduce la dirección de correo electrónico 
+								asociada a tu cuenta y te enviaremos un enlace 
+								para restablecer tu contraseña. 
+							</p>
+						</div>
+						<div class="login-form-row">
+
+							<input type="submit" id="sendpass" value="Enviar enlace"/>
+
+							<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+						</div>
+
+					</form>
+				</div>
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="recoverytext">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+
+					<div class="login-form-row">
+						<p>
+							Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+							Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+						</p>
+					</div>
+					<div class="login-form-row">
+						<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--timeout-->
+
+	<!--	Funciond emostrar ocultar en script.js linea 1303-->
+
+	<!--Modales login	-->	
+	<section class="okm-container sign-up mapc-nav-tabs">
+		<ul id="signup-steps" class="nav nav-tabs">
+			<li class="active"><span class="dp-cart">Mi compra</span></li>
+			<li><span class="dp-user-dr">Identificación</span></li>
+			<li><span class="dp-pin">Pago</span></li>
+		</ul>
+	</section>
+	
+	<section class="mapc-mi-cuenta">
+		<h2 class="mapc-section-title">¿CUANTO DESEA CARGAR DE CREDITO?</h2>
+
+		<div class="okm-row">
+			<div class="mapc-select-box">
+				<div class="price-select">
+					<select name="price" class="form-control select select-primary">
+						<option value="0">$ 50</option>
+						<option value="1">$ 100</option>
+						<option value="2">$ 200</option>
+						<option value="3">$ 500</option>
+						<option value="4">$ 1.000</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mapc-action-center">
+			<a href="#" class="btn-default" id="mapc-mi-cuenta-btn">CONTINUAR <span></span></a>
+		</div>
+</section>
+	
+	
+	<section class="okm-container mapc-mi-identificacion">
+		<div class="mapc-mi-identificacion-inner">
+		<div>
+			<div class="mapc-tabs-box">
+				<ul class="nav nav-tabs mapc-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#existing-user" aria-controls="existing-user" role="tab" data-toggle="tab">Ingrese sus datos de cliente</a></li>
+					<li role="presentation"><a href="#new-user" aria-controls="new-user" role="tab" data-toggle="tab">Registrarme como usuario</a></li>
+				</ul>
+			</div>
+			
+<!--			script.js linea 1584-->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="existing-user">
+					<div class="mapc-login-box">
+						<div class="mapc-login" id="mapc-login">
+						<form name="mapc-login">
+							<div class="mapc-login-form-row">
+								<input type="text" name="user" placeholder="Dirección de correo electrónico">
+								<i class="icon-doctorplus-envelope"></i>
+
+							</div>
+							<div class="mapc-login-form-row">
+								<input type="password" name="pass" placeholder="Contraseña">
+								<i class="icon-doctorplus-lock"></i>
+							</div>
+							<div class="mapc-login-form-row">
+								
+								<div class="olvide-pass">
+									<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+								</div>
+							</div>
+
+							<div class="mapc-login-form-row">
+								<input type="submit" value="Inicia sesión"/>
+							</div>
+						</form>
+					</div>
+						<!--				recuperar contraseña-->
+						<div class="mapc-login" id="mapc-passrecovery">
+						<h4 class="mapc-login-title">Restablecer tu contraseña</h4>
+						<form name="mapc-pass-recovery">
+							<div class="mapc-login-form-row">
+								<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+								<i class="icon-doctorplus-envelope"></i>
+							</div>
+							<div class="mapc-login-form-row">
+								<p>
+									Introduce la dirección de correo electrónico 
+									asociada a tu cuenta y te enviaremos un enlace 
+									para restablecer tu contraseña. 
+								</p>
+							</div>
+							<div class="mapc-login-form-row">
+
+								<input type="submit" id="mapc-sendpass" value="Enviar enlace"/>
+
+								<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+							</div>
+
+						</form>
+					</div>
+
+						<!--				recuperar contraseña-->
+						<div class="mapc-login" id="mapc-recoverytext">
+						<h4 class="mapc-login-title">Restablecer tu contraseña</h4>
+
+						<div class="mapc-login-form-row">
+							<p>
+								Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+								Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+							</p>
+						</div>
+						<div class="mapc-login-form-row">
+							<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+						</div>
+					</div>
+					</div>
+					
+				</div>
+				<div role="tabpanel" class="tab-pane" id="new-user">
+					
+					<div class="mapc-registro-box">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										Datos de cuenta
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									<div class="mapc-registro-inner-box">
+										<form name="mapc-datos-cuenta">
+										<div class="mapc-registro-form-row">
+											<div class="mapc-registro-alert-box">
+												<span>Los campos indicados son obligatorios</span>
+												<i class="icon-doctorplus-alert-round"></i>
+											</div>
+										</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Nombre</label>
+												<div class="mapc-input-line">
+													<input type="text" name="nombre" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Apellido</label>
+												<div class="mapc-input-line">
+													<input type="text" name="apellido" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row mapc-switch">
+												<label class="mapc-label-inline">sexo</label>
+												<div class="switch-large mul-sexo-switch" style="margin-bottom:34px;">	
+													<input type="checkbox" class="switch-checkbox" data-on-text="MUJER" data-off-text="HOMBRE" />
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">DNI</label>
+												<div class="mapc-input-line">
+													<input type="text" name="dni" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row mapc-upload-row">
+												<label class="mapc-label-upload">Foto de su DNI</label>
+												<div class="mapc-upload-box">
+													<a href="#">
+														<i class="icon-doctorplus-camera"></i>
+													</a>
+												</div>
+											</div>
+											
+											
+										<div class="mapc-registro-form-row">
+											<label class="mapc-label">Celular</label>
+											<div class="mapc-input-line">
+												<input class="error" type="text" name="celular" placeholder="ej. 1139750001"/>
+												<i class="icon-doctorplus-cel"></i>
+												<span class="mapc-campo-resaltado">*</span>
+											</div>
+										</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Correo electrónico</label>
+												<div class="mapc-input-line">
+													<input type="text" name="mail1" placeholder="ej: su-nombre@dominio.com"/>
+													<i class="icon-doctorplus-envelope"></i>
+												</div>
+											</div>
+											<div class="mapc-registro-form-row">
+												<div class="mapc-input-line">
+													<input type="text" name="mail2" placeholder="Repita correo electrónico"/>
+													<i class="icon-doctorplus-envelope"></i>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Contraseña</label>
+												<div class="mapc-input-line">
+													<input type="text" name="pass1" placeholder="Contraseña de 6 caracteres"/>
+													<i class="icon-doctorplus-lock"></i>
+												</div>
+											</div>
+											<div class="mapc-registro-form-row">
+												<div class="mapc-input-line">
+													<input type="text" name="pass2" placeholder="Repita contraseña"/>
+													<i class="icon-doctorplus-lock"></i>
+												</div>
+											</div>
+											<div class="mapc-registro-form-row">
+												<div class="mapc-input-line">
+													<span class="mapc-form-disclaimer">* Dato no obligatorio</span>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<button class="mapc-form-submit" id="accordion-trg-1">listo <i class="icon-doctorplus-check-thin"></i></button>
+											</div>
+										</form>
+									</div>
+											 
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										Datos profesionales
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									<div class="mapc-registro-inner-box">
+										<form name="mapc-datos-cuenta">
+											
+											<div class="mapc-registro-form-row">
+												<div class="mapc-registro-alert-box">
+													<span>Los campos indicados son obligatorios</span>
+													<i class="icon-doctorplus-alert-round"></i>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<div class="mapc-registro-alert-box">
+													<span>Debe ingresar al menos una matrícula</span>
+													<i class="icon-doctorplus-alert-round"></i>
+												</div>
+											</div>
+											<div class="mapc-registro-form-row">
+												<p class="mapc-registro-text">
+													Los datos solicitados por DoctorPlus tienen como finalidad 
+													verificar que los profesionales que utilizan su plataforma 
+													cumplen con los requisitos legales y comerciales para ofrecer 
+													sus servicios 
+												</p>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Celular</label>
+												<div class="mapc-input-line">
+													<input type="text" name="celular" placeholder="Especialidad"/>
+													<i class="icon-doctorplus-search"></i>
+												</div>
+											</div>
+											<div class="mapc-registro-form-row mapc-select">
+												<select name="subespecialidad" class="form-control select select-primary select-block mbl">
+													<option value="0">Sub-especialidad</option>
+													<option value="1">valor 1</option>
+													<option value="2">valor 2</option>
+													<option value="3">valor 3</option>
+													<option value="4">valor 4</option>
+												</select>
+											</div>
+											
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Matrícula NACIONAL</label>
+												<div class="mapc-input-line">
+													<input type="text" name="matricula-nac" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Colegio donde se encuentra registrada la MN</label>
+												<div class="mapc-input-line">
+													<input type="text" name="colegio" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Matrícula PROVINCIAL</label>
+												<div class="mapc-input-line">
+													<input type="text" name="matricula-prov" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">Colegio donde se encuentra registrada la MP</label>
+												<div class="mapc-input-line">
+													<input type="text" name="colegio-mp" placeholder=""/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row mapc-select">
+												<select name="provincia-prof" class="form-control select select-primary select-block mbl">
+													<option value="0">Provincia donde ejerce la profesión</option>
+													<option value="1">valor 1</option>
+													<option value="2">valor 2</option>
+													<option value="3">valor 3</option>
+													<option value="4">valor 4</option>
+												</select>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<label class="mapc-label">CUIT</label>
+												<div class="mapc-input-line">
+													<input type="text" name="cuit" placeholder="Ingrese su CUIT sin guiones"/>
+												</div>
+											</div>
+											
+											<div class="mapc-registro-form-row">
+												<button class="mapc-form-submit" id="accordion-trg-2">listo <i class="icon-doctorplus-check-thin"></i></button>
+											</div>
+											
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="okm-row">
+						<div class="mapc-politicas-box">
+							<figure>
+								<i class="icon-doctorplus-lock"></i>
+							</figure>
+							<div class="mapc-politicas">
+								<p>
+									La  información de registro de su cuenta de usuario se almacenta 
+									encriptada en nuestra base de datos.
+								</p>
+								<p>Consulte nuestra <br> <a  href="#">politica de privacidad</a> y <br><a  href="#"> protección de datos</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="mapc-action-center">
+						<a href="#" class="btn-default" id="mapc-mi-identificacion-btn">SIGUIENTE <span></span></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+</section>	
+	
+<section class="okm-container mapc-pago">
+		
+		<h2>Pago</h2>
+	
+		<div class="ok-row mapc-pago-row">
+			<div class="mapc-pago-col-table">
+				
+				<ul class="mapc-pago-table-header">
+					<li>Detalle</li>
+					<li>Medio de pago</li>
+					<li>Precio</li>
+					<li>Subtotal</li>
+				</ul>
+				<ul class="mapc-pago-table-row">
+					<li><span class="inner-txt">texto del detalle</span></li>
+					<li>
+						<div class="mapc-registro-form-row mapc-select mapc-pago-select">
+							<select name="medio-de-pago"class="form-control select select-primary select-block">
+								<option value="0">Medio de pago</option>
+								<option value="1">valor 1</option>
+								<option value="2">valor 2</option>
+								<option value="3">valor 3</option>
+								<option value="4">valor 4</option>
+							</select>
+						</div>
+						
+					</li>
+					<li><span class="inner-txt">$ 250,00 / mes</span></li>
+					<li>
+						<div class="mapc-table-subtotal"><span class="inner-txt">$ 250,00</span></div>
+					</li>
+				</ul>
+				<div class="okm-row">
+					<div class="mapc-table-subtotal-footer"><span>$ 250,00</span></div>
+				</div>
+				
+				<div class="okm-row">
+					<a href="#" class="mapc-codigo-promocion">Tengo un código promocional</a>
+					<div class="mapc-codigo-promocion-box">
+						<form name="mapc-codigo-promocional">
+							<input type="text" name="codigo-promocional" placeholder="Ingrese su Código Promocional"/>
+							<input type="submit" value="APLICAR"/>
+						</form>
+					</div>
+				
+				</div>
+			</div>
+			
+			<div class="mapc-pago-col-resultado">
+				<div class="mapc-pago-col-resultado-box">
+					<h4>Total a pagar</h4>
+					<div class="mapc-pago-precio-final">$ 350<span>00</span></div>
+					<div class="mapc-pago-precio-final-disclaimer">
+						PESOS ARGENTINOS 
+						<span>IVA incluído</span>
+					</div>
+					<div class="mapc-pago-precio-final-action">
+						<a href="#" id="mapc-finalizar-pago">continuar <span></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<div class="mapc-aviso-transaccion mapc-transaccion-ok">
+	<h4>¡Su pago ha sido realizado!</h4>
+	<div class="mapc-aviso-transaccion-box">
+		<p>¡Atención! Recuerde que si abonó por Mercado Pago
+		<strong>El pago se acreditará en un plazo maximo de 48 hs</strong>
+		</p>
+		<figure><i class="icon-doctorplus-clock"></i></figure>
+		<span>Cuando el pago se compute se realizará el cambio de cuenta</span>
+	</div>
+</div>	
+
+	<div class="mapc-aviso-transaccion mapc-transaccion-error">
+		<h4 class="alert">Errores en la operación</h4>
+		<div class="mapc-aviso-transaccion-box">
+			<p>
+			<strong>Su pago no ha podido ser procesado</strong>
+				Inténtelo nuevamente en unos minutos. Gracias
+			</p>
+			<span>Si persisten los inconvenientes para realizar el pago envíenos un mensaje a soporte@doctorplus.com.ar
+			<br>
+				Muchas gracias
+			</span>
+		</div>
+	</div>	
+	
+<section class="mapc-cuenta-profesional">
+	<h4 class="mapc-cuenta-profesional-top">
+		Si ud. desea realizar una Consulta Express o Video Consulta recuerde que el Perfil de Salud del paciente debe estar completo
+	</h4>
+	<div class="mapc-top-shadow"></div>
+	
+	<div class="okm-container mapc-cuenta-profesional-top-banner">
+	
+		<div class="mapc-cp-img-box">
+			<img src="imgs/medico/mobile-chat.png" alt="Cuenta Profesional"/>
+		</div>
+		<div class="mapc-cp-data-box">
+			<h3>Cuenta Profesional</h3>
+			<h4>¡Todas las funcionalidades sin descuentos por comisión!</h4>
+			<p>
+				Ideal para porfesionales con alta demanda y requerimiento 
+				de sus pacientes fuera del consultorio
+			</p>
+		</div>
+	</div>
+	
+	<div class="okm-container mapc-cp-servicios">
+		<ul>
+			<li>
+				<i class="icon-doctorplus-calendar"></i>
+				<span>Agenda de turnos on line</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-video-call"></i>
+				<span>Video Consulta</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-despertador"></i>
+				<span>Recordatorios por mail y SMS para reducir el ausentismo</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-pacientes"></i>
+				<span>Gestión de pacientes</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-pharmaceutics"></i>
+				<span>Acceso a la Info de Salud de sus pacientes desde cualquier dispositivo</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-people-add"></i>
+				<span>Contacto con los médicos frecuentes del paciente</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-pharmaceutics-sheet"></i>
+				<span>Registro de sus consultas médicas a distancia</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-sheet"></i>
+				<span>Envío de consejos médicos</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-chat"></i>
+				<span>Consulta Express</span>
+			</li>
+			<li>
+				<i class="icon-doctorplus-gear-round"></i>
+				<span>Soporte Técnico</span>
+			</li>
+		</ul>
+	</div>
+	
+	
+</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	
+
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+	$('.switch-checkbox').bootstrapSwitch();
+});
+</script>		
+</body>
+</html>

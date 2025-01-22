@@ -1,0 +1,193 @@
+/* 
+    Created on : 05/10/2021, 15:41:08
+    Author     : juan
+*/
+#hom-contacto-container{
+    @media (max-width: 700px) {
+        margin:0 10px;
+    }
+}
+.home-contacto-background {
+    align-items: center;
+    background-image: url(../imgs/home2/contactenos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    //padding: 2px;
+    border-radius: 20px;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        background-position-x: -350px;
+
+    }
+    @media (max-width: 600px) {
+        margin-top: 40px;;
+    }
+}
+
+
+.form-contactenos{
+    background: rgba(255,255,255,0.6);
+    border-radius: 14px;
+    width: 37%;
+    height: auto;
+    margin-top:90px;
+    // left: 30px;
+    position: relative;
+    padding: 10px 0px;
+    @media (max-width: 1070px) {
+        left: 0%;
+        width: 94%;
+        margin: 3% auto;
+    }
+
+    .hom-contacto-msg{
+        h4{
+            max-width: 100%;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .text-titulo-contactenos{
+        text-align: left;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        font-size: 46px;
+        margin: 1% 8%;
+        max-width: 100px;
+
+        @media (max-width: 1070px) {
+            font-size: 40px;
+            max-width: 100%;
+            text-align: center;
+            padding-top: 30px;
+        }
+        @media (max-width: 600px) {
+            font-size: 28px;
+        }
+    }
+    .input{
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 20px;
+        height: 40px;
+        text-align: left;
+        font-size: 20px;
+        margin-right: 0px;
+        @media (max-width: 1690px) {
+            font-size: 18px;
+        }
+    }
+
+    .corto{
+        width: 48%;
+        .input();
+        @media (max-width: 600px) {
+            width: 48%;
+            font-size: 16px;
+        }
+    }
+    .largo{
+        width: 100%;
+        .input();
+        @media (max-width: 600px) {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    .corto-segundo{
+        margin-bottom: 0px;
+    }
+    .text-area{
+        border-radius: 20px;
+        width: 100%;
+        resize: none;
+        border-style: hidden;
+        height: 120px;
+        font-size: 18px;
+        padding: 10px;
+        line-height: 20px;
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }
+    }
+    .cont-input{
+        margin: 5% 8% 0% 8%;
+        text-align: center;
+        @media (max-width: 600px) {
+            margin: 6% 3% 3% 3%;
+        }
+        @media (max-width: 490px) {
+            margin: 9% 3% 3% 3%;
+        }
+    }
+    .btn-enviar-contacto{
+        margin: 5% auto;
+        width: 65%;
+        border-radius: 20px;
+        background-color: #3DB9C6;
+        border-style: 13px solid #3DB9C6;
+        border: 5px solid #33acb9;
+        font-size: 20px;
+        padding-bottom: px;
+        height: 46px;
+        align-items: center;
+        justify-content: center;
+        display: flex;    
+
+        @media (max-width: 600px) {
+            font-size: 16px;
+            padding-bottom: px;
+            height: 40px;
+            width: 50%;
+            border: 3px solid #33acb9;
+        }
+    }
+    .grecaptcha-badge{
+        margin: 2% auto;
+    }
+    .hom-contacto button[type=submit] {
+        border: 0;
+        background-color: #02b8c1;
+        padding: 8px 62px;
+        margin: 0;
+        margin-top:15px;
+    }
+    .padding-btn-mobile{
+        margin-right: 2%;
+    }
+    .hom-form-action{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+.reveal-box-contacto {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    transform: translateX(-200px);
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -ms-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
+}
+.reveal-box-contacto.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+.fix-contacto-box-front{
+    top: 15px;
+}

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Perfil de Salud Pediatrico - Estudios e imagenes</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+		
+		<header>
+			<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+					<div class="block-profile">
+						<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+						<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+						<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+						<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+					</div>
+				</div><!-- /.container -->
+			</nav>
+		</header>
+		
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+
+<section class="filter-table-header patients">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<h1 class="section-header">Mis Pacientes</h1>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pull-right">
+				<div class="search-combo">
+					<input type="text" class="form-control flat" placeholder="Buscar paciente" />
+					<button>f</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /header mis pacientes -->  		
+
+
+
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+
+<section class="container-fluid" id="info-pacientes">
+	<div class="container">
+		<div class="fold">
+		<div class="detalles-paciente">
+			<ul>
+				<li class="pad-top-5">Juan Manuel Menoyo <span>FN 28/08/1969</span></li>
+				<li class="pad-top-5">PSHB <span class="dp-vcard">5443546546</span></li>
+				<li><a href=""><span class="dp-info"></span><small>Certificados y consejos</small></a></li>
+				<li><a href=""><span class="dp-print"></span><small>Impresi&oacute;n Perfil de Salud</small></a></li>
+			</ul>
+		</div>
+
+		<div class="tagsinput-primary">
+			<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="hepatitis, levotiroxina 100 mg, asma, rubeola, hepatitis, levotiroxina 100 mg, asma, rubeola" />
+			<a href="" class="toggle-ver"><span class="fui-plus"></span></a>
+		</div>
+		</div>
+		<a href="" class="toggle-ver toggle-info-box">Ocultar menú</a>		
+	</div>
+</section>	
+	
+<section class="filter-table-header">
+	<div class="container">
+		<h1 class="section-header"><i class="dpp-flag"></i> Notificaciones</h1>
+	</div>
+</section>  		
+
+		
+<section class="estudio-imagenes-grid container">
+	<header>
+		<h3><span class="fui-folder"></span> Archivos</h3>
+		<ul>
+			<li><a href="#"><span class="fui-list-small-thumbnails"></span></a></li>
+			<li><a href="#" class="active"><span class="fui-list-columned"></span></a></li>
+		</ul>
+	</header>	
+
+	<div class="sin-registros">
+		<i class="dpp-images"></i>
+		<h6>¡La sección está vacía!</h6>
+		<p>Aquí podrá almacenar archivos de estudios realizados. <br> Una manera práctica y segura que le evitará extravíos, le permitirá tenerlos <br> siempre a su alcance y en caso de desearlo compartirlos con otros profesionales.</p>
+	</div>
+
+	
+	<div class="row sub-grid-fix">				
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-999" class="checkbox"><input type="checkbox" id="archive-999"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-998" class="checkbox"><input type="checkbox" id="archive-998"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-997" class="checkbox"><input type="checkbox" id="archive-997"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-996" class="checkbox"><input type="checkbox" id="archive-996"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-995" class="checkbox"><input type="checkbox" id="archive-995"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-884" class="checkbox"><input type="checkbox" id="archive-884"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>		
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-889" class="checkbox"><input type="checkbox" id="archive-889"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-888" class="checkbox"><input type="checkbox" id="archive-888"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-887" class="checkbox"><input type="checkbox" id="archive-887"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-896" class="checkbox"><input type="checkbox" id="archive-896"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-895" class="checkbox"><input type="checkbox" id="archive-895"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>
+		<div class="col-sm-4 col-xs-6 col-md-2 item">
+			<label for="archive-894" class="checkbox"><input type="checkbox" id="archive-894"></label>
+			<a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"/></a>
+			<span>07/09/2015</span>
+			<span>Radiografía de tórax</span>
+		</div>															
+	</div>
+	<!--/vista thumbs-->
+
+	<div class="opciones-archivos clearfix">
+		<a href="javascript:;" class="btn btn-md btn-primary modal-btn" data-target="table-modal" role="button"><span class="fui-trash"></span>Eliminar</a>
+		<a href="javascript:;" class="btn btn-md btn-primary modal-btn" data-target="compartir" role="button"><span class="fui-link"></span>Compartir con un colega</a>
+	</div>	
+	
+	<div class="paginas">
+		<span>de 1 al 10 / 200</span>
+		<a href=""><span class="fui-arrow-left"></span></a>
+		<a href=""><span class="fui-arrow-right"></span></a>
+	</div>	
+	<!-- /paginas -->
+
+	<header>
+		<h3><span class="fui-folder"></span> Archivos</h3>
+		<ul>
+			<li><a href="#"><span class="fui-list-small-thumbnails"></span></a></li>
+			<li><a href="#" class="active"><span class="fui-list-columned"></span></a></li>
+		</ul>
+	</header>	
+	<div class="table-responsive table-nueva-consulta">
+		<table class="table table-striped">
+			<tbody>
+				<tr>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+					<td><label for="archive-1" class="checkbox"><input type="checkbox" id="archive-1"></label></td>
+				</tr>
+				<tr>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+					<td><label for="archive-2" class="checkbox"><input type="checkbox" id="archive-2"></label></td>
+				</tr>
+				<tr>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+					<td><label for="archive-3" class="checkbox"><input type="checkbox" id="archive-3"></label></td>
+				</tr>
+				<tr>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+					<td><a href="javascript:;" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+					<td><label for="archive-4" class="checkbox"><input type="checkbox" id="archive-4"></label></td>
+				</tr>																					
+			</tbody>
+		</table>
+	</div>
+	<!--/vista tabla -->
+
+	<div class="opciones-archivos clearfix">
+		<a href="javascript:;" class="btn btn-md btn-primary modal-btn" data-target="table-modal" role="button"><span class="fui-trash"></span>Eliminar</a>
+		<a href="javascript:;" class="btn btn-md btn-primary modal-btn" data-target="compartir" role="button"><span class="fui-link"></span>Compartir con un colega</a>
+	</div>	
+	
+	<div class="paginas">
+		<span>de 1 al 10 / 200</span>
+		<a href=""><span class="fui-arrow-left"></span></a>
+		<a href=""><span class="fui-arrow-right"></span></a>
+	</div>	
+	<!-- /paginas -->
+</section>
+
+
+<!-- Modal Compartir -->
+<div class="modal fade modal-type-2" id="compartir">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="tab-content view-doctor">
+	<div role="tabpanel" class="w tab-pane active fade in" id="compartir-buscar">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Compartir con</h5></div>
+			<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+		</div>
+		<form action="">
+			<div class="form-content">
+				<p class="buscar-field">
+					<input type="text" name=""> <a href="#compartir-resultados" role="tab" data-toggle="tab"><span class="fui-search"></span></a>
+					<!-- <a href="#compartir-resultados" role="tab" data-toggle="tab" class="dp-search"></a> -->
+				</p>
+				<p>
+					<select name="" id="" class="form-control select select-primary select-block">
+						<option value="">Especialidad</option>
+						<option value="">Tratamiento Prolongado</option>
+						<option value="">Crónica</option>
+						<option value="">Temporal</option>
+					</select>
+				</p>	
+				<p>
+					<select name="" id="" class="form-control select select-primary select-block">
+						<option value="">Sub-especialidad</option>
+						<option value="">Tratamiento Prolongado</option>
+						<option value="">Crónica</option>
+						<option value="">Temporal</option>
+					</select>
+				</p>
+				<p>
+					<select name="" id="" class="form-control select select-primary select-block">
+						<option value="">Experto en</option>
+						<option value="">Tratamiento Prolongado</option>
+						<option value="">Crónica</option>
+						<option value="">Temporal</option>
+					</select>
+				</p>
+			</div>
+			<div class="modal-btns">
+				<a href="#compartir-resultados" role="tab" data-toggle="tab" class="dp-search"></a>
+			</div>
+		</form>
+	</div>
+	<div role="tabpanel" class="w tab-pane fade" id="compartir-resultados">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Resultados de búsqueda</h5></div>
+			<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+		</div>
+		<div class="modal-body">
+			<ul>
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>	
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>									
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>	
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>	
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>																										
+			</ul>
+		</div>
+		<div class="modal-btns">
+			<a href="#compartir-buscar" role="tab" data-toggle="tab" class="fui-arrow-left"></a>
+		</div>						
+	</div>
+	<div role="tabpanel" class="w tab-pane fade" id="compartir-enviar">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Compartir con</h5></div>
+			<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+		</div>						
+		<form action="" method="">
+			<div class="form-content">
+				<p><span class="fui-link"></span>Dr. Osvaldo Ruffo</p>
+				<p><textarea name="" id=""  placeholder="Escriba aqui su consulta"></textarea></p>
+			</div>
+			<div class="compartir-adjuntar">
+				<img src="imgs/temp/radiografia.jpg" width="65" alt="">
+				<img src="imgs/temp/radiografia.jpg" width="65" alt="">
+				<img src="imgs/temp/radiografia.jpg" width="65" alt="">
+				
+				<label for="compartir-adjunto" class="fui-clip"></label>
+				<input type="file" id="compartir-adjunto">
+			</div>
+			<div class="modal-btns">
+				<button></button>
+			</div>
+		</form>
+	</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal Eliminar -->
+<div class="modal fade" id="table-modal">
+	<div class="modal-dialog modal-imagenes">
+		<div class="modal-content">
+			<div class="modal-text">¿Está seguro que desea eliminar los archivos seleccionados?</div>
+			<div class="modal-btns">
+				<button data-dismiss="modal">cancelar</button>
+				<button>aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<!-- Modal VER Archivo -->
+<div class="modal fade modal-type-1" id="ver-archivo">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title">
+			<h5>Radiografia de torax, Control</h5>
+		</div>
+	</div>
+	<div class="modal-body">
+		<div >
+			<div class="slider slider-for">
+				<div><img src="imgs/temp/slider-1.jpg" alt="" ></div>
+				<div><img src="imgs/temp/slider-2.jpg" alt=""></div>
+				<div><img src="imgs/temp/slider-3.jpg" alt=""></div>
+				<div><img src="imgs/temp/slider-4.jpg" alt=""></div>
+			</div>
+			<div class="slider slider-nav-carrousel">
+				<div><img src="imgs/temp/slider-1-thumb.jpg" alt=""></div>
+				<div><img src="imgs/temp/slider-2-thumb.jpg" alt=""></div>
+				<div><img src="imgs/temp/slider-3-thumb.jpg" alt=""></div>
+				<div><img src="imgs/temp/slider-4-thumb.jpg" alt=""></div>
+			</div>						
+		</div>						
+	</div>
+</div>
+</div>
+</div>			
+
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+		
+
+		
+<!--		scripts-->
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>	
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':checkbox').radiocheck();   
+
+
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		centerMode: false,
+		fade: true,
+		asNavFor: '.slider-nav-carrousel',
+		draggable: true,
+		adaptiveHeight: true
+	});
+	$('.slider-nav-carrousel').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true,
+		draggable: true
+	});	
+$('.slick-slider').each(function() {
+    $(this).slick("getSlick").refresh();
+});
+
+
+});
+</script>		
+<!--		@scripts-->
+		
+		
+		<!--		modal-->
+		<div class="modal fade" id="table-modal">
+			<div class="modal-dialog modal-imagenes">
+				<div class="modal-content">
+					<div class="modal-text">
+						¿Está seguro que desea eliminar los archivos seleccionados?
+					</div>
+					<div class="modal-btns">
+						<button data-dismiss="modal">cancelar</button>
+						<button>aceptar</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--		@modal-->
+		
+	</body>
+</html>

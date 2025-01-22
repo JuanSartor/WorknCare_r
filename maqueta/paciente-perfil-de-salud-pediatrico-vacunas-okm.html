@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Perfil de Salud Pediatrico - Estudios e imagenes</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="css/main.css">		
+</head>
+
+<body>
+	
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div>
+	</nav>
+</header>	
+<!-- /top header -->
+
+<section class="filter user-group">
+	<div class="container">
+		<div class="btn-group user-filter" data-toggle="buttons">
+			<label class="btn btn-inverse active">
+				<input type="checkbox" checked> Todos
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Juan Manuel Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Iñaki Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Usted
+			</label>
+			<button class="dp-add-user add-user"></button>
+		</div>
+	</div>
+</section>	
+<!-- /filtro usuarios -->
+
+<section class="user-actions user-paciente">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+			<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+			<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+			<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+			<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+			<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+
+<nav class="section-header pediatric profile">
+	<div class="container">
+		<div class="user-select pull-left">
+			<div class="active-user">
+				<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+				<div class="perfil-dropdown">
+					<ul>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+					</ul>
+					<span><i class="dp-arrow-down"></i></span>
+				</div>
+			</div>
+			<h1 class="section-name">Perfil de Salud Pediatrico</h1>
+		</div>
+		<div class="settings pull-right">
+			<ul>
+				<li><a href="javascript:;" class="modal-btn" data-target="configurar-tablero" role="button"><i class="dpp-grid"></i>Configurar Tablero</a></li>				
+				<li><a href="javascript:;" class="modal-btn" data-target="privacidad" role="button"><i class="dpp-lock"></i>Privacidad</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</nav>
+<!-- /header perfil pediatrico -->     
+
+		
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+
+<div class="container">
+	<div class="row" id="notificaciones">
+		<div class="col-sm-12" >
+
+			<div class="module-subheader">
+				<div class="row">
+					<h2><span class="dpp-chequeos"><span>3</span></span> Controles y chequeos</h2>
+				</div>
+			</div>
+			<table class="table-responsive historico-consultas-table notificaciones-table">
+				<thead>
+					<tr>
+						<td class="col-1">Fecha</td>
+						<td class="">Tipo</td>
+						<td class="col-3">Diagnóstico</td>
+						<td class="col-4">Desactivar todas</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag deactivated"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>																								
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</div>
+<!-- /notificaciones -->
+
+
+
+<section class="container-fluid" id="info-pacientes">
+	<div class="container">
+		<div class="fold">
+		<div class="detalles-paciente">
+			<ul>
+				<li class="pad-top-5">Juan Manuel Menoyo <span>FN 28/08/1969</span></li>
+				<li class="pad-top-5">PSHB <span class="dp-vcard">5443546546</span></li>
+				<li><a href=""><span class="dp-info"></span><small>Certificados y consejos</small></a></li>
+				<li><a href=""><span class="dp-print"></span><small>Impresi&oacute;n Perfil de Salud</small></a></li>
+			</ul>
+		</div>
+
+		<div class="tagsinput-primary">
+			<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="hepatitis, levotiroxina 100 mg, asma, rubeola, hepatitis, levotiroxina 100 mg, asma, rubeola" />
+			<a href="" class="toggle-ver"><span class="fui-plus"></span></a>
+		</div>
+		</div>
+		<a href="" class="toggle-ver toggle-info-box">Ocultar menú</a>		
+	</div>
+</section>	
+<!-- /info pacientes -->
+
+
+
+	
+<section class="module-header container">
+	<figure class="circle-icon-images icon-vacuna"></figure>
+	<h1>Vacunas</h1>
+	<p class="notice text-primary">Calendario Nacional de Vacunación</p>
+</section>
+<!-- /main header -->
+
+<section class="container vacunas-leyendas">
+	<ul>
+		<li class="va-unica-dosis"><span>&Uacute;nica dosis</span></li>
+		<li class="va-primer-dosis"><span>1&deg; dosis</span></li>
+		<li class="va-segunda-dosis"><span>2&deg; dosis</span></li>
+		<li class="va-tercera-dosis"><span>3&deg; dosis</span></li>
+		<li class="va-cuarta-dosis"><span>4&deg; dosis</span></li>
+		<li class="va-refuerzo"><span>Refuerzo</span></li>
+		<li class="va-esquema"><span>Iniciar o completar esquema</span></li>
+		<li class="va-anual-dosis"><span>Dosis anual</span></li>
+	</ul>
+</section>
+
+
+<section class="container calendario-vacunas">
+<div class="row">
+
+	<ul class="col-edad">
+		<li>Edad</li>
+		<li>RN</li>
+		<li>2M</li>
+		<li>4M</li>
+		<li>6M</li>
+		<li>12M</li>
+		<li>15M</li>
+		<li>15-18M</li>
+		<li>18M</li>
+		<li>5-6A</li>
+		<li>11A</li>
+		<li class="two-lines">A partir de los  15 A</li>
+		<li>Adultos</li>
+		<li>Embarazadas</li>
+		<li>Puerperio</li>
+		<li class="two-lines">Personal de la Salud</li>
+	</ul> 
+
+	<a href="javascript:;" class="slider-arrow slider-prev"><span class="fui-arrow-left"></span></a>
+
+
+	<div id="slider-vacunas-container">
+		<div class="slider-vacunas">
+			<ul>
+				<li>BCG</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li class="va-tercera-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-refuerzo"></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Hepatitis B</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">22mar2016</span> <span class="ref-num">(7)</span></li>
+				<li class="va-primer-dosis"><span class="fui-check"></span> <span class="ref-num">(2)</span></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"><span class="fui-check"></span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>				
+			</ul>
+			<ul>
+				<li>Neumococo Conjugada</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">22mar2016</span></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">22mar2016</span><span class="ref-num">(2)</span></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"><span class="fui-check"></span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">22mar2016</span></li>
+				<li class="va-cuarta-dosis"><span class="fui-check"></li>
+				<li class="va-refuerzo"><span class="ref-num">(2)</span></li>				
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Pentavalente</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"><span class="ref-num">(2)</span></li>
+				<li class="va-tercera-dosis"></li>				
+				<li class="va-refuerzo"><span class="ref-num">(2)</span></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-cuarta-dosis"><span class="fui-check"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Rotavirus</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Cuádruple Pentavalente</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Sabin</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Triple Viral</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Gripe</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Heptatitis A</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>				
+				<li></li>
+				<li></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>			
+				<li></li>
+			</ul>
+			<ul>
+				<li>Varicela</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"><span class="ref-num">(2)</span></li>
+				<li class="va-tercera-dosis"></li>				
+				<li class="va-refuerzo"><span class="ref-num">(2)</span></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-cuarta-dosis"><span class="fui-check"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Triple Bacteriana Celular</li>	
+				<li class="va-unica-dosis"></li>
+				<li class="va-primer-dosis"></li>
+				<li class="va-segunda-dosis"></li>
+				<li class="va-tercera-dosis"></li>
+				<li class="va-cuarta-dosis"></li>
+				<li class="va-refuerzo"></li>
+				<li class="va-esquema"></li>
+				<li class="va-anual-dosis"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Triple Bacteriana Acelular</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-anual-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-cuarta-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-refuerzo"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-esquema"><span class="va-fecha">23jun2013</span></li>				
+				<li></li>
+				<li></li>
+				<li class="va-primer-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">23jun2013</span></li>			
+				<li></li>
+			</ul>
+			<ul>
+				<li>Doble Bacteriana</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-primer-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-cuarta-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-refuerzo"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-esquema"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-anual-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Virus Papiloma Humano VPH</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-primer-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-cuarta-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-refuerzo"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-esquema"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-anual-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Doble Viral </li>	
+				<li class="va-unica-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-primer-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-cuarta-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-refuerzo"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-esquema"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-anual-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Fiebre Amarilla FA</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-primer-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-cuarta-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-refuerzo"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-esquema"><span class="va-fecha">23jun2013</span></li>
+				<li class="va-anual-dosis"><span class="va-fecha">23jun2013</span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li>Fiebre Hemorrágica Argentina FHA</li>	
+				<li class="va-unica-dosis"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-primer-dosis"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-segunda-dosis"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-tercera-dosis"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-cuarta-dosis"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-refuerzo"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-esquema"><span class="va-fecha">12nov2011</span></li>
+				<li class="va-anual-dosis"><span class="va-fecha">12nov2011</span></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>		
+		</div>		
+	</div>		
+
+	<a href="javascript:;" class="slider-arrow slider-next"><span class="fui-arrow-right"></span></a>
+
+</div>
+</section>
+<!-- /Calendario VACUNAS -->
+
+
+
+<section class="container vacunas-notas">
+	<div class="row">	
+		<div class="col-md-12">
+			<div class="notice">
+				IMPORTANTE <br>
+				Consulte a su médico acerca de las vacunas recomendadas para usted y su familia, él le indicará las dosis y los intervalos adecuados a sus antecedentes personales y de vacunación prevía.
+			</div>
+		</div>	
+		<div class="col-md-12">
+			<h3>APLICACIÓN</h3>
+			<p>
+			(1)	Se inicia esquema: 3 dosis (0-1-6 meses) <br>
+			(2)	Niños desde 6 meses hasta 24 meses de edad. <br>
+			(3)	En cualquier trimestre de la gestación. <br>
+			(4)	Madres de niños menores de 6 meses (si no la hubieran recibido durante el embarazo) <br>
+			(5)	Se indica 1 dosis a partir de la semana 20 de gestación <br>
+			(6)	Se indica 1 dosis a quienes atienden a niños menores de 1 año. <br>
+			(7)	Se indica refuerzo cada 10 años. <br>
+			(8)	Niñas de 11 años de edad: 3 dosis (0-1-6 meses o 0-2-6 meses) <br>
+			(9)	Si no hubiera recibido 2 dosis de Triple Viral o 1 dosis de Doble Viral <br>
+			(10)	Residentes en zonas de riesgo <br>
+			(11) 	Residentes en zonas de riesgo. Unico refuerzo a los 10 años de la 1º dosis
+			</p>
+		</div>  		
+		<div class="col-md-6">		
+			<h3>VACUNAS</h3>
+			<p>
+			BCG: Tuberculosis (formas invasivas) <br>
+			Hepatitis B <br>
+			Neumococo Conjugada: Previene la Meningitis, Neumonía y Sepsis por Neumococo. <br>
+			Pentavalente/Quíntuple: Difteria, Tétanos, Tos Convulsa, Hepatitis B, Haemophilus Influenzae tipo b. <br>
+			Rotavirus <br>
+			Cuádruple Pentavalente: Difteria, Tétanos, Tos Convulsa, Hepatitis B, Haemophilus Influenzae tipo b.  <br>
+			Sabin: Vacuna contra la Poliomielitis. <br>
+			Triple Viral: Sarampión, Rubeóla, Paperas. <br>
+			Gripe <br>
+			Hepatitis A <br>
+			Varicela <br>
+			Triple Bacteriana Acelular: Difteria, Tétanos, Tos Convulsa. <br>
+			Doble Bacteriana: Difteria, Tétanos. <br>
+			VHP: Virus Papiloma Humano, causante del 100% de los casos de cáncer de cuello de útero. <br>
+			Doble Viral: Sarampión, Rubeóla.
+			</p>
+		</div>	
+		<div class="col-md-6">		
+			<h3>VACUNAS PARA RESIDENTES EN ZONAS DE RIESGO</h3>
+			<p>
+				Fiebre Amarilla <br>
+				Fiebre Hemorrágica Argentina
+			</p>
+		</div>
+		</div>  
+	</div>
+</section>
+
+
+	
+
+	
+<footer>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-xs-12">
+			<h4>Servicios</h4>
+			<ul>
+				<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+				<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+				<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+				<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+				<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 col-xs-12">
+			<h4>Atención al Cliente</h4>
+			<ul>
+				<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+				<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+				<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+				<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+				<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+			</ul>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<h4>Institucional</h4>
+					<ul>
+						<li><a href="#" title="Términos legales">Términos legales</a></li>
+						<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+						<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="footer-logo">
+						<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+						<ul>
+							<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+							<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+<!-- /footer -->
+		
+
+
+<div class="modal fade modal-type-2" id="vacuna-aplicada">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="form-content edit-data">
+				<button data-dismiss="modal" class="close dp-canceled"></button>
+				<p class="text-center"><label for="va-check" class="checkbox"><input type="checkbox" id="va-check">Vacuna aplicada</label></p>
+				<p class="text-center">
+					<i>Si tiene constancia por favor ingrese la fecha de su aplicación</i>
+				<select class="select date-select" name="date-dia">
+				<option value="-">dia</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+				</select>
+				<select class="select date-select" name="date-mes">
+				<option value="-">mes</option>
+				<option value="1">January</option>
+				<option value="2">Febuary</option>
+				<option value="3">March</option>
+				<option value="4">April</option>
+				<option value="5">May</option>
+				<option value="6">June</option>
+				<option value="7">July</option>
+				<option value="8">August</option>
+				<option value="9">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+				</select>
+				<select class="select date-select" name="date-mes">
+				<option value="-">año</option>
+				<option value="2011">2011</option>
+				<option value="2010">2010</option>
+				<option value="2009">2009</option>
+				<option value="2008">2008</option>
+				<option value="2007">2007</option>
+				<option value="2006">2006</option>
+				<option value="2005">2005</option>
+				<option value="2004">2004</option>
+				<option value="2003">2003</option>
+				<option value="2002">2002</option>
+				<option value="2001">2001</option>
+				<option value="2000">2000</option>
+				<option value="1999">1999</option>
+				<option value="1998">1998</option>
+				<option value="1997">1997</option>
+				<option value="1996">1996</option>
+				<option value="1995">1995</option>
+				<option value="1994">1994</option>
+				<option value="1993">1993</option>
+				<option value="1992">1992</option>
+				<option value="1991">1991</option>
+				<option value="1990">1990</option>
+				<option value="1989">1989</option>
+				<option value="1988">1988</option>
+				<option value="1987">1987</option>
+				<option value="1986">1986</option>
+				<option value="1985">1985</option>
+				<option value="1984">1984</option>
+				<option value="1983">1983</option>
+				<option value="1982">1982</option>
+				<option value="1981">1981</option>
+				<option value="1980">1980</option>
+				<option value="1979">1979</option>
+				<option value="1978">1978</option>
+				<option value="1977">1977</option>
+				<option value="1976">1976</option>
+				<option value="1975">1975</option>
+				<option value="1974">1974</option>
+				<option value="1973">1973</option>
+				<option value="1972">1972</option>
+				<option value="1971">1971</option>
+				<option value="1970">1970</option>
+				<option value="1969">1969</option>
+				<option value="1968">1968</option>
+				<option value="1967">1967</option>
+				<option value="1966">1966</option>
+				<option value="1965">1965</option>
+				<option value="1964">1964</option>
+				<option value="1963">1963</option>
+				<option value="1962">1962</option>
+				<option value="1961">1961</option>
+				<option value="1960">1960</option>
+				<option value="1959">1959</option>
+				</select>												
+				</p>
+				<input type="submit" value="grabar datos">
+			</div>			
+		</div>
+	</div>
+</div>		
+<!-- /Gineco (usar este tipo de modals si el contenido tiene select) -->
+
+
+<!-- Modal Privacidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Privacidad</h5></div>
+		</div>
+		<form action="">
+			<div class="form-content">
+				<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+				<ul class="lista-checks">
+				<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+				<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+				<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+				</ul>
+
+			</div>
+			<div class="modal-btns">
+				<button>guardar</button>
+			</div>
+		</form>
+	</div>
+	</div>
+</div>	
+
+<!-- Modal Configurar Tablero -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="configurar-tablero">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Configurar Tablero</h5></div>
+		</div>
+		<form action="">
+			<div class="form-content ">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  	<div class="panel panel-default">
+				    	<div class="panel-heading" role="tab" id="headingOne">
+				  			<span class="dp-arrow-down collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></span>
+				    		<label for="db-0" class="checkbox" ><input type="checkbox" checked id="db-0"> Datos biométricos</label>
+				    	</div>
+				    	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				    		 <div class="panel-body">
+					      		<label for="db-1" class="checkbox"><input type="checkbox" id="db-1">Peso y altura</label>
+					      		<label for="db-2" class="checkbox"><input type="checkbox" id="db-2">Presión arterial</label>
+					      		<label for="db-3" class="checkbox"><input type="checkbox" id="db-3">Colesterol</label>
+					      		<label for="db-5" class="checkbox"><input type="checkbox" id="db-5">Glucemia</label>
+					      		<label for="db-4" class="checkbox"><input type="checkbox" id="db-4">Misceláneas</label>
+					      	</div>
+					    </div>
+				    </div>
+					<div class="panel-heading">
+						<label for="ai-1" class="checkbox"><input type="checkbox" id="ai-1">Alergias e intolerancias</label>
+					</div>	
+					<div class="panel-heading">
+						<label for="ci-1" class="checkbox"><input type="checkbox" id="ci-1">Cirugías e intervenciones</label>
+					</div>
+					<div class="panel-heading">
+						<label for="ep-1" class="checkbox"><input type="checkbox" id="ep-1">Enfermadades y Patologías </label>
+					</div>
+					<div class="panel-heading">
+						<label for="gi-1" class="checkbox"><input type="checkbox" id="gi-1">Ginecológicos &amp; Obstétricos</label>
+					</div>
+					<div class="panel-heading">
+						<label for="me-1" class="checkbox"><input type="checkbox" id="me-1">Medicamentos</label>
+					</div>
+					<div class="panel-heading">
+						<label for="cd-1" class="checkbox"><input type="checkbox" id="cd-1">Cuidado Dental</label>
+					</div>
+					<div class="panel-heading">
+						<label for="ca-1" class="checkbox"><input type="checkbox" id="ca-1">Cuidado Auditivo</label>
+					</div>
+					<div class="panel-heading">
+						<label for="cv-1" class="checkbox"><input type="checkbox" id="cv-1">Cuidado Visual</label>
+					</div>																												
+					<div class="panel-heading">
+						<label for="va-1" class="checkbox"><input type="checkbox" id="va-1">Vacunas</label>
+					</div>	
+					<div class="panel-heading">
+						<label for="ev-1" class="checkbox"><input type="checkbox" id="ev-1">Estilo de vida</label>
+					</div>	
+				</div>
+			</div>
+			<div class="modal-btns">
+				<button>guardar</button>
+			</div>
+		</form>
+	</div>
+	</div>
+</div>	
+
+
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck(); 
+	$('.slider-vacunas').slick({
+		centerMode: false,
+		dots: false,
+		draggable: false,
+		focusOnSelect: false,
+		infinite:true,
+		nextArrow: '.slider-next',	
+		prevArrow: '.slider-prev',
+		slidesToScroll: 9,
+		slidesToShow: 9,
+		touchMove:false,
+		responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 4, 
+		        slidesToScroll: 4,
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2,
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		]
+    });	
+});
+</script>	
+
+
+</body>
+</html>

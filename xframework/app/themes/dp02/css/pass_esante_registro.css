@@ -1,0 +1,1399 @@
+.pass-sante-registro-planes {
+  margin: 30px auto;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes p {
+    font-size: 16px;
+  }
+}
+.pass-sante-registro-planes .header-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.pass-sante-registro-planes .header-container .logo-container {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+.pass-sante-registro-planes .header-container .logo-container .label-logo {
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  color: #02b8c1;
+}
+.pass-sante-registro-planes .header-container img {
+  width: 300px;
+}
+.pass-sante-registro-planes .header-container h1 {
+  font-size: 26px;
+  color: #3EBAC7;
+}
+.pass-sante-registro-planes .header-container h2 {
+  font-size: 24px;
+  color: #EB599B;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes {
+  margin-top: 95px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .planes-wrapper .listado-planes {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan {
+  position: relative;
+  width: 19%;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 10px 0 #666;
+  background: white;
+  /*            &:nth-child(1){
+                            .plan-title,.plan-precio{
+                                color:#82B9EE;
+                            }
+                            .btn-suscribir{
+                                background-color: #82B9EE;
+                            }
+                            .destacado-planes{
+                                right: 10px;
+                                position: relative;
+                                width: 210px;
+                                height: 0px;
+                                border-top: 10px solid #82B9EE;
+                                border-bottom: 10px solid #82B9EE;
+                                border-right: 10px solid transparent;
+                            }
+                        }*/
+  /*            &:nth-child(1){
+                            .plan-title-particular,.plan-precio-particular{
+                                color:#82B9EE;
+                            }
+                            .btn-suscribir-particular{
+                                background-color: #82B9EE;
+                            }
+                            .destacado-planes-particular{
+                                right: 10px;
+                                position: relative;
+                                width: 210px;
+                                height: 0px;
+                                border-top: 10px solid #82B9EE;
+                                border-bottom: 10px solid #82B9EE;
+                                border-right: 10px solid transparent;
+                            }
+                        }*/
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan.plan-contratado {
+  background: #dbeeef;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan.plan-contratado:hover {
+  transform: none;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan.plan-no-disponible:hover {
+  transform: none;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan.selected {
+  transform: scale(1.04);
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan {
+    width: 90%;
+    margin: 5px auto;
+  }
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-precio {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-precio .label {
+  color: #415b70;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-precio .precio-tachado {
+  position: relative;
+  color: #cccccc;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-precio .precio-tachado hr {
+  position: absolute;
+  z-index: 2;
+  border: solid 2px #e1938d;
+  background: #e1938d;
+  width: 36px;
+  right: -8px;
+  top: 10px;
+  transform: rotate(45deg);
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .btn-suscribir {
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 25px;
+  background: #ccc;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .btn-suscribir:hover,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .btn-suscribirvisited {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .suscripcion-activa {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #34495e;
+  line-height: 34px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .plan-title,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .plan-precio {
+  color: #82B9EE;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .btn-suscribir {
+  background-color: #82B9EE;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .destacado-planes {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #82B9EE;
+  border-bottom: 10px solid #82B9EE;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .plan-title,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .plan-precio {
+  color: #3EBAC7;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .btn-suscribir {
+  background-color: #3EBAC7;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .destacado-planes {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #3EBAC7;
+  border-bottom: 10px solid #3EBAC7;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .plan-title,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .plan-precio {
+  color: #EE7A9F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .btn-suscribir {
+  background-color: #EE7A9F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .destacado-planes {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #EE7A9F;
+  border-bottom: 10px solid #EE7A9F;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(4) .plan-title,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(4) .plan-precio {
+  color: #FDCA6F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(4) .btn-suscribir {
+  background-color: #FDCA6F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(4) .destacado-planes {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #FDCA6F;
+  border-bottom: 10px solid #FDCA6F;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .plan-title-particular,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .plan-precio-particular {
+  color: #3EBAC7;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .btn-suscribir-particular {
+  background-color: #3EBAC7;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) .destacado-planes-particular {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #3EBAC7;
+  border-bottom: 10px solid #3EBAC7;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .plan-title-particular,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .plan-precio-particular {
+  color: #EE7A9F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .btn-suscribir-particular {
+  background-color: #EE7A9F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) .destacado-planes-particular {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #EE7A9F;
+  border-bottom: 10px solid #EE7A9F;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .plan-title-particular,
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .plan-precio-particular {
+  color: #FDCA6F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .btn-suscribir-particular {
+  background-color: #FDCA6F;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(3) .destacado-planes-particular {
+  right: 10px;
+  position: relative;
+  width: 210px;
+  height: 0px;
+  border-top: 10px solid #FDCA6F;
+  border-bottom: 10px solid #FDCA6F;
+  border-right: 10px solid transparent;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .consultas-incluidas {
+  margin: 10px auto;
+  text-align: left;
+  color: #415b70;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .consultas-incluidas h3 {
+  color: #e74c3c;
+  font-size: 20px;
+  text-align: center;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .consultas-incluidas p {
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 15px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .cupon-descuentos {
+  margin: 10px auto;
+  text-align: left;
+  color: #415b70;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .cupon-descuentos h3 {
+  color: #eb599b;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-bottom: 5px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .cupon-descuentos h3 i {
+  transform: rotate(90deg);
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .cupon-descuentos p {
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 16px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .descripcion-content {
+  margin: 10px auto;
+  text-align: left;
+  color: #415b70;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .descripcion-content p {
+  text-align: center;
+  background-color: #f3f3f3;
+  font-size: 14px;
+  margin: 4px 0;
+  padding: 6px 0;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan hr {
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 10px;
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-recomendado {
+  color: #ffffff;
+  background: #3EBAC7;
+  position: absolute;
+  top: -39px;
+  left: 0px;
+  right: 0px;
+  margin: 0 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 10px;
+}
+@media (max-width: 896px) {
+  .pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-recomendado {
+    top: -58px;
+  }
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-recomendado {
+    top: -39px;
+    font-size: 14px;
+  }
+}
+.pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan .plan-recomendado span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: auto;
+  line-height: 1.2;
+  font-size: 15px;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(1) {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .planes-wrapper .listado-planes .item-plan:nth-child(2) {
+    margin-bottom: 50px;
+  }
+}
+.pass-sante-registro-planes .btn-switch-planes {
+  background: #80c2cb !important;
+  border-color: #80c2cb !important;
+}
+.pass-sante-registro-planes .btn-switch-planes.active {
+  background: #1497a8 !important;
+  border-color: #1497a8 !important;
+}
+.pass-sante-registro-planes .aclaracion-impuestos {
+  font-size: 14px;
+  text-align: right;
+}
+.pass-sante-registro-planes .plogin-mensaje-registro {
+  padding-top: 16px;
+}
+.pass-sante-registro-planes .form-wrapper {
+  display: none;
+  /*mostrar contraseña*/
+}
+.pass-sante-registro-planes .form-wrapper.mapc-registro-box {
+  margin: 0px auto;
+}
+.pass-sante-registro-planes .form-wrapper .mapc-politicas-box {
+  margin: 12px auto;
+}
+.pass-sante-registro-planes .form-wrapper .label-aclaracion {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 8px;
+}
+.pass-sante-registro-planes .form-wrapper .label-aclaracion span {
+  position: absolute;
+  left: 0;
+}
+.pass-sante-registro-planes .form-wrapper .cupon-descuento .input-group-addon {
+  border: 1px #eb599b solid;
+  background-color: #eb599b;
+}
+.pass-sante-registro-planes .form-wrapper .cupon-descuento .input-group-addon i {
+  transform: rotate(90deg);
+}
+.pass-sante-registro-planes .form-wrapper .cupon-descuento input {
+  border: 1px #eb599b solid;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.pass-sante-registro-planes .form-wrapper .tipo-cuenta-box {
+  max-width: 568px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 24px;
+  position: relative;
+}
+.pass-sante-registro-planes .form-wrapper .tipo-cuenta-box .radio {
+  padding-left: 50px;
+}
+.pass-sante-registro-planes .form-wrapper .precio-total-pack {
+  line-height: 58px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px #69aaac solid;
+  color: #415b70;
+}
+.pass-sante-registro-planes .form-wrapper .mapc-politicas-box .mapc-politicas p {
+  color: #415b70;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.pass-sante-registro-planes .form-wrapper .btn-siguiente,
+.pass-sante-registro-planes .form-wrapper .btn-crear-cuenta,
+.pass-sante-registro-planes .form-wrapper .btn-volver {
+  min-width: 150px;
+}
+.pass-sante-registro-planes .form-wrapper .btn-volver:hover {
+  background: #b6b6b6 !important;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .form-wrapper .plogin-registro-accordios-title {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+.pass-sante-registro-planes .form-wrapper .mapc-select {
+  margin-top: 0px;
+}
+.pass-sante-registro-planes .form-wrapper .mapc-select .mbl {
+  margin-bottom: 0px;
+}
+.pass-sante-registro-planes .form-wrapper .plogin-mensaje-registro p {
+  background: #eeeeee;
+  padding: 10px 20px;
+  margin: 24px auto;
+}
+.pass-sante-registro-planes .form-wrapper .plogin-mensaje-registro .plogin-mensaje-registro-actions {
+  margin-bottom: 24px;
+}
+.pass-sante-registro-planes .form-wrapper .mapc-input-line > .btnShowPassword {
+  font-size: 24px;
+  line-height: 22px;
+  display: inline-block;
+  position: absolute;
+  top: 19px;
+  right: 22px;
+  /*color: #d8d8d8;*/
+}
+.pass-sante-registro-planes .form-wrapper .btnShowPassword i {
+  cursor: pointer;
+}
+.pass-sante-registro-planes .checkout-form {
+  display: none;
+  max-width: 600px;
+  margin: 10px auto;
+  margin-bottom: 60px;
+}
+.pass-sante-registro-planes .checkout-form h3 {
+  font-size: 26px;
+  color: #415b70;
+  text-align: center;
+}
+.pass-sante-registro-planes .checkout-form h4.nombre-plan {
+  font-size: 20px;
+  margin-top: 0px;
+}
+.pass-sante-registro-planes .checkout-form .plan-contratado {
+  padding: 24px;
+  margin: 20px auto 40px;
+  background: #f3f3f3;
+  font-size: 16px;
+}
+.pass-sante-registro-planes .checkout-form .plan-contratado p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .pass-sante-registro-planes .checkout-form .plan-contratado {
+    max-width: 450px;
+    height: fit-content;
+  }
+}
+.pass-sante-registro-planes .checkout-form .aclaracion-debito {
+  margin-top: 20px;
+}
+.pass-sante-registro-planes .checkout-form .aclaracion-debito p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.pass-sante-registro-planes .checkout-form .aclaracion-debito p.ejemplo {
+  color: #e74c3c;
+}
+.pass-sante-registro-planes .checkout-form .payment-form {
+  margin: 30px 0;
+}
+.pass-sante-registro-planes .checkout-form .payment-form .okm-row {
+  margin-bottom: 25px;
+}
+.pass-sante-registro-planes .checkout-form .payment-form .mapc-label {
+  margin-bottom: 10px;
+}
+.pass-sante-registro-planes .checkout-form .payment-form .payment-element {
+  padding: 15px 10px;
+  box-shadow: 2px 2px 10px 0 #666;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+.pass-sante-registro-planes .checkout-form .card-element-errors {
+  color: #e74c3c;
+  margin-top: 10px;
+}
+.pass-sante-registro-planes .checkout-form .tabs-metodo-pago .nav-tabs li {
+  width: 50%;
+}
+.pass-sante-registro-planes .checkout-form .tabs-metodo-pago .nav-tabs li i {
+  margin-right: 10px;
+}
+.pass-sante-registro-planes .checkout-form .tabs-metodo-pago .nav-tabs li.active {
+  font-weight: 600;
+}
+.pass-sante-registro-planes .checkout-form .btn-process-checkout.disabled:hover {
+  cursor: not-allowed !important;
+  background-color: #bdc3c7 !important;
+  border-color: #bdc3c7 !important;
+}
+.pass-sante-registro-planes .card-pass-sante {
+  max-width: 600px;
+  margin: 10px auto;
+}
+.pass-sante-registro-planes .card-pass-sante .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pass-sante-registro-planes .card-pass-sante .header h2 {
+  font-size: 26px;
+  color: #415b70;
+  text-align: center;
+  margin: 0;
+  padding-left: 10px;
+}
+.pass-sante-registro-planes .card-pass-sante .card {
+  padding: 24px;
+  margin: 20px auto 40px;
+  background: #f3f3f3;
+  font-size: 16px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 0 #666;
+  height: fit-content;
+  min-height: 250px;
+}
+.pass-sante-registro-planes .card-pass-sante .card .title {
+  font-size: 22px;
+  color: #415b70;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .card-pass-sante .card .card-logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+.pass-sante-registro-planes .card-pass-sante .card .card-logo img {
+  width: 140px;
+  height: 32px;
+}
+.pass-sante-registro-planes .card-pass-sante .card .codigo {
+  width: 100%;
+  font-size: 24px;
+  background-color: #007d8b;
+  color: #ffffff;
+  text-align: center;
+  width: fit-content;
+  padding: 10px 40px;
+  margin: 10px auto;
+  font-weight: 600;
+  letter-spacing: 8px;
+}
+.pass-sante-registro-planes .card-pass-sante .card .codigo::placeholder {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.pass-sante-registro-planes .card-pass-sante .card p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .pass-sante-registro-planes .card-pass-sante .card {
+    max-width: 450px;
+  }
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes .card-pass-sante .card {
+    padding: 10px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview {
+  margin: 0px auto;
+  margin-top: 30px;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: #02b8c1;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .container-header h2 {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default {
+  color: #fff;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 10px auto;
+  border-radius: 15px;
+  padding: 12px 48px;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-conectarme {
+  background: transparent  !important;
+  border: solid 1px;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-conectarme:hover {
+  background: #0ea0a7  !important;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-copy-link {
+  box-shadow: 2px 2px 10px 0 #fff;
+  background: #007d8b  !important;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-copy-link:hover {
+  background: #415b70 !important;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-copy-link i {
+  margin: 0 10px;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-download {
+  box-shadow: 2px 2px 10px 0 #fff;
+  background: #ec407a !important;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-download:hover {
+  background: #b52857 !important;
+}
+.pass-sante-registro-planes.bienvenida-preview .container-header .buttons .btn-default.btn-download i {
+  margin: 0 10px;
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body {
+  padding: 20px 10px;
+  /*.table-width{
+                    width: 680px;
+                    @media(max-width:800px)  and (min-width:701px){
+                        width:600px;
+                    }
+                    @media(max-width:700px)  and (min-width:601px){
+                        width:500px;
+                    }
+                    @media(max-width:600px)  and (min-width:501px){
+                        width:400px;
+                    }
+                    @media(max-width:500px)  and (min-width:401px){
+                        width:300px;
+                    }
+                    @media(max-width:400px)  and (min-width:351px){
+                        width:280px;
+                    }
+                    @media(max-width:350px)  and (min-width:281px){
+                        width:250px;
+                    }
+                   
+
+                }*/
+}
+@media (min-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body {
+    padding: 20px;
+  }
+}
+@media (max-width: 280px) {
+  .pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body img.qr-code {
+    width: 150px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body h5.modal-title {
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body h5.modal-title {
+    font-size: 18px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body .pass-logo img {
+  width: 200px;
+  margin: auto;
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body .pass-logo-socio img {
+  width: 70px;
+  margin: auto;
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body .link-wrapper {
+  background: #eeeeee;
+  padding: 10px;
+  text-align: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-body .qr-code {
+  margin: 0 auto;
+}
+.pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-header a.btn-copy-contenido {
+  border-radius: 50px;
+  background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+  box-shadow: 0px 10px 9px 0px #d7cdcd;
+  padding: 12px 12px;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-header a.btn-copy-contenido {
+    margin-bottom: 0px;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+@media (min-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .modal-compartir-pass .modal-header a.btn-copy-contenido {
+    width: 100% !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .disclaimer {
+  background: transparent;
+  color: #ffffff;
+  top: -35px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .disclaimer {
+    font-size: 17px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .disclaimer .btn-preview-mensaje {
+  background: #02868c;
+  padding: 5px 30px;
+  border-radius: 21px;
+  width: auto !important;
+}
+@media (min-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .disclaimer .btn-preview-mensaje {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .disclaimer .btn-preview-mensaje {
+    display: block;
+    margin: 15px auto;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 2px 2px 10px 0 #666;
+  background: #ffffff;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container {
+    margin: 5px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .header-container {
+  margin: 0;
+  background-image: url("../imgs/banner_workncare.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .header-container {
+    min-height: 150px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .header-container h1 {
+  /*font-size:64px;
+                    color: #ffffff;
+                    margin: 0 100px;
+                    margin-bottom: 20px;
+                    margin: 0 auto;
+                    width:100%;*/
+  align-items: center;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  font-size: 36px;
+  color: #009688;
+  display: flex;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .header-container h1 span {
+  box-shadow: -1px 0px 20px 20px rgba(255, 255, 255, 0.7);
+  border-radius: 20%;
+  background: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .header-container h1 {
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .description-content {
+  padding: 30px 100px;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .description-content {
+    padding: 20px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .description-content h5 {
+  margin: 40px 0;
+  color: #02b8c1;
+  font-size: 22px;
+  font-weight: 600;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .description-content .resaltador {
+  font-weight: 600;
+  background: rgba(0, 125, 139, 0.4);
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .description-content .firma {
+  margin-top: 20px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .description-content .firma p {
+  margin: 0px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .mensaje-complementario {
+  padding: 10px 20px;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .mensaje-complementario {
+    padding: 0px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .mensaje-complementario textarea {
+  width: 100%;
+  resize: vertical;
+  font-size: 18px;
+  background: #f3f6f7;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .mensaje-complementario .aclarion-mensaje {
+  font-size: 16px;
+  color: #63757d;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .mensaje-complementario .btn-guardar-mensaje {
+  float: right;
+  margin-bottom: 20px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass {
+  padding: 20px 100px 0 100px;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass {
+    padding: 12px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass h4 {
+  color: #02b8c1;
+  font-size: 24px;
+  font-weight: 600;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass h4.saber-mas {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a {
+  display: block;
+  width: 100%;
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a.saber-mas {
+  color: #02b8c1;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a.link-video {
+  color: #007d8b;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a:hover {
+  text-decoration: underline;
+  color: #122b40;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a.link-brochure {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-weight: 400;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a.link-brochure:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a.link-brochure {
+    font-size: 20px;
+    margin-right: 0px;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass a.link-brochure img {
+  margin-right: 20px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .resumen-pass iframe {
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .btn-incribirme {
+  width: 50%;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .btn-incribirme {
+    width: 100%;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .button-container {
+  padding-bottom: 60px;
+}
+.pass-sante-registro-planes.bienvenida-preview .preview-container .button-container a {
+  background: #31a592;
+}
+@media (max-width: 600px) {
+  .pass-sante-registro-planes.bienvenida-preview .preview-container .button-container a {
+    width: fit-content;
+  }
+}
+.pass-sante-registro-planes.bienvenida-preview .link-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.pass-sante-registro-planes.bienvenida-preview .link-container input {
+  color: #fff;
+  cursor: default;
+  font-size: 1px;
+  border: none;
+  background: transparent;
+}
+.btn-inscripcion-nuevo {
+  border-radius: 15px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+  .btn-inscripcion-nuevo {
+    font-size: 16px;
+  }
+}
+.margen-information {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .margen-information {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .header-container-nuevo {
+    min-height: 110px !important;
+  }
+}
+@media (max-width: 600px) {
+  .resaltado-mobile {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .h5-mobile {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 600px) {
+  .h4-mobile {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 600px) {
+  .texto-link-brochure {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 600px) {
+  .margen-right-brochure-mobile {
+    margin-right: 5px !important;
+    width: 200px !important;
+  }
+}
+.span-dest-planes {
+  position: relative;
+  bottom: 17px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.btn-info-invitacion-beneficiario {
+  width: 200px !important;
+  height: 50px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  font-size: 25px !important;
+  margin-top: 40px !important;
+  margin-bottom: 30px !important;
+}
+.btn-info-invitacion-beneficiario:hover {
+  color: white !important;
+}
+@media (max-width: 600px) {
+  .btn-info-invitacion-beneficiario {
+    width: 180px !important;
+  }
+}
+.btn-enterprise-500 {
+  margin-top: 10px;
+}
+@media (min-width: 600px) {
+  .btn-adhesion {
+    width: 130px;
+  }
+}
+@media (min-width: 600px) {
+  .margen-500 {
+    margin-top: 60px !important;
+  }
+}
+.icono-empresa-socia {
+  width: 70px !important;
+  height: 70px;
+  margin-right: 75% !important;
+}
+@media (max-width: 600px) {
+  .icono-empresa-socia {
+    position: relative;
+    right: 60%;
+  }
+}
+.margen-logo-pass {
+  margin-left: 55%!important;
+}
+@media (max-width: 600px) {
+  .margen-logo-pass {
+    margin-left: 0px !important;
+    position: relative;
+    left: 10px;
+  }
+}
+.box-tipo-empresas {
+  display: flex;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  background-color: aliceblue !important;
+  height: 80px;
+  align-items: center;
+}
+.modal-compartir-cuestionario .modal-body {
+  padding: 20px 10px;
+  /*.table-width{
+            width: 680px;
+            @media(max-width:800px)  and (min-width:701px){
+                width:600px;
+            }
+            @media(max-width:700px)  and (min-width:601px){
+                width:500px;
+            }
+            @media(max-width:600px)  and (min-width:501px){
+                width:400px;
+            }
+            @media(max-width:500px)  and (min-width:401px){
+                width:300px;
+            }
+            @media(max-width:400px)  and (min-width:351px){
+                width:280px;
+            }
+            @media(max-width:350px)  and (min-width:281px){
+                width:250px;
+            }
+           
+
+        }*/
+}
+@media (min-width: 600px) {
+  .modal-compartir-cuestionario .modal-body {
+    padding: 20px;
+  }
+}
+@media (max-width: 280px) {
+  .modal-compartir-cuestionario .modal-body img.qr-code {
+    width: 150px;
+  }
+}
+.modal-compartir-cuestionario .modal-body h5.modal-title {
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .modal-compartir-cuestionario .modal-body h5.modal-title {
+    font-size: 18px;
+  }
+}
+.modal-compartir-cuestionario .modal-body .pass-logo img {
+  width: 200px;
+  margin: auto;
+}
+.modal-compartir-cuestionario .modal-body .pass-logo-socio img {
+  width: 70px;
+  margin: auto;
+}
+.modal-compartir-cuestionario .modal-body .link-wrapper {
+  background: #eeeeee;
+  padding: 10px;
+  text-align: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.modal-compartir-cuestionario .modal-body .qr-code {
+  margin: 0 auto;
+}
+.modal-compartir-cuestionario .modal-header a.btn-copy-contenido {
+  border-radius: 50px;
+  background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+  box-shadow: 0px 10px 9px 0px #d7cdcd;
+  padding: 12px 12px;
+}
+@media (max-width: 600px) {
+  .modal-compartir-cuestionario .modal-header a.btn-copy-contenido {
+    margin-bottom: 0px;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+@media (min-width: 600px) {
+  .modal-compartir-cuestionario .modal-header a.btn-copy-contenido {
+    width: 100% !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+.btn-flayer {
+  box-shadow: 2px 2px 10px 0 #fff;
+  background: #F5C370 !important;
+}
+@media (min-width: 600px) {
+  .btn-flayer {
+    width: 293px !important;
+  }
+}
+@media (min-width: 600px) {
+  .btn-enviar-invitacion {
+    width: 293px !important;
+  }
+}
+.modal-compartir-capsula .modal-body {
+  padding: 20px 10px;
+  /*.table-width{
+            width: 680px;
+            @media(max-width:800px)  and (min-width:701px){
+                width:600px;
+            }
+            @media(max-width:700px)  and (min-width:601px){
+                width:500px;
+            }
+            @media(max-width:600px)  and (min-width:501px){
+                width:400px;
+            }
+            @media(max-width:500px)  and (min-width:401px){
+                width:300px;
+            }
+            @media(max-width:400px)  and (min-width:351px){
+                width:280px;
+            }
+            @media(max-width:350px)  and (min-width:281px){
+                width:250px;
+            }
+           
+
+        }*/
+}
+@media (min-width: 600px) {
+  .modal-compartir-capsula .modal-body {
+    padding: 20px;
+  }
+}
+@media (max-width: 280px) {
+  .modal-compartir-capsula .modal-body img.qr-code {
+    width: 150px;
+  }
+}
+.modal-compartir-capsula .modal-body h5.modal-title {
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .modal-compartir-capsula .modal-body h5.modal-title {
+    font-size: 18px;
+  }
+}
+.modal-compartir-capsula .modal-body .pass-logo img {
+  width: 200px;
+  margin: auto;
+}
+.modal-compartir-capsula .modal-body .pass-logo-socio img {
+  width: 70px;
+  margin: auto;
+}
+.modal-compartir-capsula .modal-body .link-wrapper {
+  background: #eeeeee;
+  padding: 10px;
+  text-align: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.modal-compartir-capsula .modal-body .qr-code {
+  margin: 0 auto;
+}
+.modal-compartir-capsula .modal-header a.btn-copy-contenido {
+  border-radius: 50px;
+  background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+  box-shadow: 0px 10px 9px 0px #d7cdcd;
+  padding: 12px 12px;
+}
+@media (max-width: 600px) {
+  .modal-compartir-capsula .modal-header a.btn-copy-contenido {
+    margin-bottom: 0px;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+@media (min-width: 600px) {
+  .modal-compartir-capsula .modal-header a.btn-copy-contenido {
+    width: 100% !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+.modal-flyer-capsula .modal-body {
+  padding: 20px 10px;
+  /*.table-width{
+            width: 680px;
+            @media(max-width:800px)  and (min-width:701px){
+                width:600px;
+            }
+            @media(max-width:700px)  and (min-width:601px){
+                width:500px;
+            }
+            @media(max-width:600px)  and (min-width:501px){
+                width:400px;
+            }
+            @media(max-width:500px)  and (min-width:401px){
+                width:300px;
+            }
+            @media(max-width:400px)  and (min-width:351px){
+                width:280px;
+            }
+            @media(max-width:350px)  and (min-width:281px){
+                width:250px;
+            }
+           
+
+        }*/
+}
+@media (min-width: 600px) {
+  .modal-flyer-capsula .modal-body {
+    padding: 20px;
+  }
+}
+@media (max-width: 280px) {
+  .modal-flyer-capsula .modal-body img.qr-code {
+    width: 150px;
+  }
+}
+.modal-flyer-capsula .modal-body h5.modal-title {
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .modal-flyer-capsula .modal-body h5.modal-title {
+    font-size: 18px;
+  }
+}
+.modal-flyer-capsula .modal-body .pass-logo img {
+  width: 200px;
+  margin: auto;
+}
+.modal-flyer-capsula .modal-body .pass-logo-socio img {
+  width: 70px;
+  margin: auto;
+}
+.modal-flyer-capsula .modal-body .link-wrapper {
+  background: #eeeeee;
+  padding: 10px;
+  text-align: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+.modal-flyer-capsula .modal-body .qr-code {
+  margin: 0 auto;
+}
+.modal-flyer-capsula .modal-header a.btn-copy-contenido {
+  border-radius: 50px;
+  background: linear-gradient(#3db8ab, #0f897b) content-box, linear-gradient(#4dc9bd, #00796b) 50% 0.125em no-repeat border-box, linear-gradient(#4cc8bc, #017a6d) border-box;
+  box-shadow: 0px 10px 9px 0px #d7cdcd;
+  padding: 12px 12px;
+}
+@media (max-width: 600px) {
+  .modal-flyer-capsula .modal-header a.btn-copy-contenido {
+    margin-bottom: 0px;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+@media (min-width: 600px) {
+  .modal-flyer-capsula .modal-header a.btn-copy-contenido {
+    width: 100% !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+  }
+}
+
+/*# sourceMappingURL=pass_esante_registro.css.map */

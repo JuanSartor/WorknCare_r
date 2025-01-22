@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="js/scrollbars/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+    <style type="text/css">
+<!--
+.style1 {font-size: 16px}
+-->
+    </style>
+    </head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>				</div>
+			</div>
+		  <!-- /.container -->
+		</nav>
+	</header>
+	<div class="main-content">
+
+		<div class="modal fade modal-inside">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body"></div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+			  <li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+			  <li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+			  <li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+			  <li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+			  <li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+			  <li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		  </ul>
+		</div>
+	</section>
+		
+		<nav class="section-header ce-ca-top profile">
+			<div class="container">
+				<div class="user-select pull-left user-select-sonsulta-express-rsp">
+
+					<h1 class="section-name"><i class="icon-doctorplus-video-call"></i><a class="consulta-express-tittle-lnk" href="#">Video Consulta</a></h1>
+				</div>
+				<div class="settings consulta-express-pull-right">
+					<div class="dropdown dropdown-express medico-dropdown-express">
+
+						<select class="form-control select select-primary select-block mbl ce-nc-p2-res-list-select" style="width:100%">
+							<option value="0">Consultas</option>
+							<option value="1">Nueva consulta</option>
+							<option value="2">Abiertas</option>
+							<option value="3">Finalizadas</option>
+							<option value="4">Rechazadas</option>
+							<option value="4">Vencidas</option>
+						</select>
+
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</nav>		
+		
+</div>
+	<div class="container">
+		<div class="okm-row">
+			<nav class="breadcrum">
+				<ul>
+					<li><a hrer="#">Inicio</a></li>
+					<li><a hrer="#">Juan Manuel Menoyo</a></li>
+					<li><a hrer="#">Consulta Express</a></li>
+				</ul>
+			</nav>
+			<span class="mvc-right-title"><a href="#" id="guiaUsoTrg">Guía práctica de uso</a></span>
+		</div>
+	</div>	
+	<section class="module-header">
+		<h1 class="section-header">Consultas</h1>
+	</section>
+	
+	<section class="consulta-express-submenu">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 consulta-express-submenu-icon-holder-lg">
+					<a href="#">
+						<div>
+							<figure class="mvc-active mvc-publicidad-icon"><i class="icon-doctorplus-cam-rss"></i></figure>
+							<span>12</span>
+						</div>
+						<span>PUBLICADAS EN LA RED</span>
+					</a>
+					<a href="#">
+						<div>
+							<figure><i class="icon-doctorplus-photo mvc-sala-icon"></i></figure>
+							<span class="mvc-entrar-sala"><i class="icon-doctorplus-video-cam"></i></span>
+						</div>
+						<span>INGRESO A LA SALA</span>
+					</a>
+					<a href="#">
+						<div>
+							<figure class="mvc-lista-icon"><i class="icon-doctorplus-video-sheet"></i></figure>
+						</div>
+						<span>EN LISTA</span>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 consulta-express-submenu-icon-holder-sm">
+					<a href="#">
+						<div>
+							<figure><i class="icon-doctorplus-ficha-check"></i></figure>
+							<span>12</span>
+						</div>
+						<span>FINALIZADAS</span>
+					</a>
+					<a href="#">
+						<div>
+							<figure><i class="icon-doctorplus-hi-five"></i></figure>
+							<span>123</span>
+						</div>
+						<span>RECHAZADAS</span>
+					</a>
+					<a href="#">
+						<div>
+							<figure><i class="icon-doctorplus-cloud-download"></i></figure>
+							<span>1224</span>
+						</div>
+						<span>VENCIDAS</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="vc-interrumpidas">
+		<div class="okm-container">
+			<div class="vc-interrumpidas-header">	
+				
+					<i class="icon-doctorplus-alert-round"></i>
+			
+				<h1>Video Consultas con transmisión interrumpida</h1>
+				<a href="#" class="ui-widget ui-widget style1" id="vc-interrumpidas-card-trg">Ayuda para resolver conflictos de transmisión interrumpida</a>			</div>
+			
+			<div class="vc-interrumpidas-ayuda-box">
+				<div class="okm-row mvc-interrumpidas-row">
+					<div class="mvc-interrumpidas-col">
+						<div class="mvc-grid-item-13 bg-type-4 vc-interrumpidas-ayuda-item">
+							<a href="#" class="mvc-guia-holder-trg">Cerrar consulta y escribir conclusiones</a>
+							<div class="mvc-guia-holder">
+								<figure class="mvc-item-figure">
+									<i class="icon-doctorplus-ficha-check"></i>
+								</figure>
+								<h4 class="mvc-grid-title-3">
+									Cerrar consulta<br>
+									y escribir conclusiones
+								</h4>
+								<p class="mvc-grid-p white">
+									Si ud. está en condiciones de brindarle un diagnóstico
+									o consejo médico a su paciente cierre y finalice la Video Consulta.
+								</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="mvc-interrumpidas-col">
+						<div class="mvc-grid-item-14 bg-type-7 vc-interrumpidas-ayuda-item">
+							<a href="#" class="mvc-guia-holder-trg">Llamar al paciente</a>
+							<div class="mvc-guia-holder">
+								<figure class="mvc-item-figure">
+									<i class="icon-doctorplus-cam-rss"></i>
+								</figure>
+								<h4 class="mvc-grid-title-3">
+									Llamar al paciente
+								</h4>
+								<p class="mvc-grid-p white">
+									Espere unos minutos e intente ponerse en contacto nuevamente con el paciente.
+									DoctorPlus le enviará una notificación al paciente por mail y por SMS para 
+									que ingrese nuevamente al Consultorio Virtual.
+								</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="mvc-interrumpidas-col">
+						<div class="mvc-grid-item-15 bg-type-5 vc-interrumpidas-ayuda-item">
+							<a href="#" class="mvc-guia-holder-trg">Reembolsar importe de la consulta</a>
+							<div class="mvc-guia-holder">
+								<figure class="mvc-item-figure">
+									<i class="icon-doctorplus-refund"></i>
+								</figure>
+								<h4 class="mvc-grid-title-3">
+									Reembolsar importe<br>
+									de la consulta
+								</h4>
+								<p class="mvc-grid-p white">
+									Si su inconveniente técnico no pudo ser solucionado y ud.
+									no pudo terminar de atender al paciente. 
+									Le damos la opción para que le reembolse el dinero abonado por dicha consulta.
+								</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			
+			<p class="vc-interrumpidas-aviso-importante">
+				<strong>Aviso importante:</strong><br>
+				Si ud. no realiza ninguna de las siguientes acciones dentro de las 8 hs. 
+				posteriores a la interrupcción de la transmisión, la Video Consulta quedará anulada 
+				y el dinero abonado por la misma será reembolsado al paciente.
+			</p>
+			
+		</div>
+	
+		
+		<div class="okm-container">
+		
+
+			<div class="cs-ca-consultas-holder">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+					<div class="panel panel-default">
+						<div class="panel-heading paciente-consulta-express-acc-header" role="tab">
+							<div class="ce-ca-toolbar cv-ca-toolbar highlight">
+								<div class="row">
+									<div class="colx3 vc-ca-colx3">
+										<div class="cs-ca-colx3-inner">
+											<div class="cs-ca-usr-avatar">
+												<img src="imgs/extranet/yannis.png" alt="user"/>
+												<figure>
+													<i class="icon-doctorplus-pharmaceutics"></i>
+												</figure>
+											</div>
+											<div class="cs-ca-usr-data-holder">
+												<span>Paciente</span>
+												<h2>Juan Manuel Menoyo</h2>
+											</div>
+										</div>
+									</div>
+									<div class="vc-colx6">
+										
+										<div class="vc-interrumpidas-botonera">
+											<ul class="okm-row">
+												<li>
+													<a href="#" class="cerrar-consulta-rtg">
+														<figure><i class="icon-doctorplus-ficha-check"></i></figure>
+														<div>Cerrar consulta<br>
+															<span>y escribir conclusiones</span></div>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="llamar-paciente-rtg">
+														<figure><i class="icon-doctorplus-cam-rss"></i></figure>
+														<div>Llamar al paciente</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="reembolsar-importe-rtg">
+														<figure><i class="icon-doctorplus-refund"></i></figure>
+														<div>Reembolsar importe<br>
+															<span>de la consulta</span></div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										
+									</div>
+								
+								</div>
+								<div class="row ce-ca-toolbar-row pce-header-low-row">
+									<div class="pce-colx3">
+										<div class="cs-ca-numero-consulta-holder">
+											<span class="cs-ca-numero-consulta-label">Video Consulta</span>
+											<span class="cs-ca-numero-consulta">Nº 201-521697</span>
+										</div>
+									</div>
+									<div class="pce-colx3">
+										<div class="cs-ca-numero-consulta-holder">
+											<span class="cs-ca-numero-consulta-motivo-label">Motivo:</span>
+											<span class="cs-ca-numero-consulta">Resultados estudios</span>
+										</div>
+									</div>
+									<div class="pce-colx3">
+										<div class="cs-ca-date-tools vc-ver-consulta collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+											<span class="cs-ca-fecha">ver consulta</span>
+											<div class="cs-ca-date-tools-holder">
+												<a href="#"><i class="icon-doctorplus-minus"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+							<div class="panel-body">
+								<div class="cs-ca-chat-holder">
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-dr-chat">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> 25 Ene 2016 - 17:14 hs</div>
+													<p>Buenas tardes; Te pido que me adjuntes una foto para que lo pueda verificar. Si bien en la consulta 
+														anterior nos indicas la molestia quisiera revisar la misma completa.  </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-paciente-chat">
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date">25 Ene 2016 - 17:14 hs</div>
+													<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+														Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+														Me hice baños con agua y solucioón fisiológica. 
+														Hoy sábado amanecí con el ojo casi cerrado y me cuesta abrirlo. </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="row chat-row chat-date-divider">
+										<span class="chat-date">Hoy</span>
+										<div class="chat-line-divider"></div>
+									</div>
+
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-dr-chat">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> Hoy - 17:14 hs</div>
+													<p>Buenas tardes; Te pido que me adjuntes una foto para que lo pueda verificar. 
+														Si bien en la consulta anterior nos indicas la molestia quisiera revisar la misma completa. </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-paciente-chat">
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date">25 Ene 2016 - 17:14 hs</div>
+													<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+														Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+														Me hice baños con agua y solucioón fisiológica. 
+														Hoy sábado amanecí con el ojo casi cerrado y me cuesta abrirlo. </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+												<div class="chat-content-attach">
+													<a href="#" class="modal-btn" data-target="ver-archivo" role="button">
+														<i class="icon-doctorplus-camera"></i>
+														<span class="attach-name">+5</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-dr-chat">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> Hoy - 17:14 hs</div>
+													<div class="vc-llamada-perdida">
+														<figure>
+															<span></span>
+															<i class="icon-doctorplus-cam-rss"></i>
+														</figure>
+														<span>Llamada perdida</span>
+													</div>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading paciente-consulta-express-acc-header" role="tab">
+							<div class="ce-ca-toolbar cv-ca-toolbar highlight">
+								<div class="row">
+									<div class="colx3 vc-ca-colx3">
+										<div class="cs-ca-colx3-inner">
+											<div class="cs-ca-usr-avatar">
+												<img src="imgs/extranet/yannis.png" alt="user"/>
+												<figure>
+													<i class="icon-doctorplus-pharmaceutics"></i>
+												</figure>
+											</div>
+											<div class="cs-ca-usr-data-holder">
+												<span>Paciente</span>
+												<h2>Juan Manuel Menoyo</h2>
+											</div>
+										</div>
+									</div>
+									<div class="vc-colx6">
+
+										<div class="vc-interrumpidas-botonera">
+											<ul class="okm-row">
+												<li>
+													<a href="#" class="cerrar-consulta-rtg">
+														<figure><i class="icon-doctorplus-ficha-check"></i></figure>
+														<div>Cerrar consulta<br>
+															<span>y escribir conclusiones</span></div>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="llamar-paciente-rtg">
+														<figure><i class="icon-doctorplus-cam-rss"></i></figure>
+														<div>Llamar al paciente</div>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="reembolsar-importe-rtg">
+														<figure><i class="icon-doctorplus-refund"></i></figure>
+														<div>Reembolsar importe<br>
+															<span>de la consulta</span></div>
+													</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+
+								</div>
+								<div class="row ce-ca-toolbar-row pce-header-low-row">
+									<div class="pce-colx3">
+										<div class="cs-ca-numero-consulta-holder">
+											<span class="cs-ca-numero-consulta-label">Video Consulta</span>
+											<span class="cs-ca-numero-consulta">Nº 201-521697</span>
+										</div>
+									</div>
+									<div class="pce-colx3">
+										<div class="cs-ca-numero-consulta-holder">
+											<span class="cs-ca-numero-consulta-motivo-label">Motivo:</span>
+											<span class="cs-ca-numero-consulta">Resultados estudios</span>
+										</div>
+									</div>
+									<div class="pce-colx3">
+										<div class="cs-ca-date-tools vc-ver-consulta collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+											<span class="cs-ca-fecha">ver consulta</span>
+											<div class="cs-ca-date-tools-holder">
+												<a href="#"><i class="icon-doctorplus-minus"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+							<div class="panel-body">
+								<div class="cs-ca-chat-holder">
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-dr-chat">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> 25 Ene 2016 - 17:14 hs</div>
+													<p>Buenas tardes; Te pido que me adjuntes una foto para que lo pueda verificar. Si bien en la consulta 
+														anterior nos indicas la molestia quisiera revisar la misma completa.  </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-paciente-chat">
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date">25 Ene 2016 - 17:14 hs</div>
+													<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+														Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+														Me hice baños con agua y solucioón fisiológica. 
+														Hoy sábado amanecí con el ojo casi cerrado y me cuesta abrirlo. </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="row chat-row chat-date-divider">
+										<span class="chat-date">Hoy</span>
+										<div class="chat-line-divider"></div>
+									</div>
+
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-dr-chat">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> Hoy - 17:14 hs</div>
+													<p>Buenas tardes; Te pido que me adjuntes una foto para que lo pueda verificar. 
+														Si bien en la consulta anterior nos indicas la molestia quisiera revisar la misma completa. </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-paciente-chat">
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date">25 Ene 2016 - 17:14 hs</div>
+													<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+														Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+														Me hice baños con agua y solucioón fisiológica. 
+														Hoy sábado amanecí con el ojo casi cerrado y me cuesta abrirlo. </p>
+													<span class="chat-content-arrow"></span>
+												</figure>
+												<div class="chat-content-attach">
+													<a href="#" class="modal-btn" data-target="ver-archivo" role="button">
+														<i class="icon-doctorplus-camera"></i>
+														<span class="attach-name">+5</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row chat-row">
+										<div class="chat-line-holder pce-dr-chat">
+											<img src="imgs/extranet/yannis.png" alt="user"/>
+											<div class="chat-content">
+												<figure>
+													<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> Hoy - 17:14 hs</div>
+													<div class="vc-llamada-perdida">
+														<figure>
+															<span></span>
+															<i class="icon-doctorplus-cam-rss"></i>
+														</figure>
+														<span>Llamada perdida</span>
+													</div>
+													<span class="chat-content-arrow"></span>
+												</figure>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				</div>
+
+
+			</div>
+
+			
+		</div>
+		
+		
+		
+		
+	</section>
+	
+<section class="mvc-video-consulta-disclaimer">
+		<div class="okm-container">
+			<h3>
+				Recuerde que al finalizar la Video Consulta el sistema le
+				solicitará que deje registro de sus conclusiones.
+			</h3>
+			<p>
+				El ingreso de sus conclusiones es requisito indispensable para que el sistema 
+				le transfiera el pago las Video Consultas y Consultas Express.
+			</p>
+		</div>
+	</section>
+	
+	
+<section class="mvc-video-guia">
+		<h2 id="guiaUsoTarget">Guía práctica de uso</h2>
+		<div class="okm-container">
+		
+		<div class="okm-row">
+
+			<div class="mvc-guia-grid">
+				<div class="mvc-grid-sizer"></div>
+				<div class="mvc-grid-gutter"></div>
+				
+				<div class="mvc-guia-item mvc-grid-item-1 bg-type-1">
+					<a href="#" class="mvc-guia-holder-trg">¿Cómo atender una Video Consulta?</a>
+					
+					<div class="mvc-guia-holder">
+					<small class="mvc-bread">Video Consulta</small>	
+					<h4 class="mvc-grid-title-1">¿Cómo atender una Video Consulta?</h4>
+					<p class="mvc-grid-p item-p-spacer">
+						Si al ingresar al Consultorio Virtual el paciente 
+						tiene uno de estos iconos de estado
+						junto a su nombre
+					</p>
+					<ul class="mvc-grid-icon-list">
+						<li>
+							<figure>
+								<i class="icon-doctorplus-check-thin"></i>
+							</figure>
+							<p>Quiere decir que está en línea y puede llamarlo.</p>
+						</li>
+						<li>
+							<figure class="yellow"><i class="icon-doctorplus-minus"></i></figure>
+							<p>
+								Quiere decir que no está en línea o tuvo un inconveniente de conexión.
+								El tiempo de espera de pacientes ausentes es de 10 minutos. 
+								Transcurrido dicho plazo ud. 
+								puede cancelar la consulta y atender al siguiente paciente. 
+							</p>
+						</li>
+					</ul>
+					</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-2 bg-type-6">
+					
+					<a href="#" class="mvc-guia-holder-trg">Video Consultas Publicadas en la Red</a>
+					
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Publicadas en la Red</small>	
+						<figure class="mvc-item-figure red">
+							<i class="icon-doctorplus-cam-rss"></i>
+						</figure>
+					<h4 class="mvc-grid-title-2">PUBLICADAS EN LA RED</h4>
+					<p class="mvc-grid-p">
+						Video Consultas solicitadas a los médicos de su misma especialidad 
+						que también ofrecen sus servicios a través de DoctorPlus.
+					El primer profesional que se encuentre disponible podrá atender la consulta del paciente.</p>
+					<p class="mvc-grid-p">
+						IMPORTANTE<br>
+						La Video Consultas en la Red son sin turno. 
+						Si ud. decide atender a un paciente por este medio debe 
+						ponerse en linea al instante.
+					</p>
+					</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-3 bg-type-6">
+					<a href="#" class="mvc-guia-holder-trg">Video Consultas pendientes de confirmación</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Pendientes de confirmación</small>	
+					    <figure class="mvc-item-figure">
+						<i class="icon-doctorplus-coffee-cup"></i>
+					</figure>
+					<h4 class="mvc-grid-title-2">
+						PENDIENTES DE<br>
+						CONFIRMACIÓN
+					</h4>
+					<p class="mvc-grid-p">
+						Corresponden a Video Consultas de pacientes que le han enviado una solicitud y 
+						esperan su confirmación. En caso de aceptar ud. deberá asignarles 
+						un horario de atención. En caso contrario ud. podrá declinar la solicitud 
+						y enviar un mensaje explicándo el motivo (ej. “Su consulta debe ser evaluada personalmente. Lo espero en mi consultorio físico)”</p>
+					</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-4 bg-type-6">
+					<a href="#" class="mvc-guia-holder-trg">¿Cómo ingresar al Consultorio Virtual?</a>
+				  <div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Consultorio Virtual</small>		
+					<div class="mvc-grid-circle-holder">
+						<figure class="mvc-item-figure">
+							<i class="icon-doctorplus-photo"></i>
+						</figure>
+						<figure class="mvc-item-upper-figure">
+							<i class="icon-doctorplus-video-cam"></i>
+						</figure>
+					</div>
+					
+					<h4 class="mvc-grid-title-2">CONSULTORIO VIRTUAL</h4>
+					<p class="mvc-grid-p">
+						Desde aquí ud. accederá al Consultorio Virtual donde transcurrirán las Video Consulta y 
+						a la que sólo tendrán acceso 2 usuarios a la vez: Ud. como médico  
+						(único) y 1 paciente (único)					</p>
+				  <div class="mvc-grid-cam-disclaimer">
+						<figure class="mvc-grid-cam-disclaimer-figure">
+							<i class="icon-doctorplus-video-cam"></i>
+						</figure>
+						<figure class="mvc-grid-cam-disclaimer-text">
+							<p>
+								Indicador de Video Consulta
+								con transmisión en curso
+							</p>
+							<span></span>						</figure>
+					</div>
+				</div>
+				</div>
+				
+		  <div class="mvc-guia-item mvc-grid-item-6 bg-type-6">
+					<a href="#" class="mvc-guia-holder-trg">Video Consultas finalizadas</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Finalizadas</small>
+					    <figure class="mvc-item-figure">
+						<i class="icon-doctorplus-ficha-check"></i>
+					</figure>
+					<h4 class="mvc-grid-title-2">
+						FINALIZADAS
+					</h4>
+					<p class="mvc-grid-p">
+						Historial de Video Consultas.<br>
+						Aquí le mostraremos el listado de Video Consultas atendidas por ud.<br>  
+						Las consultas se dan por finalizadas una vez que se corta la comunicación.<br> 
+						Recuerde que para que se compute el pago de la misma deberá dejar registro de sus conclusiones en los Registros Médicos del paciente.					</p>
+				
+				</div>
+				</div>
+				
+				<div class="mvc-guia-item mvc-grid-item-7 bg-type-6">
+					<a href="#" class="mvc-guia-holder-trg">Video Consultas declinadas</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Declinadas</small>
+					    <figure class="mvc-item-figure">
+						<i class="icon-doctorplus-hi-five"></i>
+					</figure>
+					<h4 class="mvc-grid-title-2">
+						DECLINADAS
+					</h4>
+					<p class="mvc-grid-p">
+						Las Video Consultas Declinadas son aquellas  
+						que por algún motivo ud. no pude atender. 
+						Por ej.  El paciente necesita trasladarse a una guardia 
+						para su mejor atención, necesita ser revisado en consultorio o
+						ud. se encuentra en un congreso, etc.<br>
+					    <strong>Las consultas declinadas no se cobran.</strong> 
+						</p>
+
+				</div>
+				</div>
+				
+				<div class="mvc-guia-item mvc-grid-item-7 bg-type-6">
+					<a href="#" class="mvc-guia-holder-trg">Video Consultas en Sala de Espera</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Sala de Espera</small>
+					    <figure class="mvc-item-figure">
+						<i class="icon-doctorplus-video-sheet"></i>					</figure>
+					<h4 class="mvc-grid-title-2">
+						SALA DE ESPERA
+					</h4>
+					<p class="mvc-grid-p">
+						¡Su Sala de Espera!<br>
+						Aquí le mostraremos el listado de Video <br>
+						Consultas de pacientes que están a la espera de ser llamados por ud.</p>
+
+				</div>
+				</div>
+				
+				<div class="mvc-guia-item mvc-grid-item-8 bg-type-6">
+					<a href="#" class="mvc-guia-holder-trg">Video Consultas vencidas</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Vencidas</small>
+					    <figure class="mvc-item-figure">
+						<i class="icon-doctorplus-cloud-download"></i>
+					</figure>
+					<h4 class="mvc-grid-title-2">
+						VENCIDAS
+					</h4>
+					<p class="mvc-grid-p">
+						Video Consultas cuyo plazo de respuesta ha 
+						vencido o el paciente decidió cancelar.<br>
+					    <strong>Las consultas vencidas no se cobran.				      </strong></p>
+
+				</div>
+				</div>
+				
+				<div class="mvc-guia-item mvc-grid-item-9 bg-type-2">
+					<a href="#" class="mvc-guia-holder-trg">Privacidad y almacenamiento</a>
+					
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Privacidad y almacenamiento</small>
+					    <figure class="mvc-item-figure-img">
+						<img src="imgs/medico/hom-servicios/servicios-slide-1.png" alt="Video Consultas"/>
+					</figure>
+					<p class="mvc-grid-p">
+						Las Video Consultas no se graban. 
+						Solo se establece una conexión online a 
+						través de su cámara web y la del paciente. 
+					</p>
+					<p class="mvc-grid-p">
+						Solamente quedará almacenado en la Hisotira Clínica del paciente
+						los mensajes de chat e imágenes enviadas.
+						Lo que le permitirá tener registro de su evolución o
+						compartirlas con otros profesionales para hacer interconsultas. 
+					</p>
+				</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-10 bg-type-3">
+					<a href="#" class="mvc-guia-holder-trg">¿Cuánto dura una Video Consulta?</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread white">Video Consulta/Duración</small>
+					    <figure class="mvc-item-figure-simple">
+						<i class="icon-doctorplus-clock"></i>
+					</figure>
+					<h4 class="mvc-grid-title-3">
+						¿Cuánto dura una Video Consulta?
+					</h4>
+					<p class="mvc-grid-p white">
+						Las Video Consultas SIN turno tienen una duración máxima de 20 minutos.
+						Transcurrido dicho plazo la transmisión finaliza y el profesional
+						deberá dejar registro de sus conclusiones.
+					Las Video Consultas CON turno tiene la misma duración del turno que ud. haya definido para sus Consultorios. Ver<strong><a href="#"> Info Profesional y Comercial</a></strong></p>
+				</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-11 bg-type-4">
+					<a href="#" class="mvc-guia-holder-trg">¿Cómo concluir una Video Consulta?</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread white">Video Consulta/Concluir Video Consulta</small>
+					    <h4 class="mvc-grid-title-3">
+						¿Cómo concluir una Video Consulta?
+					</h4>
+					<p class="mvc-grid-p white">
+						Al finalizar la Video Consulta, 
+						haga clic en el botón <strong>Finalizar llamada</strong>.					</p>
+<p class="mvc-grid-p white">
+						Inmediatamente el sistema lo llevará a 
+						dejar registro de sus conclusiones.
+						  <strong>Recuerde que éste es un requisito indispensable 
+					  para que el sistema le transfiera el pago de dicha consulta				      </strong></p>
+				</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-9 bg-type-2">
+					<a href="#" class="mvc-guia-holder-trg">¿Cómo ver el Perfil de Salud del paciente mientras atiende? </a>
+				    <div class="mvc-guia-holder">
+						<small class="mvc-bread">Video Consulta/Perfil de Salud del paciente</small>
+					    <p class="mvc-grid-p">
+						Mientras atiende una Video Consulta ud. puede consultar 
+					   el Perfil de Salud del paciente. Para ello el sistema le abrirá una ventana nueva donde podrá navegarlo en simultáneo.</p>
+					
+			  <figure class="mvc-item-figure-img-2">
+						<img src="imgs/medico/hom-servicios/servicios-slide-3.png" alt="Video Consultas"/>
+					</figure>
+				</div>
+				</div>
+				
+				<div class="mvc-guia-item mvc-grid-item-11 bg-type-3">
+					<a href="#" class="mvc-guia-holder-trg">Pagos y rendiciones</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread white">Pagos y rendiciones</small>
+					<figure class="mvc-item-figure-simple">
+						<i class="icon-doctorplus-gear-round"></i>
+					</figure>
+					<h4 class="mvc-grid-title-3">
+						Pagos y rendiciones
+					</h4>
+					<p class="mvc-grid-p white">
+						El último día del mes el sistema generará un resumen con las 
+						consultas atendidas en el período.
+					</p>
+					<p class="mvc-grid-p white">
+						El resumen podrá observarlo luego de los 10 días hábiles 
+						posteriores al cierre del período.
+					</p>
+					<p class="mvc-grid-p white">
+						A partir de allí <strong>usted podrá solicitar el pago del período vencido</strong>					  y DoctorPlus le transferirá el importe a su cuenta bancaria.					</p>
+				</div>
+				</div>
+				
+				
+				<div class="mvc-guia-item mvc-grid-item-12 bg-type-5">
+					<a href="#" class="mvc-guia-holder-trg">Requisitos del sistema</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread white">Video consulta/Requisitos del sistema</small>
+					    <figure class="mvc-item-figure-simple">
+						<i class="icon-doctorplus-dollar-circular"></i>
+					</figure>
+					<h4 class="mvc-grid-title-3">
+						Micrófono y Cámara web
+					</h4>
+					<p class="mvc-grid-p white">
+						Conexión a internet con Velocidad de subida de 512kbps o superior 
+					</p>
+					<p class="mvc-grid-p white">
+						Velocidad de baja 3 Mbps o superior
+					</p>
+				</div>
+				</div>
+				
+
+				<div class="mvc-guia-item mvc-grid-item-16 bg-type-8">
+					<a href="#" class="mvc-guia-holder-trg">Problemas de transmisión interrumpida</a>
+					<div class="mvc-guia-holder">
+						<small class="mvc-bread white">Video consulta/Problemas de Transmisión interrumpida</small>
+						<figure class="mvc-item-figure-simple">
+							<i class="icon-doctorplus-alert-round"></i>						</figure>
+						<h4 class="mvc-grid-title-4">
+							PROBLEMAS DE<br>
+							TRANSMISIÓN INTERRUMPIDA						</h4>
+						<p class="mvc-grid-p white">
+							Si tuvo un inconveniente técnico y no pudo reestabler la comunicación
+							con el paciente dentro de la duración del turno ud podrá optar entre las siguientes acciones:						</p>
+						<p class="mvc-grid-p white ui-widget ui-widget style1">
+							Cerrar consulta y escribir sus 
+							conclusiones.						</p>
+<p class="mvc-grid-p white style1">
+							Llamar al paciente nuevamente.						</p>
+<p class="mvc-grid-p white style1">
+							Reembolsar importe de la consulta.						</p>
+			</div>
+			  </div>
+				
+			</div>
+		
+		</div>
+	
+		</div>
+	</section>
+	
+	
+<section class="okm-container hom-soporte">
+		<h4 id="hom-soporte">Soporte</h4>
+		<p>¿Necesita ayuda?</p>
+
+		<div class="hom-soporte-row">
+			<div class="hom-soporte-col-x2">
+				<a href="#">
+					<figure><i class="icon-doctorplus-chat-dialog"></i></figure>
+					<label>
+						<div>Chat en vivo</div>
+						<span>Estamos para ayudarlo</span>
+					</label>
+				</a>			</div>
+
+	  <div class="hom-soporte-col-x2">
+				<a href="#">
+					<figure><i class="icon-doctorplus-envelope"></i></figure>
+					<label>
+						<div>Escríbanos</div>
+						<span>soporte@doctorplus.com.ar</span>
+					</label>
+				</a>			</div>
+	  </div>
+	</section>
+	
+	
+<div class="footer-2">
+	<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+	
+	<div class="okm-container footer-2-inner">
+		<div class="okm-row">
+			<div class="footer-col">
+				<a href="mailto:info@doctorplus.com.ar">
+					<figure><i class="icon-doctorplus-envelope"></i></figure>
+					<span>info@doctorplus.com.ar</span>
+				</a>
+			</div>
+			<div class="footer-col">
+				<figure><i class="icon-doctorplus-call-start"></i></figure>
+				<span>Tel. 4850-1389</span>
+				<span>ax 4850-1201</span>
+			</div>
+			<div class="footer-col">
+				<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+				<span>Bouchard 599 Piso 20 CABA </span>
+				<span>(C1106ABG) Argentina</span>
+			</div>
+		</div>
+		<figure class="footer-img-box">
+			<a href="#">
+				<img src="imgs/drplus-logo-grey.png" alt="Doctor Plus"/>
+			</a>
+		</figure>
+	</div>
+	<div class="okm-row">
+		<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+	</div>
+	</div>
+
+	
+<div id="vc-modal-interrupcion" class="modal fade bs-example-modal-lg vc-modal-interrupcion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title"><i class="icon-doctorplus-alert-round"></i> Se interrumpió la transmisión de la Video Consulta con el/la paciente</h4>
+				</div>
+				<div class="modal-body">
+					<div class="avatar-box">
+						<div class="avatar-row">
+							<figure>
+								<img src="imgs/temp/foto-perfil-50.jpg" alt="Usr"/>
+								<span><i class="icon-doctorplus-pharmaceutics"></i></span>
+							</figure>
+							<span class="usr-name">Juan Manuel Menoyo</span>
+						</div>
+					</div>
+					<div class="vc-interrupcion-action-box">
+						<a href="#">
+							<div class="vc-interrupcion-action-icon">
+								<i class="icon-doctorplus-ficha-check"></i>
+							</div>
+							<span>Cerrar consulta
+								y escribir conclusiones</span>
+						</a>
+						<a href="#">
+							<div class="vc-interrupcion-action-icon">
+								<i class="icon-doctorplus-user"></i>
+								<i class="icon-doctorplus-recycle"></i>
+							</div>
+							<span>Reprogramar al paciente
+								en la Sala de Espera</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="vc-modal-solve" class="modal fade bs-example-modal-lg vc-modal-interrupcion vc-refund-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<figure class="modal-icon"><i class="icon-doctorplus-alert-round"></i></figure>
+					<h4 class="modal-title">Solucionar problemas de transmisión interrumpida</h4>
+					<h3 class="modal-sub-title">1 Video Consulta</h3>
+				</div>
+				<div class="modal-body">
+					<div class="modal-action-row">
+						<a href="#" class="btn-default">Resolver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="vc-modal-refund" class="modal fade bs-example-modal-lg vc-modal-interrupcion vc-refund-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<figure class="modal-icon"><i class="icon-doctorplus-refund"></i></figure>
+					<h4 class="modal-title">Video Consulta cancelada</h4>
+					<p class="modal-title-disclaimer">Se reembolsará al paciente el importe de la consulta</p>
+				</div>
+				<div class="modal-body">
+					<div class="modal-action-row">
+						<a href="#" class="btn-alert"><i class="icon-doctorplus-cruz"></i> cancelar</a>
+						<a href="#" class="btn-default"><i class="icon-doctorplus-check-thin"></i> aceptar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	<!-- Modal VER Archivo -->
+<div class="modal fade modal-type-1" id="ver-archivo">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div class="modal-title">
+						<h5>Radiografia de torax, Control</h5>
+					</div>
+
+				</div>
+				<div class="modal-body">
+					<div>
+						<div class="slider slider-for">
+							<div><img src="imgs/temp/slider-1.jpg" alt="" ></div>
+							<div><img src="imgs/temp/slider-2.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-3.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-4.jpg" alt=""></div>
+						</div>
+						<div class="slider slider-nav-carrousel">
+							<div><img src="imgs/temp/slider-1-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-2-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-3-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-4-thumb.jpg" alt=""></div>
+						</div>						
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="js/scrollbars/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scripts.js"></script>
+	
+<script type="text/javascript">
+	$(function(){
+		//$('#vc-modal-interrupcion').modal(['show']);
+		//$('#vc-modal-solve').modal(['show']);
+
+		
+		$(".cs-ca-chat-holder").mCustomScrollbar({
+			theme:"dark-3"
+		});
+		$('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			centerMode: false,
+			fade: true,
+			asNavFor: '.slider-nav-carrousel',
+			draggable: true,
+			adaptiveHeight: true
+		});
+		$('.slider-nav-carrousel').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: true,
+			draggable: true
+		});
+		jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+			var offset = this.offsetHeight - this.clientHeight;
+
+			var resizeTextarea = function(el) {
+				jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+			};
+			jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+		});	
+	});
+	
+	
+	$('.reembolsar-importe-rtg').on('click', function(e){
+		e.preventDefault();
+		$('#vc-modal-refund').modal(['show']);
+	});
+	
+</script>	
+	
+</body>
+</html>

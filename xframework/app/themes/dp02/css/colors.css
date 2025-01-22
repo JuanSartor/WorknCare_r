@@ -1,0 +1,83 @@
+/* CSS Document */
+
+/* FONDOS */
+.bggris {
+	background:#F7F7F7;
+}
+.bg_gris {
+	background:#F7F7F7;
+}
+.bg_verde {
+	background:#60E2C9;
+}
+.bg_azul {
+	background:#37474F;
+}
+
+.bg_azul_miembro a {
+	color:#FFF !important;	
+}
+.bg_azul_miembro hr {
+	color:#FFF !important;	
+	background:#FFF;
+}
+.bg_azul_miembro {
+	color:#FFF !important;
+	background:#69AAAC !important;
+}
+
+.color-azul-miembro {
+	color:#69AAAC;
+}
+
+.bg_azul_oscuro {
+	background-color:#415B70;
+}
+.color-azul-oscuro {
+	color:#415B70 !important;
+}
+a.color-azul-oscuro:hover, a.color-azul-oscuro {
+	color:#415B70 !important;
+	
+}
+
+/* COLORES */
+.color-gris {
+	color:#999 !important;	
+}
+.txt_rojo {
+	color:#F33243 !important;
+}
+.color_rojo {
+/*	color:#F33243 !important;*/
+	color:#E21313 !important;
+}
+.color_violeta {
+	color:#E74582;
+}
+.txt_azul_miembro {
+	color:#528989 !important;
+}
+a.txt_gris_azul {
+	color:#485867 !important;
+}
+.color-gris-claro {
+	color:#C0C0C0;
+}
+.text-color-verde {
+	color:#0EC2A1;
+}
+
+
+/* FIXES */
+.table-striped.striped-green  > tbody > tr:nth-child(odd) > td,
+.table-striped.striped-green  > tbody > tr:nth-child(odd) > th {
+  background-color: #D9F4F1 !important;
+}
+.table.striped-green > thead > tr > th, .table.striped-green > tbody > tr > th, .table.striped-green > tfoot > tr > th, .table.striped-green > thead > tr > td, .table.striped-green > tbody > tr > td, .table.striped-green > tfoot > tr > td {
+	
+	border:none !important;
+	color:#46525E;
+}
+
+

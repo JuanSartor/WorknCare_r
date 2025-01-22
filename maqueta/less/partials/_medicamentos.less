@@ -1,0 +1,306 @@
+.breadcrumb{
+	color:@oil-dark;
+	display: block;
+	margin: 0;
+	padding: 5px 0;
+
+	& li{
+		display: inline;
+		font-size: 11px;
+
+		&:before{
+			content: "/";
+			padding:0 5px;
+		}
+		&:first-child:before{
+			content: "";
+			padding:0;
+		}
+	}
+	& li a{ 
+		color: #455a64;
+		&:hover{ 
+
+			text-decoration: underline;
+		}
+	}
+	
+} 
+
+.module-header p.notice{
+	text-align: center;
+	color: @turquoise-10;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+.module-header p.text-primary{
+	color: @oil;
+
+}
+
+
+.medicamentos-header {
+	.circle-icon-images { background-image: url("../imgs/icons/header/icon-medicine.svg"); }
+}
+
+.table-medicamentos{
+	tbody tr td a span{
+		color: @grey-80;
+		display: block;
+		&.dp-renew{
+			text-align: center;
+			&:before{
+				color: @oil; font-size: 28px;
+			}
+			&:hover:before{color: @turquoise-10;}
+			&.deactivated:before{
+				color: #999 !important; 
+			}
+			&.deactivated{
+				color: #999 !important; 
+			}
+			&.deactivated:hover:before{
+				color: #999 !important; 
+			}
+		}
+		
+
+	}
+	
+}
+.table-mis-prescripciones{
+	thead tr td:first-child{ width: auto;}
+}
+
+
+#doctor-info{
+	background: #B2DBDA;
+	border-bottom: 10px solid @oil-dark;
+	color: @oil;
+	text-align: center;
+	width: 270px;
+	&.w-300{ width: 300px;}
+
+	p{ font-size: 12px; margin: 0;text-transform: uppercase;}
+
+	.doctor-info{
+		padding: 15px 10px;
+		border-bottom: 4px solid #a8cfce;
+		img{
+			border-radius: 50%;
+			display: inline-block;
+		}
+		h4{
+			font-size: 18px;
+			font-weight: normal;
+			margin:15px 0 5px 0;
+		}
+	}	
+
+	.options{
+		padding: 15px 0;
+		background: #fff;
+
+		a{
+			display: inline-block;
+			line-height: 38px;
+			text-align: center;
+			width: 49%;
+
+			&.dp-email{border-right: 1px solid @oil-dark; }
+
+			&:before{
+				font-size: 30px;
+				color: @oil-dark;
+
+			}
+			&:hover:before{ color: @turquoise-20}
+		}
+		&.options-tres{
+			a{
+				&:before{ display: block; margin-bottom: 5px;}
+				&:hover{color: @turquoise-20}
+				color: @oil-dark;
+				font-size: 11px;
+				line-height: normal;
+				width: 31%; 
+			}
+		}
+	}
+}
+
+
+#enviar-mensaje,
+[id*="enviar-mensaje"]
+{
+	width: 100%;
+	//@media (max-width: @screen-sm){ width: 300px;}
+
+	.modal-header{
+		background: @oil-dark;
+		color: @white;
+		font-size: 18px;
+		font-weight: normal;
+		margin: 0;
+		padding: 22px;
+		padding-left: 45px;
+		@media (max-width: @screen-sm){ padding: 22px; font-size: 14px}
+	}	
+	.close-btn{
+		top:21px;
+		i{ color:#fff}
+	}
+
+	.options{
+		background: @white;
+	}
+	.modal-btns {
+		button{
+			width:100%; 
+			border: 0;
+			background:url("../imgs/icons/icon-send.svg") no-repeat center center;
+			height: 56px;
+		}
+		&.modal-btns-text{
+			button{
+				background: none;
+				height: auto;
+				font-size: 18px;
+
+				&:hover{color: @turquoise-10;}
+			}
+		}
+	}
+
+}
+
+ 
+
+#agregar-prescripcion{
+	.date-holder{ margin-bottom: 10px;}
+
+}
+
+
+
+.tagsinput-primary {
+	width:100%;
+	margin: 0;
+	.bootstrap-tagsinput{ display: inline; margin-right: 20px; }
+	.tag{ 
+		width: auto; margin:5px 5px 0 0;
+		padding-right: 28px;
+		padding-left: 14px;
+		span{
+			opacity: 1;
+		}
+	}
+}
+
+#idiomas-input,
+#especialidad-input,
+#subespecialidad-input { 
+	&.tagsinput-primary .bootstrap-tagsinput{
+		padding:0; padding-top:25px; display: block;
+	}	
+	.bootstrap-tagsinput .twitter-typeahead{
+		position: absolute !important; top: 7px; left: 10px;
+		.tt-input{ background: #fff !important}
+	}
+}
+
+
+#info-pacientes {
+	background: #f7f7f7;
+
+   .container{
+		padding:25px;
+		position: relative;
+
+		.detalles-paciente{
+			padding: 25px;
+			border-bottom:1px solid @greey;
+			margin-bottom: 25px;
+
+			ul,li{
+				list-style: none;
+				margin:0;
+				overflow: hidden;
+			}
+			li{ 
+				color: @oil;
+				display: inline-block;
+				float: left;
+				text-align: center;
+				width: 25%;
+				font-size: 17px;
+				min-height: 100px;
+
+	
+				@media (max-width: @screen-sm){ width: 50%; font-size: 15px; }			 
+				@media (max-width: @screen-xs){ font-size: 13px; }			 
+				
+
+				.pad-top-5{ padding-top: 5px;}
+
+				a{ color: @oil;}
+
+				span{
+					display: block;
+
+					&:before{
+						color: @oil;
+						font-size: 30px;
+					}
+					&.dp-vcard:before{ margin-right: 5px;}
+				}
+			}
+		}		
+	}
+
+	.tagsinput-primary {
+		width:80%;
+		input{ display: none;}
+	}	
+
+	a.toggle-ver{ 
+		display: inline; 
+		color:@oil-dark; 
+		text-decoration: underline; 
+		font-size: 14px;
+	}	
+	.tagsinput-primary a.toggle-ver{
+		text-decoration: none;
+		color: @turquoise-40;
+		display: inline-block;
+		vertical-align: middle;
+		padding-top:11px;
+	}
+
+	.toggle-info-box{
+		position: absolute;
+		bottom: 34px; right:25px;
+	}
+	.info-position{ bottom: 12px;}
+
+}
+
+	
+
+.filter-table-header{
+	.search{
+		padding-top: 15px;
+
+		&:before{
+			color: @oil;
+			border:0;
+		}
+
+		input{
+			background: @turquoise-05;
+			color:@oil;
+
+		}
+	}
+}	
+

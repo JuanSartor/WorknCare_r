@@ -1,0 +1,57 @@
+#cont_clientes {
+    bottom: 10px;
+    float: right !important;
+    padding-right: 10px;
+    padding-top: 6px;
+    position: absolute;
+    right: 10px;
+    width: 250px !important;
+}
+
+
+html[xmlns*=""] body:last-child #cont_clientes {
+    width: 270px !important;
+}
+
+#cont_clientes form {
+    display:inline;
+    margin:0px;
+    padding:0px;
+}
+#cont_clientes form a.refresh{
+    width:20px !important;
+    padding:0px!important;
+    margin:0px!important;
+    float:right!important;
+    margin-top:2px!important;
+}
+
+
+#subrubros_container {
+    height: auto !important;
+}
+
+#subrubros_container li {
+    clear: both;
+    height: 16px !important;
+    margin-bottom: 5px !important;
+    margin-top: 2px !important;
+}
+
+/*radio -  cehckbox inline*/
+
+li.checkbox-inline label.seleccion{
+    position: relative;
+    margin-left: 0px;
+    margin-right: 20px;
+    padding: 7px 10px 0 0;
+}
+li.checkbox-inline label.seleccion span{
+    position: absolute;
+}
+li.checkbox-inline label.seleccion div.radio{
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+}
+

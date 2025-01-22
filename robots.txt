@@ -1,0 +1,6 @@
+User-agent: *
+ 
+
+Disallow: /xframework/ 
+Disallow: /extranet/
+Disallow: /mails/

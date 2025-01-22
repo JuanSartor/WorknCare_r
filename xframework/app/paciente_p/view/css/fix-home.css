@@ -1,0 +1,64 @@
+.pul-pi-box {
+    width: 100%;
+    margin: auto;
+}
+.pul-perfil-incompleto {
+    width: 100%;
+    padding: 0;
+}
+.pul-pi-data-box .col-action, .pul-pi-data-box .col-data, .pul-pi-data-box .col-info {
+    width: fit-content;
+}
+.pul-pi-data-box {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #ccc solid;
+}
+.pul-pi-data-box:after {
+    display: none;
+}
+
+.pul-pi-data-box .col-action a {
+    min-width: 140px;
+}
+@media (max-width: 460px){
+    .pul-pi-data-box .col-data {
+        background-color: #ffffff;
+    }
+}
+@media (max-width: 600px){
+    .pul-pi-data-box .col-action a {
+        min-width: 100px;
+    }
+    .pcuh-slide-adv {
+        background-image: none;
+        padding-left: 0;
+        min-height: fit-content;
+    }
+}
+
+/*fix cards*/
+
+.pcuh-slide-content .pcuh-slide-content-inner, .pcuh-slide-content .pcuh-slide-content-inner.pcuh-turnos-inner {
+    height: fit-content !important;
+    min-height: fit-content !important;
+}
+
+/*Fix banner invitar medicos*/
+.pul-pi-box h2 {
+    color: #00AFAC;
+    display: block;
+    width: 100%;
+    padding: 32px 0 0 0;
+    text-align: center;
+    background-color: #fff;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+}
+@media (max-width: 600px){
+    .pul-pi-box h2 {
+        padding: 0px;
+    }
+}
+

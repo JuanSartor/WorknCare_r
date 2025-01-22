@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Perfil de Salud Pediatrico - Estudios e imagenes</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="js/scrollbars/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+		
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>	
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+
+	<nav class="section-header patient pediatric profile settings">
+		<div class="container">
+			<div class="user-select pull-left">
+				<div class="active-user">
+					<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+					<div class="perfil-dropdown">
+						<ul>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+						</ul>
+						<span><i class="dp-arrow-down"></i></span>
+					</div>					
+				</div>
+				<h1 class="section-name">Perfil de Salud Pediátrico</h1>
+			</div>
+			<div class="settings pull-right">
+				<ul>
+					<li><a href="#"><i class="icon-doctorplus-plus-21"></i>Configurar Tablero</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-20"></i>Notificaciones</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-26"></i>Configurar</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</nav>
+<!-- /header mis pacientes -->     
+		
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+
+<div class="container">
+	<div class="row" id="notificaciones">
+		<div class="col-sm-12" >
+
+			<div class="module-subheader">
+				<div class="row">
+					<h2><span class="dpp-chequeos"><span>3</span></span> Controles y chequeos</h2>
+				</div>
+			</div>
+			<table class="table-responsive historico-consultas-table notificaciones-table">
+				<thead>
+					<tr>
+						<td class="col-1">Fecha</td>
+						<td class="">Tipo</td>
+						<td class="col-3">Diagnóstico</td>
+						<td class="col-4">Desactivar todas</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag deactivated"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>																								
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</div>
+<!-- /notificaciones -->
+
+
+
+<section class="module-header nueva-consulta-header container-fluid">
+	<div class="row">
+		<a class="mps-header-lnk" href="#">
+			<figure class="circle-icon-images"></figure>
+			<h1>Registro consultas m&eacute;dicas</h1>
+		</a>
+	</div>
+	<div class="row mps-sub-title">
+		<h2><i class="icon-doctorplus-refresh"></i>Histórico de consultas</h2>
+		<h3>Pediatría</h3>
+	</div>
+</section>	
+
+<section class="container nueva-consulta pps-chat-tabs-section">
+	<div class="row no-gutter">
+		<div class="col-sm-2 col-md-1 pull-right col-xs-12" >
+			<div class="tab-buttons">
+			<ul class="nav-tabs nav pps-tabs-nav-chat">
+				<li class="active"><a href="#anotaciones" role="tab" data-toggle="tab"><span class="dp-profile"></span></a></li>
+				<li><a href="#agregar-prescripcion" role="tab" data-toggle="tab" class=""><span class="dp-medicine"></span></a></li>
+				<li><a href="#agregar-archivo" role="tab" data-toggle="tab"><span class="fui-photo"></span></a></li>
+				<li><a href="#chat" class="pps-menu-chat-btn" role="tab" data-toggle="tab"><i class="icon-doctorplus-chat-comment"></i></a></li>
+			</ul>
+			</div>
+			<!-- <a href="#" class="border-box border-box-solid dp-print"></a> 	-->		
+		</div>		
+		<div class="col-sm-10 col-md-11 pull-left col-xs-12">
+			<div class="tab-content view-doctor">
+				<div role="tabpanel" class="w tab-pane active fade in" id="anotaciones">	
+					<div class="form-content">
+						<div class="mps-row">
+							<div class="mps-medico-ficha-holder">
+								<a href="#" data-toggle="modal" data-target=".modal-medico-perfil">
+									<img class="mps-medico-img" src="imgs/temp/foto-perfil-110.jpg">
+								</a>
+									<div class="mps-medico-ficha">
+									<span class="mps-medico-nombre">Lic. Nadia Gómez Fares</span>
+									<span class="mps-medico-especialidad">Pediatría</span>
+										<p class="text-cut mps-medico-specs" data-lines="3">
+													<span>
+														Especialista en: Cirugía general, Diagnóstico por imágenes, Ecografía,
+														cirugía Coloproctología, Cirugía general, Diagnóstico por imágenes, Ecografía,
+														cirugía Coloproctología, Cirugía general, Diagnóstico por imágenes, Ecografía,
+														cirugía Coloproctología, Cirugía general, Diagnóstico por imágenes, Ecografía,
+														cirugía Coloproctología<br>
+														Hasta 6 lineas de texto<br>
+														Hasta 6 lineas de texto<br>
+														Hasta 6 lineas de texto
+													</span>
+												</p>
+										
+										
+								</div>
+								
+							</div>
+							<div class="mps-medico-date">
+								<span>Fecha</span> 05/12/2014
+							</div>
+						</div>
+
+						<div class="mps-row">
+							<div class="mps-data-row">
+								<p><span class="mps-data-label">Diagnóstico </span> Análisis clínico</p>
+							</div>
+						</div>
+						
+						<div class="mps-row">
+							<div class="mps-data-row mps-tratamiento">
+								<p><span class="mps-data-label">Tratamiento </span> Dieta balanceada. Deporte 3 veces por semana</p>
+							</div>
+						</div>
+
+					</div>					
+				</div>
+				<!-- /tab anotaciones -->
+
+				<div role="tabpanel" class="w tab-pane fade" id="agregar-prescripcion">
+					<div class="form-content">
+					
+
+					<div class="row">
+							<div class="col-md-12">
+								<div class="table-responsive">
+									<table class="table table-striped table-mis-prescripciones mps-table">
+										<thead>
+											<tr>
+												<td class="col-wide">Medicamento</td>
+												<td>Posolog&iacute;a</td>
+												<td class="date">Inicio</td>
+												<td class="date">Fin</td>
+												<td></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Jarabe para la tos</td>
+												<td>5 veces por dia, 7 dias.</td>
+												<td>5/12/2014</td>
+												<td>7/12/2014</td>
+												<td><a class="mps-table-link" href="#" data-toggle="modal" data-target=".modal-renovacion-receta"><i class="icon-doctorplus-rp-refresh"></i></a></td>
+											</tr>
+											<tr>
+												<td>Acivlovir Filaxis 200mg caps. x10</td>
+												<td>3 veces por dia, 10 dias.</td>
+												<td>2/12/2014</td>
+												<td>11/12/2014</td>
+												<td><a class="mps-table-link" href="#" data-toggle="modal" data-target=".modal-renovacion-receta"><i class="icon-doctorplus-rp-refresh"></i></a></td>
+											</tr>
+											<tr>
+												<td>Jarabe para la tos</td>
+												<td>5 veces por dia, 7 dias.</td>
+												<td>5/12/2014</td>
+												<td>7/12/2014</td>
+												<td><a class="mps-table-link" href="#" data-toggle="modal" data-target=".modal-renovacion-receta"><i class="icon-doctorplus-rp-refresh"></i></a></td>
+											</tr>								
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<!-- /tab medicación -->
+
+				<div role="tabpanel" class="w tab-pane fade" id="agregar-archivo">
+					<div class="form-content">
+					
+						<div class="estudio-imagenes-grid nueva-consulta-grid">
+							<header>
+								<h3><span class="fui-folder"></span> Archivos</h3>
+							</header>	
+							<div class="table-responsive table-nueva-consulta">
+								<table class="table table-striped mps-archivos-table">
+									<tbody>
+										<tr>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+										</tr>
+										<tr>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+										</tr>
+										<tr>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+										</tr>
+										<tr>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button"><img alt="Radiografía de tórax" src="imgs/temp/radiografia.jpg"></a></td>
+											<td><a href="javaScript:void(0);" class="modal-btn" data-target="ver-archivo" role="button">Radiografía de tórax</a></td>
+										</tr>																				
+									</tbody>
+								</table>
+							</div>
+					
+						</div>		
+
+
+					</div>						
+				</div>
+				<!-- /tab archivos -->
+
+				
+
+				<div role="tabpanel" class="w tab-pane fade" id="chat">
+					<div class="pps-chat-content">
+						
+						<div class="pps-chat-content-top">
+							<div class="okm-row">
+								<div class="pps-chat-content-consulta">
+									Consulta Express Nº 201-521697
+								</div>
+								<div class="pps-chat-content-motivo">
+									Motivo: Urgencia
+								</div>
+							</div>
+						</div>
+						
+						<div class="pps-chat-content-chat-box">
+
+							<div class="cs-ca-chat-holder">
+								<div class="row chat-row">
+									<div class="chat-line-holder pce-dr-chat">
+										<img src="imgs/extranet/yannis.png" alt="user"/>
+										<div class="chat-content">
+											<figure>
+												<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> 25 Ene 2016 - 17:14 hs</div>
+												<p>Buenas tardes; Te pido que me adjuntes una foto para que lo pueda verificar. Si bien en la consulta 
+													anterior nos indicas la molestia quisiera revisar la misma completa.  </p>
+												<span class="chat-content-arrow"></span>
+											</figure>
+										</div>
+									</div>
+								</div>
+								<div class="row chat-row">
+									<div class="chat-line-holder pce-paciente-chat">
+										<div class="chat-content">
+											<figure>
+												<div class="chat-content-date">25 Ene 2016 - 17:14 hs</div>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta abrirlo. </p>
+												<span class="chat-content-arrow"></span>
+											</figure>
+										</div>
+									</div>
+								</div>
+								<div class="row chat-row chat-date-divider">
+									<span class="chat-date">Hoy</span>
+									<div class="chat-line-divider"></div>
+								</div>
+
+								<div class="row chat-row">
+									<div class="chat-line-holder pce-dr-chat">
+										<img src="imgs/extranet/yannis.png" alt="user"/>
+										<div class="chat-content">
+											<figure>
+												<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> Hoy - 17:14 hs</div>
+												<p>Buenas tardes; Te pido que me adjuntes una foto para que lo pueda verificar. 
+													Si bien en la consulta anterior nos indicas la molestia quisiera revisar la misma completa. </p>
+												<span class="chat-content-arrow"></span>
+											</figure>
+										</div>
+									</div>
+								</div>
+								<div class="row chat-row">
+									<div class="chat-line-holder pce-paciente-chat">
+										<div class="chat-content">
+											<figure>
+												<div class="chat-content-date">25 Ene 2016 - 17:14 hs</div>
+												<p>Buenas tardes; el viernes por la mañana amanecí con una molestia en el ojo derecho. 
+													Tenía picazón y algo me raspaba al parpadear. Por la tarde empeoró. 
+													Me hice baños con agua y solucioón fisiológica. 
+													Hoy sábado amanecí con el ojo casi cerrado y me cuesta abrirlo. </p>
+												<span class="chat-content-arrow"></span>
+											</figure>
+											<div class="chat-content-attach">
+												<a href="#" class="modal-btn" data-target="ver-archivo" role="button">
+													<i class="icon-doctorplus-camera"></i>
+													<span class="attach-name">+5</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row chat-row">
+									<div class="chat-line-holder pce-dr-chat">
+										<img src="imgs/extranet/yannis.png" alt="user"/>
+										<div class="chat-content">
+											<figure>
+												<div class="chat-content-date"><span>Dra. Mirta Bertuchelli</span> Hoy - 17:14 hs</div>
+
+												<span class="chat-content-arrow"></span>
+												<div class="chat-audio-holder">
+													<audio controls>
+														<source src="ejemplo.mp3" type="audio/mpeg" />
+														<source src="ejemplo.ogg" type="audio/ogg" />
+														<p>Su navegador no admite la reproducción de sonido.</p>
+													</audio>
+												</div>
+											</figure>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+					
+
+
+					</div>						
+				</div>
+				<!-- /tab chat -->
+				
+			</div>
+			<!-- /tab-content -->
+		</div>
+
+	</div>
+</section>
+
+
+
+
+
+
+<!-- Modal Compartir -->
+<div class="modal fade modal-type-2" id="compartir">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="tab-content view-doctor">
+	<div role="tabpanel" class="w tab-pane active fade in" id="compartir-buscar">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Compartir con</h5></div>
+			<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+		</div>
+		<form action="">
+			<div class="form-content">
+				<p class="buscar-field">
+					<input type="text" name=""> <a href="#compartir-resultados" role="tab" data-toggle="tab"><span class="fui-search"></span></a>
+					<!-- <a href="#compartir-resultados" role="tab" data-toggle="tab" class="dp-search"></a> -->
+				</p>
+				<p>
+					<select name="" id="" class="form-control select select-primary select-block">
+						<option value="">Especialidad</option>
+						<option value="">Tratamiento Prolongado</option>
+						<option value="">Crónica</option>
+						<option value="">Temporal</option>
+					</select>
+				</p>	
+				<p>
+					<select name="" id="" class="form-control select select-primary select-block">
+						<option value="">Sub-especialidad</option>
+						<option value="">Tratamiento Prolongado</option>
+						<option value="">Crónica</option>
+						<option value="">Temporal</option>
+					</select>
+				</p>
+				<p>
+					<select name="" id="" class="form-control select select-primary select-block">
+						<option value="">Experto en</option>
+						<option value="">Tratamiento Prolongado</option>
+						<option value="">Crónica</option>
+						<option value="">Temporal</option>
+					</select>
+				</p>
+			</div>
+			<div class="modal-btns">
+				<a href="#compartir-resultados" role="tab" data-toggle="tab" class="dp-search"></a>
+			</div>
+		</form>
+	</div>
+	<div role="tabpanel" class="w tab-pane fade" id="compartir-resultados">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Resultados de búsqueda</h5></div>
+			<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+		</div>
+		<div class="modal-body">
+			<ul>
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>	
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>									
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>	
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>	
+				<li>
+					<a href="#compartir-enviar" role="tab" data-toggle="tab">
+						<img src="imgs/temp/info-doctor.gif" alt="">
+						Carla Moresco
+						<span class="resultado-ocupacion"><small>cardiologo</small>Experto en miocardio</span>
+						<span class="icon-compartir"></span>
+					</a>
+				</li>																										
+			</ul>
+		</div>
+		<div class="modal-btns">
+			<a href="#compartir-buscar" role="tab" data-toggle="tab" class="fui-arrow-left"></a>
+		</div>						
+	</div>
+	<div role="tabpanel" class="w tab-pane fade" id="compartir-enviar">
+		<div class="modal-header">
+			<div class="modal-title"><h5>Compartir con</h5></div>
+			<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+		</div>						
+		<form action="" method="">
+			<div class="form-content">
+				<p><span class="fui-link"></span>Dr. Osvaldo Ruffo</p>
+				<p><textarea name="" id=""  placeholder="Escriba aqui su consulta"></textarea></p>
+			</div>
+			<div class="compartir-adjuntar">
+				<img src="imgs/temp/radiografia.jpg" width="65" alt="">
+				<img src="imgs/temp/radiografia.jpg" width="65" alt="">
+				<img src="imgs/temp/radiografia.jpg" width="65" alt="">
+				
+				<label for="compartir-adjunto" class="fui-clip"></label>
+				<input type="file" id="compartir-adjunto">
+			</div>
+			<div class="modal-btns">
+				<button></button>
+			</div>
+		</form>
+	</div>
+
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Modal Eliminar -->
+<div class="modal fade" id="table-modal">
+	<div class="modal-dialog modal-imagenes">
+		<div class="modal-content">
+			<div class="modal-text">¿Está seguro que desea eliminar los archivos seleccionados?</div>
+			<div class="modal-btns">
+				<button data-dismiss="modal">cancelar</button>
+				<button>aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>	
+
+
+
+<!--Modal Medico perfil action-->
+	<div class="modal fade  modal-medico-perfil" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<img class="mps-modal-medico-img" src="imgs/temp/foto-perfil-150.jpg" style="width:100px">
+					<span class="mps-modal-medico">Dr. Yannis Georgandelis</span>
+					<span class="mps-modal-licencia">M.N. 104464 - M.P. 227454</span>
+					<span class="mps-modal-especialidad">Pediatría</span>
+			</div>
+			<div class="modal-footer">
+				<div class="mps-modal-action-holder">
+					<a href="#">
+						<figure><i class="icon-doctorplus-chat"></i></figure>
+						<span>Consulta Express</span>
+					</a>
+					<a href="#">
+						<figure><i class="icon-doctorplus-calendar-time"></i></figure>
+						<span>Solicitar turno</span>
+					</a>
+				</div>	
+			</div>
+		</div>
+	</div>
+	</div>
+<!--Modal Medico perfil action-->
+		
+
+<!--Modal Medico perfil action-->
+<div class="modal fade  modal-renovacion-receta" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<form name="modal-renovacion-receta" method="post">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3>Solicitud de Renovación de Receta</h3>
+			</div>
+			<div class="modal-body">
+				<div class="mps-modal-renovacion-row">
+					<label>Profesional</label>
+					<p>Dr. Osvaldo Ruffo</p>
+				</div>
+				<div class="mps-modal-renovacion-row">
+					<label>Medicamento</label>
+					<p>Aciclovir Filaxis 200 mg caps. x 10 Aciclovir Filaxis 200 mg caps. x 10 Aciclovir Filaxis 200 mg caps. x 10 Aciclovir Filaxis 200 mg caps. x 10</p>
+				</div>
+				<div class="mps-modal-renovacion-row">
+					<label>Posología</label>
+					<p>Cada 6 horas, 10 días</p>
+				</div>
+				<div class="mps-modal-renovacion-row">
+					<label>Observaciones</label>
+					<p>Tratamiento Prolongado</p>
+				</div>
+				<div class="mps-modal-renovacion-row">
+					<textarea name="mps-renovacion-mensaje" placeholder="Mensaje"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit">enviar</button>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--Modal Medico perfil action-->
+
+
+	<!-- Modal VER Archivo -->
+	<div class="modal fade modal-type-1" id="ver-archivo">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div class="modal-title">
+						<h5>Radiografia de torax, Control</h5>
+					</div>
+
+				</div>
+				<div class="modal-body">
+					<div>
+						<div class="slider slider-for">
+							<div><img src="imgs/temp/slider-1.jpg" alt="" ></div>
+							<div><img src="imgs/temp/slider-2.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-3.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-4.jpg" alt=""></div>
+						</div>
+						<div class="slider slider-nav-carrousel">
+							<div><img src="imgs/temp/slider-1-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-2-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-3-thumb.jpg" alt=""></div>
+							<div><img src="imgs/temp/slider-4-thumb.jpg" alt=""></div>
+						</div>						
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+		
+
+		
+
+
+	
+
+
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+
+		
+<!-- scripts-->
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/scrollbars/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$(".cs-ca-chat-holder").mCustomScrollbar({
+		theme:"dark-3"
+	});
+	
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		centerMode: false,
+		fade: true,
+		asNavFor: '.slider-nav-carrousel',
+		draggable: true,
+		adaptiveHeight: true
+	});
+	$('.slider-nav-carrousel').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true,
+		draggable: true
+	});
+	
+	
+	$(':checkbox').radiocheck();   
+
+	$( "#datepicker,#dp-inicio, #dp-fin" ).datepicker({
+	  showOn: "button",
+	  buttonImage: "imgs/icons/icon-calendar.svg",
+	  buttonImageOnly: true
+	});
+	
+	$('#valoracion-enviar').on('click', function(e){
+		e.preventDefault();
+		$('.valoracion-panel-1').slideUp();
+		$('.valoracion-panel-2').slideDown();
+	});
+
+	$('#valoracion-cerrar').on('click', function(e){
+		e.preventDefault();
+		$('#valoracion-panel').slideUp();
+	});
+	
+});
+</script>	
+<!-- @scripts-->
+	
+</body>
+</html>

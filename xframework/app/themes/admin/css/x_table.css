@@ -1,0 +1,161 @@
+.xTable {
+	width:99%;
+	margin:10px auto 0px auto;
+	padding:0px 10px 0px 0px;
+}
+.xTable table {
+	border:#E2E2E2 1px solid;
+}
+.xTable tr.trHeader {
+	background-color:#F5F5F5;
+	
+	
+
+}
+.xTable tr.trHeader td {
+	background: url("../imgs/separador_table.png") no-repeat scroll right center transparent;
+    color: #666666;
+    font-size: 13px;
+    font-weight: bold;
+    height: 40px !important;
+    padding: 0 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+.xTable td.center {
+	text-align:center;
+}
+
+.xTable td.td_right {
+	text-align:right !important;
+}
+
+.xTable td a {
+	color:#6699CC;
+	text-decoration:none;
+}
+.xTable td a:hover {
+	color:#336699;/*text-decoration:underline;*/
+}
+.xTable td.left {
+	text-align:left;
+}
+.xTable td.right {
+	text-align:right;
+}
+.xTable tr.trRows {
+}
+.xTable tr.trRows td {
+	background: none repeat scroll 0 0 #ffffff;
+    border-bottom: 1px solid #999999;
+    color: #666666;
+    font-size: 11px;
+    height: 45px;
+    padding: 0 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+.xTable tr.trRows td a:hover {
+	background:#FDF1EA;
+}
+.xTable tr.trRows:hover {
+	background-color:#FDF1EA;
+}
+.xTable tr.trRows:hover td {
+	color:#000000;
+	background: #E0F0F9;
+}
+/* Barra de herramientas sobre los listads */
+.xTableTools {
+	background: url("../imgs/bg_table_acciones.png") repeat-x scroll 0 0 transparent;
+    border-left: 1px solid #E2E2E2;
+    border-radius: 2px 2px 2px 2px;
+    border-right: 1px solid #E2E2E2;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    margin-bottom: 1px;
+    margin-top: 30px;
+    padding: 8px 0 0 10px;
+}
+.xTableTools ul {
+	color: #666666;
+	height: 18px;
+	list-style: none outside none;
+	margin: 0;
+	padding: 5px 0 0;
+}
+.xTableTools ul.selection {
+}
+.xTableTools ul li {
+	display:inline;
+	margin-right:5px;
+	text-decoration:none !important;
+}
+.xTableTools ul li.lbl {
+	margin-right:0px !important;
+}
+.xTableTools a {
+	color:#666666;
+}
+.xTable a:hover {
+	color:#FF6600;
+}
+.xTableTools ul li a {
+	line-height:16px;
+	height:16px;
+	padding-top:2px;
+	padding-bottom:2px;
+	text-decoration: none !important;
+}
+.xTableTools ul li a.delete {
+	/*background:url(../imgs/action_ico_delete.png) no-repeat;
+	padding-left:20px;**/
+}
+.xTableTools ul li a.aprove {
+	background:url(../imgs/action_ico_accept.png) no-repeat;
+	padding-left:20px;
+}
+.home_included {
+	background:url(../imgs/action_ico_home.png) no-repeat 0px 3px;
+	padding-left:20px;
+}
+.debe {
+	color:#FF0000 !important;
+}
+.haber {
+	color:#009933 !important;
+}
+/* ORDER */
+.xTable td.order {
+	text-align: center;
+	white-space: nowrap;
+}
+.xTable td.order span {
+	background-repeat: no-repeat;
+	float: left;
+	height: 13px !important;
+	text-align: center;
+	width: 20px;
+}
+.xTable td.order span a.a_order span.uparrow {
+	background-image: url(../imgs/uparrow.png);
+}
+.xTable td.order span a.a_order span.downarrow {
+	background-image: url(../imgs/downarrow.png);
+}
+.xTable td.order span a.a_order span.state {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+.xTable td.order span a.a_order span.text {
+	display: none;
+}
+.xTable td.order input {
+	margin-right: 5px;
+	text-align: center;
+	border: 1px solid silver;
+	font-size: 0.909em;
+}

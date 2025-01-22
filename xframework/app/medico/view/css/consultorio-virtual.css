@@ -1,0 +1,224 @@
+.mvc-top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px
+}
+.mvc-top-inner:after {
+    content: none;
+}
+.mvc-top-inner .mvc-top-left {
+    display: flex;
+    float: left;
+    padding: 0 16px;
+}
+.mvc-perfil-btns>li>a>span {
+    position: relative;
+    top: -8px;
+}
+@media (max-width: 800px){
+    .mvc-top-inner .mvc-top-left {
+        margin-bottom: 0px; 
+        margin-top: 0px;
+    }
+}
+
+
+.volver-sala{
+    height: 60px;
+    background: #415b70;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.volver-sala:hover{
+    background: #566d80;
+}
+.volver-sala label{
+    cursor: pointer;
+    margin-left:5px;
+}
+
+.mvc-top-inner .mvc-top-right {
+    display: inline-block;
+    float: right;
+    margin: 10px;
+
+}
+.okm-img-with-icon img {
+    width:42px;
+}
+
+.dp-logo img {
+    width: 120px;
+}
+/*Mobile*/
+
+.vcm-menu {
+    position: fixed;
+    display: flex;
+}
+.vcm-menu ul {
+    width: 100%;
+}
+
+.vcm-menu  .volver-sala {
+    height: 50px;
+    background: #b3eaec;
+    color: #415b70;
+    padding:16px;
+}
+.vcm-menu  .volver-sala:hover {
+    background: #7ddbdf;
+}
+
+/*Ajustes info paciente - tagsinput*/
+.mvc-profile-box {
+    position: relative;
+}
+.icon-box i{
+    font-size: 32px;
+    line-height: 1;
+}
+.empty-tagsinput{
+    background: #eee;
+    padding:10px;
+}
+.empty-tagsinput p{
+    margin-bottom: 0px
+}
+.vcm-panel-holder {
+    position: relative;
+}
+
+.mvc-perfil-btns {
+    display: block;
+    padding: 16px 0px;
+}
+.mvc-perfil-btns>li>a>i {
+    font-size: 18px;
+    margin-right: 2px;
+}
+.mvc-pshb-box {
+    background-color: #ecf9f7;
+    text-align: center;
+    padding: 16px 0px;
+}
+.mvc-pshb-box>i {
+    position: relative;
+    font-size: 18px;
+    margin-right: 16px;
+    top: -8px;
+}
+.mvc-pshb-box>.mvc-pshb-data>span {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+/*contador mensajes chat*/
+.mvc-data-top ul li {
+    position:relative;
+}
+.chat-counter{
+    font-size: 12px;
+    display: inline;
+    position: absolute;
+    min-width: 20px;
+    min-height: 20px;
+    bottom: 5px;
+    border-radius: 28px;
+    line-height: 8px;
+    text-align: center;
+    color: #fff;
+    background: #cd3845;
+    padding: 4px;
+    border: 2px solid #fff;
+    font-weight: 500;
+}
+
+/*Fix archivos adjuntos chat*/
+.mvc-chat-guest {
+    width: 100%;
+}
+.file.mvc-chat-line {
+    display: inline-block;
+}
+.file.mvc-chat-line.host {
+    float: right;
+}
+.file.mvc-chat-line.guest {
+    float: left;
+}
+.file.mvc-chat-line.host+.file.mvc-chat-line.guest,.file.mvc-chat-line.guest+.file.mvc-chat-line.host  {
+    float: none;
+    display: block;
+}
+
+.mvc-chat-btns>a {
+    font-size: 26px;
+    margin-right: 16px;
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    display: block;
+    height: 38px;
+}
+.mvc-chat-input-box {
+    padding: 0px 66px 10px;
+}
+
+
+.dropzone .dz-preview .dz-image {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+/*Fix dropzone scroll*/
+.upload-controls-container{
+    text-align: center;
+    margin: 0 10px;
+}
+/*scroll dropzone PC*/
+.upload-controls-container .chat-img-upld{
+    overflow-y: scroll;
+    max-height: 240px;
+}
+/*scroll dropzone mobile*/
+#vcm-chat .upload-controls-container .chat-img-upld {
+    overflow-y: scroll;
+    max-height: 200px;
+}
+/*Fix btn enviar mensaje*/
+.mvc-chat-btns>button {
+    position: absolute;
+    top: -10px;
+    right: 18px;
+    font-size: 32px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+/*Fix btn enviar mensaje mobile*/
+.mvc-chat-send {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: #31a592;
+    text-align: center;
+    background: transparent;
+    line-height: 28px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px !important;
+    border-radius: 5px;
+}
+.btn-send-msg{
+    color: #31a592;
+}

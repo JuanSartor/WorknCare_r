@@ -1,0 +1,152 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:300,300italic, 400,700');
+@font-face {
+  font-family: 'doctorplus';
+  src: url('../fonts/doctorplus/doctorplusicons.eot') format('embedded-opentype'), url('../fonts/doctorplus/doctorplusicons.woff') format('woff'), url('../fonts/doctorplus/doctorplusicons.svg') format('svg'), url('../fonts/doctorplus/doctorplusicons.truetype') format('truetype');
+}
+@font-face {
+  font-family: 'Flat-UI-Icons';
+  src: url('../fonts/glyphicons/flat-ui-icons-regular.eot') format('embedded-opentype'), url('../fonts/glyphicons/flat-ui-icons-regular.woff') format('woff'), url('../fonts/glyphicons/flat-ui-icons-regular.svg') format('svg'), url('../fonts/glyphicons/flat-ui-icons-regular.truetype') format('truetype');
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.otf') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype');
+}
+.calendario {
+  font-size: 12px;
+}
+.calendario .table tr td {
+  border-top: #d0d0d0 1px solid !important;
+}
+.calendario .libre libre {
+  color: #90a4ae;
+}
+.calendario .bg-status-libre {
+  background: #ffffff;
+}
+.calendario .bg-status-libre > td {
+  background: #ffffff;
+}
+.calendario .bg-status-pendiente {
+  background: #faa12d;
+}
+.calendario .bg-status-pendiente > td {
+  background: #faa12d;
+}
+.calendario .bg-status-confirmado {
+  background: #00bba2;
+}
+.calendario .bg-status-confirmado > td {
+  background: #00bba2;
+}
+.calendario .bg-status-ausente {
+  background: #f72541;
+}
+.calendario .bg-status-ausente > td {
+  background: #f72541;
+}
+.calendario .consultorio-1 {
+  background-color: #fcf3da !important;
+}
+.calendario .consultorio-1 > td {
+  background-color: #fcf3da;
+}
+.calendario .consultorio-1:hover {
+  background-color: #fbedc7 !important;
+}
+.calendario .consultorio-2 {
+  background-color: #ebedfb !important;
+}
+.calendario .consultorio-2 > td {
+  background-color: #ebedfb;
+}
+.calendario .consultorio-2:hover {
+  background-color: #dadef7 !important;
+}
+.calendario .consultorio-3 {
+  background-color: #dadada !important;
+}
+.calendario .consultorio-3 > td {
+  background-color: #dadada;
+}
+.calendario .consultorio-3:hover {
+  background-color: #d0d0d0 !important;
+}
+.calendario.calendario-semana .dias-header {
+  background-color: #4cd2b9;
+}
+.calendario.calendario-semana .dias-header .table {
+  margin-bottom: 0px;
+}
+.calendario.calendario-semana .dias-header .table > thead > tr > th {
+  border: none !important;
+  padding-top: 28px;
+  color: #ffffff !important;
+  font-size: 14px;
+}
+.calendario.calendario-semana .tabla-semana > .table > tbody > tr > td {
+  border-top: 0 none !important;
+  background-color: #f7f7f7;
+  padding: 0px !important;
+  width: 14.2% !important;
+}
+.calendario.calendario-semana .tabla-semana > .table > tbody > tr > td table.table.undia {
+  background: none !important;
+}
+.calendario.calendario-semana .tabla-semana > .table > tbody > tr > td table.table.undia tr {
+  padding: 5px 0px;
+}
+.calendario.calendario-semana .tabla-semana > .table > tbody > tr > td table.table.undia tr > td {
+  height: 50px;
+}
+.calendario.calendario-semana .tabla-semana > .table > tbody > tr > td table.table.undia tr > td:first-child {
+  width: 10px !important;
+}
+.calendario.calendario-semana .tabla-semana > .table > tbody > tr > td table.table.undia tr > td:not(:first-child) {
+  padding: 5px !important;
+}
+.calendario .calendario-mensual .agenda-mensual-dia {
+  width: 14%;
+  float: left;
+  min-height: 100px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  font-weight: bold;
+  padding: 15px 10px;
+}
+.calendario .calendario-mensual .agenda-mensual-dia .dia-numero {
+  line-height: 30px;
+  font-size: 14px;
+  text-align: left;
+}
+.calendario .calendario-mensual .agenda-mensual-dia.domingo {
+  color: #425B71 !important;
+  border-right: none !important;
+}
+.calendario .calendario-mensual .agenda-mensual-dia.domingo .dia-numero {
+  color: #C33433  !important;
+}
+.calendario .calendario-mensual .agenda-mensual-dia > ul {
+  list-style: outside none !important;
+  list-style-type: none !important;
+  text-align: right;
+}
+.calendario .calendario-mensual .agenda-mensual-dia > ul > li {
+  list-style: outside none !important;
+  text-align: right;
+  list-style-type: none !important;
+}
+.calendario .calendario-mensual .agenda-mensual-dia > ul > li span {
+  padding-left: 10px;
+  display: inline-block;
+  width: 30px;
+}
+.calendario .calendario-mensual .agenda-mensual-dia > ul > li .cantidad {
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+}
+.calendario .calendario-mensual .agenda-mensual-dia.disable {
+  background-color: #E8E8E8 !important;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}

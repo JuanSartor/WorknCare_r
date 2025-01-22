@@ -1,0 +1,1752 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300italic, 400,700');
+@font-face {
+    font-family: 'doctorplus';
+    src: url('../fonts/doctorplus/doctorplusicons.eot') format('embedded-opentype'), url('../fonts/doctorplus/doctorplusicons.woff') format('woff'), url('../fonts/doctorplus/doctorplusicons.svg') format('svg'), url('../fonts/doctorplus/doctorplusicons.truetype') format('truetype');
+}
+@font-face {
+    font-family: 'Flat-UI-Icons';
+    src: url('../fonts/glyphicons/flat-ui-icons-regular.eot') format('embedded-opentype'), url('../fonts/glyphicons/flat-ui-icons-regular.woff') format('woff'), url('../fonts/glyphicons/flat-ui-icons-regular.svg') format('svg'), url('../fonts/glyphicons/flat-ui-icons-regular.truetype') format('truetype');
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.otf') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'doctorplus-plus';
+    src: url('../fonts/doctorplus-plus/doctorplus-plus.eot?jhug7b');
+    src: url('../fonts/doctorplus-plus/doctorplus-plus.eot?jhug7b#iefix') format('embedded-opentype'), url('../fonts/doctorplus-plus/doctorplus-plus.ttf?jhug7b') format('truetype'), url('../fonts/doctorplus-plus/doctorplus-plus.woff?jhug7b') format('woff'), url('../fonts/doctorplus-plus/doctorplus-plus.svg?jhug7b#doctorplus-plus') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="dpp-"],
+[class*=" dpp-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'doctorplus-plus' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.dpp-folder:before {
+    content: "\e004";
+}
+.dpp-gear:before {
+    content: "\e005";
+}
+.dpp-arrow-back:before {
+    content: "\e006";
+}
+.dpp-arrow-next:before {
+    content: "\e007";
+}
+.dpp-send:before {
+    content: "\e010";
+}
+.dpp-alergia:before {
+    content: "\e008";
+}
+.dpp-turnos:before {
+    content: "\e001";
+}
+.dpp-chequeos:before {
+    content: "\e002";
+}
+.dpp-consulta:before {
+    content: "\e003";
+}
+.dpp-dental:before {
+    content: "\e009";
+}
+.dpp-dna:before {
+    content: "\e00a";
+}
+.dpp-express:before {
+    content: "\e00b";
+}
+.dpp-ginecologia:before {
+    content: "\e00c";
+}
+.dpp-images:before {
+    content: "\e00d";
+}
+.dpp-sonrisa:before {
+    content: "\e00e";
+}
+.dpp-medicina:before {
+    content: "\e00f";
+}
+.dpp-patologia:before {
+    content: "\e011";
+}
+.dpp-cirugia:before {
+    content: "\e000";
+}
+.dpp-vacuna:before {
+    content: "\e012";
+}
+.dpp-renovar-receta:before {
+    content: "\e013";
+}
+.dpp-flag:before {
+    content: "\e014";
+}
+.dpp-grid:before {
+    content: "\e015";
+}
+.dpp-calendario:before {
+    content: "\e016";
+}
+.dpp-ojo:before {
+    content: "\e017";
+}
+.dpp-reload:before {
+    content: "\e018";
+}
+.dpp-share:before {
+    content: "\e019";
+}
+.dpp-lock:before {
+    content: "\e01a";
+}
+.dpp-male:before {
+    content: "\e01b";
+}
+.dpp-female:before {
+    content: "\e01c";
+}
+.dpp-info:before {
+    content: "\e01d";
+}
+.dpp-oido:before {
+    content: "\e01e";
+}
+.icon-dp-24hs:before {
+    content: "a";
+}
+.icon-dp-agenda:before {
+    content: "b";
+}
+.icon-dp-agregar-miembro:before {
+    content: "c";
+}
+.icon-dp-alertas:before {
+    content: "d";
+}
+.icon-dp-analisis:before {
+    content: "e";
+}
+.icon-dp-buscar:before {
+    content: "f";
+}
+.icon-dp-celular:before {
+    content: "g";
+}
+.icon-dp-cerrar:before {
+    content: "h";
+}
+.icon-dp-comunidad-medica:before {
+    content: "i";
+}
+.icon-dp-configuracion:before {
+    content: "j";
+}
+.icon-dp-consulta-domicilio:before {
+    content: "k";
+}
+.icon-dp-consulta-express:before {
+    content: "l";
+}
+.icon-dp-consulta-secretaria:before {
+    content: "m";
+}
+.icon-dp-consultaenconsultorio:before {
+    content: "n";
+}
+.icon-dp-consultamedica:before {
+    content: "o";
+}
+.icon-dp-consultorio:before {
+    content: "p";
+}
+.icon-dp-cuenta-medico:before {
+    content: "q";
+}
+.icon-dp-cuenta-paciente:before {
+    content: "r";
+}
+.icon-dp-dia:before {
+    content: "s";
+}
+.icon-dp-edit:before {
+    content: "t";
+}
+.icon-dp-editar-miembro:before {
+    content: "u";
+}
+.icon-dp-editar-perfil:before {
+    content: "v";
+}
+.icon-dp-estadisticas:before {
+    content: "w";
+}
+.icon-dp-estrella:before {
+    content: "x";
+}
+.icon-dp-farmacia:before {
+    content: "y";
+}
+.icon-dp-guardia:before {
+    content: "z";
+}
+.icon-dp-home:before {
+    content: "A";
+}
+.icon-dp-horarios:before {
+    content: "B";
+}
+.icon-dp-imprimir:before {
+    content: "C";
+}
+.icon-dp-info:before {
+    content: "D";
+}
+.icon-dp-info2:before {
+    content: "E";
+}
+.icon-dp-info-salud:before {
+    content: "F";
+}
+.icon-dp-laboratorios:before {
+    content: "G";
+}
+.icon-dp-logo:before {
+    content: "H";
+}
+.icon-dp-logout:before {
+    content: "I";
+}
+.icon-dp-medicina:before {
+    content: "J";
+}
+.icon-dp-medico:before {
+    content: "K";
+}
+.icon-dp-mensaje:before {
+    content: "L";
+}
+.icon-dp-mes:before {
+    content: "M";
+}
+.icon-dp-miembro:before {
+    content: "N";
+}
+.icon-dp-miembros:before {
+    content: "O";
+}
+.icon-dp-nav-down:before {
+    content: "P";
+}
+.icon-dp-nav-left:before {
+    content: "Q";
+}
+.icon-dp-nav-right:before {
+    content: "R";
+}
+.icon-dp-nav-top:before {
+    content: "S";
+}
+.icon-dp-opticas:before {
+    content: "T";
+}
+.icon-dp-pacientes:before {
+    content: "U";
+}
+.icon-dp-pines:before {
+    content: "V";
+}
+.icon-dp-pines-cargar:before {
+    content: "W";
+}
+.icon-dp-pointer:before {
+    content: "X";
+}
+.icon-dp-profesionales-frecuente:before {
+    content: "Y";
+}
+.icon-dp-profesionales-frecuente-agregar:before {
+    content: "Z";
+}
+.icon-dp-receta:before {
+    content: "0";
+}
+.icon-dp-resumen-cuenta:before {
+    content: "1";
+}
+.icon-dp-seguridad:before {
+    content: "2";
+}
+.icon-dp-semana:before {
+    content: "3";
+}
+.icon-dp-sexo-mujer:before {
+    content: "4";
+}
+.icon-dp-sexo-varon:before {
+    content: "5";
+}
+.icon-dp-sms:before {
+    content: "6";
+}
+.icon-dp-tilda:before {
+    content: "7";
+}
+.icon-dp-tilda2:before {
+    content: "8";
+}
+.icon-dp-trash:before {
+    content: "9";
+}
+.icon-dp-turno-confirmado:before {
+    content: "!";
+}
+.icon-dp-turno-sacar:before {
+    content: "\"";
+}
+.icon-dp-turno-telefono:before {
+    content: "#";
+}
+.icon-dp-turnoausente:before {
+    content: "$";
+}
+.icon-dp-turnocancelado:before {
+    content: "%";
+}
+.icon-dp-turnoconfirmado:before {
+    content: "&";
+}
+.icon-dp-turnodeclinado:before {
+    content: "'";
+}
+.icon-dp-turnoes-telefonicos:before {
+    content: "(";
+}
+.icon-dp-turnopendiente:before {
+    content: ")";
+}
+.icon-dp-turnos:before {
+    content: "*";
+}
+.icon-dp-ubicacionmapa:before {
+    content: "+";
+}
+.icon-dp-ver-mas:before {
+    content: ",";
+}
+.icon-dp-videoconsulta:before {
+    content: "-";
+}
+.icon-icon-dp-turnoes-telefonicos:before {
+    content: ".";
+}
+@font-face {
+    font-family: "doctorplus-plus";
+    src: url("../fonts/doctorplus-plus/doctorplus-plus.eot");
+    src: url("../fonts/doctorplus-plus/doctorplus-plus.eot?#iefix") format("embedded-opentype"), url("../fonts/doctorplus-plus/doctorplus-plus.woff") format("woff"), url("../fonts/doctorplus-plus/doctorplus-plus.ttf") format("truetype"), url("../fonts/doctorplus-plus/doctorplus-plus.svg#doctorplus-plus") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+[data-icon]:before {
+    font-family: "doctorplus-plus" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-doctorplus"]:before,
+[class*=" icon-doctorplus"]:before {
+    font-family: "doctorplus-plus" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-doctorplus-plus:before {
+    content: "\e000";
+}
+.icon-doctorplus-electro:before {
+    content: "\e000";
+}
+.icon-doctorplus-plus-1:before {
+    content: "\e001";
+}
+.icon-doctorplus-ficha-time:before {
+    content: "\e001";
+}
+.icon-doctorplus-plus-2:before {
+    content: "\e002";
+}
+.icon-doctorplus-corazon-electro:before {
+    content: "\e002";
+}
+.icon-doctorplus-plus-3:before,
+.icon-doctorplus-estetoscopio:before {
+    content: "\e003";
+}
+.icon-doctorplus-file:before {
+    content: "\e004";
+}
+.icon-doctorplus-plus-5:before,
+.icon-doctorplus-gear:before {
+    content: "\e005";
+}
+.icon-doctorplus-left-arrow:before {
+    content: "\e006";
+}
+.icon-doctorplus-right-arrow:before {
+    content: "\e007";
+}
+.icon-doctorplus-plus-8:before {
+    content: "\e008";
+}
+.icon-doctorplus-plus-9:before,
+.icon-doctorplus-dental:before {
+    content: "\e009";
+}
+.icon-doctorplus-plus-10:before {
+    content: "\e00a";
+}
+.icon-doctorplus-chat:before {
+    content: "\e00b";
+}
+.icon-doctorplus-plus-12:before {
+    content: "\e00c";
+}
+.icon-doctorplus-plus-13:before {
+    content: "\e00d";
+}
+.icon-doctorplus-camera:before {
+    content: "\e00d";
+}
+.icon-doctorplus-plus-14:before {
+    content: "\e00e";
+}
+.icon-doctorplus-plus-15:before,
+.icon-doctorplus-pills:before {
+    content: "\e00f";
+}
+.icon-doctorplus-plus-16:before,
+.icon-doctorplus-mail-send:before {
+    content: "\e010";
+}
+.icon-doctorplus-plus-17:before,
+.icon-doctorplus-termometro:before {
+    content: "\e011";
+}
+.icon-doctorplus-plus-18:before {
+    content: "\e012";
+}
+.icon-doctorplus-jeringa:before {
+    content: "\e012";
+}
+.icon-doctorplus-plus-19:before,
+.icon-doctorplus-rp-refresh:before {
+    content: "\e013";
+}
+.icon-doctorplus-plus-20:before,
+.icon-doctorplus-flag:before {
+    content: "\e014";
+}
+.icon-doctorplus-flag:before {
+    content: "\e014";
+}
+.icon-doctorplus-plus-21:before,
+.icon-doctorplus-grid:before {
+    content: "\e015";
+}
+.icon-doctorplus-menu-grid:before {
+    content: "\e015";
+}
+.icon-doctorplus-plus-22:before,
+.icon-doctorplus-calendar:before {
+    content: "\e016";
+}
+.icon-doctorplus-plus-23:before,
+.icon-doctorplus-visual:before {
+    content: "\e017";
+}
+.icon-doctorplus-plus-24:before,
+.icon-doctorplus-refresh:before {
+    content: "\e018";
+}
+.icon-doctorplus-plus-25:before,
+.icon-doctorplus-share:before {
+    content: "\e019";
+}
+.icon-doctorplus-plus-26:before {
+    content: "\e01a";
+}
+.icon-doctorplus-plus-27:before {
+    content: "\e01b";
+}
+.icon-doctorplus-plus-28:before {
+    content: "\e01c";
+}
+.icon-doctorplus-plus-29:before,
+.icon-doctorplus-info:before {
+    content: "\e01d";
+}
+.icon-doctorplus-plus-30:before,
+.icon-doctorplus-auditivo:before {
+    content: "\e01e";
+}
+.icon-doctorplus-ficha-tecnica:before {
+    content: "\e01f";
+}
+.icon-doctorplus-map-add:before {
+    content: "\e020";
+}
+.icon-doctorplus-pc-add:before {
+    content: "\e021";
+}
+.icon-doctorplus-solid-calendar:before {
+    content: "\e022";
+}
+.icon-doctorplus-check:before {
+    content: "\e023";
+}
+.icon-doctorplus-chat-comment:before {
+    content: "\e900";
+}
+.icon-doctorplus-coffee-cup:before {
+    content: "\e903";
+}
+.icon-doctorplus-chat-empty:before {
+    content: "\e901";
+}
+.icon-doctorplus-ficha-check:before {
+    content: "\e904";
+}
+.icon-doctorplus-hi-five:before {
+    content: "\e905";
+}
+.icon-doctorplus-cloud-download:before {
+    content: "\e902";
+}
+.icon-doctorplus-organigrama:before {
+    content: "\e906";
+}
+.icon-doctorplus-video-call:before {
+    content: "\e907";
+    position: relative;
+    left: -1px;
+}
+.icon-doctorplus-check-thin:before {
+    content: "\e908";
+}
+.icon-doctorplus-bandeja-in:before {
+    content: "\e909";
+}
+.icon-doctorplus-people-add:before {
+    content: "\e90a";
+}
+.icon-doctorplus-chat-rss:before {
+    content: "\e90b";
+}
+.icon-doctorplus-user-add-like:before {
+    content: "\e911";
+}
+.icon-doctorplus-user:before {
+    content: "\e910";
+}
+.icon-doctorplus-dollar-add:before {
+    content: "\e90f";
+}
+.icon-doctorplus-dollar:before {
+    content: "\e90e";
+}
+.icon-doctorplus-circle-minus:before {
+    content: "\e90d";
+}
+.icon-doctorplus-circle-add:before {
+    content: "\e90c";
+}
+.icon-doctorplus-trash:before {
+    content: "\e912";
+}
+.icon-doctorplus-map-point:before {
+    content: "\e913";
+}
+.icon-doctorplus-star:before {
+    content: "\e914";
+}
+.icon-doctorplus-cruz:before {
+    content: "\e915";
+}
+.icon-doctorplus-search:before {
+    content: "\e916";
+}
+.icon-doctorplus-alert:before {
+    content: "\e917";
+}
+.icon-doctorplus-back:before {
+    content: "\e918";
+}
+.icon-doctorplus-usr-add:before {
+    content: "\e919";
+}
+.icon-doctorplus-circle-plus:before {
+    content: "\e91a";
+}
+.icon-doctorplus-lock:before {
+    content: "\e91b";
+}
+.icon-doctorplus-unlock:before {
+    content: "\e95c";
+}
+.icon-doctorplus-corazon:before {
+    content: "\e91c";
+}
+.icon-doctorplus-map-check:before {
+    content: "\e91d";
+}
+.icon-doctorplus-arrow-up-right:before {
+    content: "\e91e";
+}
+.icon-doctorplus-pharmaceutics:before {
+    content: "\e91f";
+}
+.icon-doctorplus-microphone:before {
+    content: "\e920";
+}
+.icon-doctorplus-minus:before {
+    content: "\e921";
+}
+.icon-doctorplus-chat-add:before {
+    content: "\e923";
+}
+.icon-doctorplus-brujula-arrow:before {
+    content: "\e922";
+}
+.icon-doctorplus-sheet:before {
+    content: "\e924";
+}
+.icon-doctorplus-plus:before {
+    content: "\e925";
+}
+.icon-doctorplus-pen:before {
+    content: "\e926";
+}
+.icon-doctorplus-calendar-time:before {
+    content: "\e927";
+}
+.icon-doctorplus-fem-symbol:before {
+    content: "\e928";
+}
+.icon-doctorplus-masc-symbol:before {
+    content: "\e929";
+}
+.icon-doctorplus-user-add-bottom:before {
+    content: "\e92a";
+}
+.icon-doctorplus-stop:before {
+    content: "\e92b";
+}
+.icon-doctorplus-dollar-circular:before {
+    content: "\e92c";
+}
+.icon-doctorplus-clock:before {
+    content: "\e92d";
+}
+.icon-doctorplus-three-dots:before {
+    content: "\e92e";
+}
+.icon-doctorplus-pacientes:before {
+    content: "\e92f";
+}
+.icon-doctorplus-profile-sheet:before {
+    content: "\e930";
+}
+.icon-doctorplus-home:before {
+    content: "\e931";
+}
+.icon-doctorplus-onoff:before {
+    content: "\e932";
+}
+.icon-doctorplus-burger:before {
+    content: "\e960";
+}
+.icon-doctorplus-24:before {
+    content: "\e934";
+}
+.icon-doctorplus-map-plus-rounded:before {
+    content: "\e935";
+}
+.icon-doctorplus-maletin:before {
+    content: "\e936";
+}
+.icon-doctorplus-chat-dialog:before {
+    content: "\e937";
+}
+.icon-doctorplus-chat-square:before {
+    content: "\e938";
+}
+.icon-doctorplus-sheet-phone:before {
+    content: "\e93a";
+}
+.icon-doctorplus-sheet-edit:before {
+    content: "\e939";
+}
+.icon-doctorplus-usr-group:before {
+    content: "\e93b";
+}
+.icon-doctorplus-arrow-down:before {
+    content: "\e93c";
+}
+.icon-doctorplus-recycle:before {
+    content: "\e93d";
+}
+.icon-doctorplus-credit-card:before {
+    content: "\e93e";
+}
+.icon-doctorplus-sms:before {
+    content: "\e93f";
+}
+.icon-doctorplus-envelope:before {
+    content: "\e940";
+}
+.icon-doctorplus-gear-round:before {
+    content: "\e941";
+}
+.icon-doctorplus-alert-round:before {
+    content: "\e942";
+}
+.icon-doctorplus-cel:before {
+    content: "\e943";
+}
+.icon-doctorplus-despertador:before {
+    content: "\e944";
+}
+.icon-doctorplus-pharmaceutics-sheet:before {
+    content: "\e945";
+}
+.icon-doctorplus-user-add-circle:before {
+    content: "\e946";
+}
+.icon-doctorplus-call-end:before {
+    content: "\e947";
+}
+.icon-doctorplus-call-start:before {
+    content: "\e948";
+}
+.icon-doctorplus-video-cam:before {
+    content: "\e949";
+}
+.icon-doctorplus-cam-rss:before {
+    content: "\e94a";
+}
+.icon-doctorplus-video-sheet:before {
+    content: "\e94b";
+}
+.icon-doctorplus-photo:before {
+    content: "\e94c";
+}
+.icon-doctorplus-usr-like:before {
+    content: "\e94d";
+}
+.icon-doctorplus-dollar-db:before {
+    content: "\e94e";
+}
+.icon-doctorplus-dollar-sheet:before {
+    content: "\e94f";
+}
+.icon-doctorplus-print:before {
+    content: "\e950";
+}
+.icon-doctorplus-refund:before {
+    content: "\e951";
+}
+.icon-doctorplus-minus-circle:before {
+    content: "\e952";
+}
+.icon-doctorplus-check-circle:before {
+    content: "\e953";
+}
+.icon-doctorplus-close-circle:before {
+    content: "\e954";
+}
+.icon-doctorplus-contrast-circle:before {
+    content: "\e955";
+}
+.icon-doctorplus-turno-disponible:before {
+    content: "\e956";
+}
+.icon-doctorplus-calendar-day:before {
+    content: "\e957";
+}
+.icon-doctorplus-consultorio-virtual:before {
+    content: "\e958";
+}
+.icon-doctorplus-declinado:before {
+    content: "\e959";
+}
+.icon-doctorplus-ausente:before {
+    content: "\e95b";
+}
+.icon-doctorplus-disponible:before {
+    content: "\e022";
+}
+.icon-doctorplus-disponible-circle:before {
+    content: "\e95a";
+}
+.icon-doctorplus-pendiente:before {
+    content: "\e942";
+}
+.icon-doctorplus-declinado-nc:before {
+    content: "\e95e";
+}
+.icon-doctorplus-ausente-nc:before {
+    content: "\e95d";
+}
+.icon-doctorplus-info-circle:before {
+    content: "\e95f";
+}
+.icon-doctorplus-usr-menu:before {
+    content: "\e933";
+}
+.icon-doctorplus-sheet-edit-full:before {
+    content: "\e961";
+}
+.icon-doctorplus-video-conferencia:before {
+    content: "\e962";
+}
+.icon-doctorplus-call-close:before {
+    content: "\e963";
+}
+.icon-doctorplus-manual:before {
+    content: "\e964";
+}
+.shadow-z-1 {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+.shadow-z-2 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+.shadow-z-2-hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+}
+.text-shadow-z-1 {
+    text-shadow: 0 6px 7px rgba(0, 0, 0, 0.3);
+}
+.breadcrum {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.breadcrum > li {
+    display: inline-block;
+    font-size: 14px;
+}
+.breadcrum > li:after {
+    content: '/';
+    margin-left: 4px;
+}
+.breadcrum > li:last-child:after {
+    content: '';
+}
+.breadcrum > li > a {
+    cursor: pointer;
+}
+.doGreenButton {
+    box-sizing: border-box;
+    background: #21b797;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doGreenButton:hover {
+    background: #64cdb6 !important;
+    color: #ffffff;
+}
+.doGreenButton > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doGreenButton:visited,
+.doGreenButton:active,
+.doGreenButton:focus {
+    color: #ffffff;
+    background: #21b797;
+}
+@media (max-width: 600px) {
+    .doGreenButton {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doGreenButton {
+        font-size: 14px;
+    }
+}
+.doWhiteButton {
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #415b70;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding: 11px 23px;
+    border: 1px #415b70 solid;
+}
+.doWhiteButton:hover {
+    background: #ffffff !important;
+    color: #415b70;
+}
+.doWhiteButton > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doWhiteButton:visited,
+.doWhiteButton:active,
+.doWhiteButton:focus {
+    color: #415b70;
+    background: #ffffff;
+}
+@media (max-width: 600px) {
+    .doWhiteButton {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doWhiteButton {
+        font-size: 14px;
+    }
+}
+.doWhiteButton:hover {
+    color: #21b797;
+    border: 1px #21b797 solid;
+}
+.doLightButton {
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #415b70;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding: 11px 23px;
+    border: 1px #ccc solid;
+}
+.doLightButton:hover {
+    background: #ffffff !important;
+    color: #415b70;
+}
+.doLightButton > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doLightButton:visited,
+.doLightButton:active,
+.doLightButton:focus {
+    color: #415b70;
+    background: #ffffff;
+}
+@media (max-width: 600px) {
+    .doLightButton {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doLightButton {
+        font-size: 14px;
+    }
+}
+.doLightButton:hover {
+    color: #21b797;
+    border: 1px #21b797 solid;
+}
+.doRedButton {
+    box-sizing: border-box;
+    background: #ff6f6f;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doRedButton:hover {
+    background: #ff9a9a !important;
+    color: #ffffff;
+}
+.doRedButton > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doRedButton:visited,
+.doRedButton:active,
+.doRedButton:focus {
+    color: #ffffff;
+    background: #ff6f6f;
+}
+@media (max-width: 600px) {
+    .doRedButton {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doRedButton {
+        font-size: 14px;
+    }
+}
+.doBlackButton {
+    box-sizing: border-box;
+    background: #415b70;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doBlackButton:hover {
+    background: #7a8c9b !important;
+    color: #ffffff;
+}
+.doBlackButton > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doBlackButton:visited,
+.doBlackButton:active,
+.doBlackButton:focus {
+    color: #ffffff;
+    background: #415b70;
+}
+@media (max-width: 600px) {
+    .doBlackButton {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doBlackButton {
+        font-size: 14px;
+    }
+}
+.doCancelButton {
+    box-sizing: border-box;
+    background: transparent;
+    color: #415b70;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doCancelButton:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #415b70;
+}
+.doCancelButton > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doCancelButton:visited,
+.doCancelButton:active,
+.doCancelButton:focus {
+    color: #415b70;
+    background: transparent;
+}
+@media (max-width: 600px) {
+    .doCancelButton {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doCancelButton {
+        font-size: 14px;
+    }
+}
+.doCancelButton i {
+    top: 0;
+    font-size: 12px;
+}
+.doCancelButton:hover {
+    color: #21b797;
+}
+.doGreenButtonsquare {
+    box-sizing: border-box;
+    background: #21b797;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doGreenButtonsquare:hover {
+    background: #64cdb6 !important;
+    color: #ffffff;
+}
+.doGreenButtonsquare > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doGreenButtonsquare:visited,
+.doGreenButtonsquare:active,
+.doGreenButtonsquare:focus {
+    color: #ffffff;
+    background: #21b797;
+}
+@media (max-width: 600px) {
+    .doGreenButtonsquare {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doGreenButtonsquare {
+        font-size: 14px;
+    }
+}
+.doWhiteButtonsquare {
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #415b70;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding: 11px 23px;
+    border: 1px #415b70 solid;
+}
+.doWhiteButtonsquare:hover {
+    background: #ffffff !important;
+    color: #415b70;
+}
+.doWhiteButtonsquare > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doWhiteButtonsquare:visited,
+.doWhiteButtonsquare:active,
+.doWhiteButtonsquare:focus {
+    color: #415b70;
+    background: #ffffff;
+}
+@media (max-width: 600px) {
+    .doWhiteButtonsquare {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doWhiteButtonsquare {
+        font-size: 14px;
+    }
+}
+.doWhiteButtonsquare:hover {
+    color: #21b797;
+    border: 1px #21b797 solid;
+}
+.doLightButtonsqare {
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #415b70;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding: 11px 23px;
+    border: 1px #ccc solid;
+}
+.doLightButtonsqare:hover {
+    background: #ffffff !important;
+    color: #415b70;
+}
+.doLightButtonsqare > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doLightButtonsqare:visited,
+.doLightButtonsqare:active,
+.doLightButtonsqare:focus {
+    color: #415b70;
+    background: #ffffff;
+}
+@media (max-width: 600px) {
+    .doLightButtonsqare {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doLightButtonsqare {
+        font-size: 14px;
+    }
+}
+.doLightButtonsqare:hover {
+    color: #21b797;
+    border: 1px #21b797 solid;
+}
+.doRedButtonsquare {
+    box-sizing: border-box;
+    background: #ff6f6f;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doRedButtonsquare:hover {
+    background: #ff9a9a !important;
+    color: #ffffff;
+}
+.doRedButtonsquare > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doRedButtonsquare:visited,
+.doRedButtonsquare:active,
+.doRedButtonsquare:focus {
+    color: #ffffff;
+    background: #ff6f6f;
+}
+@media (max-width: 600px) {
+    .doRedButtonsquare {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doRedButtonsquare {
+        font-size: 14px;
+    }
+}
+.doBlackButtonsquare {
+    box-sizing: border-box;
+    background: #415b70;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doBlackButtonsquare:hover {
+    background: #7a8c9b !important;
+    color: #ffffff;
+}
+.doBlackButtonsquare > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doBlackButtonsquare:visited,
+.doBlackButtonsquare:active,
+.doBlackButtonsquare:focus {
+    color: #ffffff;
+    background: #415b70;
+}
+@media (max-width: 600px) {
+    .doBlackButtonsquare {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doBlackButtonsquare {
+        font-size: 14px;
+    }
+}
+.doCancelButtonsquare {
+    box-sizing: border-box;
+    background: transparent;
+    color: #415b70;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.doCancelButtonsquare:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #415b70;
+}
+.doCancelButtonsquare > i {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+}
+.doCancelButtonsquare:visited,
+.doCancelButtonsquare:active,
+.doCancelButtonsquare:focus {
+    color: #415b70;
+    background: transparent;
+}
+@media (max-width: 600px) {
+    .doCancelButtonsquare {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .doCancelButtonsquare {
+        font-size: 14px;
+    }
+}
+.doCancelButtonsquare:hover {
+    color: #21b797;
+}
+.gutter {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.doGreenSelect {
+    position: relative;
+}
+.doGreenSelect > .select2-container {
+    width: 100%;
+}
+.doGreenSelect > .select2-container > a {
+    background: #edfaf8;
+    border: 1px #69aaac solid;
+    border-radius: 0;
+    color: #415b70;
+    padding: 0 12px;
+    padding-right: 42px;
+    line-height: 42px;
+    display: block;
+    width: 100%;
+}
+.doGreenSelect > .select2-container > a > .select2-arrow {
+    border-top-color: #415b70;
+}
+@media (max-width: 600px) {
+    .doGreenSelect > .select2-container > a {
+        font-size: 12px;
+    }
+}
+.filter-table-header{
+    min-height: 60px;
+}
+.section-header .user-select .section-name{
+    margin-bottom:10px;
+    margin-left:4px;
+}
+.filter-table-header-paciente{
+    margin-bottom: 4px;
+
+}
+#Main{
+    background:#02B7C0;
+}
+.pad {
+    padding: 16px;
+}
+.guia-de-uso-top-spacer {
+    padding-top: 60px;
+}
+h2.gdu-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 200;
+    color: #788F9B;
+    margin-bottom: 24px;
+    margin-top: 100px;
+}
+section.guia-de-uso {
+    padding-bottom: 0px;
+}
+section.guia-de-uso article {
+    display: block;
+    width: 100%;
+    background-color: #3DB4C0;
+    border-bottom: 4px white solid;
+}
+a.gdu-action-box {
+    display: block;
+    width: 100%;
+    background-color: #02B7C0;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -kthtml-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+a.gdu-action-box h3 {
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    padding: 26px 10px;
+}
+a.gdu-action-box:hover {
+    background-color: #05A3A3;
+}
+@media (max-width: 600px) {
+    a.gdu-action-box h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+.consulta-distancia {
+    text-align: center;
+    padding: 0 16px;
+}
+.consulta-distancia h4 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 32px;
+}
+.consulta-distancia p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 64px;
+}
+@media (max-width: 600px) {
+    .consulta-distancia h4 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .consulta-distancia p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+.gdu-label-icon-box {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 32px;
+}
+.gdu-label-icon-box figure {
+    display: block;
+    width: 42px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 42px;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    color: white;
+}
+.gdu-label-icon-box p {
+    display: block;
+    text-align: left;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-left: 54px;
+    color: white;
+    margin-bottom: 0;
+}
+.gdu-pefil-completo {
+    display: block;
+    width: 52px;
+    height: 52px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #F23243;
+    color: white;
+    line-height: 52px;
+    font-size: 16px;
+}
+.tipo-consulta-express-video {
+    padding: 0 16px;
+}
+.tipo-consulta-express-video .tipo-consulta-video-col {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding: 8px;
+    padding-right: 24px;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-express-video .tipo-consulta-video-col {
+        width: 100%;
+        text-align: center;
+        padding-right: 0px;
+    }
+}
+.tipo-consulta-express-video .tipo-consulta-express-col {
+    width: 50%;
+    float: left;
+    text-align: left;
+    padding: 8px;
+    padding-left: 24px;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-express-video .tipo-consulta-express-col {
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 32px;
+    }
+}
+.tipo-consulta-express-video .tipo-consulta-video-item {
+    display: inline-block;
+    max-width: 243px;
+}
+.tipo-consulta-express-video .tipo-consulta-video-item h4 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+    font-weight: 600;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-express-video .tipo-consulta-video-item h4 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+.tipo-consulta-express-video-footer {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 24px;
+}
+.tipo-consulta-express-video-footer h5 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: white;
+    margin-bottom: 24px;
+}
+.tipo-consulta-express-video-footer p.higlight {
+    display: block;
+    width: 100%;
+    background-color: rgba(82, 136, 136, 0.5);
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+.tipo-consulta-express-video-footer p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-express-video-footer h5 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+.tipo-consulta-video-consulta {
+    padding-top: 32px;
+}
+.tipo-consulta-video-consulta .video-consultas-pasos-number i {
+    color: #029AA2;
+}
+.tipo-consulta-video-consulta .video-consultas-pasos-txt {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 16px;
+}
+.tipo-consulta-video-consulta .video-consultas-pasos-txt small {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-video-consulta .video-consultas-pasos-txt {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+.tipo-consulta-consulta-express .video-consultas-pasos-col {
+    width: 33.33333333%;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-consulta-express .video-consultas-pasos-col {
+        width: 100%;
+    }
+}
+.tipo-consulta-consulta-express .video-consultas-features-row {
+    background-color: rgba(82, 136, 136, 0.5);
+}
+.tipo-consulta-consultorio {
+    padding: 0 16px;
+    padding-top: 42px;
+}
+.tipo-consulta-consultorio .pbr-instrucciones-col i {
+    color: #029AA2;
+    font-size: 48px;
+}
+.tipo-consulta-consultorio .pbr-instrucciones-col p {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 16px;
+    color: #fff;
+    text-align: center;
+}
+.tipo-consulta-consultorio .pbr-instrucciones-col figure {
+    margin-bottom: 24px;
+}
+.tipo-consulta-consultorio .pbr-instrucciones-col figure img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 330px;
+}
+@media (max-width: 600px) {
+    .tipo-consulta-consultorio .pbr-instrucciones-col {
+        width: 100%;
+    }
+    .tipo-consulta-consultorio .pbr-instrucciones-col p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+.tipo-consulta-consultorio-footer p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: rgba(82, 136, 136, 0.5);
+    max-width: 1024px;
+    padding: 16px 24px;
+    margin: auto;
+    margin-top: 42px;
+}
+.gdu-content {
+    display: none;
+    padding-bottom: 42px;
+}
+/*# sourceMappingURL=guiadeuso.css.map */

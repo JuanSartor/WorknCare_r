@@ -1,0 +1,52 @@
+html{
+	height: 100%;
+}
+.pe-body{
+	height: 100% !important;
+	margin: 0 !important;
+}
+
+.pe-container{
+	height: 100%;
+	position: relative;
+	background: rgba(116,202,207,1);
+	background: -moz-linear-gradient(top, rgba(116,202,207,1) 0%, rgba(18,105,115,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(116,202,207,1)), color-stop(100%, rgba(18,105,115,1)));
+	background: -webkit-linear-gradient(top, rgba(116,202,207,1) 0%, rgba(18,105,115,1) 100%);
+	background: -o-linear-gradient(top, rgba(116,202,207,1) 0%, rgba(18,105,115,1) 100%);
+	background: -ms-linear-gradient(top, rgba(116,202,207,1) 0%, rgba(18,105,115,1) 100%);
+	background: linear-gradient(to bottom, rgba(116,202,207,1) 0%, rgba(18,105,115,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74cacf', endColorstr='#126973', GradientType=0 );
+}
+
+.pe-error-holder{
+	width: 100%;
+	max-width: 800px;
+	position: absolute;
+	.center-xy;
+	background: url(../imgs/error-stripes.png) top left no-repeat;
+	padding: 42px;
+	
+	@media(max-width:600px){
+		padding: 16px;
+	}
+}
+.pe-card{
+	background-color: @white;
+	padding: 50px 100px;
+	
+	& h3{
+		font-size: 18px;
+		color: #798F9B;
+		font-weight: 400;
+	}
+	& p{
+		font-size: 14px;
+		line-height: 16px;
+		color: #798F9B;
+	}
+	
+	@media(max-width:600px){
+		padding: 24px 24px;
+	}
+}

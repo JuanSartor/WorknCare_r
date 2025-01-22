@@ -1,0 +1,6 @@
+<If " %{HTTP_HOST} =~ /(.).okame.com.ar/">
+  AuthType Basic
+  AuthName "Area privada"
+  AuthUserFile /var/www/.htpasswd
+  Require user okame
+</If>

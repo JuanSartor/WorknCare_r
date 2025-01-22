@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="js/scrollbars/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav class="paciente-nav">
+		<div class="container paciente-nav-container">
+			<div class="paciente-nav-usr">
+				<a href="#" class="paciente-nav-trigger">
+					<i class="icon-doctorplus-burger"></i>
+					<img src="imgs/extranet/yannis.png" alt="Usr profile"/>
+					<label>Dr. Yannis Georgandelis</label>
+				</a>
+				<ul class="paciente-nav-usr-menu" id="paciente-menu">
+					<li><a href="#"><i class="icon-doctorplus-profile-sheet"></i> Datos administrador</a></li>
+					<li><a href="#"><i class="icon-doctorplus-lock"></i> Configuración de privacidad</a></li>
+					<li><a href="#"><i class="icon-doctorplus-gear"></i> Configuración de cuenta</a></li>
+					<li><a href="#"><i class="icon-doctorplus-dollar-circular"></i> Estado de cuenta</a></li>
+				</ul>
+			</div>
+
+			<div class="paciente-nav-logo">
+				<a href="#">
+					<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Doctor Plus"/>
+				</a>
+			</div>
+			<div class="paciente-nav-menu">
+				<a class="paciente-nav-menu-burger"><i class="icon-doctorplus-burger"></i></a>
+				<ul class="paciente-nav-menu-rsp" id="burger-menu">
+					<li><a href="#"><i class="icon-doctorplus-onoff"></i><label>Home</label></a></li>
+					<li><a href="#"><i class="icon-doctorplus-home"></i><label>Cerrar sesión</label></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<section class="mvc-top">
+	<div class="mvc-top">
+		<div class="okm-container mvc-top-inner">
+			<h1>Sala de Consultorio Virtual</h1>
+			<ul>
+				<li class="mvc-video-cam">
+					<i class="icon-doctorplus-video-cam"></i>
+				</li>
+				<li>
+					<div class="okm-img-with-icon">
+						<img src="imgs/temp/foto-perfil-50.jpg" alt="Usuario"/>
+						<figure><i class="icon-doctorplus-check-thin"></i></figure>
+					</div>
+					
+<!--
+					<div class="okm-img-with-icon yellow">
+						<img src="imgs/temp/foto-perfil-50.jpg" alt="Usuario"/>
+						<figure><i class="icon-doctorplus-minus"></i></figure>
+					</div>
+-->
+					
+					<span>Padre del paciente</span>
+				</li>
+				<li class="mvc-conexion-segura">
+					<i class="icon-doctorplus-lock"></i>
+					<span>Conexión segura</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>	
+
+<div class="mvc-video-float">
+	<a href="#" id="video-btn-float">
+	<figure>
+		<i class="icon-doctorplus-video-cam"></i>
+	</figure>
+	<div class="mvc-video-float-label">30:00 min</div>
+	</a>
+</div>	
+	
+	
+<section class="mvc-video">
+	<div class="mvc-video-row">
+		<div class="mvc-video-col">
+			<div class="mvc-video-box">
+				<img src="imgs/temp/video.jpg" style="display:block; width:100%"/>
+			</div>
+			
+			<div class="mvc-video-thumb">
+				<img src="imgs/temp/video-thmb.jpg" style="display:block; width:100%"/>
+			</div>
+			
+			<a href="#" class="mvc-video-btn llamada-start" id="mvc-video-btn-start">
+				<figure>
+					<i class="icon-doctorplus-call-start"></i>
+				</figure>
+				<div class="mvc-video-calling">
+					<span class="mvc-video-calling-label">
+						<span>Llamando...</span>
+					</span>
+				</div>
+			</a>
+			
+<!--
+			<a href="#" class="mvc-video-btn llamada-end" id="mvc-video-btn-end">
+				<figure>
+					<i class="icon-doctorplus-call-start"></i>
+				</figure>
+				<div class="mvc-video-end-label">
+					<span class="mvc-video-end-time">
+						<span class="cs-ca-tiempo-respuesta-num" id="timer-1"></span> <span class="min-unit">min</span></span>
+					<span class="mvc-video-end-text">Tiempo para finalizar</span>
+				</div>
+			</a>
+-->
+			
+		</div>
+		<div class="mvc-data-col">
+			<div class="mvc-data-top">
+				<a href="#" id="mvc-profile-trg" class="active"><i class="icon-doctorplus-user"></i></a>
+				<a href="#" id="mvc-chat-trg"><i class="icon-doctorplus-chat-comment"></i></a>
+			</div>
+			
+			<div id="mvc-profile">
+				<div class="mvc-profile-box">
+					<div class="okm-row mvc-profile-ficha">
+						<img src="imgs/temp/foto-perfil-50.jpg" alt="Paciente"/>
+						<div class="mvc-profile-name">
+							<span>Juan Manuel Menoyo</span>
+							<span>FN 13/03/1973</span>
+						</div>
+					</div>
+
+					<div class="okm-row">
+						<div class="mvc-pshb-box">
+							<i class="icon-doctorplus-ficha-tecnica"></i>
+							<div class="mvc-pshb-data">
+								<span>PSHB</span>
+								<span>358907205/03</span>
+							</div>
+						</div>
+					</div>
+					<div class="okm-row">
+						<ul class="mvc-perfil-btns">
+							<li>
+								<a href="#">
+									<i class="icon-doctorplus-pharmaceutics"></i> 
+									<span>Perfil de Salud</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" id="profesionales-frecuentes-trg">
+									<i class="icon-doctorplus-user-add-like"></i> 
+									<span>Profesionales<br>frecuentes</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="okm-row">
+						<div class="mvc-tags">
+							<div class="mvc-tags-inner">
+
+								<div class="tagsinput-primary okm-tags-no-margin">
+									<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="rubeola,
+																																												 hepatitis,
+																																												 levotiroxina 100 mg,
+																																												 hepatitis,
+																																												 rubeola 2,
+																																												 sódica,
+																																												 sódica 2,
+																																												 hepatitis 2,
+																																												 rubeola 3,
+																																												 rubeola 4,
+																																												 rubeola 5,
+																																												 rubeola 6,
+																																												 rubeola 7,
+																																												 rubeola 8,
+																																												 rubeola 9,
+																																												 levotiroxina 100 mg 2,
+																																												 levotiroxina 100 mg 3
+																																												 " />
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			
+			<div id="mvc-chat">
+				<div class="mvc-data-box">
+				<div class="mvc-chat-box">
+					
+					<div class="okm-row mvc-chat-line">
+						<div class="mvc-chat-guest">
+							<figure>
+								<span>Padre del paciente</span>
+								<p>Este es el resultado del análisis de laboratorio. Hoja 1</p>
+							</figure>
+							<span></span>
+						</div>
+					</div>
+					<div class="okm-row mvc-chat-line">
+						<div class="mvc-chat-guest">
+							<figure class="mvc-attach">
+								<a href="#" class="mvc-video-attach-modal">
+									<img src="imgs/temp/mvc-chat-img.jpg"/>
+									
+									<div class="mvc-attach-btn">
+										<i class="icon-doctorplus-search"></i>
+									</div>
+								</a>
+							</figure>
+							<span></span>
+						</div>
+					</div>
+					
+					<div class="okm-row mvc-chat-line">
+						<div class="mvc-chat-host">
+							<figure>
+								<span>Padre del paciente</span>
+								<p>Este es el resultado del análisis de laboratorio. Hoja 1</p>
+							</figure>
+							<span></span>
+						</div>
+					</div>
+					
+					<div class="okm-row mvc-chat-line">
+						<div class="mvc-chat-host">
+							<figure class="mvc-attach">
+								<a href="#" class="mvc-video-attach-modal">
+									<img src="imgs/temp/mvc-chat-img.jpg"/>
+
+									<div class="mvc-attach-btn">
+										<i class="icon-doctorplus-search"></i>
+									</div>
+								</a>
+							</figure>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="okm-row">
+				<form name="mcv-chat-text">
+					<div class="mvc-chat-input-box">
+						<textarea data-autoresize rows="1" name="chat-msg-txt" placeholder="Escribir mensaje"></textarea>
+					</div>
+					<div class="mvc-chat-btns">
+						<a href="#"><i class="icon-doctorplus-camera"></i></a>
+						<button class="btn-default"><i class="icon-doctorplus-brujula-arrow"></i> Enviar</button>
+					</div>
+				</form>
+			</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+</section>	
+	
+
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+	<!-- Modal Privacidad -->
+	<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"><h5>Privacidad</h5></div>
+					<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+				</div>
+				<form action="">
+					<div class="form-content">
+						<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+						<ul class="lista-checks">
+							<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+							<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+							<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+						</ul>
+
+					</div>
+					<div class="modal-btns">
+						<button>guardar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- Modal Profesionales frecuentes -->
+	<div class="modal fade modal-type-2" id="profesionales-frecuentes">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"><h5>Profesionales frecuentes</h5></div>
+					<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+				</div>
+				<div class="modal-body">
+					<div class="form-content medico-pacientes-modal">
+						<ul>
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dr. Smith</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>
+							</li>
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dra. House</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>				
+							</li>			
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dr. Perez</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>				
+							</li>		
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dr. Smith</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>				
+							</li>
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dra. House</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>				
+							</li>			
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dr. Perez</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>				
+							</li>	
+							<li>
+								<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+								<h3>Dr. Smith</h3>
+								<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+								<a href="javascript:;" class="dp-email"></a>
+								<div class="enviar-mje">
+									<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								</div>				
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal VER Archivo -->
+	<div class="modal fade modal-type-1" id="ver-archivo">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div class="modal-title">
+						<h5>Imagen chat</h5>
+					</div>
+
+				</div>
+				<div class="modal-body">
+					<div class="mvc-video-modal">
+							<div><img src="imgs/temp/slider-1.jpg" alt="" ></div>
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="js/scrollbars/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="js/countid.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+	$('.switch-checkbox').bootstrapSwitch();
+	
+	
+	// timer
+
+	Date.prototype.addSeconds= function(h){
+		this.setSeconds(this.getSeconds()+h);
+		return this;
+	}
+
+	var date1 = new Date().addSeconds(5) / 1000;
+
+	$('#timer-1').countid({
+		clock: true,
+		dateTime: date1,
+		dateTplRemaining: "%M:%S",
+		dateTplElapsed: 'Finalizada',
+		complete: function( el ){
+			el.css({color:'#fff'});
+			el.siblings('.min-unit').hide();
+		}
+	});
+	
+});
+</script>		
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Consulta Express</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="js/scrollbars/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="modal fade modal-inside">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body"></div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<section class="filter user-group">
+	<div class="container">
+		<div class="btn-group user-filter" data-toggle="buttons">
+			<label class="btn btn-inverse active">
+				<input type="checkbox" checked> Todos
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Juan Manuel Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Iñaki Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Usted
+			</label>
+			<button class="dp-add-user add-user"></button>
+		</div>
+	</div>
+</section>
+<section class="user-actions user-paciente">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+			<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+			<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+			<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+			<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+			<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+	<section class="pbn-section-buscador">
+		<div class="okm-container">
+			<div class="okm-row pbn-background">
+				<div class="pbn-buscador-col pbp-section-top">
+					<a href="Javascript:history.back();" class="pbp-section-top-action"><i class="icon-doctorplus-left-arrow"></i><i class="icon-doctorplus-people-add"></i></a>
+					<h2>Buscador de profesionales</h2>
+				</div>
+				<div class="pbn-buscador-btn-col">
+					<a href="#" class="btn-oil-square pbn-buscador-btn"><span>Nueva búsqueda</span> <i class="icon-doctorplus-search"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<section class="okm-container pbp-medico-ficha">
+		<div class="okm-row">
+			<div class="pbp-col">
+				<div class="gnlist-profesional-holder">
+
+					<div class="okm-row gnlist-profesional-row">
+						
+							<figure class="gnlist-usr-avatar">
+								<a href="#">
+									<img src="imgs/temp/tmp_foto_miembro.jpg" alt="Dr. Alberto Orsini"/>
+								</a>
+							</figure>
+
+						<div class="gnlist-usr-data-holder">
+							<h3><a href="#">Dr. Alberto Orsini</a></h3>
+							<h4>Traumatólogo pediátrico</h4>
+							<div class="usr-data-content">
+								<p class="text-cut" data-lines="2">
+									<span>
+										Especialista en: Cirugía general, Diagnóstico por imágenes, Ecografía,
+										cirugía Coloproctología, Cirugía general, Diagnóstico por imágenes, Ecografía, Especialista en: Cirugía general, Diagnóstico por imágenes, Ecografía,
+										cirugía Coloproctología, Cirugía general, Diagnóstico por imágenes, Ecografía,
+									</span>
+								</p>
+							</div>
+						</div>
+
+							<div class="gnlist-ratting-holder">
+								<div class="resultados-list-left-ratting">
+									<ul class="estrellas-4">
+										<li><i class="icon-doctorplus-star"></i></li>
+										<li><i class="icon-doctorplus-star"></i></li>
+										<li><i class="icon-doctorplus-star"></i></li>
+										<li><i class="icon-doctorplus-star"></i></li>
+										<li><i class="icon-doctorplus-star"></i></li>
+									</ul>
+									<p>51 pacientes<span> lo recomendaron</span></p>
+									<a class="pbp-contacto-modal-trigger data modal-btn" data-target="pacientes-info-1" role="button" href="JavaScript:void(0);"><i class="dp-email"></i></a>
+								</div>
+							</div>
+					
+						<div class="pnb-consultorios-holder">
+
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs pbp-consultorio-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#consultorio-1" aria-controls="consultorio-1" role="tab" data-toggle="tab">
+										<i class="icon-doctorplus-map-plus-rounded"></i>
+										<span class="arrow"></span>
+									</a>
+								</li>
+								<li role="presentation">
+									<a href="#consultorio-2" aria-controls="consultorio-2" role="tab" data-toggle="tab">
+										<i class="icon-doctorplus-map-plus-rounded"></i>
+										<span class="arrow"></span>
+									</a>
+								</li>
+								<li role="presentation">
+									<a href="#video-consulta-1" aria-controls="video-consulta-1" role="tab" data-toggle="tab">
+										<i class="icon-doctorplus-video-call"></i>
+										<span class="arrow"></span>
+									</a>
+								</li>
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content pbp-consultorio-tabs-content">
+								<div role="tabpanel" class="tab-pane active" id="consultorio-1">
+									<a href="#">
+										<span>Paseo Comercial Santa Bárbara  2º piso Oficina 31 Ciudad Autónoma 
+											de Buenos Aires</span>
+									</a>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="consultorio-2">
+									<a href="#">
+										<span>Santa Bárbara  2º piso Oficina 31 Ciudad Autónoma 
+											de Buenos Aires</span>
+									</a>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="video-consulta-1">
+									<a href="#">
+										<span>Consultorio Virtual</span>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+
+						
+
+					</div>
+
+				</div>
+				
+				<div class="pbp-card pbp-perfil-profesional">
+					<div class="pbp-card-inner">
+						
+						<h3><i class="icon-doctorplus-ficha-tecnica"></i> Perfil Profesional</h3>
+						<div class="pbp-card-slide">
+						<h4>CV / Formación académica y experiencia profesional</h4>
+						
+						<div class="pbp-perfil-profesional-expand-text" data-lines="20" data-linesrsp="10">
+							<span>
+							<p>Mécico Cardiólogo recibido en UBA <br>
+								Master en blablablabla bla bla</p>
+							<p>Postgrado en la Universidad de Belgrano<br>
+								Mécico Cardiólogo recibido en UBA <br>
+								Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+								
+							<p>Postgrado en la Universidad de Belgrano<br>
+								Mécico Cardiólogo recibido en UBA <br>
+								Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+								
+								<p>Postgrado en la Universidad de Belgrano<br>
+									Mécico Cardiólogo recibido en UBA <br>
+									Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+								<p>Postgrado en la Universidad de Belgrano<br>
+									Mécico Cardiólogo recibido en UBA <br>
+									Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+								<p>Postgrado en la Universidad de Belgrano<br>
+									Mécico Cardiólogo recibido en UBA <br>
+									Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+								<p>Postgrado en la Universidad de Belgrano<br>
+									Mécico Cardiólogo recibido en UBA <br>
+									Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+								<p>Postgrado en la Universidad de Belgrano<br>
+									Mécico Cardiólogo recibido en UBA <br>
+									Master en blablablabla bla bla Mécico Cardiólogo recibido en UBA </p>
+							</span>
+						</div>
+							
+						
+						<h4>Miembro de Asociaciones Médicas</h4>
+
+							<div class="pbp-perfil-profesional-expand-text" data-lines="20" data-linesrsp="10">
+								<span>
+									<p>Actualmente, Terapeuta en despacho privado.</p>
+								</span>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="pbp-col">
+				<div id="mapa" class="pbp-map-card ">
+					<div class="google-maps">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:0"></iframe>
+					</div>
+					<!--			tooltip-->
+					<div class="map-info-profesional" style="top:42px; left:54px;">
+						<div class="map-tooltip-inner">
+							<div class="map-content">
+								<img src="imgs/temp/info-doctor.gif" alt="usuario" class="mCS_img_loaded">
+								<div class="tooltip-usr">
+									Lic. Laura Nicoletta
+									<span>Ginecólogo - Obstetra</span>
+								</div>
+								<div class="tooltip-address">
+									<i class="icon-doctorplus-map-plus-rounded"></i>
+									<p>
+										Av. Córdoba 3582 CABA <br>
+										en dos lineas
+									</p>
+									
+								</div>
+
+								
+							</div>
+							<span class="map-tooltip-arrow"></span>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="pbp-card">
+					<div class="pbp-card-inner">
+					<h3><i class="icon-doctorplus-maletin"></i> Servicios y tarifas</h3>
+					<div class="pbp-card-slide">
+						
+						<div class="okm-row">
+							<div class="pbp-tarifas-tipo">
+							<span class="pbp-tarifa-tipo-trigger">
+								<figure>
+									<i class="icon-doctorplus-estetoscopio"></i>
+								</figure>	
+							</span>
+								<span class="pbp-tarifa-tipo-trigger">
+									<figure>
+										<i class="icon-doctorplus-chat"></i>
+									</figure>	
+								</span>
+								<span class="pbp-tarifa-tipo-trigger">
+									<figure>
+										<i class="icon-doctorplus-video-call"></i>
+									</figure>	
+								</span>
+							</div>
+							
+						
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<div class="pbp-card">
+					<div class="pbp-card-inner">
+						<h3><i class="icon-doctorplus-pharmaceutics"></i> OS / Prepagas</h3>
+						<div class="pbp-card-slide">
+							<div class="pbp-prepagas-list">
+								<div class="pbp-prepagas-list-inner">
+									<ul>
+										<li>OSDE 45</li>
+										<li>OSDE 510</li>
+										<li>OSDE 410</li>
+										<li>OSDE 310</li>
+										<li>OSDE 310</li>
+										<li>OSDE 210</li>
+										<li>PSHB</li>
+										<li>Hospital Italiano</li>
+										<li>Osmecom</li>
+										<li>PSHB</li>
+										
+										<li>Hospital Italiano</li>
+										<li>OSDE 45</li>
+										<li>OSDE 510</li>
+										<li>OSDE 410</li>
+										<li>OSDE 310</li>
+										<li>OSDE 310</li>
+										<li>OSDE 210</li>
+										<li>PSHB</li>
+										<li>Hospital Italiano</li>
+										
+										<li>Hospital Italiano</li>
+										<li>OSDE 45</li>
+										<li>OSDE 510</li>
+										<li>OSDE 410</li>
+										<li>OSDE 310</li>
+										<li>OSDE 310</li>
+										<li>OSDE 210</li>
+										<li>PSHB</li>
+										<li>Hospital Italiano</li>
+									</ul>
+									
+								</div>
+								
+							</div>
+							
+						</div>
+						</div>
+					</div>
+					
+					
+				<div class="pbp-card">
+					<div class="pbp-card-inner">
+						<h3><i class="icon-doctorplus-chat-dialog"></i> Idiomas</h3>
+						<div class="pbp-card-slide">
+							<div class="pbp-card-language">
+								Español, portugués, francés
+							</div>
+						</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				
+			</div>
+		
+		</div>
+	
+	</section>
+	<a href="#" class="map-static-btn"><i class="icon-doctorplus-map-check"></i></a>
+
+
+	
+	<section class="banner-gestion-cobros">
+		<div class="okm-container">
+			<div class="okm-row">
+				<div class="banner-gestion-cobros-img-holder">
+					<div class="banner-gestion-cobros-card">
+						<figure>
+							<i class="icon-doctorplus-chat"></i>
+						</figure>
+						<div class="banner-gestion-cobros-content">
+							<div class="banner-gestion-cobros-shadow">
+								<div class="banner-gestion-cobros-inner">
+									<h3>¡Aumente su capacidad 
+										productiva!</h3>
+									<p>Controle y capitalice las consultas de 
+										sus pacientes fuera de su consultorio a 
+										través del servicio de Consulta Express.</p>
+								</div>
+							</div>
+
+							<div class="banner-gestion-cobros-footer">
+								<p>Ud. Atienda la consulta. <br>
+									DoctorPlus se encarga de gestionar su cobro.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>	
+
+
+
+
+	
+	
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Modal Privacidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Privacidad</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content">
+			<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+			<ul class="lista-checks">
+			<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+			<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+			<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+			</ul>
+
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>	
+
+
+<!-- Modal Configurar Tablero -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="configurar-tablero">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Configurar Tablero</h5></div>
+	</div>
+	<form action="">
+		<div class="form-content ">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+			    	<div class="panel-heading" role="tab" id="headingOne">
+			  			<span class="dp-arrow-down collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></span>
+			    		<label for="db-0" class="checkbox" ><input type="checkbox" checked id="db-0"> Datos biométricos</label>
+			    	</div>
+			    	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			    		 <div class="panel-body">
+				      		<label for="db-1" class="checkbox"><input type="checkbox" id="db-1">Peso y altura</label>
+				      		<label for="db-2" class="checkbox"><input type="checkbox" id="db-2">Presión arterial</label>
+				      		<label for="db-3" class="checkbox"><input type="checkbox" id="db-3">Colesterol</label>
+				      		<label for="db-5" class="checkbox"><input type="checkbox" id="db-5">Glucemia</label>
+				      		<label for="db-4" class="checkbox"><input type="checkbox" id="db-4">Misceláneas</label>
+				      	</div>
+				    </div>
+			    </div>
+				<div class="panel-heading">
+					<label for="ai-1" class="checkbox"><input type="checkbox" id="ai-1">Alergias e intolerancias</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ci-1" class="checkbox"><input type="checkbox" id="ci-1">Cirugías e intervenciones</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ep-1" class="checkbox"><input type="checkbox" id="ep-1">Enfermadades y Patologías </label>
+				</div>
+				<div class="panel-heading">
+					<label for="gi-1" class="checkbox"><input type="checkbox" id="gi-1">Ginecológicos &amp; Obstétricos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="me-1" class="checkbox"><input type="checkbox" id="me-1">Medicamentos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cd-1" class="checkbox"><input type="checkbox" id="cd-1">Cuidado Dental</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ca-1" class="checkbox"><input type="checkbox" id="ca-1">Cuidado Auditivo</label>
+				</div>
+				<div class="panel-heading">
+					<label for="cv-1" class="checkbox"><input type="checkbox" id="cv-1">Cuidado Visual</label>
+				</div>																												
+				<div class="panel-heading">
+					<label for="va-1" class="checkbox"><input type="checkbox" id="va-1">Vacunas</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ev-1" class="checkbox"><input type="checkbox" id="ev-1">Estilo de vida</label>
+				</div>	
+			</div>
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>
+
+	
+	<!-- Modal Paciente ENVIAR Mensaje - class: male/female id="pacientes-info-X" -->
+	<div class="modal fade pbp-modal-contacto" id="pacientes-info-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>		
+					<div class="form-content">
+						<div class="data">
+							<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+							<h3>Victoria Andrade</h3>
+							<div class="more-data pbp-modal-contacto-mensaje-ready">
+								<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+								<a href="javascript:;" class="dp-email pbp-modal-contacto-trigger"></a>
+							</div>
+							<div class="pbp-modal-contacto-mensaje-enviado">
+								¡Su mensaje ha sido enviado!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="js/scrollbars/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="js/scripts.js"></script>
+
+	<script>
+		
+		$(function(){
+
+			
+			// cambiar en send OK
+
+			$('.pbp-modal-contacto-trigger').on('click', function(e){
+				if($('.pbp-modal-contacto').is(':visible')){
+					$('.pbp-modal-contacto-mensaje-ready').hide();
+					$('.pbp-modal-contacto-mensaje-enviado').show();
+					console.log('pepe');
+				}
+			});
+			
+			
+			
+		$(':checkbox').radiocheck();
+			
+
+		
+			
+		
+
+			$('.pbn-turnos-slide-holder').on('init', function(slick){
+				//slickNext
+				$(this).siblings('.pbn-turnos-right-arrow').on('click', function(e){
+					e.preventDefault();
+					$(this).siblings('.pbn-turnos-slide-holder').slick('slickNext');
+
+				});
+
+				$(this).siblings('.pbn-turnos-left-arrow').on('click', function(e){
+					e.preventDefault();
+					$(this).siblings('.pbn-turnos-slide-holder').slick('slickPrev');
+
+				});
+
+
+
+			});
+
+			$('.pbn-turnos-slide-holder').slick({
+				dots: false,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				adaptiveHeight: false,
+				arrows:false
+			});
+
+		
+			$(".pbp-prepagas-list").mCustomScrollbar({
+				theme:"dark-3"
+			});
+			
+		});
+	</script>
+	
+</body>
+</html>

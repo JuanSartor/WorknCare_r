@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Conectados cuidamos mejor nuestra salud</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav class="hom-nav">
+		<div class="okm-container">
+			<div class="okm-row top-2-center-logo">
+				<div class="hom-nav-logo">
+					<a href="/">
+						<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus">
+					</a>
+				</div>
+				<div class="hom-nav-menu">
+					<a href="#" id="hom-nav-rsp-trg" class="hom-nav-burger"><i class="icon-doctorplus-burger"></i></a>
+					<ul id="hom-nav-rsp-get">
+						<li><a href="#">Crear una cuenta</a></li>
+						<li><a href="#" id="loginbtn">Iniciar sesión</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	
+	<!--Modales login	-->
+
+
+	<div class="modal fade usrlogin login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+				</div>
+				<div class="modal-body" id="login">
+					<h4 class="modal-title">Iniciar sesión</h4>
+					<form name="login">
+						<div class="login-form-row">
+							<input type="text" name="user" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+
+						</div>
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<div class="login-recordar">
+								<label class="checkbox">
+									<input type="checkbox" name="recordar" id="recordarme">
+									Recordarme
+								</label>
+							</div>
+							<div class="olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+
+					</form>
+					<div class="login-registro-row">
+						<span>¿No tenés una cuenta?</span>
+						<a href="#">Registrate</a>
+					</div>
+				</div>
+
+
+				<div class="modal-body" id="timeout">
+					<h4 class="modal-title-small">Para continuar confirma que eres</h4>
+					<span class="modal-user-name">Andrea</span>
+
+					<img src="imgs/temp/foto-perfil-110.jpg" class="modal-usr-picture" alt="usr"/>
+					<div class="modal-user-name-small">Andrea Sachse</div>
+					<div class="modal-user-mail">andrea@estudioasya.com</div>
+
+					<form name="login">
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						<div class="login-form-row">
+							<div class="olvide-pass timeout-olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="passrecovery">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+					<form name="pass-recovery">
+						<div class="login-form-row">
+							<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+						</div>
+						<div class="login-form-row">
+							<p>
+								Introduce la dirección de correo electrónico 
+								asociada a tu cuenta y te enviaremos un enlace 
+								para restablecer tu contraseña. 
+							</p>
+						</div>
+						<div class="login-form-row">
+
+							<input type="submit" id="sendpass" value="Enviar enlace"/>
+
+							<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+						</div>
+
+					</form>
+				</div>
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="recoverytext">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+
+					<div class="login-form-row">
+						<p>
+							Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+							Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+						</p>
+					</div>
+					<div class="login-form-row">
+						<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--timeout-->
+	
+
+	
+<div class="plogin-header">
+	<h1>Crear una cuenta como</h1>
+	<div class="okm-row hub-account-action-box">
+		<div class="hub-account-paciente-col">
+			<a href="#">Paciente</a>
+		</div>
+		<div class="hub-account-medico-col">
+			<a href="#">Profesional de la salud</a>
+		</div>
+	
+	</div>
+</div>
+	
+<div class="hub-account-already">
+	<div class="hub-account-already-box">
+		<div class="hub-account-already-row">
+			¿Ya tiene una cuenta? <a href="#">Iniciar sesión ahora</a> 
+		</div>
+		<div class="hub-account-already-row">
+			<a href="#">¿Olvidó su contraseña?</a>
+		</div>
+	</div>
+</div>
+
+	
+	<section class="plogin-beneficios-doctorplus">
+		<div class="okm-container">
+			<h4 class="hub-account-list-header">Los beneficios de cuidar su salud a través de DoctroPlus</h4>
+			<div class="okm-row hub-account-list-row">
+				<ul class="hub-account-list paciente">
+					<li class="hub-account-list-title"><h4>Si es paciente</h4></li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Recibí avisos de tus próximos turnos, 
+						controles y chequeos, recordatorios de vacunas y
+						consejos sobre vida saludable y bienestar.
+					</div>
+					
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Sacá un turno médico en solo tres pasos. Las 24 hs, todos los días.
+					</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Administrá la info de salud y la de tu familia en un solo lugar.
+					</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Conectate con tus médicos frecuentes estés dónde estés a través 
+						de una Video Consulta o Consulta Express.
+					</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						¡Optimizá tu tiempo y ya no esperes más! Solicitá  la atención de tus consultas a distancia a los Profesionales en la Red. Te atenderá el primer especialista que esté disponible.</div>
+				</li>
+			</ul>
+				<ul class="hub-account-list medico">
+					<li class="hub-account-list-title"><h4>Si es un profesional</h4></li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Su consultorio portátil a su alcance desde cualquier dispositivo (PC, tablet o celular)</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Gestione su agenda y ofrezca sus turnos médicos sin necesidad de secretaria las 24 hs,
+						todos los días.
+					</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						La Historia Clínica Digital de sus pacientes a su alcance en todo momento y lugar.
+					</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						¡Basta de responder consultas por Wspp, SMS o llamadas telefónicas! Capitalice sus consultas a distancia en un marco de legalidad que le permite dejar nota de sus registros médicos, consejos o prescripciones en el historial de consultas de sus pacientes.					</div>
+				</li>
+				<li>
+					<div class="hub-account-list-icon">
+						<i class="icon-doctorplus-check-thin"></i>
+					</div>
+					<div class="hub-account-list-item">
+						Comparta con otros colegas imágenes y
+						conclusiones y brinde una mejor atención a sus pacientes.
+					</div>
+				</li>
+					<li>
+						<div class="hub-account-list-icon">
+							<i class="icon-doctorplus-check-thin"></i>
+						</div>
+						<div class="hub-account-list-item">
+							Logre mayor productividad y nuevos pacientes atendiendo las consultas a distancia publicadas por todos los usuarios de DoctorPlus</div>
+					</li>
+			</ul>
+			</div>
+		</div>
+	</section>
+	
+
+	
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+	
+	
+
+	<!-- Modal Privacidad -->
+	<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"><h5>Privacidad</h5></div>
+					<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+				</div>
+				<form action="">
+					<div class="form-content">
+						<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+						<ul class="lista-checks">
+							<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+							<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+							<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+						</ul>
+
+					</div>
+					<div class="modal-btns">
+						<button>guardar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+	$('.switch-checkbox').bootstrapSwitch();
+});
+</script>		
+</body>
+</html>

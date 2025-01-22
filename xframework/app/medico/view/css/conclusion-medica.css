@@ -1,0 +1,130 @@
+.data-paciente{
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 0 #666;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.data-paciente label i {
+    font-size: 24px;
+    position: relative;
+    top: 4px;
+}
+.modal-perfil-completo-acreditacion .modal-body {
+    padding: 24px 30px;
+}
+
+.cobertura-paciente-row{
+    margin-bottom:10px;
+}
+.cobertura-paciente-row i{
+    font-size:18px;
+}
+.conclusion-row p.motivo-consulta {
+    background:#fff;
+    padding:10px 20px
+}
+.nueva-consulta .tab-buttons .nav-tabs li a {
+    display: block;
+    text-align: left;
+    padding: 20px;
+}
+.nueva-consulta .form-content {
+    background: #dcefeb;
+}
+.nueva-consulta .tab-buttons {
+    background: #edfaf8;
+}
+.nueva-consulta .tab-buttons .nav-tabs li.active a,.nueva-consulta .tab-buttons .nav-tabs li.active {
+    border: 0;
+    background: #dcefeb;
+    font-weight: 600;
+}
+.nueva-consulta .form-content .select2-container a {
+    background: #ffffff;
+}
+.nueva-consulta .button-container {
+    padding: 20px 0;
+    background: #edfaf8;
+}
+.nueva-consulta .tab-buttons .nav-tabs li a span:before {
+    font-size: 24px;
+    color: #415b70;
+    margin-right: 10px;
+}
+.nueva-consulta .form-content .guardar-btn {
+    background: #3BB1B7;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.nueva-consulta .check_delete button {
+    color:#e74c3c;
+}
+
+.nueva-consulta .form-content .date-holder {
+    width: 100% !important;
+}
+.table-nueva-consulta .table tbody tr td:first-child, .table-nueva-consulta .table tbody tr td:first-child img {
+    width: 30px;
+}
+.nueva-consulta table.table-striped>tbody>tr {
+    background: #fff;
+}
+
+.nueva-consulta .medicamentos-form .row {
+    margin-bottom:10px;
+}
+.nueva-consulta .form-content .date-holder.required,.nueva-consulta .form-content input.required {
+    border: solid 1px #e74c3c !important;
+}
+
+.pps-chat-content-chat-box {
+    background-color: #fff;
+    margin: 25px;
+    padding: 24px 16px;
+    padding-bottom: 25px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.consulta-container{
+    background: #dcefeb;
+}
+
+@media (max-width: 768px){
+    .nueva-consulta .tab-buttons .nav-tabs li small {
+        font-size: 12px;
+    }
+    .consulta-express-tittle-lnk {
+        display: inline-block;
+    }
+
+    .nueva-consulta .tab-buttons .nav-tabs li small {
+        font-size: 12px;
+        width: 100%;
+        display: block;
+    }
+    .nueva-consulta .tab-buttons .nav-tabs {
+        border: 0;
+        display: flex;
+        justify-content: space-between;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .nueva-consulta .tab-buttons .nav-tabs li {
+        width: auto;
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .nueva-consulta .tab-buttons .nav-tabs li a span:before {
+        margin-right: 0px;
+    }
+    .nueva-consulta .tab-buttons .nav-tabs li a {
+        display: block;
+        text-align: center;
+        padding: 5px; 
+    }
+}

@@ -1,0 +1,78 @@
+/* FORM WIZARD */
+#myWizard {
+}
+
+@green-1: #FFF;/*#68C39F;*/
+@darkblue-3:#FFF;
+
+.easyWizardSteps {
+	list-style: none;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border-bottom: 0px solid rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+	/*background: #21b797;*/
+	background: #0DC8A7;
+}
+
+.easyWizardSteps li {
+	font-size: 18px;
+	
+	display: inline-block;
+	padding: 10px 20px;
+	color: #eee;
+	border-right: 1px solid rgba(0,0,0,0.1);
+	margin-right: 0px;
+}
+
+.easyWizardSteps li:last-child{
+	border-right: 0px;
+}
+
+.easyWizardSteps li span {
+	font-size: 15px;
+	padding: 4px 10px;
+	border-radius: 50%;
+	margin-top: -5px;
+	color: #eee;
+	font-weight: 700;
+	margin-right: 5px;
+	border:2px solid #eee;
+}
+
+.easyWizardSteps li.current span {
+	border:2px solid @green-1;
+	color: @green-1;
+}
+
+.easyWizardSteps li.current {
+	color: @darkblue-3;
+	background: #0A9A81;
+}
+
+.easyWizardButtons {
+	overflow: hidden;
+	padding: 10px;
+}
+
+.easyWizardButtons button, .easyWizardButtons .submit {
+	cursor: pointer;
+}
+
+.easyWizardButtons .prev {
+	float: left;
+}
+
+.easyWizardButtons .next, .easyWizardButtons .submit {
+	float: right;
+}
+
+
+
+.intl-tel-input {
+	&.allow-dropdown	 {
+		width:100% !important;
+	}
+} 

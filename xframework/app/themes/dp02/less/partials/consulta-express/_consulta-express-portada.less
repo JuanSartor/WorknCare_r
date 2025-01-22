@@ -1,0 +1,367 @@
+//variables
+
+@verde-claro:#0ec2a1;
+@verde-agua:#60e2c9;
+
+@verde-turquesa:#00b0ad;
+
+@verde-medio:#27b898;
+@verde-oscuro:#159f85;
+
+@crema-claro:#f9f6ec;
+@crema-bajo:#f0eadf;
+
+@gris-alto:#eceff1;
+@gris-medio:#8b9fa8;
+
+@azul-oil:#34495e;
+
+.consulta-portada-top{
+	background: @verde-claro;
+}
+.consulta-portada-main-icon{
+	display: inline-block;
+	margin-right: 32px;
+	& > i{
+		font-size: 42px;
+		color: @white;
+		position: relative;
+		top: 4px;
+	}
+}
+.dropdown-portada{
+	top: 23px;
+	& > button{
+	background: @verde-agua !important;
+	.trans-all;
+	&:hover{
+		background: tint(@verde-agua,30%) !important;
+	}
+}
+	
+	@media(max-width:359px){
+		top: 0px;
+	}
+	
+}
+// icon big
+.consulta-portada-lg-icon{
+	font-size: 54px !important;
+}
+// slide
+.portada-item-1{
+	background: @crema-claro;
+	height: 480px !important;
+	position: relative;
+	&-inner{
+		max-width: 1200px;
+		height: 100%;
+		border-bottom: 12px @crema-bajo solid;
+		margin: 0 auto;
+		background: url(../imgs/consulta-express/portada/slide1/mobile.png) top left no-repeat;
+		background-position: bottom left;
+		background-position-y: bottom;
+		background-position-x: 15%;
+		
+		@media (max-width:@screen-sm){
+			background-position: 15% 138px;
+			background-position-y: 138px;
+			background-position-x: center;
+			background-size: 340px;
+		}
+		
+	}
+	&-card{
+		width: 440px;
+		padding: 24px;
+		position: absolute;
+		top: 76px;
+		right: 15%;
+		
+		& > h2{
+			color: @verde-turquesa;
+			font-size: 32px;
+			display: block;
+			text-align: center;
+			font-weight: 300;
+		}
+		& > p{
+			color: @oil;
+			font-size: 16px;
+			display: block;
+			text-align: center;
+			font-weight: 400;
+		}
+		& div.lnk-holder{
+			text-align: -webkit-center;
+			text-align: center;
+			padding-top: 24px;
+			& > a{
+				color: @azul-oil;
+				font-size: 16px;
+				font-weight: 400;
+				background: @crema-claro;
+				border: 1px @gris-medio solid;
+				padding: 8px 24px;
+				.trans-all;
+				
+				&:hover{
+					background: @crema-bajo;
+				}
+		}
+		}
+		
+		@media(max-width:@screen-md){
+			right: 0;
+			
+		
+		}
+		@media(max-width:@screen-sm){
+			.center-x;
+			top: -34px;
+			width: 100%;
+			padding: 0;
+			
+			& > h2{
+				padding-bottom: 0px;
+				padding-top: 24px;
+			}
+			& > p{
+				font-size: 14px;
+				line-height: 16px;
+				display: block;
+				max-width: 450px;
+				padding: 0 12px;
+				margin: 0 auto;
+				padding-bottom: 280px;
+				
+			}
+			& > div.lnk-holder{
+				border-top: 1px @gris-medio solid;
+				background: @crema-bajo;
+				height: 86px;
+			}
+		}
+		@media(max-width:@screen-xs){
+			& > div.lnk-holder{
+				padding-top: 14px;
+			}
+		}
+		@media(max-width:@screen-xxs){
+			& > h2{
+				padding-bottom: 0px;
+				padding-top: 24px;
+				font-size: 18px;
+			}
+			& > p{
+				font-size: 12px;
+				line-height: 16px;
+				padding-bottom: 280px;
+
+			}
+			& > div.lnk-holder{
+				border-top: 1px @gris-medio solid;
+				background: @crema-bajo;
+				height: 86px;
+			}
+		}
+		
+	}
+}
+.portada-item-2{
+	background: @gris-alto;
+	height: 480px !important;
+	&-inner{
+		max-width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		background: url(../imgs/consulta-express/portada/slide2/back.jpg) right top no-repeat;
+	}
+}
+.portada-item-2{
+	&-inner{
+		
+	}
+	&-card{
+		max-width: 500px;
+		padding: 24px;
+		padding-top: 62px;
+		
+		& > h2{
+			padding: 0;
+			margin: 0;
+			color: #512d37;
+			font-size: 32px;
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		& > p{
+			display: block;
+			padding-top: 32px;
+			text-align: center;
+			font-size: 18px;
+			color: #000;
+			font-weight: bold;
+			line-height: 20px;
+			
+			&.bajada{
+				color: #fbb03b;
+				padding-top: 0px;
+			}
+		}
+		& > .lnk-holder{
+			width: 100%;
+			position: relative;
+			padding-top: 24px;
+			& > a{
+				display: inline-block;
+				position: relative;
+				.center-x;
+				& > figure{
+					position: absolute;
+					.doCircle(64, px);
+					background: @verde-medio;
+					.center-x;
+					text-align: center;
+					& > i{
+						font-size: 42px;
+						color: @white;
+					}
+					.trans-all;
+				}
+				& > span{
+					font-size: 14px;
+					color: #000;
+				}
+				
+				&:hover{
+					& > figure{
+						background: @verde-oscuro;
+					}
+					& > span{
+						color: #000;
+					}
+				}
+			}
+			
+		}
+	//---
+	}
+	
+	
+	@media(max-width:@screen-md){
+		&-inner{
+			background-position-x: -324px;
+		}
+	}
+	@media(max-width:@screen-sm){
+		&-inner{
+			background-position-x: right;
+			background-size: 360px;
+			padding-top: 142px;
+		}
+		&-card{
+			width: 100%;
+			max-width: inherit;
+			padding: 24px;
+			background: @gris-alto;
+
+			& > h2{
+				padding: 0;
+				margin: 0;
+				color: #512d37;
+				font-size: 24px;
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			& > p{
+				display: block;
+				padding-top: 32px;
+				text-align: center;
+				font-size: 14px;
+				color: #000;
+				font-weight: bold;
+				line-height: 16px;
+
+				&.bajada{
+					color: #fbb03b;
+					padding-top: 0px;
+				}
+			}
+			& > .lnk-holder{
+				padding-top: 4px;
+			}
+		}
+		
+	}
+	@media(max-width:@screen-sm){
+		&-inner{
+			background-position-x: right;
+			background-size: 360px;
+			padding-top: 142px;
+		}
+		&-card{
+			width: 100%;
+			max-width: inherit;
+			padding: 24px;
+			background: @gris-alto;
+
+			& > h2{
+				padding: 0;
+				margin: 0;
+				color: #512d37;
+				font-size: 16px;
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			& > p{
+				display: block;
+				padding-top: 17px;
+				text-align: center;
+				font-size: 12px;
+				color: #000;
+				font-weight: bold;
+				line-height: 16px;
+
+				&.bajada{
+					color: #fbb03b;
+					padding-top: 0px;
+				}
+			}
+			& > .lnk-holder{
+				padding-top: 4px;
+			}
+		}
+
+	}
+}
+
+.consulta-portada-shadow{
+	background: url(../imgs/consulta-express/portada/consulta-express-portada-shadow.png) top center no-repeat;
+	background-position-y: -2px;
+	height: 70px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 12px;
+}
+
+
+@media(max-width:@screen-sm){
+	.consulta-portada{
+		bottom: -19px !important;
+	}
+}
+@media(max-width:@screen-xs){
+	.consulta-portada{
+		bottom: -19px !important;
+		
+		& > li, & >li.active{
+			width: 18px;
+			height: 18px;
+		}
+	}
+}

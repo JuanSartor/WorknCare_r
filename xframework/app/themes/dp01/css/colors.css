@@ -1,0 +1,137 @@
+/* CSS Document */
+
+/* FONDOS */
+.bggris {
+	background:#F7F7F7;
+}
+.bg_gris {
+	background:#F7F7F7;
+}
+
+.bg_gris_oscuro {
+	background:#EEE;
+}
+
+.bg_verde {
+	background:#60E2C9;
+}
+
+.bg_azul_miembro a {
+	color:#FFF !important;	
+}
+.bg_azul_miembro hr {
+	color:#FFF !important;	
+	background:#FFF;
+}
+.bg_azul_miembro {
+	color:#FFF !important;
+	background:#69AAAC !important;
+}
+
+.bar-rojo-right {
+	background:#FB5555;
+	color:#FFF;
+}
+
+.bar-verde {
+	background:#69AAAC;
+	color:#FFF;
+}
+
+.bar-semiverde {
+	background:#00A79D;
+	color:#FFF;
+}
+
+.color-azul-miembro {
+	color:#69AAAC;
+}
+
+.bg_azul {
+    background: none repeat scroll 0 0 #37474f;
+}
+
+.bg_azul_oscuro {
+	background-color:#415B70;
+}
+.color-azul-oscuro {
+	color:#415B70 !important;
+}
+a.color-azul-oscuro:hover, a.color-azul-oscuro {
+	color:#415B70 !important;
+	
+}
+
+/* COLORES */
+.color-gris {
+	color:#999 !important;	
+}
+.txt_rojo {
+	color:#F33243 !important;
+}
+.color_rojo {
+/*	color:#F33243 !important;*/
+	color:#E21313 !important;
+}
+.txt_azul_miembro {
+	color:#528989 !important;
+}
+
+.txt_azul_miembro_claro {
+	color:#69AAAC !important;
+}
+
+a.txt_gris_azul {
+	color:#485867 !important;
+}
+.color-gris-claro {
+	color:#C0C0C0;
+}
+.text-color-verde {
+	color:#0EC2A1;
+}
+.color-verde {
+	color:#1ABCA1
+}
+.color-amarillo{
+	color:#F7A901
+}
+.color-grisazulado{
+	color:#425B71
+}
+.color-verde-clarito {
+	color:#80BCBC
+}
+
+
+.color-turno-libre {
+	color:#099;
+}
+
+.color-turno-confirmado {
+	color:#1ABCA1;	
+}
+
+.color-turno-pendiente {
+	color:#F6A800;
+}
+
+/* FIXES */
+.table-striped.striped-green  > tbody > tr:nth-child(odd) > td,
+.table-striped.striped-green  > tbody > tr:nth-child(odd) > th {
+  background-color: #D9F4F1 !important;
+}
+.table.striped-green > thead > tr > th, .table.striped-green > tbody > tr > th, .table.striped-green > tfoot > tr > th, .table.striped-green > thead > tr > td, .table.striped-green > tbody > tr > td, .table.striped-green > tfoot > tr > td {
+	
+	border:none !important;
+	color:#46525E;
+}
+
+
+
+
+.btn-block.bar-semiverde:hover{
+	background:#39B7AC !important;
+}
+
+

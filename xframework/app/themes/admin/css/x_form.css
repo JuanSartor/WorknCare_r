@@ -1,0 +1,329 @@
+.xForm {
+    border:1px solid #D3D3D3;
+    border-radius: 3px;
+    padding:5px;
+    /*-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);*/
+    width: 98%;
+    background:#FFFFFF;
+}
+
+.gris{
+    background-color: #F4F4F4;
+    border-radius: 3px 3px 3px 3px !important;
+    width:360px;
+    height:32px;
+}
+
+.form_container .note {
+    font-size:10px;	
+}		
+/************/
+.xForm .left {
+    float:left;
+    width:360px;
+}
+.xForm .right {
+    float:left;
+    width:360px;
+}
+.xForm .wide{
+    float:left;
+    width:750px;
+}
+
+.xForm .left  input,  .right  input, .xForm .left select, .xForm .right select  {
+    width:203px;
+}
+
+.xForm .left  .lbl,  .xForm .right  .lbl {
+    width:203px;
+    display:inline-block;
+    font-size:12px;
+    color:#666;
+    line-height:16px;
+    padding-left:10px;
+    padding-top:5px;
+    border:1px solid #ccc;
+    border: 1px solid #E0E0E0;
+    border-radius: 0 3px 3px 0;
+    color: #777777;
+    font-family: 'Oxygen',sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    height: 18px;
+    outline: 0 none;
+
+}
+
+
+
+#cont_campos label{
+    width:250px !important;
+}
+
+
+#cont_campos input{
+
+    width:140px !important;
+}
+
+
+.xForm .lbl.red {
+
+    border: 1px solid #CC0000;
+}
+
+.xForm .wide  input{
+    width:577px;
+}
+
+.xForm .wide .lbl{
+    width:577px;
+    display:inline-block;
+    font-size:12px;
+    color:#666;
+    line-height:16px;
+    padding-left:10px;
+    padding-top:5px;
+    border:1px solid #ccc;
+    border: 1px solid #E0E0E0;
+    border-radius: 0 3px 3px 0;
+    color: #777777;
+    font-family: 'Oxygen',sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    height: 18px;
+    outline: 0 none;
+}
+
+
+.xForm .wide  textarea.uniform {
+    width:577px;
+}
+.xForm .left  textarea.uniform {
+    width:207px;
+}
+
+
+
+.xForm ul {
+    list-style: outside none;
+    padding: 0;
+    margin: 0;
+    width:750px;
+    margin-top:10px;
+}
+.xForm li {
+    margin-bottom:5px;
+    clear: none;
+    height:30px;
+    margin-right:10px;
+    list-style: outside none;
+}
+
+.xForm li.subtitle {
+    color:#666666;
+    font-size:13px;
+    font-weight:bold;
+}
+.xForm li.clear {
+    height:10px !important;
+    margin-top:3px !important;
+    margin-bottom:3px !important;
+}
+
+.xForm li.texarea {
+    clear: both;
+    height: auto;
+    margin-bottom: 15px;
+}
+.xForm label {
+    /*	background-color: #F4F4F4;
+        border-radius: 3px 0 0 3px;*/
+    clear: both;
+    display: inline-block;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 18px;
+    margin-bottom: 3px;
+    padding: 7px 0 0 10px;
+    text-transform: uppercase;
+    width: 130px;
+}
+
+.xForm label .um {
+    text-transform: none !important;		
+}
+
+/*label.radio {
+        background-color: #F4F4F4;
+        border-radius: 3px 3px 3px 3px;
+        clear: both;
+        float: left;
+        font-size: 10px;
+        font-weight: bold;
+        height: 23px;
+        margin-bottom: 3px;
+        padding: 12px 0 0 10px;
+        text-transform: uppercase;
+        width: 350px;
+}*/
+.xForm label.seleccion {
+    clear: none;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+    margin: 0 0 0 10px;
+    width: auto;
+    background:none;
+}
+
+.xForm .title {
+    background: url("../imgs/grilla_admin.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #EFEFEF;
+    border-radius: 4px 4px 4px 4px;
+    color: #394B55;
+    font-family: arial;
+    font-size: 18px;
+    height: 31px;
+    margin-top: 0;
+    padding: 5px 0 0 10px;
+}
+.xForm .title a{}
+.xForm .title a:hover{
+    color:#CCCCCC;
+}	
+
+.xForm .title img.info{
+    float:right;
+    margin-right:5px;
+}
+
+/**************************************************/
+._____HTML_BUTTON_____ {
+}
+.generic-button {
+    background: url("../imgs/bg_boton_a.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px 5px 2px 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 23px;
+    padding: 7px 10px 0 0;
+    position: relative;
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding-left:30px !important;
+}
+.volver{ 
+    background: url("../imgs/action_ico_arrow_left.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+
+    background-color:#86CBC7;
+}
+.guardar{
+    background: url("../imgs/action_ico_save.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+
+    background-color:#86CBC7;}
+
+.guardar_cerrar{
+    background-color:#86CBC7;
+    height: 23px;
+    margin-left: 0;
+}
+.nuevo{
+    background: url("../imgs/new_empty.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+
+    background-color:#86CBC7;}
+
+.cancelar{
+    background: url("../../taxforce/imgs/cancelar.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+    background-color:#86CBC7;}
+
+.restablecer{
+    background: url("../imgs/restablecer.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+
+    background-color:#86CBC7;}
+.buscar{
+    background: url("../imgs/buscar.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+
+    background-color:#86CBC7;}
+
+.agregar{
+    background: url("../imgs/agregar.png") no-repeat scroll left 5px center #FF6600;
+    height: 23px;
+    margin-left: 0;
+    background-color:#86CBC7;}
+.generic-button a {
+    font-weight: bold;
+    color: #ffffff;
+    cursor: default;
+}
+.generic-button:hover {
+    background-color:#A9DAD7;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.50);
+    color:#ffffff;
+
+}
+
+
+.title_bar .generic-button {
+    float: right;
+    margin-right: 5px;
+    margin-top: -5px;
+    padding-left:30px;
+}
+
+.subitem .remove_category {
+
+    color:#000000;
+    text-decoration:underline;
+    font-style:inherit;
+}
+
+.subitem {
+    padding-left:20px;
+    background:url(../imgs/ico_bullet.png) no-repeat 0px -2px;
+    font-size:11px;
+}
+
+#clientes_container {
+    height:auto !important;
+}
+
+#clientes_container li {
+    margin-bottom:5px !important;
+    margin-top:2px !important;
+    height:16px !important;
+    clear:both;
+}
+
+.xForm .left  input.datepicker ,  .right  input.datepicker , .xForm .left select.datepicker , .xForm .right select.datepicker   {
+    width:183px;
+}

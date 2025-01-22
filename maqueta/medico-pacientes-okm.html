@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="modal fade  modal-inside">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+			<div class="modal-body"></div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<div class="main-content">
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+	
+	<section class="filter-table-header patients">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-4 ">
+					<h1 class="section-header">Mis Pacientes</h1>
+				</div>
+				<div class="col-md-5 col-sm-8 icon-btns">
+					<a href="#" data-target="lista-pacientes" class="btn-slider dp-user">Mis Pacientes</a>
+					<a href="#" data-target="lista-sin-cargo" class="btn-slider dp-user-like">Pacientes sin cargo</a>
+					<a href="#" data-target="agregar-paciente" class="btn-slider dp-add-user">Agregar Paciente</a>						
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="search-combo">
+						<input type="text" class="form-control flat" placeholder="Buscar paciente" />
+						<button>f</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container agregar-paciente" id="agregar-paciente">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="form-content form-content-variante">
+					<h4 class="text-center dp-add-user">Agregar paciente</h4>
+					<br>
+					<p>Buscar un Paciente ya registrado en DoctorPlus</p>
+					<div class="row">
+						<div class="col-md-6">			
+							<div class="search">
+								<input type="text" class="form-control flat" placeholder="Escriba un nombre o correo" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<a href="javascript:;" data-target="datos-nuevo-paciente" class="btn-slider btn-primary btn btn-block">Paciente no registrado en DoctorPlus</a>
+						</div>
+					</div>
+					<div class="datos-nuevo-paciente">
+						<h4 class="dp-pacientes text-center">Datos del Paciente</h4>
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<p class="input-aux-container"><input type="text" placeholder="Nombre y apellido"><span class="input-required">*</span></p>
+								<p class="input-aux-container"><input type="text" placeholder="Fecha de nacimiento"><span class="input-required">*</span></p>
+								<div class="date-holder  input-aux-container">
+									<input placeholder="Fecha de nacimiento" type="text" id="datepicker">
+									<span class="input-required">*</span>
+								</div>
+								<p class="text-center">En caso de  menores de edad, ingresar los datos de contacto del adulto responsable.</p>
+								<p class="input-aux-container"><input type="text" placeholder="Email"><span class="input-required">*</span></p>
+								<p><input type="text" placeholder="Celular"></p>							
+								<p class="text-center"><small>El número debe ingresarse con el código de área sin el 0 ni el 15. <br> 	
+									Es decir, si para llamarlo marcan 0351+15+3101234 <br> deberá ingresar 3513101234.</small></p>
+							</div>
+						</div>
+						<br>
+						<a href="javascript:;" data-modal="yes" id="modal-400" class="btn-primary btn btn-submit role-button" role="button">Enviar invitación<i class="dpp-send"  ></i></a>
+
+						<div class="modal-edit-data hidden">
+							<div class="edit-data text-center enviar-invitacion">
+								<p>Se le ha enviado una invitación a</p>
+								<p><i class="dp-email"></i><a href="mailto:valeriamoresco@hotmail.com">valeriamoresco@hotmail.com</a></p>
+								<p><i class="dp-smartphone"></i> 15-5698-9985</p>
+							</div>
+							<a href="javascript:;" data-dismiss="modal" class="btn btn-inverse btn-block">cerrar</a>
+						</div>							
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /agregar pacientes -->		
+	<div id="lista-pacientes">
+	<section class="container lista-pacientes">
+		<article class="customer-box female w">			
+			<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Carla Moresco</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+					<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li><a href="javascript:;" class="dp-health-info">Perfil de Salud</a></li>
+					<li>
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>						
+					</li>
+					<li>
+						<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn dp-frequent-dr">Profesionales frecuentes</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Profesionales frecuentes: 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>
+					<li>
+						<a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+						<label class="checkbox medico-paciente-list-check">
+							<input type="checkbox" value="" data-toggle="checkbox">
+							Consulta Express sin cargo
+						</label>
+					
+					</li>
+				</ul>						
+			</div>
+		</article>
+
+		
+		
+		<article class="customer-box male w">
+			<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juan Manuel Menoyo</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+					<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p>
+				</div>
+			</div>
+			</a>
+			<div class="customer-options">
+				<ul>
+					<li><a href="javascript:;" class="dp-health-info">Perfil de Salud</a></li>
+					<li>&nbsp;</li>
+					<li>
+						<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn dp-frequent-dr">Profesionales frecuentes</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Profesionales frecuentes: 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>					
+					<li><a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+						<label class="checkbox medico-paciente-list-check">
+							<input type="checkbox" value="" checked="checked" data-toggle="checkbox">
+							Consulta Express sin cargo
+						</label>
+					</li>
+				</ul>						
+			</div>
+		</article>
+
+		<article class="customer-box female w">
+			<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Julieta Andrade</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+					<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li><a href="javascript:;" class="dp-health-info">Perfil de Salud</a></li>
+					<li>
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>						
+					</li>
+					<li>
+						<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn dp-frequent-dr">Profesionales frecuentes</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Profesionales frecuentes: 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>					
+					<li><a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+						<label class="checkbox medico-paciente-list-check">
+							<input type="checkbox" value="" checked="checked" data-toggle="checkbox">
+							Consulta Express sin cargo
+						</label>
+					</li>
+				</ul>						
+			</div>
+		</article>				
+
+		<article class="customer-box solicitud-enviada w">
+			<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juana Moresco</h3>
+				<div class="more-data">
+					<p><br> Pendiente de confirmación</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li class="long-list">Solicitud enviada el 13 May 2016 a carla.moresco@yahoo.com</li>
+					<li><a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+						<label class="checkbox medico-paciente-list-check">
+							<input type="checkbox" value="" checked="checked" data-toggle="checkbox">
+							Consulta Express sin cargo
+						</label>
+					</li>
+				</ul>						
+			</div>
+		</article>		
+
+		<div class="paginas">
+			<span>de 1 al 10 / 200</span>
+			<a href=""><span class="fui-arrow-left"></span></a>
+			<a href=""><span class="fui-arrow-right"></span></a>
+		</div>				
+	</section>
+	<!-- /listado mis pacientes -->
+
+	<!-- pacientes en Doctor Plus -->
+	<section class="container lista-pacientes-full">
+		<h2 class="dp-pacientes">Pacientes en Doctor plus</h2>
+
+		<article class="customer-box female w">
+			<div class="data">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Carla Moresco</h3>
+				<div class="more-data">
+					<br>
+					<p>FN 13/03/1973</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li class="long-list">
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>
+					<li><a href="javascript:;" class="btn btn-inverse">Agregar a mis pacientes</a></li>
+				</ul>						
+			</div>
+		</article>
+
+		<article class="customer-box male w">
+			<div class="data">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juan Manuel Menoyo</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li class="long-list">
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>
+					<li><a href="javascript:;" class="btn btn-inverse">Agregar a mis pacientes</a></li>
+				</ul>						
+			</div>
+		</article>
+
+		<article class="customer-box female w">
+			<div class="data">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Julieta Andrade</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li class="long-list">
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>
+					<li><a href="javascript:;" class="btn btn-inverse">Agregar a mis pacientes</a></li>
+				</ul>						
+			</div>
+		</article>				
+
+		<article class="customer-box solicitud-enviada w">
+			<div class="data">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juana Moresco</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li class="long-list">
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>
+					<li><a href="javascript:;" class="btn btn-inverse">Agregar a mis pacientes</a></li>
+				</ul>						
+			</div>
+		</article>				
+	</section>
+	<!-- /pacientes en DoctorPlus-->
+
+</div>
+	
+	<section class="container lista-pacientes" id="lista-sin-cargo">
+		<div id="pacientesSinCargo" class="pacientes-sin-cargo">
+			<div class="pacientes-sin-cargo-disclaimer">
+				<div class="close-box">
+					<a href="#" id="pacientesSinCargoClose"><i class="icon-doctorplus-cruz"></i></a>
+				</div>
+				<h3>Recuerde que por tener Cuenta Profesional ud. puede bonificar sus servicios de Consultas Express de hasta cincuenta pacientes. </h3>
+
+				<div class="pacientes-sin-cargo-disclaimer-text" id="codigoEtica">
+					<h4>Código de Ética para el Equipo de Salud</h4>
+					<p>
+						Art. 314. - La atención gratuita debe limitarse a los casos de parentesco cercano, amistad íntima, asistencia entre colegas y pobreza manifiesta.
+					<br>
+						En esta última situación no es falta de ética negarse a la asistencia enforma privada, si existiera en la localidad un servicio asistencial público, y que la posibilidad del acceso al mismo sea oportuna.
+					</p>
+					<p>
+						Art. 316. - Las consultas por carta, correo electrónico o algún otro método a desarrollar, que  generan  la  opinión  y toma  de  decisiones  del  profesional,  deben  considerarse como atención en consultorio y dan derecho al cobro de honorarios.
+					</p>
+					<span>Fuente: Asociación Médica Argentina </span>
+				</div>
+			</div>
+			<div class="pacientes-sin-cargo-disclaimer-footer">
+				<div class="okm-row">
+					<div class="colx2">
+						<a href="#" id="codigoEticaShow">¿Qué dice el Código de Ética Médica al respecto?</a>
+						<a href="#" id="codigoEticaHide">Ocultar</a>
+					</div>
+					<div class="colx2">
+						<label class="checkbox pacientes-sin-cargo-disclaimer-check">
+							<input type="checkbox" value="" data-toggle="checkbox">
+							No ver más este mensaje
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="pacientes-sin-cargo-num">
+			Pacientes con servicio bonificado 10 de 50
+		</div>
+		
+		<article class="customer-box female w">			
+			<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Carla Moresco</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+					<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p>
+				</div>
+			</div>
+			<div class="customer-options">
+				<ul>
+					<li><a href="javascript:;" class="dp-health-info">Perfil de Salud</a></li>
+					<li>
+						<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Pacientes relacionados: 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>						
+					</li>
+					<li>
+						<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn dp-frequent-dr">Profesionales frecuentes</a>
+						<div class="tooltip top fade in">
+							<div class="tooltip-arrow"></div>
+							<div class="tooltip-inner">
+								Profesionales frecuentes: 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Pepe Grillo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Juan Menoyo</a> 
+								<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Carla Moresco</a>
+							</div>							
+						</div>							
+					</li>
+					<li>
+						<a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+						<label class="checkbox medico-paciente-list-check">
+							<input type="checkbox" value="" data-toggle="checkbox">
+							Consulta Express sin cargo
+						</label>
+
+					</li>
+				</ul>						
+			</div>
+		</article>
+
+
+
+		<article class="customer-box male w">
+			<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juan Manuel Menoyo</h3>
+				<div class="more-data">
+					<p>FN 13/03/1973</p>
+					<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p>
+				</div>
+			</div>
+			</a>
+		<div class="customer-options">
+			<ul>
+				<li><a href="javascript:;" class="dp-health-info">Perfil de Salud</a></li>
+				<li>&nbsp;</li>
+				<li>
+					<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn dp-frequent-dr">Profesionales frecuentes</a>
+					<div class="tooltip top fade in">
+						<div class="tooltip-arrow"></div>
+						<div class="tooltip-inner">
+							Profesionales frecuentes: 
+							<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Pepe Grillo</a> 
+							<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Juan Menoyo</a> 
+							<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Carla Moresco</a>
+						</div>							
+					</div>							
+				</li>					
+				<li><a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+					<label class="checkbox medico-paciente-list-check">
+						<input type="checkbox" value="" checked="checked" data-toggle="checkbox">
+						Consulta Express sin cargo
+					</label>
+				</li>
+			</ul>						
+		</div>
+		</article>
+
+	<article class="customer-box female w">
+		<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+			<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+			<h3>Julieta Andrade</h3>
+			<div class="more-data">
+				<p>FN 13/03/1973</p>
+				<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p>
+			</div>
+		</div>
+		<div class="customer-options">
+			<ul>
+				<li><a href="javascript:;" class="dp-health-info">Perfil de Salud</a></li>
+				<li>
+					<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn dp-pacientes-rel">Carolina Etchague es un paciente relacionado</a>
+					<div class="tooltip top fade in">
+						<div class="tooltip-arrow"></div>
+						<div class="tooltip-inner">
+							Pacientes relacionados: 
+							<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Pepe Grillo</a> 
+							<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Juan Menoyo</a> 
+							<a href="javascript:;" data-target="pacientes-relacionados" role="button" class="modal-btn">Carla Moresco</a>
+						</div>							
+					</div>						
+				</li>
+				<li>
+					<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn dp-frequent-dr">Profesionales frecuentes</a>
+					<div class="tooltip top fade in">
+						<div class="tooltip-arrow"></div>
+						<div class="tooltip-inner">
+							Profesionales frecuentes: 
+							<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Pepe Grillo</a> 
+							<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Juan Menoyo</a> 
+							<a href="javascript:;" data-target="profesionales-frecuentes" role="button" class="modal-btn">Carla Moresco</a>
+						</div>							
+					</div>							
+				</li>					
+				<li><a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+					<label class="checkbox medico-paciente-list-check">
+						<input type="checkbox" value="" checked="checked" data-toggle="checkbox">
+						Consulta Express sin cargo
+					</label>
+				</li>
+			</ul>						
+		</div>
+	</article>				
+
+	<article class="customer-box solicitud-enviada w">
+		<div class="data modal-btn" data-target="pacientes-info-1" role="button">
+			<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+			<h3>Juana Moresco</h3>
+			<div class="more-data">
+				<p><br> Pendiente de confirmación</p>
+			</div>
+		</div>
+		<div class="customer-options">
+			<ul>
+				<li class="long-list">Solicitud enviada el 13 May 2016 a carla.moresco@yahoo.com</li>
+				<li><a href="javascript:;" class="btn btn-inverse"> Eliminar de mis pacientes</a>
+					<label class="checkbox medico-paciente-list-check">
+						<input type="checkbox" value="" checked="checked" data-toggle="checkbox">
+						Consulta Express sin cargo
+					</label>
+				</li>
+			</ul>						
+		</div>
+	</article>		
+	<div class="pacientes-sin-cargo-actions">
+		<a href="#" class="btn-light-sqare">Ver más</a>
+	</div>
+	
+	
+	</section>
+	
+	
+	
+	
+	
+	
+
+<div class="sin-registros">
+	<i class="dp-pacientes dp-icon"></i>
+	<h6>¡La sección está vacía!</h6>
+	<p>Ud no tiene <strong>Pacientes</strong>.</p>
+</div>	
+<div class="sin-registros">
+	<i class="dp-pacientes dp-icon"></i>
+	<h6>¡La sección está vacía!</h6>
+	<p>Ud no tiene <strong>Pacientes</strong> relacionados.</p>
+</div>	
+
+
+</div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Modal Pacientes Relacionados -->
+<div class="modal fade modal-type-2" id="pacientes-relacionados">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Pacientes relacionados</h5></div>
+		<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+	</div>
+	<div class="modal-body">
+		<div class="form-content">
+		<ul>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juan Manuel Menoyo</h3>
+				<p>FN 13/03/1973</p>
+				<span class="pacientes-relacionados-modal-solicitud">Solicitud enviada</span>
+				<a href="javascript:;" class="dp-user"></a>
+			</li>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Carla Perez</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-add-user"></a>
+			</li>			
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Manuel Menoyo</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-add-user"></a>
+			</li>		
+								<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juan Manuel Menoyo</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-user"></a>
+			</li>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Carla Perez</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-add-user"></a>
+			</li>			
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Manuel Menoyo</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-user"></a>
+			</li>	
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Juan Manuel Menoyo</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-add-user"></a>
+			</li>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Carla Perez</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-add-user"></a>
+			</li>			
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Manuel Menoyo</h3>
+				<p>FN 13/03/1973</p>
+				<a href="javascript:;" class="dp-add-user"></a>
+			</li>				
+		</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>	
+
+<!-- Modal Profesionales frecuentes -->
+<div class="modal fade modal-type-2" id="profesionales-frecuentes">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Profesionales frecuentes</h5></div>
+		<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+	</div>
+	<div class="modal-body">
+		<div class="form-content medico-pacientes-modal">
+		<ul>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dr. Smith</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>
+			</li>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dra. House</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>				
+			</li>			
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dr. Perez</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>				
+			</li>		
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dr. Smith</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>				
+			</li>
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dra. House</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>				
+			</li>			
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dr. Perez</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>				
+			</li>	
+			<li>
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Dr. Smith</h3>
+				<p><strong>Pediatra</strong> <span>Especialista en: Medicina del Deporte, Ortopedia y Traumatología Pediátrica, Medicina del Deporte, Ortopedia y Traumatología Pediátrica...</span></p>
+				<a href="javascript:;" class="dp-email"></a>
+				<div class="enviar-mje">
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+				</div>				
+			</li>
+		</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Modal Paciente ENVIAR Mensaje - class: male/female id="pacientes-info-X" -->
+<div class="modal fade male" id="pacientes-info-1">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-body">
+		<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>		
+		<div class="form-content">
+			<div class="data">
+				<img class="img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+				<h3>Victoria Andrade</h3>
+				<div class="more-data">
+				<!-- 	
+					<p>FN 13/03/1973</p>
+					<p class="tel"><i class="fa fa-phone"></i> 011 4308-4300</p> 
+				-->
+					<textarea name="" id="" class="form-control flat" placeholder="Mensaje"></textarea>
+					<a href="javascript:;" class="dp-email modal-paciente-contacto-sbmt"></a>
+				</div>
+				<div class="modal-paciente-msg-sbmt">
+					<p>¡Su mensaje al paciente <br>
+						ha sido enviado!</p>
+				</div>
+			</div>
+			
+			
+<!--			script.js linea 1919-->
+			
+		</div>
+	</div>
+</div>
+</div>
+</div>	
+
+  
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+$(function() {
+	$( "#datepicker" ).datepicker({
+	  showOn: "button",
+	  buttonImage: "imgs/icons/icon-calendar.svg",
+	  buttonImageOnly: true,
+	  buttonText: "Select date"
+	});
+	
+	$(':checkbox').radiocheck();
+});
+</script>
+</body>
+</html>

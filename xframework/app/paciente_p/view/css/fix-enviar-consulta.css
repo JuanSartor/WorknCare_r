@@ -1,0 +1,160 @@
+.cs-ca-chat-holder .chat-line-holder>.chat-content>figure>p {
+    font-size: 16px !important;
+}
+
+.chat-msg-holder-btn-holder .file-trigger,.chat-msg-holder-btn-holder .chat-mic-rec{
+    display: block;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #415b70;
+    color: #f2f2f2;
+    float: left;
+    overflow: hidden;
+    top: -4px !important;
+    transition: all .2s ease-out;
+}
+.chat-msg-holder-btn-holder .file-trigger i.icon-doctorplus-camera{
+    position: relative;
+    top: 2px !important;
+    left: -1px !important;
+}
+.chat-msg-holder-btn-holder i.icon-doctorplus-stop:before  {
+    content: "\e92b";
+    position: relative;
+    top: 7px;
+    left: 11px;
+}
+.chat-msg-holder-btn-holder  i.icon-doctorplus-microphone:before {
+    content: "\e920";
+    position: relative;
+    top: 7px;
+    left: 11px;
+}
+
+.chat-msg-input-holder textarea::placeholder{
+    color:#415b70;
+}
+.chat-content-attach a,  .chat-content-attach i{
+    font-size:16px !important;
+}
+
+/*Ajustes header buscador profesionales*/
+.cs-nc-p2-header {
+    padding-bottom: 0px;
+    padding-top: 16px;
+    text-align: center;
+}
+
+.cs-nc-p2-header>figure {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+}
+.cs-nc-p2-header>figure>i {
+
+    font-size: 18px;
+}
+.cs-nc-p2-header>h2 {
+    display: inline;
+    font-size: 18px;
+}
+.ce-nc-main-nav{
+    min-height: 50px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+}
+@media(min-width:600px){
+    .cs-nc-p2-header>figure {
+        display: inline-block;
+    }
+
+}
+/*Ajustes solicitar consulta - prefesional seleccionado -setp 1*/
+.cv-nc-consulta-medico-icon {
+    text-align: center;
+}
+.ce-nc-consulta-paciente-content {
+    min-height: 60px;
+}
+.cv-nc-consulta-medico-icon>figure>i.icon-doctorplus-user-add-like,
+.cv-nc-consulta-medico-icon>figure>i.icon-doctorplus-people-add {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    left: 1px; 
+    line-height: 1;
+}
+.ce-nc-consulta-paciente-holder {
+    clear: both;
+    margin-top: 12px;
+}
+.cv-nc-consulta-medico-icon>figure {
+    display:inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 0px auto 0;
+
+}
+.cv-nc-consulta-medico-icon>span {
+    font-size:18px;
+    display:inline-block;
+    margin-left: 8px;
+}
+.ce-nc-p4-usr .ce-nc-p4-arrow-divider:after {
+    top: 80px;
+}
+
+@media (max-width: 600px){
+    .cv-nc-consulta-medico-icon>span {
+        font-size: 14px;
+    }
+
+
+    .ce-nc-consulta-paciente-content>p {
+        font-size: 14px;
+        line-height: 16px;
+        padding-bottom: 0px;
+    }
+}
+
+/*Fix step botones solicitud consulta*/
+.ce-nc-p3-monto-btns-holder{
+    text-align: center;
+}
+.ce-nc-p3-monto-btns-holder button{
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 12px;
+
+}
+/*Fix banner alerta reintegro*/
+.ce-nc-p3-disclaimer{
+    margin-top:24px;
+    margin-bottom:0px;
+}
+/*Fix banner alerta reintegro*/
+.ce-nc-p3-disclaimer{
+    margin-top:24px;
+    margin-bottom:0px;
+}
+/*Fix header confirar pago*/
+.ce-nc-p3-header>figure {
+    display: inline-block;
+}
+.ce-nc-p3-header .ce-nc-p3-title {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/*Fix saldo insuficiente*/
+.ce-nc-p3-monto-holder>.ce-nc-p3-monto>p.saldo-insuficiente-lbl{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.ce-nc-p3-monto-holder>.ce-nc-p3-monto>p.saldo-insuficiente-qty{
+    margin-bottom: 0px;
+    padding-top: 6px;
+
+}

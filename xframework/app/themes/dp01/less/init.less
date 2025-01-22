@@ -1,0 +1,525 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "doctorplusicons";
+  src:url("../fonts/doctorplus/doctorplusicons.eot");
+  src:url("../fonts/doctorplus/doctorplusicons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/doctorplus/doctorplusicons.woff") format("woff"),
+    url("../../fonts/doctorplus/doctorplusicons.ttf") format("truetype"),
+    url("../fonts/doctorplus/doctorplusicons.svg#doctorplusicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: "doctorplus";
+  src:url("../fonts/doctorplus/doctorplusicons.eot");
+  src:url("../fonts/doctorplus/doctorplusicons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/doctorplus/doctorplusicons.woff") format("woff"),
+    url("../../fonts/doctorplus/doctorplusicons.ttf") format("truetype"),
+    url("../fonts/doctorplus/doctorplusicons.svg#doctorplusicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@grey-10: #d0d0d0;
+@grey-15: #efefef;
+@grey-20: #f7f7f7;
+@grey-30: #90a4ae;
+@greey: #78909c;
+@oil: #415b70;
+@red-10:;
+@red-20:;
+@red-30: #fb5555;
+@red-40:;
+@red-50: #f33243;
+@red-60:;
+@red-70:;
+@red-80:;
+@red-90:;
+@red-100:;
+@pale-green: #dff4f1;
+@turquoise-base: #4cd2b9;
+@turquoise-10: #16a086;
+@turquoise-20: #69aaac;
+@turquoise-30: #80bcbc;
+@turquoise-40: #16a085;
+@turquoise-50: #31a592;
+@turquoise-60: #48c9b0;
+@white: #fff;
+
+@doctorplus: 'doctorplus';
+@fa: 'fontawesome';
+@fui-glyph: 'Flat-UI-Icons';
+
+
+.icon(@font-size: 16px, @color: @white, @font-family: @doctorplus) {
+  color: @color;
+  font-family: @font-family;
+  font-size: @font-size;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+[class^=dp-]:before {
+  .icon;
+}
+h2{
+  & [class^=dp-]:before {
+  .icon(30px);
+  }
+}
+.dp-agenda:before {
+  content: 'b';
+}
+.dp-add-user:before {
+  content: 'c';
+}
+.dp-add-pin:before {
+  content: 'W';
+}
+.dp-alarm:before {
+  content: 'd';
+}
+.dp-attention:before {
+  color: #f33243!important;
+  content: '$';
+}
+.dp-available:before {
+  color: @oil!important;
+  content: '\"';
+}
+.dp-branch:before {
+  content: 'p';
+}
+.dp-billing:before {
+  content: '1';
+}
+.dp-branch-consult:before {
+  content: 'n';
+}
+.dp-canceled:before {
+  color: #af142e!important;
+  content: '%';
+}
+.dp-cart:before {
+  content: 'y';
+}
+.dp-confirmed:before {
+  content: '&';
+  color: #1abca1!important;
+}
+.dp-day:before {
+  content: 's';
+}
+.dp-declined:before {
+  color: #06a9ef!important;
+  content: '\'';
+}
+.dp-dismiss:before {
+  content: 'h';
+}
+.dp-edit:before {
+  content: 't';
+}
+.dp-email:before {
+  content: "L";
+}
+.dp-express:before {
+  content: 'l';
+}
+.dp-file:before {
+  content: 'r';
+}
+.dp-flag:before {
+  content: '';
+  background: url('../imgs/icons/flag.svg') no-repeat center center;
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+}
+.dp-frequent-dr:before {
+  content: 'Y';
+}
+.dp-grid:before {
+  content: '';
+  background: url('../imgs/icons/grid.svg') no-repeat center center;
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+}
+.dp-health-info:before {
+  content: 'F';
+}
+.dp-home-consult:before {
+  content: 'k';
+}
+.dp-info:before {
+  content: 'q';
+}
+.dp-lock:before {
+  content: '2';
+}
+.dp-lock.svg:before {
+  content: '';
+  background: url('../imgs/icons/lock.svg') no-repeat center center;
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+}
+.dp-month:before {
+  content: 'M';
+}
+.dp-next:before {
+  content: 'R';
+}
+.dp-plus:before {
+  content: ',';
+}
+.dp-pin:before {
+  content: 'V';
+}
+.dp-prev:before {
+  content: 'Q';
+}
+.dp-pending:before {
+  color: #f6a800!important;
+  content: ')';
+}
+.dp-print:before {
+  content: 'C';
+}
+.dp-search:before {
+  content: 'f';
+}
+.dp-smartphone:before {
+  content: 'g';
+}
+.dp-sms:before {
+  content: '6';
+}
+.dp-stats:before {
+  content: 'w';
+}
+.dp-support:before {
+  content: 'j';
+}
+.dp-time:before {
+  content: 'B';
+}
+.dp-trash:before {
+  content: '9';
+}
+.dp-user:before {
+  content: 'N';
+}
+.dp-user-dr:before {
+  content: 'K';
+}
+.dp-video:before {
+  content: '-';
+}
+.dp-vcard:before {
+  content: '*';
+}
+.dp-week:before {
+  content: '3';
+}
+
+.button(@background-color: @grey-30, @font-size: 16px, @color: @white, @padding: 5px 30px) {
+  background-color: @background-color;
+  color: @color;
+  font-size: @font-size;
+  padding: @padding;
+  transition: all 200ms;
+  &:hover {
+    background-color: lighten(@background-color, 5%);
+  }
+}
+
+[data-icon]:before {
+  font-family: "doctorplusicons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "doctorplusicons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dp-24hs:before {
+  content: "a";
+}
+.icon-dp-agenda:before {
+  content: "b";
+}
+.icon-dp-agregar-miembro:before {
+  content: "c";
+}
+.icon-dp-alertas:before {
+  content: "d";
+}
+.icon-dp-analisis:before {
+  content: "e";
+}
+.icon-dp-buscar:before {
+  content: "f";
+}
+.icon-dp-celular:before {
+  content: "g";
+}
+.icon-dp-cerrar:before {
+  content: "h";
+}
+.icon-dp-comunidad-medica:before {
+  content: "i";
+}
+.icon-dp-configuracion:before {
+  content: "j";
+}
+.icon-dp-consulta-domicilio:before {
+  content: "k";
+}
+.icon-dp-consulta-express:before {
+  content: "l";
+}
+.icon-dp-consulta-secretaria:before {
+  content: "m";
+}
+.icon-dp-consultaenconsultorio:before {
+  content: "n";
+}
+.icon-dp-consultamedica:before {
+  content: "o";
+}
+.icon-dp-consultorio:before {
+  content: "p";
+}
+.icon-dp-cuenta-medico:before {
+  content: "q";
+}
+.icon-dp-cuenta-paciente:before {
+  content: "r";
+}
+.icon-dp-dia:before {
+  content: "s";
+}
+.icon-dp-edit:before {
+  content: "t";
+}
+.icon-dp-editar-miembro:before {
+  content: "u";
+}
+.icon-dp-editar-perfil:before {
+  content: "v";
+}
+.icon-dp-estadisticas:before {
+  content: "w";
+}
+.icon-dp-estrella:before {
+  content: "x";
+}
+.icon-dp-farmacia:before {
+  content: "y";
+}
+.icon-dp-guardia:before {
+  content: "z";
+}
+.icon-dp-home:before {
+  content: "A";
+}
+.icon-dp-horarios:before {
+  content: "B";
+}
+.icon-dp-imprimir:before {
+  content: "C";
+}
+.icon-dp-info:before {
+  content: "D";
+}
+.icon-dp-info2:before {
+  content: "E";
+}
+.icon-dp-info-salud:before {
+  content: "F";
+}
+.icon-dp-laboratorios:before {
+  content: "G";
+}
+.icon-dp-logo:before {
+  content: "H";
+}
+.icon-dp-logout:before {
+  content: "I";
+}
+.icon-dp-medicina:before {
+  content: "J";
+}
+.icon-dp-medico:before {
+  content: "K";
+}
+.icon-dp-mensaje:before {
+  content: "L";
+}
+.icon-dp-mes:before {
+  content: "M";
+}
+.icon-dp-miembro:before {
+  content: "N";
+}
+.icon-dp-miembros:before {
+  content: "O";
+}
+.icon-dp-nav-down:before {
+  content: "P";
+}
+.icon-dp-nav-left:before {
+  content: "Q";
+}
+.icon-dp-nav-right:before {
+  content: "R";
+}
+.icon-dp-nav-top:before {
+  content: "S";
+}
+.icon-dp-opticas:before {
+  content: "T";
+}
+.icon-dp-pacientes:before {
+  content: "U";
+}
+.icon-dp-pines:before {
+  content: "V";
+}
+.icon-dp-pines-cargar:before {
+  content: "W";
+}
+.icon-dp-pointer:before {
+  content: "X";
+}
+.icon-dp-profesionales-frecuente:before {
+  content: "Y";
+}
+.icon-dp-profesionales-frecuente-agregar:before {
+  content: "Z";
+}
+.icon-dp-receta:before {
+  content: "0";
+}
+.icon-dp-resumen-cuenta:before {
+  content: "1";
+}
+.icon-dp-seguridad:before {
+  content: "2";
+}
+.icon-dp-semana:before {
+  content: "3";
+}
+.icon-dp-sexo-mujer:before {
+  content: "4";
+}
+.icon-dp-sexo-varon:before {
+  content: "5";
+}
+.icon-dp-sms:before {
+  content: "6";
+}
+.icon-dp-tilda:before {
+  content: "7";
+}
+.icon-dp-tilda2:before {
+  content: "8";
+}
+.icon-dp-trash:before {
+  content: "9";
+}
+.icon-dp-turno-confirmado:before {
+  content: "!";
+}
+.icon-dp-turno-sacar:before {
+  content: "\"";
+}
+.icon-dp-turno-telefono:before {
+  content: "#";
+}
+.icon-dp-turnoausente:before {
+  content: "$";
+}
+.icon-dp-turnocancelado:before {
+  content: "%";
+}
+.icon-dp-turnoconfirmado:before {
+  content: "&";
+}
+.icon-dp-turnodeclinado:before {
+  content: "'";
+}
+.icon-dp-turnoes-telefonicos:before {
+  content: "(";
+}
+.icon-dp-turnopendiente:before {
+  content: ")";
+}
+.icon-dp-turnos:before {
+  content: "*";
+}
+.icon-dp-ubicacionmapa:before {
+  content: "+";
+}
+.icon-dp-ver-mas:before {
+  content: ",";
+}
+.icon-dp-videoconsulta:before {
+  content: "-";
+}
+.icon-icon-dp-turnoes-telefonicos:before {
+  content: ".";
+}
+
+
+
+a.btn {
+  &:hover {
+    text-decoration: none !important; 
+  }
+}
+a.btn-block {
+  &:hover {
+    text-decoration: none !important; 
+  }
+}
+
+a.home:hover, a.logout:hover {
+  text-decoration: none !important;   
+}
+a.home, a.logout{
+    margin-top: 4px !important;
+}
+
+.bggris a {
+  color:#415b70 !important
+}

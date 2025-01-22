@@ -1,0 +1,430 @@
+@font-face {
+	font-family: 'doctorplus';
+	src: url('../fonts/doctorplus/doctorplusicons.eot') format('embedded-opentype'),
+	url('../fonts/doctorplus/doctorplusicons.woff') format('woff'),
+	url('../fonts/doctorplus/doctorplusicons.svg') format('svg'),
+	url('../fonts/doctorplus/doctorplusicons.truetype') format('truetype');
+}
+@font-face {
+	font-family: 'Flat-UI-Icons';
+	src: url('../fonts/glyphicons/flat-ui-icons-regular.eot') format('embedded-opentype'),
+	url('../fonts/glyphicons/flat-ui-icons-regular.woff') format('woff'),
+	url('../fonts/glyphicons/flat-ui-icons-regular.svg') format('svg'),
+	url('../fonts/glyphicons/flat-ui-icons-regular.truetype') format('truetype');
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome/fontawesome-webfont.eot') format('embedded-opentype'),
+	url('../fonts/fontawesome/fontawesome-webfont.otf') format('embedded-opentype'),
+	url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+	url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'doctorplus-plus';
+    src:    url('../fonts/doctorplus-plus/doctorplus-plus.eot?jhug7b');
+    src:    url('../fonts/doctorplus-plus/doctorplus-plus.eot?jhug7b#iefix') format('embedded-opentype'),
+        url('../fonts/doctorplus-plus/doctorplus-plus.ttf?jhug7b') format('truetype'),
+        url('../fonts/doctorplus-plus/doctorplus-plus.woff?jhug7b') format('woff'),
+        url('../fonts/doctorplus-plus/doctorplus-plus.svg?jhug7b#doctorplus-plus') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="dpp-"], [class*=" dpp-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'doctorplus-plus' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dpp-folder:before {
+    content: "\e004";
+}
+.dpp-gear:before {
+    content: "\e005";
+}
+.dpp-arrow-back:before {
+    content: "\e006";
+}
+.dpp-arrow-next:before {
+    content: "\e007";
+}
+.dpp-send:before {
+	content: "\e010";
+}
+.dpp-alergia:before {
+    content: "\e008";
+}
+.dpp-turnos:before {
+    content: "\e001";
+}
+.dpp-chequeos:before {
+    content: "\e002";
+}
+.dpp-consulta:before {
+    content: "\e003";
+}
+.dpp-dental:before {
+    content: "\e009";
+}
+.dpp-dna:before {
+    content: "\e00a";
+}
+.dpp-express:before {
+    content: "\e00b";
+}
+.dpp-ginecologia:before {
+    content: "\e00c";
+}
+.dpp-images:before {
+    content: "\e00d";
+}
+.dpp-sonrisa:before {
+    content: "\e00e";
+}
+.dpp-medicina:before {
+    content: "\e00f";
+}
+.dpp-patologia:before {
+    content: "\e011";
+}
+.dpp-cirugia:before {
+    content: "\e000";
+}
+.dpp-vacuna:before {
+    content: "\e012";
+}
+.dpp-renovar-receta:before {
+    content: "\e013";
+}
+.dpp-flag:before {
+    content: "\e014";
+}
+.dpp-grid:before {
+    content: "\e015";
+}
+.dpp-calendario:before {
+    content: "\e016";
+}
+.dpp-ojo:before {
+    content: "\e017";
+}
+.dpp-reload:before {
+    content: "\e018";
+}
+.dpp-share:before {
+    content: "\e019";
+}
+.dpp-lock:before {
+    content: "\e01a";
+}
+.dpp-male:before {
+    content: "\e01b";
+}
+.dpp-female:before {
+    content: "\e01c";
+}
+.dpp-info:before {
+    content: "\e01d";
+}
+.dpp-oido:before {
+    content: "\e01e";
+}
+
+
+
+
+
+//@import url('//fonts.googleapis.com/css?family=Lato:300,300italic, 400,700');
+
+
+@black: #000;
+@grey-10: #d0d0d0;
+@grey-15: #efefef;
+@grey-16: #f2f2f2;
+@grey-19: #f6f6f6;
+@grey-20: #f7f7f7;
+@grey-21: #f9f9f9;
+@grey-25: #eceff1;
+@grey-30: #90a4ae;
+@grey-50: #ccc;
+@grey-70: #747579;
+@grey-80: #3a3d43;
+@greey: #78909c;
+@oil: #415b70;
+@oil-dark: #455a64;
+@oil-80: #455a64;
+@red-10:;
+@red-20: #fce1db;
+@red-30: #fb5555;
+@red-40:#cd3845;
+@red-50: #f33243;
+@red-60:#f99b9b;
+@red-70:#e74c3c;
+@red-80:;
+@red-90:;
+@red-100:;
+@pale-green: #dff4f1;
+@turquoise-base: #24cea6;
+@turquoise-02: #edf7f6;
+@turquoise-05: #edfaf8;
+@turquoise-10: #16a086;
+@turquoise-20: #69aaac;
+@turquoise-30: #80bcbc;
+@turquoise-40: #e4f1f4;
+@turquoise-50: #31a592;
+@turquoise-60: #48c9b0;
+@green:#1ABC9C;
+@light-blue:#31a6de;
+@white: #fff;
+
+@doctorplus: 'doctorplus';
+@fa: 'FontAwesome';
+@fui-glyph: 'Flat-UI-Icons';
+
+
+
+@cell: ~"screen and (max-width: @{screen-sm})";
+
+
+// setteo fijo de rem
+
+
+
+.icon-dp-24hs:before {
+  content: "a";
+}
+.icon-dp-agenda:before {
+  content: "b";
+}
+.icon-dp-agregar-miembro:before {
+  content: "c";
+}
+.icon-dp-alertas:before {
+  content: "d";
+}
+.icon-dp-analisis:before {
+  content: "e";
+}
+.icon-dp-buscar:before {
+  content: "f";
+}
+.icon-dp-celular:before {
+  content: "g";
+}
+.icon-dp-cerrar:before {
+  content: "h";
+}
+.icon-dp-comunidad-medica:before {
+  content: "i";
+}
+.icon-dp-configuracion:before {
+  content: "j";
+}
+.icon-dp-consulta-domicilio:before {
+  content: "k";
+}
+.icon-dp-consulta-express:before {
+  content: "l";
+}
+.icon-dp-consulta-secretaria:before {
+  content: "m";
+}
+.icon-dp-consultaenconsultorio:before {
+  content: "n";
+}
+.icon-dp-consultamedica:before {
+  content: "o";
+}
+.icon-dp-consultorio:before {
+  content: "p";
+}
+.icon-dp-cuenta-medico:before {
+  content: "q";
+}
+.icon-dp-cuenta-paciente:before {
+  content: "r";
+}
+.icon-dp-dia:before {
+  content: "s";
+}
+.icon-dp-edit:before {
+  content: "t";
+}
+.icon-dp-editar-miembro:before {
+  content: "u";
+}
+.icon-dp-editar-perfil:before {
+  content: "v";
+}
+.icon-dp-estadisticas:before {
+  content: "w";
+}
+.icon-dp-estrella:before {
+  content: "x";
+}
+.icon-dp-farmacia:before {
+  content: "y";
+}
+.icon-dp-guardia:before {
+  content: "z";
+}
+.icon-dp-home:before {
+  content: "A";
+}
+.icon-dp-horarios:before {
+  content: "B";
+}
+.icon-dp-imprimir:before {
+  content: "C";
+}
+.icon-dp-info:before {
+  content: "D";
+}
+.icon-dp-info2:before {
+  content: "E";
+}
+.icon-dp-info-salud:before {
+  content: "F";
+}
+.icon-dp-laboratorios:before {
+  content: "G";
+}
+.icon-dp-logo:before {
+  content: "H";
+}
+.icon-dp-logout:before {
+  content: "I";
+}
+.icon-dp-medicina:before {
+  content: "J";
+}
+.icon-dp-medico:before {
+  content: "K";
+}
+.icon-dp-mensaje:before {
+  content: "L";
+}
+.icon-dp-mes:before {
+  content: "M";
+}
+.icon-dp-miembro:before {
+  content: "N";
+}
+.icon-dp-miembros:before {
+  content: "O";
+}
+.icon-dp-nav-down:before {
+  content: "P";
+}
+.icon-dp-nav-left:before {
+  content: "Q";
+}
+.icon-dp-nav-right:before {
+  content: "R";
+}
+.icon-dp-nav-top:before {
+  content: "S";
+}
+.icon-dp-opticas:before {
+  content: "T";
+}
+.icon-dp-pacientes:before {
+  content: "U";
+}
+.icon-dp-pines:before {
+  content: "V";
+}
+.icon-dp-pines-cargar:before {
+  content: "W";
+}
+.icon-dp-pointer:before {
+  content: "X";
+}
+.icon-dp-profesionales-frecuente:before {
+  content: "Y";
+}
+.icon-dp-profesionales-frecuente-agregar:before {
+  content: "Z";
+}
+.icon-dp-receta:before {
+  content: "0";
+}
+.icon-dp-resumen-cuenta:before {
+  content: "1";
+}
+.icon-dp-seguridad:before {
+  content: "2";
+}
+.icon-dp-semana:before {
+  content: "3";
+}
+.icon-dp-sexo-mujer:before {
+  content: "4";
+}
+.icon-dp-sexo-varon:before {
+  content: "5";
+}
+.icon-dp-sms:before {
+  content: "6";
+}
+.icon-dp-tilda:before {
+  content: "7";
+}
+.icon-dp-tilda2:before {
+  content: "8";
+}
+.icon-dp-trash:before {
+  content: "9";
+}
+.icon-dp-turno-confirmado:before {
+  content: "!";
+}
+.icon-dp-turno-sacar:before {
+  content: "\"";
+}
+.icon-dp-turno-telefono:before {
+  content: "#";
+}
+.icon-dp-turnoausente:before {
+  content: "$";
+}
+.icon-dp-turnocancelado:before {
+  content: "%";
+}
+.icon-dp-turnoconfirmado:before {
+  content: "&";
+}
+.icon-dp-turnodeclinado:before {
+  content: "'";
+}
+.icon-dp-turnoes-telefonicos:before {
+  content: "(";
+}
+.icon-dp-turnopendiente:before {
+  content: ")";
+}
+.icon-dp-turnos:before {
+  content: "*";
+}
+.icon-dp-ubicacionmapa:before {
+  content: "+";
+}
+.icon-dp-ver-mas:before {
+  content: ",";
+}
+.icon-dp-videoconsulta:before {
+  content: "-";
+}
+.icon-icon-dp-turnoes-telefonicos:before {
+  content: ".";
+}

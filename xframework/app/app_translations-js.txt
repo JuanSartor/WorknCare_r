@@ -1,0 +1,2 @@
+/var/www/html/xframework/app/xadmin/view/templates/traduccion/traduccion_list.js:    colNames: [' ', x_translate("Original"), x_translate("Traducción"), x_translate("Tipo"), x_translate("Descripción")],
+/var/www/html/xframework/app/xadmin/view/templates/traduccion/traduccion_list.js:    caption: x_translate("Traducciones"),

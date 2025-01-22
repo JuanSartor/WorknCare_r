@@ -1,0 +1,752 @@
+ul{
+	padding:0;
+	margin:0;
+}
+
+li{
+	list-style:none;
+}
+
+sub,
+sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+color:#999999;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+
+.separador{
+margin:40px 0;
+border-bottom:1px #C0C0C0 solid;
+clear:both;
+width:100%;
+float:left;
+}
+
+#usuario_logueado .def_perfil a{
+	color:#fff;
+	border-radius:100%; 
+	width:182px; 
+	height:182px;
+	padding:10%;
+}
+	
+#usuario_logueado .def_perfil a:hover{
+	background:#00a79d;
+}
+	
+#usuario_logueado .def_perfil a span{
+	width:71px;	 
+	height:67px;
+	display:block;
+	margin:0 auto 20px;
+	background:url(../imgs/icons_def_perfil.png);
+}
+	
+#usuario_logueado .def_perfil > div > div:nth-child(2) a span{
+	background-position:-192px 0; 
+}
+	
+#usuario_logueado .def_perfil > div > div:nth-child(3) a span{
+	background-position:-392px 0; 
+}
+	
+#usuario_logueado .def_perfil > div > div:nth-child(4) a span{
+	background-position:-565px 0; 
+}
+	
+#usuario_logueado .def_perfil .estado{
+	border-radius:50%;
+	height:52px;
+	width:52px;
+	margin:33px auto 0;
+	line-height:52px;
+	background:#00A79D;
+	color:#fff;
+}
+	
+#usuario_logueado .venta_ser > div{
+	height:325px;
+	padding:0;
+	display:inline-block;
+}
+	
+#usuario_logueado .venta_ser > div > div{
+	padding:53px 0 0;
+}
+	
+#usuario_logueado .venta_ser > div h2{
+	font-size:24px;
+	color:#F33243;
+	margin:0 0 53px;
+}
+	
+#usuario_logueado .venta_ser > div > div img{
+	float:left;
+	margin:0 32px 32px 0;
+}
+	
+#usuario_logueado .venta_ser > div p{
+	font-size:18px;
+	color:#415B70;
+}
+	
+#usuario_logueado .venta_ser > div li{
+	display:block;
+	line-height:25px;
+	font-size:18px;
+	color:#415B70;
+	background:url(../imgs/tilde_verde.png) 0 center no-repeat;
+	padding:0 0 0 30px;
+}
+	
+#usuario_logueado .tipo_cuentas thead th{
+	color:#2C3E50;
+	font-size:24px;
+	line-height:42px;
+	font-weight:normal;
+}
+
+#usuario_logueado .tipo_cuentas thead th span{
+	color:#2C3E50;
+	display:block;
+	font-size:24px;
+}
+
+#usuario_logueado .tipo_cuentas thead th span{
+	color:#fff;
+	font-size:18px;
+	background:#F33243;
+	display:block;
+	text-align:center;
+}
+
+#usuario_logueado .tipo_cuentas tbody tr td:nth-child(n+2){
+	color:#F33243;
+	font-size:14px;
+	text-align:center;
+}
+
+#usuario_logueado .tipo_cuentas tfoot{
+	color:#fff;
+	font-size:12px;
+	background:#F33243;
+}
+
+#usuario_logueado .tipo_cuentas tfoot td{
+	vertical-align: middle;
+	min-height:40px;
+	border:none;
+}
+
+#usuario_logueado .tipo_cuentas tfoot span{
+	display:block;
+	text-align:center;
+	font-size:18px;		
+}
+
+#usuario_logueado .tipo_cuentas tfoot a{
+	color:#fff;
+	display:block;
+	text-align:center;
+	line-height:40px;
+	font-size:12px;
+	border-top:1px #fff solid;
+}
+
+#usuario_logueado .txt-tfoot{
+}
+
+#usuario_logueado .txt-tfoot p{
+	color:#999999;
+	font-size:12px;
+}
+
+.bg_green {
+background: #49c9b0;
+}
+
+.globe.green{
+color: #FFF;
+background: #00a79d !important;
+display: inline-block;
+width: 60px;
+height: 60px;
+line-height: 60px;
+text-align: center;
+}
+
+#paciente_logueado .datos-perfil{
+	background:#F7F7F7;
+	overflow:hidden;
+}
+
+#paciente_logueado .datos p{
+	font-size:12px;
+}
+
+#paciente_logueado .datos .campo{
+	line-height:50px;
+	background:#fff;
+	padding:10px;
+	margin:5px 0;
+	font-size:18px;
+	color:#415B70;
+	border-bottom:1px #fff solid;
+	position:relative;
+}
+
+#paciente_logueado .datos .campo span{
+	float:right;
+	display:none;
+}
+
+#paciente_logueado .datos .campo span a{
+	color:#47C2C0;
+}
+
+#paciente_logueado .datos .campo:hover{
+	-webkit-box-shadow: -4px -3px 0px 0px rgba(201, 242, 238, 0.75);
+	-moz-box-shadow:    -4px -3px 0px 0px rgba(201, 242, 238, 0.75);
+	box-shadow:         -4px -3px 0px 0px rgba(201, 242, 238, 0.75);
+}
+
+#paciente_logueado .datos .campo:hover span{
+	display: block;
+}
+
+#paciente_logueado .datos .campo:hover::after{
+	position:absolute;
+	content:"";
+	display:block;
+	width:100%;
+	bottom:-5px;
+	left:0;
+	border-bottom:1px #69AAAC solid;
+}
+
+#paciente_logueado .datos  input{
+	display:none;
+}
+
+#paciente_logueado .upload-foto{
+	width:139px;
+	height:103px;
+	display:block;
+	background:#fff;
+	border:thin dashed #69AAAC;
+	float:right;
+}
+
+#paciente_logueado .upload-foto span{
+	color:#47C2C0;
+	display:block;
+	clear:both;
+	text-align:center;
+	font-size:14px;
+	text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
+}
+
+#paciente_logueado .nueva-pass p{
+	font-size:18px;
+	line-height:71px;
+}
+
+#paciente_logueado .nueva-pass .datos > div{
+}
+
+/* medico_logueado_perfil */
+
+
+
+.medico .nav-tabs a.active,
+.medico .nav-tabs a:hover{
+	color:#37474F;
+	border-bottom:5px #37474F solid;
+	background:none;
+	height:76px;
+}
+
+.medico .nav-tabs a{
+	color:#90A4AE;
+	font-size:18px;
+}
+
+.medico .title-tabs{
+	padding:20px 40px;
+}
+
+.medico .title-tabs h3{
+	color:#fff;
+	margin:0;
+}
+
+#medico_logueado_perfil .tab{
+}
+
+#medico_logueado_perfil .inf-profesional .foto input{
+	border:1px #69AAAC solid;
+	height:60px;
+	width:98%;
+	font-size:18px;
+	padding: 0 0 0 2%;
+	font-weight:normal;
+}
+
+#medico_logueado_perfil .inf-profesional .foto p{
+	font-size:11px;
+}
+
+#medico_logueado_perfil .inf-profesional .areas p{
+	font-size:18px;
+	color:#37474F;
+}
+
+#medico_logueado_perfil .datos-consultorio .row-consultorio{
+	overflow:hidden;
+}
+
+#medico_logueado_perfil .datos-consultorio .row-consultorio + .row-consultorio{
+	border-top:1px #2E363A solid;
+}
+
+#medico_logueado_perfil .datos-consultorio li{
+	line-height:92px;
+	font-size:18px;
+}
+
+#medico_logueado_perfil .datos-consultorio li a{
+	color:#58595B !important;
+}
+
+#medico_logueado_perfil .datos-consultorio li:nth-child(1){
+	font-size:24px;
+}
+
+#medico_logueado_perfil .datos-consultorio li:nth-child(1) span{
+	color:#16A086 !important;
+}
+
+#medico_logueado_perfil .datos-tarifa{
+	background:#F0F0F0;
+	overflow:hidden;
+}
+
+#medico_logueado_perfil .datos-tarifa ul{
+	overflow:hidden;
+	margin:10px 0;
+} 
+
+#medico_logueado_perfil .datos-tarifa li{
+	font-size:14px;
+	padding:10px 0;
+}
+
+#medico_logueado_perfil .datos-tarifa ul + ul{
+	border-top:1px #898989 solid;
+}
+
+#medico_logueado_perfil .datos-tarifa li:nth-child(4){
+	font-size:11px;
+}
+
+#medico_logueado_perfil .datos-tarifa li .icon{
+	font-size:24px;
+	color:#80BCBC;
+}
+
+#medico_logueado_perfil .datos-tarifa input{
+	width:90%;
+	background:#F6F6F6;
+	border-radius:7px;
+	border:1px #8A8989 solid;
+	height:27px;
+}
+
+#medico_logueado_perfil .operaciones ul{
+	text-align:center;
+}
+
+#medico_logueado_perfil .operaciones li{
+	display:inline-block;
+}
+
+#medico_logueado_perfil .operaciones li + li{
+	margin:0 0 0 20px;
+}
+
+#medico_logueado_perfil .operaciones a{
+	background:#80BCBC;
+}
+
+#medico_logueado_perfil .datos-cobertura .poner-sacar li{
+	display:block;
+	width:28px;
+	height:28px;
+	background:#00A79D;
+	margin:0 0 20px;
+}
+
+#medico_logueado_perfil .datos-cobertura .poner-sacar li a{
+	display:block;
+	background: url(../imgs/poner-sacar.png) 0 center no-repeat;
+	width:7px;
+	margin:auto;
+	height:28px;
+}
+
+#medico_logueado_perfil .datos-cobertura .cober{
+	overflow:hidden;
+}
+
+#medico_logueado_perfil textarea{
+	background:#F6F6F6;
+	width:100%;
+	height:150px;
+}
+
+/* medico_turno_detalle */
+
+#medico_turno_detalle .cont-datos{
+	background:#F6F6F6;
+	overflow:hidden;
+	padding:20px;
+}
+
+#medico_turno_detalle .cont-datos .anterior,
+#medico_turno_detalle .cont-datos .siguiente{
+	text-align:center;
+	display:block;
+	font-size:14px;
+	color:#2E363A;
+}
+
+#medico_turno_detalle .cont-datos .nombre{
+	font-size:20px;
+	color:#2E363A;
+	text-align:center;
+}
+
+#medico_turno_detalle .cont-datos > div{
+	position:relative;
+}
+
+#medico_turno_detalle .cont-datos div:nth-child(2)::before{
+	position:absolute;
+	width:1px;
+	height:100%;
+	content:"";
+	left:0;
+	top:0;
+	background:#C0C0C0;
+}
+
+#medico_turno_detalle .table td{
+	border:none;
+}
+
+#medico_turno_detalle textarea{
+	background:#fff;
+	border:1px #8A8989 solid;
+	width:100%;
+	height:124px;
+}
+
+#medico_turno_detalle .fecha-hora{
+	font-size:18px;
+	color:#E21313;
+	text-align:center;
+	line-height:40px;
+	padding:0;
+}
+
+#medico_turno_detalle .estado{
+	background:#0EC2A1;
+	padding:2% 6%;
+	margin:0 0 20px;
+}
+
+#medico_turno_detalle .estado p{
+	color:#fff;
+	font-size:18px;
+	margin:0;
+}
+
+#medico_turno_detalle .estado span{
+	float:right;
+}
+
+#medico_turno_detalle .numero-turno{
+	margin:0 0 20px;
+}
+
+#medico_turno_detalle .tipo-visita{
+	border:1px #898989 solid;
+	text-align:center;
+	padding:4%;
+}
+
+#medico_turno_detalle .separador{
+	height:1px;
+	margin:20px 0;
+	background:#000;
+}
+
+#medico_turno_detalle .editar-estado button{
+	background:#C0C0C0;
+}
+
+#medico_turno_detalle .lista-estados{
+	margin:20px 0 0;
+	padding:2%;
+	border:1px #ccc solid;
+}
+
+#medico_turno_detalle .lista-estados li{
+	display:block;
+	padding:20px 0 0;
+	line-height:25px;
+}
+
+#medico_turno_detalle .lista-estados li span{
+	font-size:24px;
+	float:left;
+	margin:0 10px 0 0;
+}
+
+#medico_turno_detalle .lista-estados li:nth-child(1) span{
+	color:#1ABCA1;
+}
+
+#medico_turno_detalle .lista-estados li:nth-child(2) span{
+	color:#F6A800;
+}
+
+#medico_turno_detalle .lista-estados li:nth-child(3) span{
+	color:#AF142E;
+}
+
+#medico_turno_detalle .lista-estados li:nth-child(4) span{
+	color:#F33243;
+}
+
+#medico_turno_detalle .lista-estados li:nth-child(5) span{
+	color:#06A9EF;
+}
+
+#medico_agenda_semana .tabla-semana tbody{
+	background:#F7F7F7;
+}
+
+#medico_agenda_semana .tabla-semana td{
+	padding:0 0 0 8px;
+	position: relative;
+	width:14.28%;
+}
+
+#medico_agenda_semana .tabla-semana td div{
+	background:#F9EFC5;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:40px;
+	padding:2% 4%;
+	position:relative;
+}
+
+#medico_agenda_semana .tabla-semana td > span{
+	position:absolute;
+	left:0;
+	top:0;
+	width:8px;
+	height:100%;
+	display:block;
+}
+
+#medico_agenda_semana .tabla-semana .libre{
+	background:#DFF4F1;
+}
+
+#medico_agenda_semana .e0{
+	background:;
+}
+
+#medico_agenda_semana .e1{
+	background:#1ABCA1;
+}
+
+#medico_agenda_semana .e2{
+	background:#F26D7D;
+}
+
+#medico_agenda_semana .e3{
+	background:#F6A800;
+}
+
+#medico_agenda_semana .e4{
+	background:#5BDDC4;
+}
+
+#medico_agenda_semana .e5{
+	background:#84D3EF;
+}
+
+#medico_agenda_semana .e6{
+	background:#F26D7D;
+}
+
+#medico_agenda_semana .dias{
+	background:#5FD6CA;
+	height:70px;
+}
+
+#medico_agenda_semana .dias th{
+	position: relative;
+	width: 14.28%;
+	padding:0 0 0 8px;
+	text-align:center;
+	height:70px;
+	padding:0 0 10px;
+	border:none;
+	font-size:14px;
+	font-weight:normal;
+	color:#fff;
+}
+
+#medico_agenda_semana .agenda{
+	background:#5FD6CA;
+	height:70px;
+}
+
+#medico_agenda_semana .agenda .menu{
+	border-left:1px #31A592 solid;
+	width:30px;
+	height:50px;
+	display:block;
+	margin:10px 0 0;
+}
+
+#medico_agenda_semana .agenda .menu span{
+	clear:both;
+	float:right;
+	width:8px;
+	margin:5px 0;
+	height:6px;
+	display:block;
+	background:#90E9E3;
+}
+
+#medico_agenda_semana .agenda .mas-icons li{
+	display:inline-block;
+}
+
+#medico_agenda_semana .pagi-dias{
+	background:#DFF4F1;
+	height:65px;
+}
+
+#medico_agenda_semana .pagi-dias ul{
+	text-align:center;
+	padding:0;
+}
+
+#medico_agenda_semana .pagi-dias li{
+	display:inline-block;
+	padding:0 10px;
+	font-size:18px;
+	width:33%;
+	color:#546E7A;
+	line-height:65px;
+}
+
+#medico_agenda_semana .pagi-dias li span{
+	font-size:32px;
+}
+
+#medico_agenda_semana .detalle-estado{
+	background:#DFF4F1;
+	position:relative;
+	height:47px;
+}
+
+#medico_agenda_semana .detalle-estado > div{
+	position:relative;
+}
+
+#medico_agenda_semana .detalle-estado > div > div{
+	border-radius:100%;
+	width:70px;
+	height:70px;
+	background:#415B70;
+	display:block;
+	position:absolute;
+	left:0;
+	top:-23px;
+	padding:10px 0 0;
+	text-align:center;
+}
+
+#medico_agenda_semana .detalle-estado > div > div span{
+	font-size: 36px;
+	color:#90E9E3;
+}
+
+#medico_agenda_semana .detalle-estado ul{
+	text-align:center;
+	padding:0;
+}
+
+#medico_agenda_semana .detalle-estado li{
+	display:inline-block;
+	padding:0 10px;
+	font-size:12px;
+	color:#546E7A;
+	line-height:18px;
+}
+
+#medico_agenda_semana .detalle-estado li span{
+	font-size:18px;
+	float:left;
+	margin:0 10px 0 0;
+}
+
+#medico_agenda_semana .tabla-diaria td{
+	background:#F9EFC5;
+}
+
+#medico_agenda_semana .tabla-diaria .libre td{
+	background: #DFF4F1;
+	text-align:right;
+	padding:0 20px 0 0;
+	width:50%;
+	line-height:87px;
+	font-size:18px;
+}
+
+#medico_agenda_semana .tabla-diaria .libre td + td{
+	text-align:left;
+	padding:0 0 0 20px;
+}
+
+#medico_agenda_semana .tabla-diaria tr{
+	margin:0 0 2px;
+}
+
+#medico_agenda_semana .tabla-diaria .disponible td{
+	background: none;
+}
+
+#medico_agenda_semana .tabla-diaria td:nth-child(4){
+	font-size:22px;
+}
+
+#medico_agenda_semana .tabla-diaria span[class="icon-dp-turnoconfirmado"]{
+	color:#1ABCA1 !important;
+}
+

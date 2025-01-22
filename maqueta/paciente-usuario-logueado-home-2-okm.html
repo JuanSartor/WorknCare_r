@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Buscador PRofesional</title>       
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>    
+ 
+        
+	<nav class="paciente-nav">
+		<div class="container paciente-nav-container">
+			<div class="paciente-nav-usr">
+				<a href="#" class="paciente-nav-trigger">
+					<i class="icon-doctorplus-burger"></i>
+					<img src="imgs/extranet/yannis.png" alt="Usr profile"/>
+					<label>Dr. Yannis Georgandelis</label>
+				</a>
+				<ul class="paciente-nav-usr-menu" id="paciente-menu">
+					<li><a href="#"><i class="icon-doctorplus-profile-sheet"></i> Datos administrador</a></li>
+					<li><a href="#"><i class="icon-doctorplus-lock"></i> Configuración de privacidad</a></li>
+					<li><a href="#"><i class="icon-doctorplus-gear"></i> Configuración de cuenta</a></li>
+					<li><a href="#"><i class="icon-doctorplus-dollar-circular"></i> Estado de cuenta</a></li>
+				</ul>
+			</div>
+
+			<div class="paciente-nav-logo">
+				<a href="#">
+					<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus"/>
+				</a>
+			</div>
+			<div class="paciente-nav-menu">
+				<a class="paciente-nav-menu-burger"><i class="icon-doctorplus-burger"></i></a>
+				<ul class="paciente-nav-menu-rsp" id="burger-menu">
+					<li><a href="#"><i class="icon-doctorplus-onoff"></i><label>Home</label></a></li>
+					<li><a href="#"><i class="icon-doctorplus-home"></i><label>Cerrar sesión</label></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<!-- /nav -->
+    
+<section class="container ph2-title">
+    <h4>Bienvenida Carla Moresco</h4>
+    <h3 class="text-danger">¡DoctorPlus, la red de e-Salud más importante del país!</h3>
+</section>
+
+
+	<section class="filter user-group">
+		<div class="container">
+			<div class="btn-group user-filter" data-toggle="buttons">
+				<label class="btn btn-inverse active">
+					<input type="checkbox" checked> Todos
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Juan Manuel Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Iñaki Menoyo
+				</label>
+				<label class="btn btn-inverse">
+					<input type="checkbox"> Usted
+				</label>
+				<button class="dp-add-user add-user"></button>
+		  </div>
+		</div>
+	</section>
+
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+			  <li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+			  <li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+			  <li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+			  <li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+			  <li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+			  <li><a href="#" class="dpp-flag"><p>Notificaciones</p> <span>1</span></a></li>
+		  </ul>
+		</div>
+	</section>
+
+    
+<section id="completar-perfil">
+<div class="container">
+    <div class="text-center">
+        <h2>¿Cómo comenzar a utilizar su cuenta?</h2>
+        <h6>Complete las siguientes secciones</h6>
+    </div>
+
+    <div id="perfil-info">
+        <ul>
+            <li><a href=""><i class="icon-dp-miembro"></i>Información del paciente</a><span>0<small>%</small></span></li>
+            <li><a href=""><i class="icon-dp-info-salud"></i>Perfil de Salud</a><span>0<small>%</small></span></li>
+            <li><a href=""><i class="icon-dp-miembros"></i>Agregar miembros <br>de mi familia</a><span>0<small>%</small></span></li>
+        </ul>
+    </div>  
+</div>    
+</section>
+<!-- /completar perfil -->
+
+
+<section id="consulta-express">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center consulta-express-listado">
+                <h2><i class="dp-express"></i>Consulta Express</h2>
+              <h6>Su médico necesita conocerlo</h6>
+                <p>Complete su Perfil de Salud y el de sus familiares y acceda a una de las herramientas más innovadoras de e-Salud</p>
+
+                <ul>
+                    <li>
+                        <a href="javascript:;" data-target="secciones-faltantes-1" role="button" class="btn-secciones">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnodeclinado"></i>                        </a>                    </li>
+      <li>
+                        <a href="javascript:;" data-target="secciones-faltantes-2" role="button" class="btn-secciones">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnoconfirmado"></i>                        </a>                    </li>
+      <li>
+                        <a href="">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnodeclinado"></i>                        </a>                    </li>
+      <li>
+                        <a href="">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnoconfirmado"></i>                        </a>                    </li>
+      <li>
+                        <a href="">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnodeclinado"></i>                        </a>                    </li>
+      <li>
+                        <a href="">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnoconfirmado"></i>                        </a>                    </li>   
+      <li>
+                        <a href="">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnodeclinado"></i>                        </a>                    </li>
+      <li>
+                        <a href="">
+                        <img src="imgs/temp/info-doctor.gif" alt=""> 
+                        <i class="icon-dp-turnoconfirmado"></i>                        </a>                    </li>                       
+
+              </ul>
+            </div>
+            <div class="col-md-5 col-md-offset-1 text-center consulta-express-paciente" id="secciones-faltantes-1">
+                <p>
+                    <span><img src="imgs/temp/info-doctor.gif" alt=""> 
+                    <i class="icon-dp-turnodeclinado"></i></span>
+                    Carla Moresco                </p>
+              <h4>Debe terminar de completar <br> las siguientes secciones</h4>
+                <ul>
+                    <li><a href="">Datos biometricos</a></li>
+                    <li><a href="">Alergias e intolerancias</a></li>
+                    <li><a href="">Antecedentes</a></li>
+                    <li><a href="">Cirugias e intervenciones</a></li>
+                    <li><a href="">Enfermedades y patologías</a></li>
+                    <li><a href="">Ginecólogos &amp; obstetricios</a></li>
+                    <li><a href="">Medicamentos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-5 col-md-offset-1 text-center consulta-express-paciente" id="secciones-faltantes-2">
+                <p>
+                    <span><img src="imgs/temp/info-doctor.gif" alt=""> 
+                    <i class="icon-dp-turnodeclinado"></i></span>
+                    Carla Moresco                </p>
+              <h4>Debe terminar de completar <br> las siguientes secciones</h4>
+                <ul>
+                    <li><a href="">Datos biometricos</a></li>
+                    <li><a href="">Antecedentes</a></li>
+                    <li><a href="">Cirugias e intervenciones</a></li>
+                    </ul>
+            </div>            
+
+        </div>
+    </div>    
+</section>
+<p class="note">Recuerde: Para poder hacer una Consulta Express o Video Consulta el Perfil de Salud del paciente debe estar completo</p>
+<!-- /consulta express -->
+
+
+<section id="herramientas" class="herramientas">
+	<div class="container pulh">
+        <h2>Disfrute también de estas herramientas</h2>
+			<div class="herramientas-content">
+				<div class="row">
+					
+            <div class="herramientas-col herramientas-profesional">
+							<div class="box pulh-box">
+									<div class="herramientas-img">
+									<img src="imgs/okm/home-buscar-profesionales.png"/>									</div>
+									<h4><i class="icon-dp-turno-sacar"></i>Buscar profesionales<br>Turnos on line</h4>
+                    <p>
+                    Saque sus turnos médicos en solo unos clicks y no se olvide más! Reciba avisos y recordatorios por mail o en su celular.                    </p>
+									<a class="herramientas-lnk" href="#">Más info</a>                </div>
+            </div>
+					
+					<div class="herramientas-col herramientas-salud">
+						<div class="box pulh-box">
+									<div class="herramientas-img">
+										<img src="imgs/okm/home-perfil-de-salud.png"/>									</div>
+                    <h4><i class="icon-dp-info-salud"></i>Perfil de Salud</h4>
+                    <p>
+                    Su Perfil de Salud y el de su familia en un solo lugar. Visualice y tenga siempre a mano el resultado de sus estudios y chequeos.                    </p> 
+									<a class="herramientas-lnk" href="#">Más info</a>                </div>
+            </div> 
+					
+        </div> 
+			</div>
+    </div>
+</section>
+<!-- /herramientas -->
+
+
+<section id="video-consulta">
+	<div class="container pulh">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>¿Está de viaje o no puede trasladarse <br>y necesita hacerle una consulta <br> a su médico de confianza?</h4>
+                <p>¡No demore más su consulta! <br> Su médico lo atiende a distancia en vivo <br> y en directo con una <strong>Video Consulta.</strong></p>
+                <a href=""><i class="icon-dp-videoconsulta"></i>Más info</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /video consulta -->
+       
+      
+       
+   
+<div class="container-fluid bar-instituciones">
+<div class="container">
+    <h3>Pacientes</h3>                       
+</div>
+</div>
+    
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<h4>Servicios</h4>
+					<ul>
+						<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+						<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+						<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+						<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+						<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<h4>Atención al Cliente</h4>
+					<ul>
+						<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+						<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+						<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+						<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+						<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<h4>Institucional</h4>
+							<ul>
+								<li><a href="#" title="Términos legales">Términos legales</a></li>
+								<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+								<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="footer-logo">
+								<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+								<ul>
+									<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+									<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
+
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery-ui.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+<script>
+$(function() {
+    $('.btn-secciones').on('click', function() {
+        $('#consulta-express .container').css( 'background','none');
+        $(".consulta-express-paciente").slideUp();
+        var targetId = '#' + $(this).data('target');
+        $(targetId).slideDown();
+    });    
+});    
+</script>
+
+</body>
+</html>

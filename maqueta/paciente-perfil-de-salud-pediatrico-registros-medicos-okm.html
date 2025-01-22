@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Perfil de Salud Pediatrico - Estudios e imagenes</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+		
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>	
+
+<section class="filter user-group">
+	<div class="container">
+		<div class="btn-group user-filter" data-toggle="buttons">
+			<label class="btn btn-inverse active">
+				<input type="checkbox" checked> Todos
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Juan Manuel Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Iñaki Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Usted
+			</label>
+			<button class="dp-add-user add-user"></button>
+		</div>
+	</div>
+</section>	
+
+	<section class="user-actions user-paciente">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+
+<section class="filter-table-header patients">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<h1 class="section-header">Mis Pacientes</h1>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pull-right">
+				<div class="search-combo">
+					<input type="text" class="form-control flat" placeholder="Buscar paciente" />
+					<button>f</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /header mis pacientes -->      
+	
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+
+
+<div class="container">
+	<div class="row" id="notificaciones">
+		<div class="col-sm-12" >
+
+			<div class="module-subheader">
+				<div class="row">
+					<h2><span class="dpp-chequeos"><span>3</span></span> Controles y chequeos</h2>
+				</div>
+			</div>
+			<table class="table-responsive historico-consultas-table notificaciones-table">
+				<thead>
+					<tr>
+						<td class="col-1">Fecha</td>
+						<td class="">Tipo</td>
+						<td class="col-3">Diagnóstico</td>
+						<td class="col-4">Desactivar todas</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag deactivated"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>																								
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</div>
+<!-- /notificaciones -->
+
+<section id="info-pacientes">
+	<div class="container">
+		<div class="fold">
+			<div class="detalles-paciente">
+				<ul>
+					<li class="pad-top-5">Juan Manuel Menoyo <span>FN 28/08/1969</span></li>
+					<li class="pad-top-5">PSHB <span class="dp-vcard">5443546546</span></li>
+					<li><a href=""><span class="dp-info"></span><small>Certificados y consejos</small></a></li>
+					<li><a href=""><span class="dp-print"></span><small>Impresi&oacute;n Perfil de Salud</small></a></li>
+				</ul>
+			</div>
+			<div class="tagsinput-primary">
+				<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="hepatitis, levotiroxina 100 mg, asma, rubeola, hepatitis, levotiroxina 100 mg, asma, rubeola" />
+				<a href="" class="toggle-ver"><span class="fui-plus"></span></a>	
+			</div>
+		</div>
+		<a href="" class="toggle-ver toggle-info-box">Ocultar menú</a>		
+	</div>	
+</section>	
+<!-- /info paciente -->
+
+<section class="module-header container">
+	<div class="row ">
+		<div class="col-md-12">
+			<ol class="breadcrumb">
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Mis Pacientes</a></li>
+				<li><a href="#">Perfil de Salud</a></li>
+				<li><a href="#">Juan Manuel Menoyo</a></li>
+				<li class="active">Medicamentos</li>
+			</ol>
+		</div>
+	</div>
+</section>
+<!-- /breadcrumb -->
+
+<section class="module-header nueva-consulta-header container">
+	<figure class="circle-icon-images"></figure>
+	<h1>Registro consultas m&eacute;dicas</h1>
+</section>	
+
+<section class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<a href="#" class="border-box border-box-solid dp-add-user"><span>Registros de otros profesionales</span></a>	
+		</div>
+		<div class="col-md-4">
+			<a href="#" class="border-box border-box-solid dp-info"><span>Mis Registros del paciente</span></a>	
+		</div>
+		<div class="col-md-4">
+			<a href="#" class="border-box dp-plus"><span>Nueva consulta</span></a>	
+		</div>			
+	</div>
+</section>	
+
+
+<section class="historico-consultas container">
+	<div class="module-subheader">
+		<h2 class="dp-info"><img src="imgs/icons/icon-reload.svg" alt="">Mis registros del paciente</h2>
+	</div>				
+	<div id="registros-paciente" class="table-responsive">
+		<table class="table historico-consultas-table expand-table">
+			<thead>
+				<tr>
+					<td class="col-1">Fecha</td>
+					<td class="col-3">Diagnóstico</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>05/11/2014</td>
+					<td>Radiografía de peroné 
+						<div class="iconos-tabla">
+							<span class="fui-photo"></span> 
+							<span class="dp-express"></span>
+						</div>	
+					</td>
+					<td><span class="fui-arrow-right"></span></td>
+				</tr>
+				<tr class="full-width">
+					<td colspan="3">
+						<div class="expand-content">
+						<section class="container-fluid nueva-consulta">
+							<div class="row no-gutter">
+								<div class="col-sm-1 col-md-1 col-xs-12 pull-right">
+									<div class="tab-buttons">
+									<ul class="nav-tabs nav">
+										<li class="active"><a href="#anotaciones-1" role="tab" data-toggle="tab"><span class="dp-profile"></span></a></li>
+										<li><a href="#medicamentos-1" role="tab" data-toggle="tab" class=""><span class="dp-medicine"></span></a></li>
+										<li><a href="#ver-archivo-1" role="tab" data-toggle="tab"><span class="fui-photo"></span></a></li>
+										<li><a href="javascript:;"><span class="dp-print"></span></a></li>
+									</ul>
+									</div>
+									<!-- <a href="#" class="border-box border-box-solid dp-print"></a> 	-->		
+								</div>								
+								<div class="col-sm-11 col-md-11 col-xs-12 pull-left">
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active fade in" id="anotaciones-1">	
+											<div class="form-content">
+												<p>Evolucion clinica <span>Sigue con Fiebre</span></p>
+												<p>Laboratorio <span>Sigue con Fiebre</span></p>
+												<p>Otros estudios <span>Sigue con Fiebre</span></p>
+												<p>Diagnostico <span>Bronquitis</span></p>
+												<p>Tratamiento <span>Nebulizaciones cada 6 horas con Sabutamol gotas</span></p>
+											</div>
+										</div>
+										<!-- /tab anotaciones -->
+
+										<div role="tabpanel" class="tab-pane fade" id="medicamentos-1">
+											<div class="form-content">
+												<div class="table-responsive">
+													<table class="table-striped table-mis-prescripciones">
+														<thead>
+															<tr>
+																<td class="col-wide">Medicamento</td>
+																<td>Posolog&iacute;a</td>
+																<td class="date">Inicio</td>
+																<td class="date">Fin</td>
+																<td></td>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Jarabe para la tos</td>
+																<td>5 veces por dia, 7 dias.</td>
+																<td>5/12/2014</td>
+																<td>7/12/2014</td>
+																<td><label for="archive-11" class="checkbox"><input type="checkbox" id="archive-11"></label></td>
+															</tr>
+															<tr>
+																<td>Acivlovir Filaxis 200mg caps. x10</td>
+																<td>3 veces por dia, 10 dias.</td>
+																<td>2/12/2014</td>
+																<td>11/12/2014</td>
+																<td><label for="archive-22" class="checkbox"><input type="checkbox" id="archive-22"></label></td>
+															</tr>
+															<tr>
+																<td>Jarabe para la tos</td>
+																<td>5 veces por dia, 7 dias.</td>
+																<td>5/12/2014</td>
+																<td>7/12/2014</td>
+																<td><label for="archive-33" class="checkbox"><input type="checkbox" id="archive-33"></label></td>
+															</tr>								
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- /tab medicación -->
+
+										<div role="tabpanel" class="w tab-pane fade" id="ver-archivo-1">
+											<div class="form-content">
+												<div style="width:500px; margin:0 auto;">
+													<div class="slider slider-for">
+														<div><img src="imgs/temp/slider-1.jpg" ></div>
+														<div><img src="imgs/temp/slider-2.jpg"></div>
+														<div><img src="imgs/temp/slider-3.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-4.jpg" alt=""></div>
+													</div>
+													<div class="slider slider-nav-carrousel">
+														<div><img src="imgs/temp/slider-1-thumb.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-2-thumb.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-3-thumb.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-4-thumb.jpg" alt=""></div>
+													</div>						
+												</div>														
+											</div>						
+										</div>
+										<!-- /tab archivos -->
+
+									</div>
+									<!-- /tab-content -->
+								</div>
+
+							</div>
+						</section>
+						</div>
+					</td>
+				</tr>
+				<!-- /ROW + Collapse -->
+
+
+				<tr>
+					<td>05/11/2014</td>
+					<td>Radiografía de peroné 
+						<div class="iconos-tabla">
+							<span class="fui-photo"></span> 
+							<span class="dp-express"></span>
+						</div>	
+					</td>
+					<td><span class="fui-arrow-right"></span></td>
+				</tr>
+				<tr class="full-width">
+					<td colspan="3">
+						<div class="expand-content">
+						<section class="container-fluid nueva-consulta">
+							<div class="row no-gutter">
+								<div class="col-sm-1 col-md-1 col-xs-12 pull-right">
+									<div class="tab-buttons">
+									<ul class="nav-tabs nav">
+										<li class="active"><a href="#anotaciones-2" role="tab" data-toggle="tab"><span class="dp-profile"></span></a></li>
+										<li><a href="#medicamentos-2" role="tab" data-toggle="tab" class=""><span class="dp-medicine"></span></a></li>
+										<li><a href="#ver-archivo-2" role="tab" data-toggle="tab"><span class="fui-photo"></span></a></li>
+										<li><a href="javascript:;"><span class="dp-print"></span></a></li>
+									</ul>
+									</div>
+									<!-- <a href="#" class="border-box border-box-solid dp-print"></a> 	-->		
+								</div>								
+								<div class="col-sm-11 col-md-11 col-xs-12 pull-left">
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active fade in" id="anotaciones-2">	
+											<div class="form-content">
+												<p>Evolucion clinica <span>Sigue con Fiebre</span></p>
+												<p>Laboratorio <span>Sigue con Fiebre</span></p>
+												<p>Otros estudios <span>Sigue con Fiebre</span></p>
+												<p>Diagnostico <span>Bronquitis</span></p>
+												<p>Tratamiento <span>Nebulizaciones cada 6 horas con Sabutamol gotas</span></p>
+											</div>
+										</div>
+										<!-- /tab anotaciones -->
+
+										<div role="tabpanel" class="tab-pane fade" id="medicamentos-2">
+											<div class="form-content">
+												<div class="table-responsive">
+													<table class="table-striped table-mis-prescripciones">
+														<thead>
+															<tr>
+																<td class="col-wide">Medicamento</td>
+																<td>Posolog&iacute;a</td>
+																<td class="date">Inicio</td>
+																<td class="date">Fin</td>
+																<td></td>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Jarabe para la tos</td>
+																<td>5 veces por dia, 7 dias.</td>
+																<td>5/12/2014</td>
+																<td>7/12/2014</td>
+																<td><label for="archive-11" class="checkbox"><input type="checkbox" id="archive-11"></label></td>
+															</tr>
+															<tr>
+																<td>Acivlovir Filaxis 200mg caps. x10</td>
+																<td>3 veces por dia, 10 dias.</td>
+																<td>2/12/2014</td>
+																<td>11/12/2014</td>
+																<td><label for="archive-22" class="checkbox"><input type="checkbox" id="archive-22"></label></td>
+															</tr>
+															<tr>
+																<td>Jarabe para la tos</td>
+																<td>5 veces por dia, 7 dias.</td>
+																<td>5/12/2014</td>
+																<td>7/12/2014</td>
+																<td><label for="archive-33" class="checkbox"><input type="checkbox" id="archive-33"></label></td>
+															</tr>								
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- /tab medicación -->
+
+										<div role="tabpanel" class="w tab-pane fade" id="ver-archivo-2">
+											<div class="form-content">
+												<div style="width:500px; margin:0 auto;">
+													<div class="slider slider-for">
+														<div><img src="imgs/temp/slider-1.jpg" ></div>
+														<div><img src="imgs/temp/slider-2.jpg"></div>
+														<div><img src="imgs/temp/slider-3.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-4.jpg" alt=""></div>
+													</div>
+													<div class="slider slider-nav-carrousel">
+														<div><img src="imgs/temp/slider-1-thumb.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-2-thumb.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-3-thumb.jpg" alt=""></div>
+														<div><img src="imgs/temp/slider-4-thumb.jpg" alt=""></div>
+													</div>						
+												</div>														
+											</div>						
+										</div>
+										<!-- /tab archivos -->
+
+									</div>
+									<!-- /tab-content -->
+								</div>
+							</div>
+						</section>
+						</div>
+					</td>
+				</tr>
+				<!-- /ROW + Collapse -->			
+
+			</tbody>
+		</table>
+	</div>
+	<div class="paginas">
+		<span>de 1 al 10 / 200</span>
+		<a href=""><span class="fui-arrow-left"></span></a>
+		<a href=""><span class="fui-arrow-right"></span></a>
+	</div>	
+</section>
+<!-- /Mis registros del paciente -->
+
+
+<!-- Registros de otros profesionales -->
+<section class="consultas-grid-block-holder container-fluid">
+	<div class="row">
+	<div class="col-md-12">
+
+		<div class="module-subheader">
+			<h2 class="dp-add-user"><a href=""><img src="imgs/icons/icon-reload.svg" alt=""></a> Registros de otros profesionales</h2>
+		</div>
+		</div>	
+		<div class="col-sm-12">
+			<ul>
+				<li></li>
+				<li><a href="#"><span class="fui-list-small-thumbnails"></span></a></li>
+				<li><a href="#" class="active"><span class="fui-list-columned"></span></a></li>
+			</ul>
+		</div>
+
+	</div>
+	</div>
+</section>
+
+<section class="antecedentes-ginecologicos container-fluid">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="col-sm-4 consultas-card-left">
+					<div class="consultas-card">
+						<h3>Gastroenteorólogo</h3>
+						<label class="consultas-card-diagnostico">Diagnóstico</label>
+						<p>Cuadro viral</p>
+						<label>Ultima consulta</label>
+						<span>24/06/2015</span>
+					</div>
+					<button class="btn btn-md btn-inverse consultas-card-btn">ver más</button>
+				</div>
+				<div class="col-sm-4 consultas-card-mid">
+					<div class="consultas-card">
+						<h3>Gastroenteorólogo</h3>
+						<label class="consultas-card-diagnostico">Diagnóstico</label>
+						<p>Cuadro viral</p>
+						<label>Ultima consulta</label>
+						<span>24/06/2015</span>
+					</div>
+					<button class="btn btn-md btn-inverse consultas-card-btn">ver más</button>
+				</div>
+				<div class="col-sm-4 consultas-card-right">
+					<div class="consultas-card">
+						<h3>Gastroenteorólogo</h3>
+						<label class="consultas-card-diagnostico">Diagnóstico</label>
+						<p>Cuadro viral</p>
+						<label>Ultima consulta</label>
+						<span>24/06/2015</span>
+					</div>
+					<button class="btn btn-md btn-inverse consultas-card-btn">ver más</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="historico-consultas container-fluid">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 historico-consultas-holder">
+			<div class="row">
+				<div class="col-sm-12">
+					<table class="table-responsive historico-consultas-table expand-table">
+						<thead>
+							<tr>
+								<td class="col-1">Especialidad</td>
+								<td class="col-2">Dr/a.</td>
+								<td>Fecha</td>
+								<td class="col-3">Diagnostico</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="">Pediatra</a></td>
+								<td>Dr. Antonio Conforti</td>
+								<td>05/11/2014</td>
+								<td>Radiografía de peroné</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="5">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->
+							<tr>
+								<td><a href="">Pediatra</a></td>				
+								<td>Dr. Antonio Conforti</td>
+								<td>05/11/2014</td>
+								<td>Radiografía de peroné</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="5">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->
+																																				<tr>
+								<td><a href="">Pediatra</a></td>
+								<td>Dr. Antonio Conforti</td>
+								<td>05/11/2014</td>
+								<td>Radiografía de peroné</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="5">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->
+							<tr>
+								<td><a href="">Pediatra</a></td>
+								<td>Dr. Antonio Conforti</td>
+								<td>05/11/2014</td>
+								<td>Radiografía de peroné</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="5">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->								
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="paginas">
+				<span>de 1 al 10 / 200</span>
+				<a href=""><span class="fui-arrow-left"></span></a>
+				<a href=""><span class="fui-arrow-right"></span></a>
+			</div>	
+		</div>
+	</div>
+</section>	
+<!-- /Registros de otros profesionales -->	
+
+<section class="historico-consultas container-fluid">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 historico-consultas-holder">
+			<h2><img src="imgs/icons/icon-reload.svg" alt="Histórico consultas"> Histórico de consultas</h2>
+			<h3>Pediatra</h3>
+			
+			<div class="row">
+				<div class="col-sm-12">
+					<table class="table-responsive historico-consultas-table expand-table">
+						<thead>
+							<tr>
+								<td class="col-1">Fecha</td>
+								<td class="col-2">Dr/a.</td>
+								<td class="col-3">Diagnóstico</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>05/11/2014</td>
+								<td>Dr. Antonio Conforti</td>
+								<td>Radiografía de peroné 										
+									<div class="iconos-tabla">
+										<span class="fui-photo"></span> 
+										<span class="dp-express"></span>
+									</div>	
+								</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="4">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->
+							<tr>
+								<td>05/11/2014</td>
+								<td>Dr. Antonio Conforti</td>
+								<td>Radiografía de peroné 										
+									<div class="iconos-tabla">
+										<span class="fui-photo"></span> 
+										<span class="dp-express"></span>
+									</div>	
+								</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="4">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->
+							<tr>
+								<td>05/11/2014</td>
+								<td>Dr. Antonio Conforti</td>
+								<td>Radiografía de peroné 										
+									<div class="iconos-tabla">
+										<span class="fui-photo"></span> 
+										<span class="dp-express"></span>
+									</div>	
+								</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="4">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->
+							<tr>
+								<td>05/11/2014</td>
+								<td>Dr. Antonio Conforti</td>
+								<td>Radiografía de peroné 										
+									<div class="iconos-tabla">
+										<span class="fui-photo"></span> 
+										<span class="dp-express"></span>
+									</div>	
+								</td>
+								<td><span class="fui-arrow-right "></span></td>
+							</tr>
+							<tr class="full-width">
+								<td colspan="4">
+									<div class="expand-content">
+										<section class="container-fluid nueva-consulta">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="form-content">
+														<p>Diagnostico <span>Dermatitis crónica</span></p>
+														<p>Tratamiento<span>Se indica control dentro de una semana</span></p>
+														<p>Medicación <span>Ibuprofeno 600mg</span></p>
+													</div>					
+												</div>		
+											</div>
+										</section>
+									</div>
+								</td>
+							</tr>
+							<!-- /ROW + Collapse -->																								
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="paginas">
+				<span>de 1 al 10 / 200</span>
+				<a href=""><span class="fui-arrow-left"></span></a>
+				<a href=""><span class="fui-arrow-right"></span></a>
+			</div>	
+		</div>
+	</div>
+</section>	
+<!-- /Registros de otros profesionales -->
+
+
+
+
+<!-- FOOTER -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+		
+
+		
+<!-- scripts-->
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery-ui.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>	
+	<script src="js/scripts.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$(':checkbox').radiocheck();   
+
+
+			 $('.slider-for').slick({
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  arrows: true,
+			  centerMode: false,
+			  fade: true,
+			  asNavFor: '.slider-nav-carrousel',
+			  draggable: false
+			});
+			$('.slider-nav-carrousel').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  asNavFor: '.slider-for',
+			  dots: false,
+			  centerMode: false,
+			  focusOnSelect: true,
+			  draggable: false
+			});
+
+		});
+	</script>	
+<!-- @scripts-->
+		
+
+		
+	</body>
+</html>

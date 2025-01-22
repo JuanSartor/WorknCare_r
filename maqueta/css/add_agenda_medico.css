@@ -1,0 +1,293 @@
+/* Contenedor principal de la agenda mensual */
+
+#agenda-mensual {
+	background-color:#F7F7F7;
+}
+
+
+#agenda-mensual .agenda-mensual-dia{
+	width:14%;
+	float:left;
+/*	background:#F7F7F7;*/
+	min-height:100px;
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	font-weight:bold;
+	padding:15px 10px;
+}
+
+#agenda-mensual .agenda-header .agenda-mensual-dia {
+		background-color:#5FD6CA !important;
+		color:#FFF;		
+		min-height:60px !important;		
+		line-height:60px !important;
+		height:60px !important;
+		border:none !important;
+		padding:0px !important
+}
+
+
+#agenda-mensual .agenda-mensual-dia.domingo{
+	color:#425B71;
+	border-right:none !important;
+	
+}
+
+#agenda-mensual .agenda-mensual-dia .dia-numero {
+	line-height:30px;
+	font-size:18px;
+	text-align:left;	
+}
+#agenda-mensual .agenda-mensual-dia.domingo .dia-numero {
+	color:#C33433;
+}
+
+#agenda-mensual .agenda-mensual-dia ul {
+	list-style:outside none;
+	text-align:right;
+}
+#agenda-mensual .agenda-mensual-dia ul li {
+	list-style:outside none;
+	text-align:right;
+}
+#agenda-mensual .agenda-mensual-dia ul li .cantidad {
+	display:inline-block;
+	width:2em;
+	text-align:right;	
+}
+
+#agenda-mensual .agenda-mensual-dia.dia-disable {
+	background-color:#E8E8E8 !important;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+} 
+
+
+
+/* AGENDA SEMANAL */
+.medico_agenda_container .tabla-semana tbody{
+	background:#F7F7F7;
+}
+
+.medico_agenda_container .tabla-semana td{
+	padding:0 0 0 0px;
+	position: relative;
+	width:14.28%;
+}
+
+.medico_agenda_container .tabla-semana td .item-dia-semana {
+	padding:0px 0px 0px 10px;	
+}
+.medico_agenda_container .tabla-semana td div.item-dia-semana-inner{
+	background:#F9EFC5 !important;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:48px;
+/*	padding:2% 4%;*/
+	position:relative;
+	padding:4px 4px 0px 5px;
+}
+
+.medico_agenda_container .tabla-semana td .item-dia-semana.turno-confirmado {
+	background-color:#1ABCA1 !important;	
+}
+.medico_agenda_container .tabla-semana td .item-dia-semana.turno-pendiente {
+	background-color:#F6A800 !important;
+}
+
+.medico_agenda_container .tabla-semana td > span{
+	position:absolute;
+	left:0;
+	top:0;
+	width:8px;
+	height:100%;
+	display:block;
+}
+
+.medico_agenda_container .tabla-semana .libre{
+	background:#DFF4F1;
+}
+
+.medico_agenda_container .e0{
+	background:;
+}
+
+.medico_agenda_container .e1{
+	background:#1ABCA1;
+}
+
+.medico_agenda_container .e2{
+	background:#F26D7D;
+}
+
+.medico_agenda_container .e3{
+	background:#F6A800;
+}
+
+.medico_agenda_container .e4{
+	background:#5BDDC4;
+}
+
+.medico_agenda_container .e5{
+	background:#84D3EF;
+}
+
+.medico_agenda_container .e6{
+	background:#F26D7D;
+}
+
+.medico_agenda_container .dias{
+	background:#5FD6CA;
+	height:70px;
+}
+
+.medico_agenda_container .dias th{
+	position: relative;
+	width: 14.28%;
+	padding:0 0 0 8px;
+	text-align:center;
+	height:70px;
+	padding:0 0 10px;
+	border:none;
+	font-size:14px;
+	font-weight:normal;
+	color:#fff;
+}
+
+
+.bar-title-verde{
+	background:#1ABCA1;
+	color:#FFF;
+}
+.bar-title-verde h3 {
+	margin:10px 0px;	
+}
+
+.bar-title-verde .icons-left {
+	line-height:70px;	
+}
+.medico_agenda_container .menu{
+	border-left:1px #31A592 solid;
+	width:30px;
+	height:50px;
+	display:block;
+	margin:10px 20px 0 0;
+}
+
+.medico_agenda_container .menu span{
+	clear:both;
+	float:right;
+	width:8px;
+	margin:5px 0;
+	height:6px;
+	display:block;
+	background:#90E9E3;
+}
+
+.medico_agenda_container .mas-icons li{
+	display:inline-block;
+}
+
+.medico_agenda_container .bar-title-verde2{
+	background:#DFF4F1;
+/*	height:65px;*/
+	color:#546E7A;
+	padding:15px 0px;
+}
+.medico_agenda_container .bar-title-verde2 a, .medico_agenda_container .bar-title-verde2 a span{
+	color:#546E7A !important;
+}
+
+.medico_agenda_container .bar-title-verde2 ul{
+	text-align:center;
+	padding:0;
+}
+
+.medico_agenda_container .bar-title-verde2 li{
+	display:inline-block;
+	padding:0 10px;
+	font-size:18px;
+	width:33%;
+	color:#546E7A;
+/*	line-height:65px;*/
+}
+
+.medico_agenda_container .bar-title-verde2 li span{
+	font-size:32px;
+}
+
+.medico_agenda_container .detalle-estado{
+	background:#DFF4F1;
+	border-top:1px solid #999;
+}
+
+.medico_agenda_container .detalle-estado .icono {
+	display:inline-block;
+	margin:0px 5px;
+	color:#546e7a !important;
+}
+
+.item-dia-semana {
+	height:49px;
+	min-height:49px;
+	max-height:49px;
+	display:block;	
+	border-bottom:1px solid #CCC
+}
+
+.turno-libre .icon {
+	color:#099;
+}
+
+.turno-confirmado .icon{
+	color:#1ABCA1;	
+}
+
+.turno-pendiente .icon {
+	color:#F6A800;
+}
+
+.color-consultorio-1 td {
+	background: #DFF4F1;	
+}
+.color-consultorio-2 td {
+	background: #DADEF7;	
+}
+.color-consultorio-3 td {
+	background: #DFF4F1;	
+}
+.color-consultorio-4 td {
+	background: #DFF4F1;	
+}
+.color-consultorio-5 td {
+	background: #DFF4F1;	
+}
+
+
+.medico_agenda_container .tabla-diaria .turno-libre td + td{
+	text-align:left;
+	padding:0 0 0 20px;
+}
+
+.medico_agenda_container .tabla-diaria tr{
+	margin:0 0 2px;
+}
+
+.medico_agenda_container .tabla-diaria .turno-disponible td{
+	background: none;
+}
+
+.medico_agenda_container .tabla-diaria td:nth-child(4){
+	font-size:22px;
+}
+
+.medico_agenda_container .tabla-diaria span[class="icon-dp-turnoconfirmado"]{
+	color:#1ABCA1 !important;
+}
+
+
+.bg_azul a, .bg_azul span, .bg_azul a:hover {
+	color:#B0BEC5 !important;
+	text-decoration:none !important;
+}
+

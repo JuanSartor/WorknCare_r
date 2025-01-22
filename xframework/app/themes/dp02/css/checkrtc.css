@@ -1,0 +1,455 @@
+/*Modal */
+#run-checkrtc .modal-dialog {
+    width:800px;
+}
+@media (max-width: 1024px){
+    #run-checkrtc .modal-dialog {
+        width:95%;
+    }
+}
+
+/*Hide media controls*/
+.media-cntrols-container, .media-controls-container *{
+    display:none;
+}
+/*Header*/
+.top-verde-centrado {
+    background-color: #00b0ad;
+    min-height: 50px;
+    text-align: center;
+}
+.top-verde-centrado h1 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+    line-height: 50px;
+}
+.top-verde-centrado h1>i {
+    font-size: 28px;
+    margin-right: 12px;
+    position: relative;
+    top: 2px;
+}
+
+/*Test module*/
+.testEnvironment {
+    text-align: center;
+}
+.test-item-container{
+    display:flex;
+    justify-content: space-around;
+    min-height: 150px;
+
+}
+
+.testEnvironment h1 {
+    font-size: 24px;
+}
+
+.testEnvironment h2 {
+    font-size: 18px;
+}
+
+.testEnvironment img {
+    padding: 10px 0 0;
+    width:32px;
+    height: 42px;
+    margin-right:10px
+}
+
+.recording-label:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 2000ms infinite;      
+    animation: ellipsis steps(4,end) 2000ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+}
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
+.testEnvironment .testItem .test-progress{
+    display: flex;
+    align-items: center;
+}
+
+.testEnvironment .testItem video{
+    width:150px;
+}
+
+.testEnvironment .testItem #testing {
+    margin-top: 22px;
+}
+
+.testEnvironment .testItem svg {
+    width: 40px;
+}
+
+.animationContainer {
+    padding: 20px 0 0;
+    margin-right:10px;
+    display: inline-block;
+} 
+/*Test results*/
+
+#testResults .errorMessage h3 {
+    font-size: 20px !important;
+    color: #ba4343;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#testResults .exito h3 {
+    font-size: 20px !important;
+    color: #16a085;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+#testResults {
+    padding: 0 0 30px;
+    display: none;
+}
+
+
+.button-container a{
+    width: 50% !important;
+    display: inline !important;
+    margin: 0 10px !important;
+    max-width: 150px;
+
+}
+@media(max-width:600px){
+    .button-container{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*Error message*/
+.errorMessage .animationContainer {
+    padding: 20px 0 0;
+    width: 150px;
+    display: inline-block;
+}
+
+.errorMessage small {
+    text-transform: uppercase;
+    color: #BA4343;
+}
+
+.errorMessage .errorDetail {
+    color: #74767F;
+    list-style: disc;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.errorMessage i {
+    font-size: 12px;
+}
+
+
+@media (max-width: 600px){
+    /*Test module*/
+    .test-item-container{
+        flex-direction: column;
+    }
+    .testEnvironment .testItem {
+        padding: 0;
+        display: flex;
+    }
+    .testItem .conexion-status{
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 18px;
+    }
+    .testEnvironment .testItem .test-progress {
+        margin-right:10px;
+    }
+    .testEnvironment .testItem .media {
+        display: flex;
+        align-items: center;
+    }
+    .testEnvironment .testItem .media #meter {
+        margin-top: 10px;
+    }
+
+    /*Header*/
+    .top-test {
+        background-color: #00b0ad;
+        min-height: 50px;
+        text-align: center;
+    }
+    .top-test h1 {
+        color: #fff;
+        font-size: 16px;
+        margin: 0;
+        line-height: 50px;
+    }
+    .top-test h1>i {
+        font-size: 24px;
+        margin-right: 12px;
+        position: relative;
+        top: 2px;
+    }
+
+}
+/*
+.testEnvironment .testItem .progressContainer {
+    display: inline-block;
+    height: 7px;
+    width: 100%;
+    max-width: 200px;
+    background: #dddddd;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    margin: 0 !important;
+}
+
+.testEnvironment .testItem .progressContainer .progress {
+    display: inline-block;
+    position: absolute;
+    height: 7px;
+    max-width: 200px;
+    border-radius: 10px;
+    -webkit-transform-origin: left !important;
+    transform-origin: left !important;
+}
+
+.testEnvironment .testItem .progressContainer .progress.Ok {
+    -webkit-animation: isComplete 1.7s 1, isOk 2.5s 1;
+    animation: isComplete 1.7s 1, isOk 2.5s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.testEnvironment .testItem .progressContainer .progress.hasError {
+    -webkit-animation: isComplete 1.7s 1, hasError 2.5s 1;
+    animation: isComplete 1.7s 1, hasError 2.5s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.testEnvironment .testItem .progressContainer .progress.d-2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.testEnvironment .testItem .progressContainer .progress.d-3 {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+.testEnvironment .testItem .progressContainer .progress.d-4 {
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+}
+
+.testEnvironment .testItem .progressContainer .progress.d-5 {
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s;
+}
+
+.testEnvironment .testItem .progressContainer .progress.d-6 {
+    -webkit-animation-delay: 15s;
+    animation-delay: 15s;
+}
+
+.testEnvironment .testItem .progressContainer .progress.d-7 {
+    -webkit-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+@keyframes isComplete {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+@-webkit-keyframes rubberBand {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubberBand {
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes isComplete {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+@-webkit-keyframes isOk {
+    0% {
+        background: #767C7C;
+    }
+    90% {
+        background: #767C7C;
+    }
+    100% {
+        background: #1FDDCB;
+    }
+}
+
+@keyframes isOk {
+    0% {
+        background: #767C7C;
+    }
+    90% {
+        background: #767C7C;
+    }
+    100% {
+        background: #1FDDCB;
+    }
+}
+
+@-webkit-keyframes hasError {
+    0% {
+        background: #767C7C;
+    }
+    90% {
+        background: #767C7C;
+    }
+    100% {
+        background: #f33243;
+    }
+}
+
+@keyframes hasError {
+    0% {
+        background: #767C7C;
+    }
+    90% {
+        background: #767C7C;
+    }
+    100% {
+        background: #f33243;
+    }
+}
+*/
+/*# sourceMappingURL=pablo.css.map */

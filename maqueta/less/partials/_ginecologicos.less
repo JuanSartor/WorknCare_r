@@ -1,0 +1,239 @@
+.circle-icon-ginecology{
+	.circle-icon(@turquoise-60,'../imgs/icons/header/icon-ginecology.svg',51px);
+	margin: 0 auto;
+}
+.antecedentes-ginecologicos{
+	padding-bottom: 42px;
+	
+	&-holder{
+		background: @red-20;
+		margin-bottom: 24px;
+		padding: 4% 7%;
+		
+		& h2{
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+			font-weight: 400;
+			margin-bottom: 24px;
+			
+		}
+		
+		& .input-row{
+			margin-bottom: 16px;
+		}
+		
+		& label.input-left{
+			text-indent: 24px;
+		}
+		
+		& label.switch-label{
+			margin-right: 24px;
+			line-height: 20px;
+		}    
+		
+		& input[type="text"]{
+			height: 28px;
+			width: auto;
+			border:none;
+			line-height: 28px;
+			font-size: 14px;
+			text-indent: 8px;
+			border-radius: 0;
+
+			&.input-small{ width: 60px;}
+		}
+		
+		& input[type="number"]{
+			height: 28px;
+			width: auto;
+			border:none;
+			line-height: 28px;
+			font-size: 14px;
+			text-indent: 8px;
+			border-radius: 0;
+
+			&.input-small{ width: 60px;}
+		}
+		& .check-holder{
+
+			
+			& .checkbox{
+				display: inline-block;
+				padding-left: 24px !important;
+				text-indent: 0 !important;
+				margin-right: 12px;
+			}	
+		}
+		& button{
+			display:block;
+			margin: 0 auto;
+		}
+	}
+	
+	
+	
+}
+
+.controles-holder{
+	background: @white;
+}
+	.select-style{
+		display: inline-block;
+		width: 30%;
+	}
+	 .select2-container{
+		border: 1px @grey-50 solid;
+		border-radius: 4px;
+		 background: @white;
+		& a{
+			color: @grey-50;
+			line-height: 16px;
+			
+			& .select2-arrow{
+				border-color: @grey-50 transparent;
+			}
+		}
+	}
+	
+.historico-consultas{
+	padding-bottom: 42px;
+	&-holder{
+		border-top:0;
+		padding-top: 42px;
+	}
+	
+	& h2{
+		display: block;
+		text-align: center;
+		width: 100%;
+		clear: both;
+		font-size: 18px;
+		color: @oil;
+		& img{
+			width: 24px;
+			margin-right: 16px;
+			position: relative;
+			top: -7px;
+		}
+		
+	}
+	& h3{
+		display: block;
+		font-size: 22px;
+		text-align: center;
+		color: @turquoise-50;
+		font-weight: 400;
+		clear: both;
+	}
+	
+	//tabla
+	
+	&-table{
+		width: 100%;
+		margin-bottom: 42px;
+		& > thead > tr{
+			background: @oil;	
+			
+			& > td{
+				color: @white;
+				font-size: 14px;
+				@media (max-width: @screen-xs){ font-size: 11px; }
+				
+				&.col-1{
+					padding: 8px 8px 8px 50px;
+					width: 170px;
+				}
+				&.col-2{
+					width: 250px;
+					}
+				&.col-3{
+					
+					}
+				
+			}
+			
+		}
+		& tbody > tr{
+			border-bottom: 1px @grey-50 solid;
+			
+		
+			&:nth-child(odd){
+				.trans-all();
+				&:hover{
+					background: @turquoise-05;
+					cursor: pointer;
+				}
+			}
+
+			&.next-tr .expand-content,
+			&.next-tr{ visibility: visible; height: auto;}
+
+			&.full-width tr{ display: table-row !important;}
+
+			tr:nth-child(even){ height: auto; visibility: visible;}
+			
+			& > td{
+				font-size: 14px;
+				color: @oil;
+				@media (max-width: @screen-xs){ font-size: 11px; padding: 5px !important }
+
+				&:first-of-type{
+					padding: 8px 8px 8px 50px;
+				}
+				& > span{
+					display: block;
+					width: 14px;
+					height: 14px;
+				}
+				& > span.expanded{
+					transform: rotate(90deg);
+					position: relative;
+					left: 4px;
+				}	
+				}	
+			}
+		
+		}
+}
+
+.expand-table{
+				tr:nth-child(even){
+				//display: none;
+				visibility: hidden; height: 0;
+				overflow: hidden;
+				.expand-content{ height: 0;}
+			
+			}	
+}
+
+.expand-content{
+	padding-right: 50px;
+	& > label{
+		width: 100%;
+	}
+	& > div{
+		width: 100%;
+		min-height: 120px;
+		text-align: left;
+		border: none;
+		background: @grey-19;
+		border: 1px @grey-50 solid;
+		font-size: 14px;
+		color: @oil;
+		padding: 8px;
+	}
+
+
+}
+
+.check-embarazada{
+	//float: right;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+<link rel="stylesheet" type="text/css" href="{$url_x_templates}x_components/loading_box_in_context/loading_box_in_context.css" />

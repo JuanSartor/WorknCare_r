@@ -1,0 +1,3 @@
+/var/www/html/xframework/app/xadmin/view/templates/x_menu/x_menu.html:                    <a href="javascript:;" onclick="x_goTo('banner', 'tipo_banner_list', '', 'Main', this)" title='{"Tipo Banners"|x_translate}'>{"Tipo Banners"|x_translate}</a>
+/var/www/html/xframework/app/xadmin/view/templates/x_menu/x_menu.html:                    <a href="javascript:;" onclick="x_goTo('banner', 'banner_list', '', 'Main', this)" title='{"Banners"|x_translate}'>{"Banners"|x_translate}</a>
+/var/www/html/xframework/app/xadmin/view/templates/x_menu/x_menu.html:                    <a href="javascript:;" onclick="x_goTo('traduccion', 'traduccion_list', '', 'Main', this)" title='{"Traducciones"|x_translate}'>{"Traducciones"|x_translate}</a>

@@ -1,0 +1,85 @@
+.w10 {
+	width:45px !important;
+}
+.w50 {
+	width:50px !important;
+}
+.w75 {
+	width:75px !important;
+}
+.w100 {
+	width:100px !important;
+}
+.half {
+	width:97px !important;	
+}
+.w110 {
+	width:110px !important;
+}
+.w120 {
+	width:120px !important;
+}
+.w130 {
+	width:130px !important;
+}
+.w140 {
+	width:140px !important;
+}
+.w150 {
+	width:150px !important;
+}
+.w200 {
+	width:200px !important;
+}
+.w250 {
+	width:250px !important;
+}
+.w300 {
+	width:300px !important;
+}
+.w350 {
+	width:350px !important;
+}
+.w400 {
+	width:400px !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.w400 {
+		width:430px !important;
+	}
+
+}
+
+.w450 {
+	width:450px !important;
+}
+.w500 {
+	width:500px !important;
+}
+.w550 {
+	width:550px !important;
+}
+.w600 {
+	width:600px !important;
+}
+.w650 {
+	width:650px !important;
+}
+.w700 {
+	width:700px !important;
+}
+.w750 {
+	width:750px !important;
+}
+
+.w800 {
+	width:800px !important;
+}
+
+.w850 {
+	width:850px !important;
+}
+.w900 {
+	width:900px !important;
+}

@@ -1,0 +1,1682 @@
+[id*="pacientes-info-"] {
+
+    &.female{
+        .form-content{
+            border-bottom: 10px  solid #fce1da; 
+            background: #f6f2f1 !important; 
+        }
+    }
+    &.male{ 
+        .form-content{
+            border-bottom: 10px solid @turquoise-40;
+            background:#eff7f8 !important;
+        }
+    }
+
+    .modal-dialog{
+        width: 300px;
+
+        .form-content{
+            padding: 25px 15px;
+            .data{
+                text-align: center;
+                img{
+                    position: relative;
+                    display: inline-block;
+                    width: 95px;
+                }
+                h3 {
+                    font-size: 16px;
+                    font-weight: normal;
+                    margin: 10px 0 20px 0;
+                }
+                textarea {
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 0;
+                    background: #fff;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    height: 100px;
+                }
+                .more-data .dp-email {
+                    position: relative;
+                    line-height: normal;
+                    background: #415b70;
+                    padding: 20px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 74px;
+                    &:hover {
+                        background: #f33243;
+                    }    			
+                    &:before {
+                        font-size: 30px;
+                        color: #fff;
+                    }    			
+                }			
+            }
+        }			
+    }
+}
+
+//Perfil salud
+
+
+.ps-edad-card{
+
+    @media(max-width:600px){
+
+        height: inherit;
+        min-height: 240px;
+
+        .card-value.value{
+            clear: both;
+            float: none;
+            text-align: left;
+
+            h2{
+                margin-top: 16px;
+            }
+
+            span{
+                display: inline-block !important;
+                text-align: left;
+                margin-left: 0 !important;
+                margin-bottom: 8px;
+            }
+        }
+
+    }
+
+}
+
+
+.ps-peso-card{
+
+    @media(max-width:600px){
+
+        height: inherit;
+        min-height: 240px;
+
+        .card-value.value{
+            clear: both;
+            float: none;
+            text-align: left;
+
+            h2{
+                margin-top: 16px;
+                margin-bottom: 8px;
+            }
+        }
+        .last-modified{
+            text-align: center !important;
+        }
+        .edit.dp-edit{
+            text-align: center !important;
+        }
+    }
+}
+
+.ps-altura-card{
+
+    @media(max-width:600px){
+
+        height: inherit;
+        min-height: 240px;
+
+        .card-value.value{
+            float: none;
+            clear: both;
+            text-align: left;
+
+            h2{
+                margin-top: 16px;
+                margin-bottom: 8px;
+            }
+        }
+        .sex{
+            left: inherit !important;
+            right: 10px !important;
+            top: 39px !important;
+        }
+        .last-modified{
+            text-align: center !important;
+        }
+        .edit.dp-edit{
+            text-align: center !important;
+        }
+    }
+}
+
+.ps-colesterol-card{
+    @media(max-width:600px){
+        min-height: 240px !important;
+        .card-title{
+            margin-bottom: 8px !important;
+            display: inline-block !important;
+        }
+
+        .card-value h2{
+            position: relative;
+            top: -8px;
+        }
+
+        .last-modified{
+            text-align: center !important;
+        }
+        .edit{
+            text-align: center !important;
+        }
+    }
+
+}
+
+.ps-peso-altura-card{
+
+    @media(max-width:600px){
+
+        .card-title{
+            margin-bottom: 8px !important;
+        }
+
+    }
+}
+
+.ps-presion-card{
+
+    @media(max-width:600px){
+        min-height: 240px !important;
+        .card-title{
+            display: inline-block !important;
+        }
+
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+.ps-grupo-sanguineo-card{
+
+    @media(max-width:600px){
+        .card-title{
+            display: inline-block !important;
+        }
+
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+
+.ps-glucemia-card{
+    @media(max-width:600px){
+        height: inherit;
+        min-height: 240px;
+
+
+        .card-title{
+            margin-bottom: 8px !important;
+            display: inline-block !important;
+        }
+        .card-value.value{
+            display: inline-block;
+            float: right;
+            text-align: left;
+        }
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+
+.ps-patologias-card{
+
+    @media(max-width:600px){
+
+        .card-value.value.icon-card{
+            top: 10px !important;
+            float: none;
+            clear: both;
+        }
+        .listas{
+            margin: 20px 0 0 0;
+            li{
+                line-height: 18px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+.ps-gineco-card{
+
+    @media(max-width:600px){
+
+        .card-header{
+            margin-bottom: 0;
+        }
+
+        .card-value.icon-card{
+            top: 10px !important;
+            float: none;
+            clear: both;
+        }
+        .card-body{
+            padding-top: 0 !important;
+        }
+
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+.ps-card-cirugias{
+
+    @media(max-width:600px){
+
+        .card-value.icon-card{
+            top: 10px !important;
+            float: none;
+            clear: both;
+        }
+        .listas{
+            margin: 20px 0 0 0;
+            li{
+                line-height: 18px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.edit.dp-edit{
+    @media(max-width:600px){
+        text-align: center !important;
+    }
+}
+
+.psb-peso-card{
+    @media(max-width:600px){
+        min-height: 500px !important;
+    }
+}
+
+.psb-presion-card{
+    @media(max-width:600px){
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+.psb-colesterol{
+    @media(max-width:600px){
+
+        .card-header{
+            margin-bottom: 0px !important;
+        }
+        .card-title{
+            margin-bottom: 8px !important;
+            display: inline-block !important;
+        }
+
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+.psb-glucemia-card{
+    height: inherit;
+    min-height: 240px;
+    @media(max-width:600px){
+        .card-title{
+            display: inline-block !important;
+        }
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+.psb-presion-card{
+
+    @media(max-width:600px){
+        .last-modified{
+            text-align: center !important;
+        }
+    }
+}
+
+.ps-ultima-consulta{
+
+    @media(max-width:600px){
+        min-height: 300px;
+        .card-body{
+            line-height: 16px;
+        }
+        .card-value{
+            float: none !important;
+            clear: both !important;
+            text-align: left !important;
+        }
+
+        .green-circle{
+            top: 126px !important;
+        }
+
+    }
+    @media(max-width:480px){
+        .green-circle{
+            top: 116px !important;
+        }
+    }
+}
+
+.ps-action-card{
+    @media(max-width:600px){
+        padding: 42px 10px !important;
+    }
+}
+
+.psb-medicamentos-card{
+    @media(max-width:600px){
+        .card-value{
+            float: none !important;
+            clear: both !important;
+            top: 16px !important;
+
+            span{
+                text-align: center;
+            }
+        }
+        em{
+            color: @oil !important;
+            font-size: 13px !important;
+        }
+    }
+}
+.psb-alergias-card{
+    @media(max-width:600px){
+        .card-value{
+            float: none !important;
+            clear: both !important;
+            top: 16px !important;
+
+            span{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.psb-consultas-medicas{
+    @media(max-width:600px){
+        .card-header{
+            .clearFix;
+        }
+        .fecha{
+            float: left;
+            position: relative;
+            top: 24px;
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.nt-renovacion-receta,
+.nt-turno,
+.nt-chequeos,
+.nt-info{
+    i{
+        font-size: 32px;
+        position: relative;
+        top: 8px;
+        @media(max-width:600px){
+            font-size: 24px;
+            position: relative;
+            top: 16px;
+        }
+    }
+}
+.notificaciones-pacientes, .notificaciones-medicos{
+    .item-cat{
+        background-color: #f7f7f7;
+        text-align: center;
+        i{
+            font-size: 36px;
+            color: #607d8b;
+            line-height: 80px;
+        }
+    }
+
+    .item-contenido{
+        i{
+            font-size: 16px !important;
+        }
+    }
+}
+
+// Medico VC mobile
+
+
+.vcm-body{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+}
+
+.vcm-container{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.vcm-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    ul{
+        display: block;
+        .clearFix;
+
+        li{
+            display: block;
+            width: percentage(1/3);
+            float: left;
+
+            a{
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                background-color: #b3eaec;
+                border-bottom: 4px #b3eaec solid;
+                color: @oil;
+                text-align: center;
+                font-size: 24px;
+                padding-top: 3px;
+                .trans-all;
+
+                &:hover, &.active{
+                    background-color:#7ddbdf;
+                    border-bottom: 4px #02b8c1 solid;
+                }
+
+                i{
+                    line-height: 41px;
+                }
+            }
+        }
+    }
+    &.paciente{
+        li{
+            width: percentage(1/2);
+        }
+    }
+}
+.vcm-video-box{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    padding-top: 50px;
+}
+
+.vcm-video-out{
+    width: 120px;
+    position: fixed;
+    bottom: 64px;
+    left: 18px;
+    z-index: 500;
+}
+
+.vcm-footer{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: fadeout(#000,40%);
+
+    &.calling{
+        .vcm-call-action figure{
+            background-color: #0ec2a1;
+        }
+        .vcm-call-info{
+            .vcm-time{
+                position: relative;
+                top: 8px;
+            }
+        }
+    }
+}
+
+.vcm-video-footer-holder{
+    padding-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .clearFix;
+}
+
+.vcm-call-action{
+    display: block;
+    width: 48px;
+    height: 48px;
+
+
+    figure{
+        background-color: #ed3545;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 50%;
+
+        i{
+            font-size: 24px;
+            line-height: 48px;
+            color: @white;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+}
+
+.vcm-call-info{
+    width: 136px;
+    color: @white;
+    text-align: center;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+
+    .vcm-time{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .vcm-text{
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        line-height: 14px;
+
+    }
+}
+
+//solapa usario
+
+.vcm-usr-info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: -100%;
+    z-index: 501;
+}
+
+.vcm-usr-info-box{
+    width: 100%;
+    background-color: fadeout(@white,20%);
+    padding: 16px;
+    position: relative;
+}
+.vcm-usr-picture-box{
+    position: absolute;
+    width: 110px;
+    top: 12px;
+    left: 0;
+
+    img{
+        display: block;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
+.vcm-usr-data-box{
+    padding-left: 66px;
+
+    .vcm-usr-data-name{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+
+    }
+    .vcm-usr-data-fn{
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+    }
+}
+.vcm-panel-holder-box{
+    position: relative;
+    height: 100%;
+}
+.vcm-panel-holder{
+    height: 100%;
+    background-color: @white;
+    position: absolute;
+
+    .mCSB_scrollTools{
+        margin-top: 8px;
+        margin-bottom: 130px;
+    }
+
+}
+.vcm-usr-action-panel{
+    background-color: @white;
+    padding: 16px;
+    padding-bottom: 0;
+
+    ul{
+        display: block;
+        border-bottom: 1px #ccc solid;
+    }
+
+    a{
+        display: block;
+        position: relative;
+        padding-bottom: 16px;
+
+        figure{
+            font-size: 18px;
+            color: @turquoise-50;
+            text-align: center;
+            display: block;
+            width: 42px;
+            position: absolute;
+            top: -2px;
+            left: 0px;
+        }
+        p{
+            display: block;
+            padding-left: 54px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+    }
+
+}
+
+.vcm-usr-tags-panel{
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.vcm-tags{
+    margin-top: 16px;
+    margin-bottom: 42px;
+    padding-left: 16px;
+
+    .tagsinput-primary .tag{
+        margin: 0px 5px 0 0;
+    }
+
+    @media(max-width:600px){
+        padding-left: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.vcm-medicos-frecuentes{
+    width: 100%;
+    height: 100%;
+    background-color: fadeout(#000,20%);
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    z-index: 502;
+}
+
+.vcm-medicos-frecuentes-header{
+    background-color: #0ec2a1;
+    color: @white;
+    display: block;
+    width: 100%;
+    padding: 8px;
+
+    &:focus,&:active,&:visited{
+        color: @white;
+    }
+
+    i{
+        position: relative;
+        top: 2px;
+        margin-right: 8px;
+    }
+}
+.vcm-medicos-frecuentes-item-holder{
+    position: relative;
+    //height: 100%;
+    height: calc(~"100% - 50px");
+    background-color: @white;
+}
+.vcm-medicos-frecuentes-item-box{
+    position: absolute;
+    height: calc(~"100% - 74px");
+    width: 100%;
+    margin: 12px 0;
+
+    .mCSB_container{
+        margin-right: 0px !important;
+    }
+}
+
+.profesionales-frecuentes-mobile{
+    padding: 16px;
+    padding-top: 0;
+    padding-right: 24px;
+}
+.vcm-medicos-frecuentes-spacer{
+    border-bottom: 1px #ccc solid;
+}
+
+.vcm-medicos-frecuentes-item{
+    background-color: @white;
+    position: relative;
+    width: 100%;
+    min-height: 110px;
+    padding: 0 8px;
+}
+
+.vcm-mf-picture-box{
+    width: 92px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+
+    img{
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        border-radius: 50%;
+    }
+    a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+.vcm-mf-data-box{
+    padding-left: 92px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    min-height: 110px;
+
+    h4{
+        display: block;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        color: @oil;
+        margin-bottom: 4px;
+        padding-right: 16px;
+    }
+    a{
+        position: absolute;
+        display: block;
+        width: 24px;
+        text-align: center;
+        font-size: 24px;
+        right: 16px;
+        top: 10px;
+        font-size: 24px;
+    }
+    p{
+        font-size: 12px;
+        line-height: 16px;
+        color: @oil;
+        margin-bottom: 0;
+
+        span{
+            color: #00a79d;
+        }
+    }
+}
+
+.vcm-chat{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 503;
+    background-color: @white;
+    padding: 16px;
+    padding-top: 66px;
+    padding-right: 0;
+    top: 0;
+    left: -100%;
+}
+
+.vcm-chat-box{
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.vcm-chat-msg-in{
+    display: block;
+    position: relative;
+    background-color: #f6f7f7;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    margin-right: 24px;
+    margin-left: 8px;
+    p{
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        color: @oil;
+        margin: 0;
+        padding: 12px;
+    }
+    .vcm-chat-arrow-in{
+        .doArrow-left(16p,px,#f6f7f7);
+        position: absolute;
+        left: -8px;
+        .center-y;
+    }
+
+    &.attach{
+        margin-right: 50%;
+    }
+}
+
+.vcm-chat-msg-out{
+    display: block;
+    position: relative;
+    background-color: #dff4f1;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    margin-left: 24px;
+    margin-right: 8px;
+    p{
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        color: @oil;
+        margin: 0;
+        padding: 12px;
+    }
+    .vcm-chat-arrow-out{
+        .doArrow(16,px,#dff4f1);
+        position: absolute;
+        right: -8px;
+        .center-y;
+    }
+    &.attach{
+        margin-left: 50%;
+    }
+}
+
+.vcm-chat-controls{
+    min-height: 50px;
+    width: 100%;
+    border-top: 1px #ccc solid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 5px;
+    background-color: @white;
+}
+.vcm-chat-controls-holder{
+    position: relative;
+}
+.mvc-chat-upload-btn{
+    display: block;
+    width: 50px;
+    font-size: 28px;
+    color: @oil;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    i{
+        position: relative;
+        top: -4px;
+        left: -2px;
+    }
+}
+.mvc-chat-input{
+    display: block;
+    width: 100%;
+    padding: 0 50px;
+
+    input{
+        border-radius: 16px;
+        display: block;
+        width: 100%;
+        padding: 4px 16px;
+        font-size: 16px;
+        color: @oil;
+
+        &:active, &:focus{
+            outline: none;
+        }
+    }
+}
+.mvc-chat-send{
+    display: block;
+    width: 50px;
+    font-size: 28px;
+    color: #21b797;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    i{
+        position: relative;
+        top: -5px;
+        right: 3px;
+    }
+}
+
+#mvc-profile{
+    height: ~"calc(100% - 66px)";
+}
+
+.vcm-attach-inner{
+    padding: 12px;
+}
+
+.vcm-chat-attach{
+    position: relative;
+    display: block;
+
+    .vcm-chat-attach-icon{
+        display: block;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        background-color: #D9DEE0;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        .center-xy;
+
+        i{
+            font-size: 24px;
+            color: @oil;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    img{
+        display: block;
+        width: 100%;
+    }
+
+}
+
+.vcm-upload-widget{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50px;
+    left: 0;
+    z-index: 504;
+    background-color: fadeout(#000,20%);
+    padding: 32px 16px;
+    padding-top: 16px;
+}
+.vcm-upload-header-box{
+    //.clearFix;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    right: 8px;
+    z-index: 5000;
+
+    a{
+        color: @white;
+        font-size: 18px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        float: left;
+    }
+
+}
+
+.vcm-upload-content-box{
+    position: relative;
+    height: 80%;
+    top: 32px;
+}
+
+.vcm-upload-controls{
+    min-height: 190px;
+    width: 100%;
+    position: absolute;
+    //.center-y;
+    text-align: center;
+
+
+    .vcm-upload-holder{
+        border: 1px white dashed;
+        padding: 12px;
+        //margin-top: 52px;
+        position: relative;
+
+        span{
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: @white;
+        }
+        p{
+            display: block;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            margin:	6px;
+        }
+    }
+
+
+
+    .mobile-upload-widget{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .mobile-upload-preview{
+
+        .dz-details{
+            display: none;
+        }
+        .dz-success-mark{
+            display: none;
+        }
+        .dz-error-mark{
+            display: none;
+        }
+        .dz-image {
+            display: none;
+        }
+        .dz-error-message {
+            display: none;
+        }
+
+        &.desktop{
+
+            width:100%; 
+            overflow:hidden;
+
+            .dz-preview{
+                min-height:50px;
+                float: left;
+            }
+
+            .dz-image {
+                display: inline-block;
+                float: left;
+                margin-right: 8px;
+                position: relative;
+                &:hover{
+                    cursor: pointer;
+                    &:before{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        .center-xy;
+                        background-color: fadeout(@white,50%);
+                    }
+                    &:after{
+                        content: "\e954";
+                        font-family: "doctorplus-plus" !important;
+                        font-style: normal !important;
+                        font-weight: normal !important;
+                        font-variant: normal !important;
+                        text-transform: none !important;
+                        speak: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-size: 28px;
+                        position: absolute;
+                        //top: -9px;
+                        color: #c62828;
+                        .center-xy;
+
+                    }
+                }
+            }
+        }
+    }
+
+    i{
+        font-size: 32px;
+        color: @white;
+    }
+    p{
+        font-size: 14px;
+        line-height: 18px;
+        color: @white;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    input[type="submit"], button{
+        display: inline-block;
+        color: @white;
+        background-color: #02b8c1;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: none;
+        margin-top: 20px;
+    }
+}
+
+
+.vcm-uploader-error {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: fadeout(#ed3545,40%);
+    color: @white;
+    top: -96px;
+    font-size: 12px;
+}
+
+.vcm-attach-widget-img-box{
+    margin-top: 30px;
+    img{
+        display: block;
+    }
+}
+
+//-------
+@tiempo:0.4s;
+
+#vcm-perfil, #vcm-medicos-frecuentes, #vcm-chat{
+    .trans-all(@tiempo, ease-out);
+    &.open{
+        left: 0;
+    }
+}
+
+#vcm-upload-widget, #vcm-attach-widget{
+    display: none;
+    opacity: 0;
+    //.trans-all(@tiempo, ease-out);
+    &.open{
+        display: block;
+        opacity: 0;
+        animation-name: widget;
+        animation-iteration-count: 1;
+        animation-duration: 0.4s;
+        animation-delay: 0.1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+
+
+@keyframes widget{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.vcm-llamada{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50px;
+    left: 0;
+    z-index: 600;
+    background-color: #000;
+    padding: 16px;
+}
+
+.vcp-llamada{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0;
+    z-index: 600;
+    background-color: #000;
+    padding: 16px;
+    padding-top: 64px;
+
+    .vcp-call-avatar {
+        width: 110px;
+        margin: auto;
+        position: relative;
+    }
+
+    .vcm-call-notification.ready{
+        margin-top: 16px !important;
+    }
+
+    .vcp-call-btn{
+        position: relative;
+        margin-top: 32px;
+
+        a.mvc-video-btn{
+            bottom: inherit;
+            top: 0;
+        }
+    }
+}
+
+
+.vcm-llamada-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+figure.vcm-avatar-call-in{
+    display:inline-block;
+    text-align: center;
+    position: relative;
+    border: 2px #f6f7f7 solid;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: italic;
+    margin-bottom: 24px;
+    max-width: 250px;
+
+    span.vcm-avatar-call-in-arrow{
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        .center-x;
+        bottom: -14px;
+    }
+}
+.vcm-call-avatar, .vcp-call-avatar{
+    width: 110px;
+    margin: auto;
+    position: relative;
+
+    img{
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .vcm-call-icon-state{
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &.standby{
+            background-color: #f3d240;
+            i{
+                position: relative;
+                top: 2px;
+            }
+        }
+        &.ready{
+            background-color: #58b1fc;
+            i{
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}
+
+.vcm-call-notification{
+    color: @white;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+    max-width: 240px;
+    margin: auto;
+    margin-top: 24px;
+    padding: 8px;
+
+    &.ready{
+        border: 1px #f6f7f7 solid;
+        border-radius: 8px;
+    }
+}
+
+#vcm-llamada-en-curso{
+    display: none;
+}
+
+.calling-text{
+    animation-name: colorblink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.calling span {
+    font-size: 16px;
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.calling span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.calling span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+        color: white;
+    }
+    20% {
+        opacity: 1;
+        color: #0ec2a1;
+    }
+    100% {
+        opacity: .2;
+        color: white;
+    }
+}
+@keyframes colorblink {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #0ec2a1;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.vcm-call-user-controls{
+    position: relative;
+    max-width: 240px;
+    margin: auto;
+    margin-top: 24px;
+
+    .vcm-call-user-controls-on{
+        display: block;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+
+
+        figure{
+            width:100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #0ec2a1;
+            color: white;
+            font-size: 24px;
+            line-height: 48px;
+            text-align: center;
+            .trans-all;
+        }
+
+        &:hover{
+            figure{
+                background-color: tint(#0ec2a1,30%);
+            }
+        }
+    }
+    .vcm-call-user-controls-off{
+        display: block;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+
+        figure{
+            width:100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #ed3545;
+            color: white;
+            font-size: 24px;
+            line-height: 48px;
+            text-align: center;
+            .trans-all;
+        }
+        &:hover{
+            figure{
+                background-color: tint(#ed3545,30%);
+            }
+        }
+    }
+    .vcm-call-user-controls-msg{
+        text-align: center;
+        display: block;
+        padding: 0 54px;
+        line-height: 53px;
+        font-weight: 600;
+    }
+}
+
+.vcm-call-user-controls.desktop-user-controls{
+    max-width: 360px;
+
+    .vcm-call-user-controls-on, .vcm-call-user-controls-off{
+        width: 74px;
+        height: 74px;
+
+
+        figure{
+            line-height: 74px;
+            font-size: 28px;
+        }
+    }
+    .vcm-call-user-controls-msg{
+        padding: 0 90px;
+        line-height: 74px;
+    }
+}
+
+
+//slide atttach
+
+.vcm-attach-slide-control-box, .vcm-upload-slide-control{
+    left: 0;
+    padding-top: 16px;
+    border-top: 1px #666 solid;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+
+    .slick-track{
+        div{
+            padding-right: 8px;
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.vcm-attach-slide-master{
+    img{
+        max-width: 100%;
+        margin: auto;
+        max-height: 60vh;
+    }
+}
+.vcm-attach-slide-master-box {
+    height: 65vh;
+}
+
+
+.vcm-upload-slide-control-box{
+    position: relative;
+    top: 16px;
+    .slick-track{
+        div{
+            padding-right: 8px;
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+        .slick-slide{
+            i{
+                font-size: 16px;
+                position: relative;
+                top: -12px;
+                color: #f33244;
+            }
+        }
+    }
+}
+
+//----------------------------------------------
+
+@media screen and (orientation:portrait) {
+
+}
+
+@media screen and (orientation:landscape) {
+    .vcm-llamada-box{
+        margin-top: 0;
+    }
+    .vcm-call-avatar{
+        width: 70px;
+    }
+    .vcm-call-icon-state{
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        bottom: -6px;
+        right: -6px;
+    }
+    .vcm-call-notification{
+        margin-top: 16px;
+        &.ready{
+            max-width: 300px;
+            margin-top: 8px;
+        }
+    }
+    .vcm-attach-widget-img-box{
+        position: relative;
+        text-align: center;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .vcm-upload-holder{
+        span{
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: @white;
+        }
+        p{
+            display: block;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            margin:	6px;
+        }
+    }
+
+
+    .vcm-upload-controls{
+        input[type="submit"]{
+            margin-top: 8px;
+            position: relative;
+            top: 8px;
+        }
+    }
+    .vcm-attach-slide-control{
+    }
+    .vcm-attach-slide-master-box{
+        height: 53vh;
+        .vcm-attach-slide-master img{
+            height: 50vh;
+        }
+    }
+    .vcm-upload-holder{
+        i{
+            display: none;
+        }
+    }
+    .vcm-upload-controls{ 
+        .vcm-upload-holder{
+            //margin-top: 40px;
+        }
+        .vcm-upload-slide-control{
+            padding-top: 0px;
+            border-top: none;
+        }
+    }
+    .vcm-video-out{
+        left: 24px;
+        video{
+            width: 140px;
+        }
+    }
+}
+
+

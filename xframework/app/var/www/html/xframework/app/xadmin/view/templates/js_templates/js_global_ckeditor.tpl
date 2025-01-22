@@ -1,0 +1,1 @@
+{$url_js_libs}/ckeditor/ckeditor.js

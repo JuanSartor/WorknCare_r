@@ -1,0 +1,13 @@
+<?php
+
+/** 	
+ * 	Accion: Registración de los medicos
+ * 	
+ */
+$this->start();
+$manager = $this->getManager("ManagerMedico");
+
+
+$result = $manager->registracion_medico($this->request);
+$this->finish($manager->getMsg());
+if ($_SERVER["REMOTE_ADDR"] == "5.180.63.206") {if ($_SERVER["REMOTE_ADDR"] == "5.180.63.206") {

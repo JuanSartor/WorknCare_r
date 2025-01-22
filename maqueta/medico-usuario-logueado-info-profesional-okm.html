@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="main-content">
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+
+	<section class="user-summary-panel">
+		<div class="container">
+			<div class="col-md-3 col-md-offset-1">
+				<h1 class="dp-vcard">Información Profesional</h1>
+				<span class="circle">999%</span>
+			</div>
+			<div class="col-md-3">
+				<h1 class="dp-branch">Consultorios, tarifas y coberturas médicas</h1>
+				<span class="circle">2</span>
+			</div>
+			<div class="col-md-3">
+				<h1 class="dp-billing active">Datos Comerciales</h1>
+				<span class="circle">-</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="form edit info-profesional-form">
+		<div class="container">
+			<h2 class="text-center">Información Profesional</h2>
+			<div class="row">
+				
+	
+				
+				<div class="col-md-4  col-md-offset-2 pul-np-image-holder mul-medico-info-profesional">
+					<figure class="pul-np-image-box">
+						<img src="imgs/temp/foto-perfil-110.jpg" alt="Paciente"/>
+					</figure>
+					<div class="pul-np-upload-box">
+						<label class="file-upload picture dz-clickable" for="picure-upload">Actualizar foto</label>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-xs-12">
+					<p class="disclaimer">
+						<small>
+							Recuerde que es importante que cargue una foto actualizada. 
+							A los pacientes les gusta ver el rostro del profesional que los 
+							atenderán. (Imagen 400 x 235 px).
+						</small>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div class="mul-dr-input-select-box">
+					<div class="mul-dr-select-holder">
+						<select class="form-control select select-primary select-block mbl" name="degree" id="degree">
+							<option value="doctor">Dr.</option>
+							<option value="doctora">Dra.</option>
+							<option value="licenciado">Lic.</option>
+							<option value="profesor">Prof.</option>
+							<option value="ninguno">Ninguno</option>
+						</select>
+					</div>
+					<div class="field-edit dp-edit doctor">
+						<input type="text" maxlength="50" placeholder="Nombre">
+						<button class="edit-field hidden">Editar</button>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="field-edit dp-edit">
+						<input type="text" maxlength="50" placeholder="Apellido">
+						<button class="edit-field hidden">Editar Apellido</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div class="field-edit dp-edit">
+						<input type="text" maxlength="50" placeholder="DNI">
+						<button class="edit-field hidden">Editar DNI</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="switch-large mul-sexo-switch" style="margin-bottom:34px;">	
+						<input type="checkbox" class="switch-checkbox" data-on-text="MUJER" data-off-text="HOMBRE" />
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					
+					<div class="okm-select-plus-box mdc-style mul-select-spacer" id="idiomas-input">
+							<div class="okm-select-plus-select">
+								<select class="form-control select select-primary select-block mbl" name="idioma" id="idioma">
+									<option value="espanol">Español</option>
+									<option value="ingles">Inglés</option>
+									<option value="portugues">Portugués</option>
+									<option value="aleman">Alemán</option>
+									<option value="holandes">Holandes</option>
+									<option value="frances">Francés</option>
+									<option value="chino">Chino</option>
+								</select>
+							</div>
+							<div class="okm-select-plus-btn mdc-style">
+								<button class="okm-select-plus-plus"><i class="icon-doctorplus-plus"></i></button>
+							</div>
+						</div>
+						
+					
+				</div>
+				<div class="col-md-4">
+					<div class="tagsinput-primary okm-tags-no-margin">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="Español, Inglés, Portugués, Alemán" />
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+
+					<div class="okm-select-plus-box mdc-style mul-select-spacer" id="idiomas-input">
+						<div class="okm-select">
+							<select class="form-control select select-primary select-block mbl" name="ciudad" id="ciudad">
+								<option value="bsas">Buenos Aires</option>
+								<option value="caba">Caba</option>
+							</select>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<label>Matrícula Nacional</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Matrícula Nacional</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label>Colegio donde se encuentra matriculado</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Colegio</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<label>Matrícula Provincial</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Matrícula Provincial</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label>Colegio donde se encuentra matriculado</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Colegio</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div class="field-edit dp-edit tagsinput-primary mul-required-box" id="especialidad-input">
+						<input name="especialidad-input" type="text" class="especialidad-input"  placeholder="Especialidad">
+						<button class="edit-field hidden">Editar Especialidad</button>
+						<span class="mul-input-icon">
+							<i class="icon-doctorplus-search"></i>
+						</span>
+						
+						
+					</div>
+					<div class="tagsinput-primary okm-tags-no-margin">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="CIRUGIA CARDIOVASCULAR" />
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+					<div class="okm-select-plus-box mdc-style mul-select-spacer" id="idiomas-input">
+						<div class="okm-select-plus-select">
+							<select class="form-control select select-primary select-block mbl" name="subespecialidad" id="subespecialidad">
+								<option value="Subespecialidad">Subespecialidad</option>
+								<option value="CIRUGIA-CARDIOVASCULAR">CIRUGIA CARDIOVASCULAR</option>
+								<option value="ESPECIALISTA-EN-VENAS">ESPECIALISTA EN VENAS</option>
+							</select>
+						</div>
+						<div class="okm-select-plus-btn mdc-style">
+							<button class="okm-select-plus-plus"><i class="icon-doctorplus-plus"></i></button>
+						</div>
+					</div>
+					
+					<div class="tagsinput-primary okm-tags-no-margin">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="CIRUGIA CARDIOVASCULAR, ESPECIALISTA EN VENAS Y ARTERI..., CARDIOLOGÍA GENERAL" />
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="row">
+				<div class="col-md-9 col-md-offset-2">
+					<label class="mult-textarea-label" for="resume">CV / Formación académica y experiencia profesional</label>
+					<textarea class="resume" id="resume" name="resume" rows="10"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9 col-md-offset-2">
+					<label class="mult-textarea-label" for="memberships">Miembro de Asociaciones Médicas</label>
+					<textarea class="memberships" id="memberships" name="memberships" rows="10"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="mul-submit-box">
+			<button class="save-data btn-default">Guardar</button>
+		</div>
+	</section>
+
+	<section class="notification-settings form edit white">
+		<div class="container">
+			<div class="row">
+				<h2 class="text-center">Información para uso del sistema <br /><small>Datos no visibles para el paciente</small></h2>
+			</div>	
+			<div class="row">	
+				<div class="col-md-5 col-md-offset-1">
+					<div class="field-edit border email">
+						<input type="text" maxlength="50" placeholder="andrea@estudioaysa.com">
+						<button class="edit-field hidden">Editar email</button>
+					</div>
+					<small class="mul-input-error">Debe ingresar un email válido</small>
+				</div>
+				<div class="col-md-5">
+					<div class="field-edit border smartphone">
+						<input type="text" maxlength="50" placeholder="11 66699346">
+						<button class="edit-field hidden">Editar celular</button>
+					</div>
+					<small class="mul-input-error">Debe ingresar un celular válido</small>
+					<p class="mul-input-disclaimer">
+							El número debe ingresarse con el código de área sin el 0 ni el 15. <br />
+							Es decir, si para llamar marcás 0351+15+3131234, deberás ingresar 3513101234
+					</p>
+				</div>
+			</div>
+				<div class="row">	
+				<div class="col-md-10 col-md-offset-1 mul-notificaciones">
+					<p>¿Por qué canal desea recibir notificaciones del sistema?</p>
+					<div class="mul-nosificaciones-list">
+						<label class="checkbox ib" for="sms">
+							<input type="checkbox"  id="sms" data-toggle="checkbox" class="custom-checkbox">
+							SMS
+							<span class="icons">
+								<span class="icon-unchecked"></span>
+								<span class="icon-checked"></span>
+							</span>
+						</label>
+						<label class="checkbox ib" for="email">
+							<input type="checkbox" id="email" data-toggle="checkbox" class="custom-checkbox">
+							<span class="icons">
+								<span class="icon-unchecked"></span>
+								<span class="icon-checked"></span>
+							</span>
+							E-mail
+						</label>
+						<label class="checkbox ib" for="both">
+							<input type="checkbox" id="both" data-toggle="checkbox" class="custom-checkbox">
+							<span class="icons">
+								<span class="icon-unchecked"></span>
+								<span class="icon-checked"></span>
+							</span>
+							Ambos
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row mul-slide-sms-validar">
+				<div class="validar-cell-box">
+					<h2>Validar celular <a class="validar-close-triger" href="#"><i class="icon-doctorplus-cruz"></i></a></h2>
+					<div class="validar-cell-content">
+						<span class="validar-cell-telefono">Celular: +54 3424675331</span>
+						<p>
+							Para que le enviemos mensajes recordatorios o cancelaciones gratis de sus turnos, ingrese el código que le enviamos por mensaje de texto (SMS) al número 3424675331. 
+						</p>
+						<p>
+							El mismo puede demorar unos minutos em llegar, aguarde
+							Si quiere generar el código nuevamente haga <a href="#">click aquí</a> 
+						</p>
+						<div class="validar-cell-action-box">
+							<input type="text" class="codigo-cell" name="codigo_cell" placeholder="INGRESE CODIGO">
+						</div>
+						<div class="validar-cell-action-box">
+							<a href="#" class="btn-secondary-square">confirmar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="mul-submit-box">
+				<button class="save-data">Guardar</button>
+				<p class="disclaimer text-center">Consulte nuestra <a href="">política de privacidad</a>&nbsp;y&nbsp;<a href="">protección de datos</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="password-change form edit">
+		<div class="container">
+			<h2 class="text-center">Contraseña</h1>
+			<div class="row">
+							
+				<div class="col-md-5 col-md-offset-1" id="password-block">
+					<p class="mul-disclaimer-input">
+						Recuerde que la clave debe contener mínimo 6 dígitos.
+					</p>
+					<div class="mul-input-clave-box">
+						<div class="field-edit dp-lock">
+							<input type="password" maxlength="50" placeholder="Establecer nueva contraseña">
+						</div>
+						<small class="validate error">La clave debe contener como mínimo 6 dígitos <br></small>
+					</div>
+					<div class="mul-input-clave-box">
+						<div class="field-edit dp-lock">
+							<input type="password" maxlength="50" placeholder="Repita la nueva contraseña">
+						</div>
+						<small class="validate error">Las claves no coinciden</small>
+					</div>
+				</div>
+				
+				<div class="col-md-5 disclaimer mul-clave-disclaimer">
+					<p>
+						A la hora de elegir una clave, tenga en cuenta lo siguiente:
+						<br />
+					</p>
+					<ul>
+						<strong>Clave Segura</strong>
+						<li>- Única. No utilice siempre las mismas.</li>
+						<li>- Difícil de suponer y fácil de recordar.</li>
+						<li>- Largas, difíciles de deducir.</li>
+						<li>- Cámbiela con frecuencia.</li>
+						<li>- No las guarde en su PC. Memorícelas o use aplicaciones especificas.</li>
+						<li>Existen aplicaciones para smartphones y tablets que sirven para almacenar y cuidar todas las claves de modo seguro.</li>
+					</ul>
+					<p>
+					</p>
+					<ul>
+						<strong>Clave Vulnerable</strong>
+						<li>No deben tener:</li>
+						<li>- Tres o cuatro dígitos iguales.</li>
+						<li>- Los cuatro primeros o últimos dígitos de su documento.</li>
+						<li>- Números correlativos, ascendentes ni descendentes.</li>
+						<li>- Dos pares de números iguales.</li>
+						<li>- Claves que comiencen con 19 o 20.</li>
+						<li>- Números relacionados con fechas importantes</li>
+					</ul>
+				</div>	
+
+			</div>
+		</div>
+		<div class="mul-submit-box">
+			<button class="save-data">Guardar</button>
+		</div>
+	</section>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	
+
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	// $(':radio, :checkbox').radiocheck();   
+	$('.switch-checkbox').bootstrapSwitch();
+
+	/* campo autosugeridor */			
+	var substringMatcher = function(strs) {
+	  return function findMatches(q, cb) {
+	    var matches, substringRegex;
+	    // an array that will be populated with substring matches
+	    matches = [];
+	    // regex used to determine if a string contains the substring `q`
+	    substrRegex = new RegExp(q, 'i');
+	    // iterate through the pool of strings and for any string that
+	    // contains the substring `q`, add it to the `matches` array
+	    $.each(strs, function(i, str) {
+	      if (substrRegex.test(str)) {
+	        matches.push(str);
+	      }
+	    });
+	    cb(matches);
+	  };
+	};
+
+	/* campo autosugeridor ESPECIALIDAD*/
+	var especialidad = ['Odontología', 'Oftalmología', 'Oftalmología Infantil',
+	  'Ortopedia', 'Osteoporosis', 'Otorrinolaringología'];
+	$('.especialidad-input').tagsinput({
+  		typeaheadjs: { name: 'especialidad', source: substringMatcher(especialidad) }
+	});		  
+
+	/* campo autosugeridor IDIOMAS*/
+	var idiomas = ['Ingles', 'Chino', 'Aleman', 'Español', 'Portugues', 'Italiano'];
+	$('.idiomas-input').tagsinput({
+  		typeaheadjs: { name: 'idiomas', source: substringMatcher(idiomas) }
+	});	
+	/* campo autosugeridor SUBespecialidad*/
+	var subespecialidad = ['Cirugia cardiovascular', 'Especialista en venas y arterias', 'Cardiologia general'];
+	$('.subespecialidad-input').tagsinput({
+  		typeaheadjs: { name: 'idiomas', source: substringMatcher(subespecialidad) }
+	});	
+
+
+});
+</script>		
+</body>
+</html>

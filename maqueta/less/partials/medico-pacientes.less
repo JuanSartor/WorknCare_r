@@ -1,0 +1,62 @@
+[id*="pacientes-info-"] {
+
+	&.female{
+		.form-content{
+			border-bottom: 10px  solid #fce1da; 
+			background: #f6f2f1 !important; 
+		}
+	}
+	&.male{ 
+		.form-content{
+			border-bottom: 10px solid @turquoise-40;
+			background:#eff7f8 !important;
+		}
+	}
+
+	.modal-dialog{
+		width: 300px;
+		
+		.form-content{
+			padding: 25px 15px;
+			.data{
+				text-align: center;
+				img{
+					position: relative;
+					display: inline-block;
+					width: 95px;
+				}
+				h3 {
+	    			font-size: 16px;
+	    			font-weight: normal;
+	    			margin: 10px 0 20px 0;
+				}
+				textarea {
+	    			width: 100%;
+				    border-radius: 5px;
+	    			border: 0;
+	    			background: #fff;
+	    			margin-bottom: 10px;
+	    			font-size: 14px;
+	    			height: 100px;
+				}
+				.more-data .dp-email {
+	    			position: relative;
+	    			line-height: normal;
+	    			background: #415b70;
+	    			padding: 20px;
+	    			display: inline-block;
+	    			border-radius: 50%;
+	    			width: 74px;
+					&:hover {
+	    				background: #f33243;
+					}    			
+					&:before {
+	    				font-size: 30px;
+	    				color: #fff;
+					}    			
+				}			
+			}
+		}			
+	}
+}
+

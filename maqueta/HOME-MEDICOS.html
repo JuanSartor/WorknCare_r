@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="hom-nav">
+	<div class="okm-container">
+		<div class="okm-row">
+			<div class="hom-nav-logo">
+				<a href="/">
+					<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Doctor Plus">
+				</a>
+			</div>
+			<div class="hom-nav-menu">
+				<a href="#" id="hom-nav-rsp-trg" class="hom-nav-burger"><i class="icon-doctorplus-burger"></i></a>
+				<ul id="hom-nav-rsp-get">
+					<li><a href="#">Home</a></li>
+					<li><a data-lnk="hom-solucion" href="#">Solución</a></li>
+					<li><a data-lnk="hom-funcionalidades" href="#">Funcionalidades</a></li>
+					<li><a data-lnk="hom-planes" href="#">Planes</a></li>
+					<li><a data-lnk="hom-contacto" href="#">Contáctenos</a></li>
+					<li><a data-lnk="hom-soporte" href="#">Soporte</a></li>
+					<li><a href="#">Crear una cuenta</a></li>
+					<li><a href="#" id="loginbtn">Iniciar sesión</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+	
+
+	
+	<!--Modales login	-->
+
+
+	<div class="modal fade usrlogin login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+				</div>
+				<div class="modal-body" id="login">
+					<h4 class="modal-title">Iniciar sesión</h4>
+					<form name="login">
+						<div class="login-form-row">
+							<input type="text" name="user" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+
+						</div>
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<div class="login-recordar">
+								<label class="checkbox">
+									<input type="checkbox" name="recordar" id="recordarme">
+									Recordarme
+								</label>
+							</div>
+							<div class="olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+
+					</form>
+					<div class="login-registro-row">
+						<span>¿No tenés una cuenta?</span>
+						<a href="#">Registrate</a>
+					</div>
+				</div>
+
+
+				<div class="modal-body" id="timeout">
+					<h4 class="modal-title-small">Para continuar confirma que eres</h4>
+					<span class="modal-user-name">Andrea</span>
+
+					<img src="imgs/temp/foto-perfil-110.jpg" class="modal-usr-picture" alt="usr"/>
+					<div class="modal-user-name-small">Andrea Sachse</div>
+					<div class="modal-user-mail">andrea@estudioasya.com</div>
+
+					<form name="login">
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						<div class="login-form-row">
+							<div class="olvide-pass timeout-olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="passrecovery">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+					<form name="pass-recovery">
+						<div class="login-form-row">
+							<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+						</div>
+						<div class="login-form-row">
+							<p>
+								Introduce la dirección de correo electrónico 
+								asociada a tu cuenta y te enviaremos un enlace 
+								para restablecer tu contraseña. 
+							</p>
+						</div>
+						<div class="login-form-row">
+
+							<input type="submit" id="sendpass" value="Enviar enlace"/>
+
+							<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+						</div>
+
+					</form>
+				</div>
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="recoverytext">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+
+					<div class="login-form-row">
+						<p>
+							Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+							Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+						</p>
+					</div>
+					<div class="login-form-row">
+						<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--timeout-->
+
+
+
+
+	<!--	Funciond emostrar ocultar en script.js linea 1303-->
+
+	<!--Modales login	-->	
+	
+
+<section class="hom-slider-box">
+	<div class="okm-container">
+		<div class="hom-slide">
+			
+			<div class="hom-slide-item-1">
+				<div class="hom-slide-inner-box">
+					<img src="imgs/medico/home-medico-1.jpg" alt="Portabilidad y accesibilidad"/>
+					<div class="hom-slide-data-box">
+						<h2>Portabilidad y accesibilidad</h2>
+						<p>
+							Su Consultorio Portátil y la atención de consultas a distancia siempre a su alcance
+						</p>
+						<span>¡GRATIS PARA USTED!</span>
+					</div>
+					<div class="hom-slide-footer">DoctorPlus promueve la visita al consultorio de los pacientes</div>
+			</div>
+			</div>
+			
+			
+			<div class="hom-slide-item-2">
+				<div class="hom-slide-inner-box">
+					<img src="imgs/medico/home-medico-2.jpg" alt="Portabilidad y accesibilidad"/>
+					<div class="hom-slide-data-box">
+						<h2>¡Basta de consultas por 
+							teléfono, mail o wspp!</h2>
+						<p>
+							Atienda consultas rápidas o conejos médicos en forma inmediata en el marco de un sitio que le ofrece la posibilidad de responder como si estuviese en su consultorio.
+						</p>
+						<ul>
+							<li><i class="icon-doctorplus-check-thin"></i> Visualice la Info de Salud del paciente</li>
+							<li><i class="icon-doctorplus-check-thin"></i> Deje registro del consejo o respuesta brindada</li>
+							<li><i class="icon-doctorplus-check-thin"></i> Capitalice dichas consultas</li>
+						</ul>
+					</div>
+					<div class="hom-slide-footer">DoctorPlus promueve la visita al consultorio de los pacientes</div>
+				</div>
+			</div>
+			
+			
+			<div class="hom-slide-item-3">
+				<div class="hom-slide-inner-box">
+					<img src="imgs/medico/home-medico-3.jpg" alt="Portabilidad y accesibilidad"/>
+					<div class="hom-slide-data-box">
+						<h2>Conectados</h2>
+						<p>
+							ayudamos a nuestros pacientes a 
+							cuidar mejor su salud
+						</p>
+						<span>
+							Ofrezca turnos de Video Consultas y atienda a sus pacientes a distancia en vivo y en directo
+						</span>
+					</div>
+					<div class="hom-slide-footer">DoctorPlus promueve la visita al consultorio de los pacientes</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</section>
+	
+	<section class="hom-servicios">
+		<h2 id="hom-funcionalidades">¡Conozca las funcionalidades disponibles para ud.!</h2>
+	<ul>
+		<li><a href="#" class="hslide" data-slide="0"><i class="icon-doctorplus-chat"></i></a></li>
+		<li><a href="#" class="hslide" data-slide="1"><i class="icon-doctorplus-video-call"></i></a></li>
+		<li><a href="#" class="hslide" data-slide="2"><i class="icon-doctorplus-pharmaceutics"></i></a></li>
+		<li><a href="#" class="hslide" data-slide="3"><i class="icon-doctorplus-search"></i></a></li>
+		<li><a href="#" class="hslide" data-slide="4"><i class="icon-doctorplus-calendar"></i></a></li>
+		<li><a href="#" class="hslide" data-slide="5"><i class="icon-doctorplus-pacientes"></i></a></li>
+	</ul>
+	<div class="okm-container">
+	<div class="hom-servicios-slide">
+		
+		<div class="hom-servicios-slide-item-1">
+			<div class="hom-servicios-slide-item-inner">
+				<h2 class="hom-servicios-title">Consulta Express</h2>
+				<p>
+					Una solución desarrollada para atender la demanda de pacientes
+					que necesitan hacerle una consulta breve o frecuente, pacientes 
+					crónicos que requieren acompañamiento en sus tratamientos o solicitud 
+					de renovación de recetas o pacientes en tratamiento que desean mostrarle 
+					el resultado de sus estudios. 
+				</p>
+				<p>
+					En el caso de que la consulta no pueda ser brindada por este medio ud. 
+					podrá rechazarla y el importe de la Consulta Express será reintegrado al paciente
+				</p>
+				
+				<div class="okm-row hom-slide-box">
+					<div class="hom-slide-img-box">
+						<img src="imgs/medico/hom-servicios/servicios-slide-1.png" alt="Consulta Express"/>
+					</div>
+					<div class="hom-slide-content-box">
+						<ul>
+							<li><i class="icon-doctorplus-check-thin"></i> 
+								Envíos automatizados con avisos de recordatorios de turnos para reducir el ausentismo.
+							</li>
+							<li><i class="icon-doctorplus-check-thin"></i> 
+								Avisos por cancelaciones del paciente.
+							</li>
+							<li><i class="icon-doctorplus-check-thin"></i> 
+								Gestione su agenda de e-salud desde cualquier lugar. 
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="hom-slide-action">
+					<a href="#" class="btn-default">CONOZCA MAS SOBRE <span>CONSULTA EXPRESS</span></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hom-servicios-slide-item-2">
+			<h2 class="hom-servicios-title">Video Consulta</h2>
+			<p>
+				Las video consultas son de total confidencialidad e incluso, en caso de necesitarlo, 
+				el paciente podrá acercarse al consultorio físico del médico para continuar con el proceso. 
+			</p>
+			<img src="imgs/medico/hom-servicios/servicios-slide-2.png" alt="Video Consulta"/>
+			<h3>Con la misma privacidad que transcurre en un consultorio particular</h3>
+			<p>
+				Para  proteger  al  médico  y  al  paciente, el sistema está concebido desde la relación 
+				real entre ambos, por lo que el paciente debe ser invitado por el médico para acceder a
+				la sala donde transcurrirá su Video Consulta y a la que sólo tendrán acceso 2 usuarios:
+				1 médico  (único) y 1 paciente (único)
+			</p>
+		</div>
+		
+		<div class="hom-servicios-slide-item-3">
+			<h2 class="hom-servicios-title">Perfil de Salud</h2>
+			<h3> ¡Administre la info de salud de sus pacientes en un solo lugar!</h3>
+			<p>
+				Visualice y tenga siempre a mano  los registros de consultas de sus pacientes y los 
+				registros de otros colegas que hayan atendido al paciente, el resultado de sus estudios y 
+				chequeos, antecedentes de enfermedades, diagnósticos, vacunas y medicamentos.  
+			</p>
+			<img src="imgs/medico/hom-servicios/servicios-slide-3.png" alt="Perfil de Salud"/>
+		</div>
+		
+		<div class="hom-servicios-slide-item-4">
+			<h2 class="hom-servicios-title">Buscador de profesionales</h2>
+			<h3>Sus datos disponibles en internet y al alcance de la creciente demanda de pacientes digitalizados.</h3>
+
+			<img src="imgs/medico/hom-servicios/servicios-slide-4.png" alt="Buscador de profesionales"/>
+		</div>
+		
+		<div class="hom-servicios-slide-item-5">
+			<h2 class="hom-servicios-title">Agenda de turnos on line</h2>
+			<h3>Su agenda de turnos disponibles en solo tres pasos, las 24 hs, todos los días.<br>(24x7)</h3>
+
+			<div class="okm-row hom-slide-box">
+				<div class="hom-slide-img-box">
+					<img src="imgs/medico/hom-servicios/servicios-slide-5.png" alt="Agenda de turnos on line"/>
+				</div>
+				<div class="hom-slide-content-box">
+					<ul>
+						<li><i class="icon-doctorplus-check-thin"></i> 
+							Envíos automatizados con avisos de recordatorios de turnos para reducir el ausentismo.
+						</li>
+						<li><i class="icon-doctorplus-check-thin"></i> 
+							Avisos por cancelaciones del paciente.
+						</li>
+						<li><i class="icon-doctorplus-check-thin"></i> 
+							Gestione su agenda de e-salud desde cualquier lugar. 
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hom-servicios-slide-item-6">
+			<h2 class="hom-servicios-title">Gestión de pacientes</h2>
+			<h3>Interactúe con sus pacientes sin necesidad de llamadas telefónicas:</h3>
+
+			<img src="imgs/medico/hom-servicios/servicios-slide-6.png" alt="Gestión de pacientes"/>
+			
+			<ul>
+				<li><i class="icon-doctorplus-check-thin"></i> 
+					Notificaciones por renovación de recetas.
+				</li>
+				<li><i class="icon-doctorplus-check-thin"></i> 
+					Solicitud de certificados y aptos médicos.
+				</li>
+				<li><i class="icon-doctorplus-check-thin"></i> 
+					Recordatorios de próxima consulta, controles y chequeos.
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	<div class="swipe-icon-box">	
+		<figure class="swipe-icon">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 64 64" enable-background="new 0 0 42 42" xml:space="preserve">
+				<polygon fill="#000" points="8.7,14.8 1.3,7.4 8.7,0 8.7,4.9 16.1,5 16.1,9.8 8.7,9.9 "/>
+				<polygon fill="#000" points="33.3,14.8 40.7,7.4 33.3,0 33.3,4.9 25.9,5 25.9,9.8 33.3,9.9 "/>
+				<path id="swipe-hand" fill="#000" d="M35.8,22.2c-1.4,0-2.5,1.1-2.5,2.5v-2.5c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5v-2.5
+																c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5V9.9c0-1.4-1.1-2.5-2.5-2.5c-1.4,0-2.5,1.1-2.5,2.5v16.6c-1.1-0.8-2-1.5-2.5-1.8
+																c-2.9-2.3-7.4,0-7.4,0L18.5,42h14.8c0.2,0,0.5,0,1.2,0c2,0,3.7-1.7,3.7-3.7V37V24.7C38.3,23.3,37.2,22.2,35.8,22.2z"/>
+			</svg>	
+		</figure>	
+	</div>
+		
+	</div>
+</section>	
+	
+	
+<section class="okm-container hom-servicios-bottom">
+	<p>
+		El 80% de los pacientes descuida su salud por lo engorroso que resulta el sistema:
+		días y horarios específicos para solicitar turnos, turnos con alta demora, 
+		consultorios colapsados, etc.
+	</p>
+	
+	<p>
+		Los pacientes de hoy están acostumbrados a utilizar internet para solucionar todos
+		las necesidades de su vida cotidiana, inclusive las relacionadas con su salud.
+	</p>
+	
+	<div class="hom-servicios-bottom-action-box">
+		<i class="icon-doctorplus-arrow-down"></i>
+	</div>
+	
+</section>
+	
+	<section class="okm-container hom-servicios-solucion">
+		<h4 id="hom-solucion">Una solución integral para las consultas fuera del consultorio</h4>
+	<p>
+		DoctorPlus le ofrece su Agenda de Turnos, el Perfil de Salud de sus pacientes y 
+		la posibilidad de realizar Consultas Médicas pagas a distancia en un solo espacio de trabajo.
+	</p>
+	<div class="hom-servicios-solucion-cols">
+		<div class="okm-row">
+			<div class="col-3">
+				<div class="imagen-box">
+					<img src="imgs/medico/hom-servicios/agendaTurnos.jpg" alt="Administre su Agenda de Turnos"/>
+				</div>
+				<h4>Administre su Agenda de Turnos</h4>
+				<p>
+					¡Ofrezca sus turnos online las 24 hs todos los días! Reduzca 
+					el ausentismo con recordatorios automáticos a sus pacientes
+				</p>
+			</div>
+			<div class="col-3">
+				<div class="imagen-box">
+					<img src="imgs/medico/hom-servicios/consulta.jpg" alt="Consulta Express y Video Consulta"/>
+				</div>
+				<h4>Consulta Express y Video Consulta</h4>
+				<p>
+					Capitalice las consultas que recibe fuera de su consultorio y atienda a sus pacientes a distancia pudiendo consultar su historial de visitas, prescripciones, tratamientos y los registros médicos de los profesionales frecuentes del paciente.
+				</p>
+			</div>
+			<div class="col-3">
+				<div class="imagen-box">
+					<img src="imgs/medico/hom-servicios/saludpaciente.jpg" alt="La Salud de sus pacientes a su alcance en todo momento"/>
+				</div>
+				<h4>La Salud de sus pacientes a su alcance en todo momento</h4>
+				<p>
+					La información de salud de sus pacientes en un solo lugar y siempre a su alcance esté donde esté. Para poder acompañar y tener seguimiento de los tratamientos indicados.</p>
+		  </div>
+		</div>
+	</div>
+	
+	
+</section>
+	
+<section class="hom-doctores">
+	<div class="okm-container">
+		<img src="imgs/medico/hom-servicios/doctores.jpg" alt="Doctor Plus Profesionales"/>
+		<div class="hom-doctores-text-box">
+			<p>
+				Además...  DoctorPlus le ofrece la posibilidad de formar parte de una creciente 
+				comunidad de profesionales de la salud en el ámbito nacional que le permite el 
+				intercambio de conocimientos, estudios y conclusiones.
+			</p>
+		</div>
+	</div>
+</section>	
+	
+	
+	<section class="account-order hom-planes" >
+		<div class="container">
+			<h1 id="hom-planes" class="text-center">Tipos de cuentas</h1>
+			<h2 class="text-center">Los planes más convenientes de acuerdo a sus necesidades</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<img src="imgs/graphic-computer.svg" alt="Tipos de cuenta">
+				</div>
+				<div class="col-md-7">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="highlight-box text-center">
+								<small>Cuenta Básica</small>
+								<div class="price">
+									<span>Gratis</span>
+									<span></span>
+								</div>
+								<a href="#" role="button">Adquirir</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="highlight-box text-center">
+								<small>Cuenta Profesional</small>
+								<div class="price">
+									<span>$350</span>
+									<span>FINAL/MES</span>
+								</div>
+								<a href="#" role="button">Adquirir</a>
+							</div>
+						</div>
+					</div>
+					<div class="hom-planes-btn-box">
+						<button id="compare-btn" class="uppercase">Comparar planes</button>
+					</div>
+				</div>
+			</div>
+			<div id="comparison-table" class="comparison-table">
+				<table class="table table-rsp hom-planes-table">
+					<tr>
+						<th>Tipo de cuenta</th>
+						<th><span>Cuenta <br>Básica</span></th>
+						<th><span>Cuenta <br>Profesional</span></th>
+					</tr>
+					<tr>
+						<td>Agenda de Turnos on line</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Recordatorios de turnos por email y sms</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Acceso a la Info de Salud de sus pacientes desde cualquier dispositivo</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Registro de sus consultas médicas a distancia</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Consulta Express</td>
+						<td><span class="red">25% comisión<sup>(1)</sup></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Video Consulta</td>
+						<td><span class="red">25% comisión<sup>(1)</sup></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Gestión de pacientes</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+                    	<tr>
+						<td>Contacto con los médicos frecuentes del paciente</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Envío de consejos médicos</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>50 pacientes con servicio de CE bonificado(2)</td>
+						<td><span class="cross"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Soporte Técnico</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+				</table>
+				<small class="pull-right">
+					<sup>(1)</sup>La comisión que percibe DoctorPlus por el servicio de Consulta Express y Video Consulta corresponde a un 25%  sobre el valor de la consulta.<br>
+					<sup>(2)</sup>Hasta 50 (cincuenta) pacientes bonificados para sus servicios de Consulta Express.
+				</small>
+			</div>
+		</div>
+	</section>	
+	
+	<section class="okm-container hom-contacto">
+		<h4 id="hom-contacto">Contáctenos</h4>
+		<div class="hom-servicios-bottom-action-box">
+			<i class="icon-doctorplus-arrow-down"></i>
+		</div>
+		<div class="hom-contacto-box">
+			<div id="hom-contacto-box" class="hom-contacto-box">
+				<form id="hom-contacto" name="hom-contacto" action="#" method="get">
+			<div class="hom-form-row">
+				<div class="hom-form-col-x2">
+					<label>Nombre<span>*</span></label>
+					<input type="text" name="nombre">
+					<small class="error">Este campo es obligatorio</small>
+				</div>
+			
+			<div class="hom-form-col-x2">
+				<label>Apellido<span>*</span></label>
+				<input type="text" name="apellido">
+				<small class="error">Este campo es obligatorio</small>
+			</div>
+				
+			</div>
+			
+			<div class="hom-form-row">
+				<div class="hom-form-col-x2">
+					<label>Correo electrónico<span>*</span></label>
+					<input type="text" name="mail">
+					<small class="error">Debe ingresar una dirección de correo válida</small>
+					<small class="error">Este campo es obligatorio</small>
+				</div>
+
+				<div class="hom-form-col-x2">
+					<label>Teléfono</label>
+					<input type="text" name="telefono">
+					<small class="error">Este campo es obligatorio</small>
+				</div>
+
+			</div>
+			
+			<div class="hom-form-row">
+				<div class="hom-form-col-x1">
+					<label>Mensaje</label>
+					<textarea name="mensaje"></textarea>
+				</div>
+			</div>
+			
+			<div class="hom-form-row hom-form-action">
+				<input class="btn-default" type="submit" value="Enviar">
+			</div>
+		
+		</form>
+			</div>
+			<div id="hom-contacto-msg" class="hom-contacto-msg">
+				<p>
+					Su consulta ha sido enviada.<br>
+					Nos pondremos en contacto con usted a la brevedad
+				</p>
+				<p>
+					El equipo de DoctorPlus
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="okm-container hom-soporte">
+		<h4 id="hom-soporte">Soporte</h4>
+		<p>¿Necesita ayuda?</p>
+		
+		<div class="hom-soporte-row">
+			<div class="hom-soporte-col-x2">
+				<a href="#">
+					<figure><i class="icon-doctorplus-chat-dialog"></i></figure>
+					<label>
+						<div>Chat en vivo</div>
+						<span>Estamos para ayudarlo</span>
+					</label>
+				</a>
+			</div>
+			
+			<div class="hom-soporte-col-x2">
+				<a href="#">
+					<figure><i class="icon-doctorplus-envelope"></i></figure>
+					<label>
+						<div>Escríbanos</div>
+						<span>soporte@doctorplus.com.ar</span>
+					</label>
+				</a>
+			</div>
+		</div>
+	</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	
+
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+});
+</script>		
+</body>
+</html>

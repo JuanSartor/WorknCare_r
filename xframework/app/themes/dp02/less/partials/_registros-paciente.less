@@ -1,0 +1,213 @@
+.historico-consultas-table{
+	td{ position: relative;}
+
+	.iconos-tabla{
+		position: absolute;
+		right: 40px;
+		top: 5px;
+		text-align: left;
+
+		@media (max-width: @screen-md){
+			position: relative; 
+			right: auto;
+			top: auto;
+		}
+
+		i{
+			position:relative;
+			top: 3px;
+			font-size: 24px;
+			margin-right: 8px;
+			&:last-child{
+				margin-right: 0px;
+			}
+			&.icon-doctorplus-camera{
+				color: @oil;
+			}
+			&.icon-doctorplus-chat{
+				color: @turquoise-60
+			}
+			&.icon-doctorplus-video-call{
+				color: @turquoise-60;
+				top: 1px;
+			}
+		}
+		
+		span{
+			margin-left: 10px;
+			float: left;
+
+			&:before{
+				font-size: 20px;
+				color: @oil;
+			}
+			&.dp-express:before{ 
+				color: @turquoise-60;
+			}
+		}
+	}
+}
+
+.historico-consultas{
+	.full-width{
+		.nueva-consulta{ margin: 0;}
+		td{
+			padding:0 0 !important;
+			td{
+				padding:12px !important;
+				min-width: 40px;
+				.checkbox{
+					margin-bottom:38px;
+					padding: 0;
+				}
+			}
+		}
+		.expand-content{
+			padding:0;
+			overflow: hidden;
+		}	
+		.container-fluid{
+			padding:0;
+		}		
+
+		.form-content {
+			p {
+				margin-bottom: 40px;
+
+				span{
+					font-size: 14px;
+					color: #000;
+					padding-left: 20px;
+					@media (max-width: @screen-xs){ font-size: 11px; }
+				}
+			}	
+		}		
+	}
+
+}
+
+.grid-pagination{
+	padding: 20px 0;
+
+	ul,li{ margin:0; padding: 0; list-style: none; text-align: center;}
+
+	li{
+		display: inline-block;
+		margin: 0 20px;
+		@media (max-width: @screen-xs){ margin: 0; }
+		a{
+			display: inline-block;
+			background: @greey;
+			border-radius: 50%;
+			font-size: 18px;
+			color: @white;
+			padding: 3px  13px;
+
+			&:hover{ background: @turquoise-60; }
+			@media (max-width: @screen-xs){ font-size: 12px; }
+		}
+	}
+
+	&.pagination-modal{
+		a{
+			background: none;
+			color: @oil;
+		}
+	}
+}
+
+
+[id*="ver-archivo-"],
+#ver-archivo{
+	.modal-body{
+		padding: 0 50px 10px 50px;
+		 @media (max-width: @screen-sm){ padding: 0 0 10px 0;}
+	}
+
+	.slider-nav{ padding: 0 20px; }
+	.slider-nav-carrousel .slick-list{
+	    max-width: 460px !important; 
+	    @media (max-width: @screen-sm){ width: 300px}
+	}
+	.slick-prev, .slick-next{
+		background-size: 47px;
+		width: 47px; height: 47px;
+		z-index: 999;
+		&:before{ content:"";}
+	}
+	.slick-prev{ background: url("../imgs/icons/slider-arrow-back.svg") no-repeat;}
+	.slick-next{ background: url("../imgs/icons/slider-arrow-next.svg") no-repeat;}
+
+	.slider-nav-carrousel{
+		padding: 0 35px;
+		@media (max-width: @screen-sm){ display: none}
+		.slick-prev, .slick-next{ width: 9px; height: 16px;}
+		.slick-prev{ background: url("../imgs/icons/slider-arrow-back-carrousel.svg") no-repeat; left: 0;}
+		.slick-next{ background: url("../imgs/icons/slider-arrow-next-carrousel.svg") no-repeat; right: 0;}
+		.slick-slide img{
+			border:1px solid @grey-50;
+			padding:3px;
+		}		
+		.slick-current img{ border-color: @grey-80;}
+	}
+	@media (max-width: @screen-xs){ 
+		.slider-for{ width: 300px; }
+	}	
+	.slider{ 
+		width: 500px; margin: 0 auto; margin-bottom: 30px;
+		@media (max-width: @screen-sm){ width:300px;}
+	}
+	
+	.slider-for{ 
+		.slick-list{
+			//min-height: 400px !important;
+		}
+		.slick-slide{ 
+			//width: 500px !important;
+			
+			img{
+				width: 100%; height: auto;
+				max-width: 500px;
+				@media (max-width: @screen-sm){ width:300px;}
+			}
+		}
+	}
+
+}
+[id*="medicamentos-"]{
+	.form-content{min-height: 400px;}
+
+}
+.search-combo{
+	width: 100%;
+	position: relative;
+	margin-top: 16px;
+	height: 42px;
+	
+	& > input{
+		border-radius: 0px;
+		background: @turquoise-05;
+		height: 42px;
+		line-height: 42px;
+		width: 100%;
+		padding-right: 45px;
+	}
+	& > button{
+		color: @oil;
+		font-family: 'doctorplus';
+		font-family: 'doctorplus';
+		position: absolute;
+		display: block;
+		right: 0px;
+		top: 0px;
+		background: @turquoise-05;
+		width: 42px;
+		height: 42px;
+		.trans-all();
+		&:hover{
+			color:@turquoise-10;
+		}
+	}
+}
+
+

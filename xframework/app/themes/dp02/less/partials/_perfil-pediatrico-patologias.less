@@ -1,0 +1,372 @@
+// correccion input que se apilan con select
+
+.data-form input.flat-input.small{
+	text-align: left;
+}
+
+@media (max-width: 689px){
+	input.flat-input.ib{
+		display: block !important;
+		margin: 0;
+		margin-top: 15px;
+		width: 100%;
+		max-width: 310px;
+	}
+	.data-form .patient-file .question{
+		display: block !important;
+		font-weight: 400;
+		color: @black;
+		font-size: 16px;
+	}
+}
+
+.select2-drop{
+	margin-top: 2px !important;
+}
+
+
+
+//Paciente perfil saluf pediatrico patologias
+
+.pps-subtitle{
+	color: #747579;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 0;
+	margin-bottom: 24px;
+	
+	@media(max-width:600px){
+		font-size: 16px;
+	}
+}
+
+.pps-form-row{
+	.clearFix;
+	margin-bottom: 8px;
+}
+.pps-label{
+	display: inline-block;
+	margin: 0 !important;
+	float: left;
+	width: 40%;
+	line-height: 18px;
+	position: relative;
+	top: 12px;
+	
+	
+	@media(max-width:960px){
+		font-size: 12px;
+	}
+	@media(max-width:700px){
+		width: 50%;
+	}
+	@media(max-width:600px){
+		width: 100%;
+		padding-bottom: 16px;
+		font-size: 14px;
+	}
+}
+.pps-form-options{
+	display: inline-block;
+	margin: 0;
+	float: left;
+	width: 60%;
+	
+	@media(max-width:700px){
+		width: 50%;
+	}
+	@media(max-width:600px){
+		width: 100%;
+	}
+}
+.pps-form-options-item{
+	display: inline-block;
+	margin-right: 4%;
+	&:last-child{
+		margin-right:0;
+	}
+	& label.checkbox{
+		display: inline-block;
+		
+		@media(max-width:960px){
+			font-size: 12px;
+			
+			& > span.label{
+				line-height: 24px;
+			}
+		}
+	}
+	@media(max-width:600px){
+		width: 100%;
+		clear: both;
+	}
+}
+.pps-form-input-holder{
+	display: inline-block;
+	& input{
+		border: none;
+		padding: 0px 6px;
+		margin-right: 10px;
+		max-width: 120px;
+		position: relative;
+		top: 2px;
+		
+		&::placeholder{
+			color: #C0C0C0;
+			font-size: 14px;
+			font-weight: 400;
+			position: relative;
+			top: -1px;
+		}
+	}
+}
+.pps-form-col-x6{
+	width: 50%;
+	float: left;
+	display: inline-block;
+	padding: 3px 16px;
+	
+	@media(max-width:600px){
+		clear: both;
+		width: 100%;
+		padding: 0px;
+		min-height: 32px;
+	}
+}
+.pps-form-col-x6-label{
+	display: block;
+	width: 100%;
+	text-align: right;
+	position: relative;
+	top: 2px;
+	
+	@media(max-width:600px){
+		text-align:left;
+		width: 100%;
+		padding-bottom: 0px;
+		font-size: 14px;
+		line-height: 16px;
+		padding-top: 12px;
+	}
+}
+.pps-form-col-x6-input{
+	&.left{
+		float: left;
+	}
+	&.right{
+		float: right;
+	}
+	& input[type='text']{
+		border: none;
+		padding: 0px 6px;
+		margin-right: 10px;
+		min-width: 220px;
+		position: relative;
+		top: 2px;
+	}
+	
+	
+	
+	
+	@media(max-width:600px){
+		padding-top: 16px;
+		&.left{
+			float: none;
+			clear: both;
+		}
+		&.right{
+			float: none;
+			clear: both;
+		}
+
+	}
+}
+.pps-form-col-x6-offset-x6{
+	width: 50%;
+	float: left;
+	display: inline-block;
+	padding: 3px 16px;
+	margin-left: 50%;
+	
+	& .pps-form-col-x6-input{
+		& > button{
+			margin-top: 0 !important;
+			
+			& > i{
+				margin-left: 4px;
+				position: relative;
+				top: 2px;
+			}
+			@media(max-width:600px){
+				margin: 0 !important;
+				margin-left: 24px !important;
+			}
+		}
+	}
+	
+	@media(max-width:600px){
+		clear: both;
+		width: 100%;
+		margin-left:0;
+	}
+}
+.pps-tags-holder{
+	max-width: 700px;
+	margin: auto;
+}
+.pps-divider{
+	min-height: 2px;
+	border-bottom: 1px #ccc solid;
+	padding: 16px 0;
+}
+.pps-form-options-left-col{
+	width: 100%;
+}
+.pps-col{
+	@media(max-width:600px){
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+//Paciente-perfil-de-salud-detalle-consulta
+.pps-chat-tabs-section{
+	margin-bottom: 62px !important;
+	
+	& .form-content{
+		min-height: 326px;
+	}
+}
+
+.pps-menu-chat-btn{
+	font-size: 30px;
+	color: @oil;
+	&:hover{
+		color: @oil !important;
+	}
+}
+
+.pps-tabs-nav-chat{
+	@media(max-width:768px){
+		& > li{
+			width: 50% !important;
+		}
+	}
+}
+
+.pps-chat-content{
+	background: #edfaf8;
+	padding-bottom: 25px;
+}
+
+.pps-chat-content-top{
+	background-color: #415b70;
+	color: #f2f2f2;
+	font-size: 14px;
+	line-height: 16px;
+	
+	.pps-chat-content-consulta{
+		width: 50%;
+		float: left;
+		padding: 13px 15px;
+		padding-left: 25px;
+		
+		@media(max-width:600px){
+			width: 100%;
+		}
+	}
+	.pps-chat-content-motivo{
+		width: 50%;
+		float: left;
+		padding: 13px 15px;
+		padding-right: 25px;
+		
+		@media(max-width:600px){
+			width: 100%;
+			padding-left: 25px;
+		}
+	}
+}
+
+.pps-chat-content-chat-box{
+	background-color: @white;
+	margin: 25px;
+	padding: 24px 16px;
+	
+	& .cs-ca-chat-holder{
+		max-width: 100% !important;
+	}
+}
+
+.pps-inline-form{
+	@media(max-width:600px){
+		.pps-form-options-item{
+			width: auto;
+		}
+	}
+}
+
+//.pps-center{
+//	@media(max-width:600px){
+//		
+//		.pps-form-col-x6-label{
+//		}
+//	}
+//	
+//}
+
+.health-profile{
+	
+		@media(max-width:600px){
+			.pps-form-options{
+				.pps-form-options-item{
+					display: inline-block;
+					width: auto;
+				}
+			}
+			.pps-form-row{
+				.select{
+					min-width: 100% !important;
+				}
+				input[type="text"]{
+					margin-right: 0!important;
+					min-width: 100% !important;
+				}
+				button.submit{
+					margin: auto !important;
+				}
+				.bootstrap-tagsinput{
+					margin-right: 0 !important;
+				}
+			}
+			
+			.pps-center{
+				text-align: center;
+				
+				label{
+					text-align: center;
+				}
+			}
+		}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

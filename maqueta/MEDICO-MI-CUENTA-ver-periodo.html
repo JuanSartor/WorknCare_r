@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="main-content">
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<nav class="section-header ce-ca-top profile">
+		<div class="container">
+			<div class="okm-row">
+				<div class="user-select pull-left user-select-sonsulta-express-rsp">
+					<h1 class="section-name">
+						<i class="icon-doctorplus-pc-add"></i><a class="consulta-express-tittle-lnk" href="#">Mi Cuenta</a>
+					</h1>
+				</div>
+				<div class="top-nav-icons-select-combo">
+					<div class="okm-row">
+						<div class="top-nav-right-icon-box">
+							<a href="#"><i class="icon-doctorplus-dollar-sheet"></i> <span>Mis facturas</span></a>
+							<a href="#"><i class="icon-doctorplus-dollar-db"></i> <span>Pagos</span></a>
+						</div>
+
+						<div class="consulta-express-pull-right">
+							<div class="dropdown dropdown-express medico-dropdown-express">
+
+								<select class="form-control select select-primary select-block mbl ce-nc-p2-res-list-select" style="width:100%">
+									<option value="0">Consultas</option>
+									<option value="1">Nueva consulta</option>
+									<option value="2">Abiertas</option>
+									<option value="3">Finalizadas</option>
+									<option value="4">Rechazadas</option>
+									<option value="4">Vencidas</option>
+								</select>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>	
+
+</div>
+	
+<section class="okm-container mmc-detale-consulta">
+	<h1 class="mmc-title">Febrero 2015</h1>
+	<div class="mmc-detalle-consulta-box">
+		<div class="okm-row">
+			
+			<div class="mmc-detalle-consulta-col">
+				<i class="icon-doctorplus-chat"></i>
+				<div class="mmc-cant-consultas">30</div>
+				<a href="#" class="resumen-trg mmc-detalle-consulta-btn">ver detalle de consultas</a>
+				<div class="mmc-price">$ 1.850</div>
+				<div class="mmc-price-comision">
+					Comisión DoctorPlus
+					<span>$ 150</span>
+				</div>
+			</div>
+			
+			<div class="mmc-detalle-consulta-col">
+				<i class="icon-doctorplus-video-call"></i>
+				<div class="mmc-cant-consultas">30</div>
+				<a href="#" class="resumen-trg mmc-detalle-consulta-btn">ver detalle de consultas</a>
+				<div class="mmc-price">$ 500</div>
+				<div class="mmc-price-comision">
+					Comisión DoctorPlus
+					<span>$ 20</span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="mmc-price-total">
+		<i class="icon-doctorplus-dollar-circular"></i>
+		<span>Total del período</span>
+		<span class="mmc-price">$ 2.300</span>
+	</div>
+	
+</section>
+	
+<section class="okm-container mmc-costos-periodo">
+	<div id="mmc-paso-0" class="mmc-action-center-box">
+		<a href="#" id="paso-0-trg" class="mmc-periodo-pago-btn">Solicitar pago de período</a>
+	</div>
+	
+	<div id="mmc-paso-1" class="mmc-costos-periodo-paso-box">
+		<h3>Solicitud de pago</h3>
+		<div class="mmc-paso-box-1">
+			<div class="mmc-grey-box">
+			<div class="okm-row">
+				<div class="col-x2">
+					<span>Importe</span>
+					<span class="mmc-paso1-importe">$ 2.300</span>
+				</div>
+				<div class="col-x2">
+					<span>Correspondientes al período</span>
+					<span class="mmc-paso1-importe">Febrero 2015</span>
+				</div>
+			</div>
+		</div>
+			<div id="mmc-costos-periodo-paso1" class="mmc-action-center-box">
+				<a href="#" id="paso-1-trg" class="mmc-periodo-pago-btn">Confirmo</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="mmc-paso-2" class="mmc-costos-periodo-paso-box">
+		<h3>Solicitud de pago</h3>
+		<div class="mmc-paso-box-2">
+		<p>Ud. solicitó pago por transfencia a la cuenta bancaria</p>
+		<div class="mmc-paso-datos-cuenta">
+			<ul class="mmc-datos-de-cuenta">
+				<li>Número de Cuenta: 504-00000025198/5</li>
+				<li>Banco: Santander Río</li>
+				<li>Titular: JAVIER MIGUEL MARIA MENOYO</li>
+			</ul>
+		</div>
+		<div class="mmc-action-center-box">
+			<div class="mmc-importe-box">
+				<span>Importe</span>
+				<span class="mmc-price">$ 2.300</span>
+		</div>
+		</div>
+		<div class="mmc-action-center-box mmc-action-2-btn-box">
+			<a href="#" id="paso-2-cancelar-trg" class="mmc-periodo-pago-btn">Cancelar</a>
+			<a href="#" id="paso-2-trg" class="mmc-periodo-pago-btn">Confirmo</a>
+		</div>
+	</div>
+	</div>
+		
+	<div id="mmc-paso-3" class="mmc-costos-periodo-paso-box">
+		<h3>Solicitud de pago</h3>
+		<div class="mmc-paso-box-3">
+		<p>Su solicitud ha sido enviada.</p>
+
+		<ul class="mmc-solicitud-enviada">
+			<li>
+				<span>Fecha:</span>
+				27 JUN 2015
+			</li>
+			<li>
+				<span>Número de solicitud de pago:</span>
+				304-00005879
+			</li>
+			<li>
+				<span>PAGO POR TRANSFERENCIA BANCARIA</span>
+				<div class="mmc-solicitud-enviada-datos-box">
+					<ul class="mmc-datos-de-cuenta">
+						<li>Número de Cuenta: 504-00000025198/5</li>
+						<li>Banco: Santander Río</li>
+						<li>Titular: JAVIER MIGUEL MARIA MENOYO</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+
+		<div class="mmc-action-center-box">
+			<div class="mmc-importe-box">
+				<span>Importe</span>
+				<span class="mmc-price">$ 2.300</span>
+			</div>
+		</div>
+
+		<div id="mmc-costos-periodo-paso1" class="mmc-action-center-box mmc-action-2-btn-box">
+			<a href="#" id="paso-3-cancelar-trg" class="mmc-periodo-pago-btn">Cancelar</a>
+			<a href="#" class="mmc-periodo-pago-btn-print"><i class="icon-doctorplus-print"></i></a>
+		</div>
+
+
+	</div>
+	</div>
+	
+	
+	<div class="mmc-costos-periodo-disclaimer">
+		<p>
+			Los profesionales podrán solicitar los pagos de los 
+			resumenes a partir del primer día hábil siguiente al cierre del período (mes) reclamado.
+		</p>
+		<p>
+			COMISIONES DOCTORPLUS S.A.<br>
+			DoctorPlus S.A. percibirá una comisión para los servicios de Consulta Express y Video Consulta del 25% para las Cuentas Gratuitas.
+		</p>
+		<p>
+			Los servicios que impliquen mensajes vía SMS requiere que el celular adherido sea
+			apto para dicha tecnología y que se encuentre encendido y dentro del área de cobertura.
+			El cargo de cada SMS será el que cobre la empresa de telefonía celular seleccionada por 
+			el cliente. La baja del celular adherido en el caso mencionado implicará que el cliente 
+			deja de recibir avisos de DoctorPlus por dicha vía.
+		</p>
+	
+	</div>
+	
+</section>	
+	
+
+<section class="mmc-resumen-periodo">
+	<div class="mmc-resumen-top">
+		<div class="okm-container mmc-resumen-top-in">
+			<h2>Resumen del Período</h2>
+			<div class="mmc-resumen-download-box">
+				<a href="#" download data-toggle="tooltip" data-placement="left" title="Descargar período"><i class="icon-doctorplus-bandeja-in"></i></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="okm-container okm-row mmc-resumen-list-box">
+		<ul class="mmc-resumen-list-1">
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+		</ul>
+		
+		
+		<ul class="mmc-resumen-list-2">
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Carla Moresco</span>
+				<span>5 feb 2016</span>
+			</li>
+			<li>
+				<span>Juan Manuel Menoyo</span>
+				<span>5 feb 2016</span>
+			</li>
+		</ul>
+		
+	</div>
+	<div class="okm-row">
+		<div class="paginador separador">
+			<div class="paginas">
+				<span>de 1 al 10 / 200</span>
+				<a href=""><span class="fui-arrow-left"></span></a>
+				<a href=""><span class="fui-arrow-right"></span></a>
+			</div>
+		</div>
+	</div>
+</section>	
+
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+	$('[data-toggle="tooltip"]').tooltip()
+});
+</script>		
+</body>
+</html>

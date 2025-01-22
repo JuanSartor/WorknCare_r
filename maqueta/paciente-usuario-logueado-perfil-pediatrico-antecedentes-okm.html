@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div><!-- /.container -->
+	</nav>
+</header>
+
+<div class="modal fade modal-inside">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body"></div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<section class="filter user-group">
+	<div class="container">
+		<div class="btn-group user-filter" data-toggle="buttons">
+			<label class="btn btn-inverse active">
+				<input type="checkbox" checked> Todos
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Juan Manuel Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Iñaki Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Usted
+			</label>
+			<button class="dp-add-user add-user"></button>
+		</div>
+	</div>
+</section>
+
+<section class="user-actions user-paciente">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+			<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+			<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+			<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+			<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+			<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+
+<nav class="section-header pediatric profile">
+	<div class="container">
+		<div class="user-select pull-left">
+			<div class="active-user">
+				<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+				<div class="perfil-dropdown">
+					<ul>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+					</ul>
+					<span><i class="dp-arrow-down"></i></span>
+				</div>				
+			</div>
+			<h1 class="section-name">Perfil de Salud Pediatrico</h1>
+		</div>
+		<div class="settings pull-right">
+			<ul>
+				<li><a href="javascript:;" class="modal-btn" data-target="configurar-tablero" role="button"><i class="dpp-grid"></i>Configurar Tablero</a></li>
+				
+				<li><a href="javascript:;" class="modal-btn" data-target="privacidad" role="button"><i class="dpp-lock"></i>Privacidad</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</nav>
+<!-- /header perfil pediatrico -->  
+
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+
+<div class="container">
+	<div class="row" id="notificaciones">
+		<div class="col-sm-12" >
+
+			<div class="module-subheader">
+				<div class="row">
+					<h2><span class="dpp-chequeos"><span>3</span></span> Controles y chequeos</h2>
+				</div>
+			</div>
+			<table class="table-responsive historico-consultas-table notificaciones-table">
+				<thead>
+					<tr>
+						<td class="col-1">Fecha</td>
+						<td class="">Tipo</td>
+						<td class="col-3">Diagnóstico</td>
+						<td class="col-4">Desactivar todas</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag deactivated"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>																								
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</div>
+<!-- /notificaciones -->
+
+
+<section class="module-header">
+	<h1 class="section-header text-center icon-svg circle dna">Antecedentes</h1>
+</section>
+
+
+<section class="data-form health-profile">		
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 class="section-header form-header text-center">Perinatales</h2>
+				<form class="form patient-file light-grey" role="form" method="post">
+					<div class="form-group">
+						<span class="question small">Gesta</span>
+						<input type="text" class="flat-input small" id="gesta">
+						<label class="checkbox ib" for="parto">
+							<input type="radio" id="parto" name="gesta"> Parto
+						</label>
+						<label class="checkbox ib" for="cesarea">
+							<input type="radio" id="cesarea" name="gesta">
+							Cesárea
+						</label>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="form-group">
+								<span class="question small">Peso</span>
+								<input type="text" class="flat-input small" id="peso">grs.
+							</div>
+							<div class="form-group">
+								<span class="question small">Talla</span>
+								<input type="text" class="flat-input small" id="talla">cm.
+							</div>
+							<div class="form-group">
+								<span class="question small">Per. Cef.</span>
+								<input type="text" class="flat-input small" id="talla">cm.
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6  col-xs-6">
+							<div class="form-group">
+								<span class="question small">Apgar 1'</span>
+								<input type="text" class="flat-input small" id="apgar-1">
+							</div>
+							<div class="form-group">
+								<span class="question small">Apgar 5'</span>
+								<input type="text" class="flat-input small" id="apgar-5">
+							</div>
+							<div class="form-group">
+								<span class="question small">Ed. Gest.</span>
+								<input type="text" class="flat-input small" id="ed-gest">
+							</div>
+						</div>
+					</div>
+					<button action="" type="submit" class="submit">Grabar Datos</button>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<h2 class="section-header form-header text-center">Familiares</h2>
+				<form class="form patient-file" role="form" method="post">
+					<h1 class="text-center no-margin">Grupo Sanguíneo</h1>
+					<br>
+					<br>
+					<div class="form-group text-center">
+						<span class="question small big-font">Padre</span>
+						<select name="grupo-padre" id="grupo-padre" class="form-control select select-primary select-block mbl medium ib">
+							<option>Seleccione</option>
+							<option value="ab+">AB+</option>
+							<option value="ab-">AB-</option>
+							<option value="0+">0+</option>
+							<option value="0-">0-</option>
+						</select>
+					</div>
+					<div class="form-group text-center">
+						<span class="question small big-font">Madre</span>
+						<select name="grupo-madre" id="grupo-madre" class="form-control select select-primary select-block mbl medium ib">
+							<option>Seleccione</option>
+							<option value="ab+">AB+</option>
+							<option value="ab-">AB-</option>
+							<option value="0+">0+</option>
+							<option value="0-">0-</option>
+						</select>
+					</div>
+					<button action="" type="submit" class="submit" style="margin-top:120px;">Grabar Datos</button>
+				</form>
+			</div>
+		</div>
+		<h2 class="section-header form-header text-center">Patologías familiares</h2>
+		<form class="form patient-file" role="form" method="post">
+			<div class="row user-select">
+				<div class="col-md-4 col-md-offset-1">
+					<h1 class="box-header">Familiar</h1>
+					<ul class="select-box">
+						<li>Abuelo materno</li>
+						<li>Abuela materna</li>
+						<li>Abuelo paterno</li>
+						<li>Abuela paterna</li>
+						<li>Padre</li>
+						<li>Madre</li>
+						<li>Hermanos</li>
+						<li>Cónyugue</li>
+						<li>Hijos</li>
+						<li>Otros (tíos, primos, etc)</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h1 class="box-header">Patología</h1>
+					<ul class="select-box">
+						<li>Tuberculosis</li>
+						<li>Diabetes Mellitus</li>
+						<li>Hipertensión</li>
+						<li>Carcinomas</li>
+						<li>Cardiopatías</li>
+						<li>Enfermedades hepáticas</li>
+						<li>Enfermedades renales</li>
+						<li>Enfermedades endócrinas</li>
+						<li>Enfermedades mentales</li>
+						<li>Epilepsia</li>
+						<li>Asma</li>
+						<li>Enfermedades hematológicas</li>
+						<li>Sífilis</li>
+					</ul>
+					<div class="select-otras">
+						<label class="checkbox" for="ninguna">
+							<input type="checkbox" id="ninguna"> Ninguna de las mencionadas
+						</label>
+						<input type="text" id="otras-patologias" placeholder="Otras patologías (indique)" class="flat-input">
+						<a href="javascript:;" class="fui-plus" id="otras-patologias-add"></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<button class="add-items btn-inverse btn">agregar</button>
+					<div class="tagsinput-primary">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="" />
+
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+$('.select-box li').on('click', function() {
+	$(this).parent('.select-box').find('li').removeClass('active');
+	$(this).addClass('active');
+});
+$('.add-items').on('click', function(event) {
+	event.preventDefault();
+	var text = '';
+	var actives = $('.select-box').find('.active');
+	$(actives).each(function() {
+		text += $(this).text() + ' ';
+	})
+	$('.tagsinput').tagsinput('add', text);
+});
+$('#otras-patologias-add').on('click', function(event) {
+	event.preventDefault();
+	var text = '';
+	var text = $('#otras-patologias').val();
+	$('.tagsinput').tagsinput('add', text);
+});
+
+
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck(); 
+});
+
+</script>
+</body>
+</html>

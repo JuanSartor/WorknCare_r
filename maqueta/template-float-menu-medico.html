@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="css/flat-ui.css">
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+<nav class="paciente-nav">
+	<div class="container paciente-nav-container">
+			<div class="paciente-nav-usr">
+				<a href="#" class="paciente-nav-trigger">
+					<i class="icon-doctorplus-burger"></i>
+					<img src="imgs/extranet/yannis.png" alt="Usr profile"/>
+					<label>Dr. Yannis Georgandelis</label>
+				</a>
+				<ul class="paciente-nav-usr-menu" id="paciente-menu">
+						<li><a href="#"><i class="icon-doctorplus-profile-sheet"></i> Datos administrador</a></li>
+						<li><a href="#"><i class="icon-doctorplus-lock"></i> Configuración de privacidad</a></li>
+						<li><a href="#"><i class="icon-doctorplus-gear"></i> Configuración de cuenta</a></li>
+						<li><a href="#"><i class="icon-doctorplus-dollar-circular"></i> Estado de cuenta</a></li>
+					</ul>
+			</div>
+		
+			<div class="paciente-nav-logo">
+				<a href="#">
+					<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus"/>
+				</a>
+			</div>
+			<div class="paciente-nav-menu">
+				<a class="paciente-nav-menu-burger"><i class="icon-doctorplus-burger"></i></a>
+				<ul class="paciente-nav-menu-rsp" id="burger-menu">
+					<li><a href="#"><i class="icon-doctorplus-onoff"></i><label>Home</label></a></li>
+					<li><a href="#"><i class="icon-doctorplus-home"></i><label>Cerrar sesión</label></a></li>
+				</ul>
+			</div>
+	</div>
+</nav>	
+
+<!--
+<header>
+	<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+		<div class="container">
+		
+			<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+			<div class="block-profile">
+				<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+				<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+				<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+				<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+			</div>
+		</div>
+	</nav>
+</header>
+-->
+
+	
+<nav id="float-nav" class="float-nav fn-mdc">
+	<div class="fn-box">
+		
+		<div class="fn-menu">
+			
+			<ul class="fn-action-list">
+				<li>
+					<a href="#" class="fn-list-action-item fn-mdc-usr-trigger">
+						<i class="icon-doctorplus-usr-group"></i>
+					</a>
+					<div class="fn-mdc-usr-holder">
+						<ul>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+							<li>
+								<a href="#"><img src="imgs/temp/foto-perfil-150.jpg" alt="Usr"/></a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="fn-list-action-item fn-usr">
+						<figure class="gotmsg"></figure>
+
+						<i class="icon-doctorplus-search"></i>
+			
+						
+						<figure class="fn-tooltip">
+							<span class="fn-item-content">Buscador</span>
+							<span class="fn-arrow"></span>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="fn-list-action-item fn-usr">
+						<figure class="gotmsg"></figure>
+
+						<i class="icon-doctorplus-pharmaceutics"></i>
+
+						<figure class="fn-tooltip">
+							<span class="fn-item-content">Perfil Salud</span>
+							<span class="fn-arrow"></span>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="fn-list-action-item fn-usr">
+						<figure class="gotmsg"></figure>
+
+						<i class="icon-doctorplus-user-add-like"></i>
+
+						<figure class="fn-tooltip">
+							<span class="fn-item-content">Prof. Frecuentes</span>
+							<span class="fn-arrow"></span>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="fn-list-action-item fn-usr">
+						<figure class="gotmsg"></figure>
+
+						<i class="icon-doctorplus-video-call"></i>
+
+						<figure class="fn-tooltip">
+							<span class="fn-item-content">Video Consulta</span>
+							<span class="fn-arrow"></span>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="fn-list-action-item fn-usr">
+						<figure class="gotmsg"></figure>
+
+						<i class="icon-doctorplus-chat"></i>
+
+						<figure class="fn-tooltip">
+							<span class="fn-item-content">Consulta Express</span>
+							<span class="fn-arrow"></span>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="fn-list-action-item fn-usr">
+						<figure class="gotmsg"></figure>
+
+						<i class="icon-doctorplus-flag"></i>
+
+						<figure class="fn-tooltip">
+							<span class="fn-item-content">Notificaciones</span>
+							<span class="fn-arrow"></span>
+						</figure>
+					</a>
+				</li>
+			</ul>
+			<a href="#" class="fn-close"><i class="icon-doctorplus-cruz"></i></a>
+		</div>
+		<a href="#" class="fn-usr-trigger">
+			<i class="icon-doctorplus-chat-square"></i>
+		</a>
+	</div>
+</nav>	
+	
+	
+	
+<div class="modal fade modal-inside"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"></div></div></div></div>
+<!-- /.modal-dialog -->
+
+<section class="filter user-group">
+	<div class="container">
+		<div class="btn-group user-filter" data-toggle="buttons">
+			<label class="btn btn-inverse active">
+				<input type="checkbox" checked> Todos
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Juan Manuel Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Iñaki Menoyo
+			</label>
+			<label class="btn btn-inverse">
+				<input type="checkbox"> Usted
+			</label>
+			<button class="dp-add-user add-user"></button>
+		</div>
+	</div>
+</section>
+
+
+<section class="user-actions">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+			<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+			<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+			<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+			<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+			<li><a href="#" class="dpp-flag"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu -->
+
+<section class="user-actions user-paciente">
+	<div class="container">
+		<ul>
+			<li><a href="#" class="dp-search"><p>Buscador</p></a></li>
+			<li><a href="#" class="dp-user"><p>Información del paciente</p></a></li>			
+			<li><a href="#" class="dp-health-info"><p>Perfil de Salud</p></a></li>
+			<li><a href="#" class="dp-frequent-dr"><p>Profesionales frecuentes</p></a></li>
+			<li><a href="#" class="dp-video"><p>Video Consulta</p><span>1</span></a></li>
+			<li><a href="#" class="dp-express"><p>Consulta Express</p><span>1</span></a></li>			
+			<li><a href="#" class="dpp-flag"><p>Notificaciones</p> <span>1</span></a></li>
+		</ul>
+	</div>
+</section>
+<!-- /accesso directos menu paciente -->
+	<section class="section-header patient profile settings">
+		<div class="container">
+			<div class="user-select pull-left">
+				<div class="active-user">
+					<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+					<div class="perfil-dropdown">
+						<ul>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+						</ul>
+						<span><i class="dp-arrow-down"></i></span>
+					</div>					
+				</div>
+				<h1 class="section-name">Perfil de Salud</h1>
+			</div>
+			<div class="settings pull-right">
+				<ul>
+					<li><a href="#"><i class="icon-doctorplus-plus-21"></i>Configurar Tablero</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-20"></i>Notificaciones</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-26"></i>Configurar</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+
+<nav class="section-header pediatric profile">
+	<div class="container">
+		<div class="user-select pull-left">
+			<div class="active-user">
+				<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+				<div class="perfil-dropdown">
+					<ul>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+					</ul>
+					<span><i class="dp-arrow-down"></i></span>
+				</div>				
+			</div>
+			<h1 class="section-name">Perfil de Salud Pediatrico</h1>
+		</div>
+		<div class="settings pull-right">
+			<ul>
+				<li><a href="javascript:;" class="modal-btn" data-target="configurar-tablero" role="button"><i class="dpp-grid"></i>Configurar Tablero</a></li>				
+				<li><a href="javascript:;" class="modal-btn" data-target="privacidad" role="button"><i class="dpp-lock"></i>Privacidad</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</nav>
+<!-- /header perfil pediatrico -->   
+
+<nav class="section-header patient profile">
+	<div class="container">
+		<div class="user-select pull-left">
+			<div class="active-user">
+				<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+				<div class="perfil-dropdown">
+					<ul>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+						<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+					</ul>
+					<span><i class="dp-arrow-down"></i></span>
+				</div>				
+			</div>
+			<h1 class="section-name">Perfil de Salud</h1>
+		</div>
+		<div class="settings pull-right">
+			<ul>
+				<li><a href="javascript:;" class="modal-btn" data-target="configurar-tablero" role="button"><i class="dpp-grid"></i>Configurar Tablero</a></li>				
+				<li><a href="javascript:;" class="modal-btn" data-target="privacidad" role="button"><i class="dpp-lock"></i>Privacidad</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</nav>
+<!-- /header perfil salud-->   
+<nav class="section-header patient pediatric profile settings">
+		<div class="container">
+			<div class="user-select pull-left">
+				<div class="active-user">
+					<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+					<div class="perfil-dropdown">
+						<ul>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+						</ul>
+						<span><i class="dp-arrow-down"></i></span>
+					</div>					
+				</div>
+				<h1 class="section-name">Perfil de Salud</h1>
+			</div>
+			<div class="settings pull-right">
+				<ul>
+					<li><a href="#"><i class="icon-doctorplus-plus-21"></i>Configurar Tablero</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-20"></i>Notificaciones</a></li>
+					<li><a href="#"><i class="icon-doctorplus-plus-26"></i>Configurar</a></li>
+				</ul>
+			</div>
+				<div class="clearfix"></div>
+		</div>
+	</nav>
+
+<nav class="tablero-box">
+	<div class="container ">
+		<div class="row">
+			<div class="col-xs-3 col-sm-2 col-md-1 tablero-icon">
+				<a href=""><img src="imgs/temp/info-doctor.gif" alt=""></a>					
+			</div>
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-prev"></a>
+			</div>	
+			<div class="col-xs-5 col-sm-8 col-md-9">
+				<ul class="slider-menu">
+					<li><a href="#"><i class="dpp-express"></i><span class="green"><i class="fui-check"></i></span></a></li>
+					<li><a href="#notificaciones" class="icon-notificaciones"><i class="dpp-chequeos"></i><span>3</span></a></li>
+					<li><a href="#"><i class="dpp-male"></i><span><strong>-</strong></span></a></li>
+					<li><a href="#"><i class="dpp-patologia"></i></a></li>
+					<li><a href="#"><i class="dpp-dna"></i></a></li>
+					<li><a href="#"><i class="dpp-medicina"></i></a></li>
+					<li><a href="#"><i class="dpp-consulta"></i></a></li>
+					<li><a href="#"><i class="dpp-images"></i></a></li>
+					<li><a href="#"><i class="dpp-ginecologia"></i></a></li>
+					<li><a href="#"><i class="dpp-vacuna"></i></a></li>
+					<li><a href="#"><i class="dpp-cirugia"></i></a></li>
+					<li><a href="#"><i class="dpp-alergia"></i></a></li>
+					<li><a href="#"><i class="dpp-dental"></i></a></li>
+					<li><a href="#"><i class="dpp-oido"></i></a></li>
+					<li><a href="#"><i class="dpp-ojo"></i></a></li>
+					<li><a href="#"><i class="dpp-sonrisa"></i></a></li>
+				</ul>
+			</div>	
+			<div class="col-xs-2 col-sm-1 col-md-1">
+				<a href="javascript:;" class="slider-arrow slider-menu-next"></a>
+			</div>				
+			
+		</div>	
+	</div>
+</nav>
+<!-- /menu slider -->
+
+<nav class="section-header ce-ca-top profile">
+		<div class="container">
+			<div class="user-select pull-left user-select-sonsulta-express-rsp">
+
+				<h1 class="section-name"><i class="icon-doctorplus-chat"></i><a class="consulta-express-tittle-lnk" href="#">Consulta Express</a></h1>
+			</div>
+			<div class="settings consulta-express-pull-right">
+				<div class="dropdown dropdown-express medico-dropdown-express">
+
+					<select class="form-control select select-primary select-block mbl ce-nc-p2-res-list-select" style="width:100%">
+						<option value="0">Consultas</option>
+						<option value="1">Nueva consulta</option>
+						<option value="2">Abiertas</option>
+						<option value="3">Finalizadas</option>
+						<option value="4">Rechazadas</option>
+						<option value="4">Vencidas</option>
+					</select>
+
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</nav>	
+	
+<nav class="section-header consulta-express-top profile">
+		<div class="container">
+			<div class="user-select pull-left user-select-sonsulta-express-rsp">
+				<div class="active-user active-user-no-arrow">
+					<div class="user-img">
+						<img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario">
+						<figure class="sub-circle-green"><i class="icon-doctorplus-check-thin"></i></figure>
+					</div>
+					<div class="perfil-dropdown">
+						<ul>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+						</ul>
+						<span><i class="dp-arrow-down"></i></span>
+					</div>				
+				</div>
+				<h1 class="section-name"><a class="consulta-express-tittle-lnk pcu-header-lnk" href="#">Profesionales Frecuentes</a></h1>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</nav>	
+	
+<div class="container">
+	<div class="row" id="notificaciones">
+		<div class="col-sm-12" >
+
+			<div class="module-subheader">
+				<div class="row">
+					<h2><span class="dpp-chequeos"><span>3</span></span> Controles y chequeos</h2>
+				</div>
+			</div>
+			<table class="table-responsive historico-consultas-table notificaciones-table">
+				<thead>
+					<tr>
+						<td class="col-1">Fecha</td>
+						<td class="">Tipo</td>
+						<td class="col-3">Diagnóstico</td>
+						<td class="col-4">Desactivar todas</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag deactivated"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>
+					<tr>
+						<td>05/11/2014</td>
+						<td>Vacuna</td>
+						<td>Refuerzo antitetánica</td>
+						<td><span class="dpp-flag"></span></td>
+					</tr>																								
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</div>
+<!-- /notificaciones -->
+
+
+<section class="filter-table-header patients">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<h1 class="section-header">Mis Pacientes</h1>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pull-right">
+				<div class="search-combo">
+					<input type="text" class="form-control flat" placeholder="Buscar paciente" />
+					<button>f</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /header mis pacientes -->
+
+	
+<section class="section-header section-header profile filter-table-header filter-table-header-paciente">
+		<div class="container">
+
+			<!-- comienzo user-select HTML NUEVO  -->
+			<div class="user-select pull-left">
+				<div class="active-user">
+					<div class="user-img"><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"></div>
+					<div class="perfil-dropdown">
+						<ul>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> JMM</a></li>
+							<li><a href=""><img class="img-responsive img-circle" src="imgs/extranet/user.jpg" alt="Nombre de usuario"> IMM</a></li>
+						</ul>
+						<span><i class="dp-arrow-down"></i></span>
+					</div>				
+				</div>
+				<h1 class="section-name"><i class="dpp-flag"></i> Notificaciones</h1>
+			</div>
+			<!-- fin user-select HTML NUEVO  -->
+
+		</div>
+	</section>	
+
+<section class="container-fluid" id="info-pacientes">
+	<div class="container">
+		<div class="fold">
+		<div class="detalles-paciente">
+			<ul>
+				<li class="pad-top-5">Juan Manuel Menoyo <span>FN 28/08/1969</span></li>
+				<li class="pad-top-5">PSHB <span class="dp-vcard">5443546546</span></li>
+				<li><a href=""><span class="dp-info"></span><small>Certificados y consejos</small></a></li>
+				<li><a href=""><span class="dp-print"></span><small>Impresi&oacute;n Perfil de Salud</small></a></li>
+			</ul>
+		</div>
+
+		<div class="tagsinput-primary">
+			<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="hepatitis, levotiroxina 100 mg, asma, rubeola, hepatitis, levotiroxina 100 mg, asma, rubeola" />
+			<a href="" class="toggle-ver"><span class="fui-plus"></span></a>	
+		</div>
+		</div>
+		<a href="" class="toggle-ver toggle-info-box">Ocultar menú</a>		
+	</div>
+</section>	
+<!-- /info-pacientes -->
+
+
+<section class="container">
+	<ol class="breadcrumb">
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">Mis Pacientes</a></li>
+		<li><a href="#">Perfil de Salud</a></li>
+		<li><a href="#">Juan Manuel Menoyo</a></li>
+		<li class="active">Medicamentos</li>
+	</ol>
+</section>	
+<!-- /breadcrumbs -->
+
+
+<section class="module-header medicamentos-header container">
+	<figure class="circle-icon-images"></figure>
+	<h1>Titulo</h1>
+	<p class="notice">Texto informativo</p>
+</section>
+<!-- /main titulo -->
+
+	<section class="module-header medicamentos-header container">
+<h4 class="text-center"><a href="javascript:;" class="modal-btn" data-target="usabilidad-modal" role="button">&raquo; Modal Alerta</a></h4>
+
+	</section>
+
+
+<div class="paginas container">
+	<span>de 1 al 10 / 200</span>
+	<a href=""><span class="fui-arrow-left"></span></a>
+	<a href=""><span class="fui-arrow-right"></span></a>
+</div>   
+<!-- /paginador -->
+<!-- Modal Alert trigger-->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-alert">Modale ALerta</button>
+
+	<!-- Modal Perfil completo-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-perfil-completo">Modal Fin Perfil</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-perfil-completo-acreditacion">Modal Fin Perfil Acreditación</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modal-chrome">Modal Usabilidad Chrome</button>
+	
+<div class="sin-registros">
+	<i class="dp-pacientes dp-icon"></i>
+	<h6>¡La sección está vacía!</h6>
+	<p>Ud no tiene <strong>Pacientes </strong> relacionados.</p>
+</div>
+
+
+<div class="info-salud-banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box-shadow">
+					<h3>La Info de Salud de sus pacientes en un solo lugar</h3>
+					<p>Visualice y tenga siempre a mano el
+			seguimiento de sus pacientes, el resultado de estudios y chequeos y la posibilidad de contactarse con sus profesionales frecuentes</p>
+				</div>
+				<div class="box-shadow-bt"></div>
+			</div>
+			<div class="col-sm-6">
+				<img src="imgs/info-salud-banner.png" alt="" class="img-responsive">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<br>
+			<br>
+			<br>
+			<table class="responsive-table">
+				<thead>
+					<tr>
+						<th scope="col">Columna 1</th>
+						<th scope="col">Columna 2</th>
+						<th scope="col">Columna 3</th>
+						<th scope="col">Columna 4</th>
+						<th scope="col">Columna 5</th>
+						<th scope="col">Columna 6</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">Row A Columna 1</td>
+						<td data-title="Columna 2">dato ca2</td>
+						<td data-title="Columna 3">dato ca3</td>
+						<td data-title="Columna 4">dato ca4</td>
+						<td data-title="Columna 5">dato ca5</td>
+						<td data-title="Columna 6">dato ca6</td>
+					</tr>
+					<tr>
+						<td scope="row">Row B Columna 2</td>
+						<td data-title="Columna 2">dato cb2</td>
+						<td data-title="Columna 3">dato cb3</td>
+						<td data-title="Columna 4">dato cb4</td>
+						<td data-title="Columna 5">dato cb5</td>
+						<td data-title="Columna 6">dato cb6</td>
+					</tr>
+					<tr>
+						<td scope="row">Row C Columna 3</td>
+						<td data-title="Columna 2">dato cc2</td>
+						<td data-title="Columna 3">dato cc3</td>
+						<td data-title="Columna 4">dato cc4</td>
+						<td data-title="Columna 5">dato cc5</td>
+						<td data-title="Columna 6">dato cc6</td>
+					</tr>
+					<tr>
+						<td scope="row">Row D Columna 4</td>
+						<td data-title="Columna 2">dato cd2</td>
+						<td data-title="Columna 3">dato cd3</td>
+						<td data-title="Columna 4">dato cd4</td>
+						<td data-title="Columna 5">dato cd5</td>
+						<td data-title="Columna 6">dato cd6</td>
+					</tr>
+				
+				</tbody>
+			</table>
+		<br>
+		<br>
+		<br>
+		<br>
+		</div>
+	</div>
+</div>
+
+<div style="text-align:center; padding-bottom:24px;">
+
+	<a href="#" class="btn-cancel"><i class="icon-doctorplus-cruz"></i> Cancelar</a>
+	<a href="#" class="btn-default"><i class="icon-doctorplus-plus"></i> Boton Default</a>
+	<a href="#" class="btn-secondary"><i class="icon-doctorplus-pen"></i> Boton Secundario</a>
+	<a href="#" class="btn-seconday-inverted"><i class="icon-doctorplus-pen"></i> Boton Secundario invertido</a>
+	<a href="#" class="btn-alert"><i class="icon-doctorplus-alert"></i> Boton Alert</a>
+	<a href="#" class="btn-light"><i class="icon-doctorplus-check"></i> Boton Light</a>
+	
+</div>
+	
+	<div style="text-align:center; padding-bottom:24px;">
+
+		<a href="#" class="btn-cancel"><i class="icon-doctorplus-cruz"></i> Cancelar</a>
+		<a href="#" class="btn-default-square"><i class="icon-doctorplus-plus"></i> Boton Default</a>
+		<a href="#" class="btn-secondary-square"><i class="icon-doctorplus-pen"></i> Boton Secundario</a>
+		<a href="#" class="btn-seconday-inverted-square"><i class="icon-doctorplus-pen"></i> Boton Secundario invertido</a>
+		<a href="#" class="btn-alert-square"><i class="icon-doctorplus-alert"></i> Boton Alert</a>
+		<a href="#" class="btn-light-sqare"><i class="icon-doctorplus-check"></i> Boton Light</a>
+</div>	
+	
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+
+<!-- Modal Usabilidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="usabilidad-modal">
+<div class="modal-dialog">
+<div class="modal-content">
+	<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+	<div class="form-content">
+		<h5>Sugerencia de usabilidad</h5>
+		<p><img src="imgs/usabilidad.png" height="67" width="241" alt=""></p>
+		<p>Navegar esta sección con la pantalla en sentido horizontal</p>
+	</div>
+</div>
+</div>
+</div>	
+
+<!-- Modal Privacidad -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Privacidad</h5></div>
+		<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+	</div>
+	<form action="">
+		<div class="form-content">
+			<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+			<ul class="lista-checks">
+			<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+			<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+			<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+			</ul>
+
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>	
+
+
+<!-- Modal Configurar Tablero -->
+<div class="modal fade modal-type-2 modal-type-size-small" id="configurar-tablero">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<div class="modal-title"><h5>Configurar Tablero</h5></div>
+		<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+	</div>
+	<form action="">
+		<div class="form-content ">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel-heading">
+					<label for="ai-1" class="checkbox"><input type="checkbox" id="ai-1">Alergias e intolerancias</label>
+				</div>	
+				<div class="panel-heading">
+					<label for="ci-1" class="checkbox"><input type="checkbox" id="ci-1">Cirugías e intervenciones</label>
+				</div>
+				<div class="panel-heading">
+					<label for="ca-1" class="checkbox"><input type="checkbox" id="ca-1">Cuidado Auditivo</label>
+				</div>				
+				<div class="panel-heading">
+					<label for="cd-1" class="checkbox"><input type="checkbox" id="cd-1">Cuidado Dental</label>
+				</div>		
+				<div class="panel-heading">
+					<label for="cv-1" class="checkbox"><input type="checkbox" id="cv-1">Cuidado Visual</label>
+				</div>			
+			  	<div class="panel panel-default">
+			    	<div class="panel-heading" role="tab" id="headingOne">			  			
+			    		<label for="db-0" class="checkbox" ><input type="checkbox" checked id="db-0"> Datos biométricos</label>
+			    		<span class="dp-arrow-down collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></span>
+			    	</div>
+			    	<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			    		<div class="panel-body">
+				      		<label for="db-1" class="checkbox"><input type="checkbox" id="db-1">Peso y altura</label>
+				      		<label for="db-2" class="checkbox"><input type="checkbox" id="db-2">Presión arterial</label>
+				      		<label for="db-3" class="checkbox"><input type="checkbox" id="db-3">Colesterol</label>
+				      		<label for="db-5" class="checkbox"><input type="checkbox" id="db-5">Glucemia</label>
+				      		<label for="db-4" class="checkbox"><input type="checkbox" id="db-4">Misceláneas</label>
+				      	</div>
+				    </div>
+			    </div>							
+				<div class="panel-heading">
+					<label for="ep-1" class="checkbox"><input type="checkbox" id="ep-1">Enfermadades y Patologías </label>
+				</div>
+				<div class="panel-heading">
+					<label for="ev-1" class="checkbox"><input type="checkbox" id="ev-1">Estilo de vida</label>
+				</div>					
+				<div class="panel-heading">
+					<label for="gi-1" class="checkbox"><input type="checkbox" id="gi-1">Ginecológicos &amp; Obstétricos</label>
+				</div>
+				<div class="panel-heading">
+					<label for="me-1" class="checkbox"><input type="checkbox" id="me-1">Medicamentos</label>
+				</div>
+			</div>
+		</div>
+		<div class="modal-btns">
+			<button>guardar</button>
+		</div>
+	</form>
+</div>
+</div>
+</div>
+
+	
+<!--Modal alerta	-->
+
+	<div class="modal fade bs-example-modal-lg modal-alert" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content modal-content-alert">
+				
+				<div class="mod-alert-header">
+					<figure><i class="icon-doctorplus-alert"></i></figure>
+					<h3>Ud. tiene una Consulta Express en proceso.</h3>
+				</div>
+				<div class="mod-alert-action-holder">
+					<div class="mod-alert-action">
+						<button><i class="icon-doctorplus-pen"></i> Continuar</button>
+						<button class="mod-alert-action-cancel" data-dismiss="modal"><i class="icon-doctorplus-cruz"></i>Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+<!--	ALERTAS - Perfil de Salud completo - felicitaciones	-->
+
+
+	<div class="modal fade bs-example-modal-lg modal-perfil-completo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">¡Felicitaciones!</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						Ha completado el requerimiento mínimo del Perfil de Salud 
+						y se encuentra habilitado para realizar una 
+						Consulta Express
+					</p>
+					<div class="modal-perfil-completo-action-holder">
+						<button><i class="icon-doctorplus-chat"></i> Hacer una Consulta Express</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+	<!--	Modal Chrome Usabilidad	-->
+
+
+	<div class="modal fade bs-example-modal-lg modal-chrome" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="chrome-modal-holder">
+						<h2>Sugerencia de usabilidad</h2>
+						<img src="imgs/chrome-logo.png" alt="Sugerencia de usabilidad"/>
+						<p>Para el correcto funcionamiento de todas las funcionalidades de
+							Consulta Express recomendamos navegar la sección con Google Chrome</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--	ALERTAS - Perfil de Salud completo - acreditacion	-->
+
+
+	<div class="modal fade bs-example-modal-lg modal-perfil-completo-acreditacion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">¡Felicitaciones ha concluído la consulta!</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						Se acreditarán <strong>$90</strong> en su cuenta.
+					</p>
+					<div class="modal-perfil-completo-action-holder">
+						<button><i class="icon-doctorplus-chat"></i> Volver a Consulta Express</button>
+						<button><i class="icon-doctorplus-sheet"></i> ir a Mi Cuenta</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery-ui.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck(); 
+	
+
+	
+
+	
+	
+});
+</script>	
+</body>
+</html>

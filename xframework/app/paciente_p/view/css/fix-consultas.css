@@ -1,0 +1,167 @@
+/*Fix header cantidad consultas*/
+.ce-ca-consultas-abiertas {
+    margin-left: 0px;
+}
+.ce-ca-toobar a {
+    width: 30px;
+}
+.ce-ca-toobar span {
+    margin-left: 8px;
+}
+.consulta-express-submenu{
+    margin-bottom:18px;
+}
+
+
+
+/*Fix header buscador rango fecha - Consultas finalizadas*/
+@media (max-width: 600px){
+    .ce-ca-toolbar-filter-box .ce-ca-toolbar-desde-box {
+        width: 40%;
+        text-align: center;
+    }
+    .ce-ca-toolbar-filter-box .ce-ca-toolbar-hasta-box {
+        width: 40%;
+        text-align: center;
+    }
+    .ce-ca-toolbar-filter-box .ce-ca-toolbar-action-box {
+
+        max-width: 20%;
+    }
+}
+/*Fix boton eliminar consulta*/
+.btn_eliminar_consulta, .btn_eliminar_consulta:active,.btn_eliminar_consulta:focus, .btn_eliminar_consulta:visited {
+    color: #fff !important;
+    background: #ff6f6f  !important;
+}
+.btn_eliminar_consulta:hover {
+    background: #ff9a9a!important;
+    color: #fff;
+}
+/*Fix home bandeja entrada iconos VC - CE*/
+/**quitar margenes*/
+.consulta-express-submenu-icon-holder-lg>a:first-child,.consulta-express-submenu-icon-holder-lg>a:last-child { 
+    margin-left:0px !important;
+    padding-bottom: 5px;
+}
+
+
+/*Fix orden iconos Consulta -bandeja entrada*/
+.consulta-express-submenu-icon-holder-sm a,.consulta-express-submenu-icon-holder-lg a {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+.menu-consulta-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: none;
+    margin: auto;
+    width:100%;
+    justify-content: center;
+
+}
+.menu-consulta-item-inicio{
+    justify-content: normal !important;
+}
+.home .menu-consulta-item>div{
+    width: 25%;
+    box-sizing: border-box;
+    margin-bottom: 0px !important;
+}
+.menu-consulta-item-nuevo{
+    width: 50% !important;
+    text-align: left !important;
+}
+
+
+/*Fix alinear alerta contador consultas*/
+.consulta-express-submenu-icon-holder-sm>a>div>span {
+    bottom: -5px !important;
+    right: calc(50% - 35px) !important;
+}
+
+@media (max-width: 600px){
+    .consulta-express-submenu-icon-holder-lg>a>div>span {
+        bottom: -5px !important;;
+        right: calc(50% - 35px) !important;
+    }
+    .mvc-right-title {
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        padding-top: 18px;
+    }
+    .consulta-express-submenu-icon-holder-lg>a {
+        padding-bottom: 18px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    /*Fix ocultar titulo y select estados - home bandeja entrada*/
+    #div_bandeja_entrada .consulta-express-tittle-lnk {
+        display: inline-block !important;
+    }
+    #div_bandeja_entrada .settings.consulta-express-pull-right{
+        display: none  !important;
+    }
+
+    /*Orden iconos mobile*/
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item>div,
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item>div,
+    .home .menu-consulta-item>div{
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    /*Orden iconos VC*/
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .pendientes { order: 1; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .nueva { order: 2; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .abiertas { order: 3; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .consultorio-virtual { order: 4; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .finalizadas { order: 5; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .declinadas { order: 6; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .vencidas { order: 7; }
+    #div_bandeja_entrada_videoconsulta .menu-consulta-item .check-rtc { order: 8; }
+
+    /*Orden iconos CE*/
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item .pendientes { order: 1; }
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item .nueva { order: 2; }
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item .abiertas { order: 3; }
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item .finalizadas { order: 4; }
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item .declinadas { order: 5; }
+    #div_bandeja_entrada_consultaexpress .menu-consulta-item .vencidas { order: 6; }
+
+}
+
+/*Fix chat holder*/
+
+.audio-actions-panel .audio-reccord-holder .chat-msg-holder {
+    width: 100%;
+    float: left;
+    padding-right: 0px;
+    border: solid 1px #ccc;
+}
+
+@media (max-width: 460px){
+    .audio-actions-panel .audio-reccord-holder .chat-msg-holder .chat-msg-input-holder {
+        border-bottom: none;
+    }
+}
+
+/*Destacar consultas vencidas no leidas*/
+.ce-ca-toolbar .consultas-vencidas.highlight .colx3,
+.ce-ca-toolbar .consultas-vencidas.highlight .cs-ca-tiempo-respuesta-holder{
+    background-color: #00a4ac !important;
+}
+.ce-ca-toolbar .videoconsultas-vencidas.highlight .colx3,
+.ce-ca-toolbar .videoconsultas-vencidas.highlight .cs-ca-tiempo-respuesta-holder{
+    background-color: #FF6F71!important;
+}
+.consultas-finalizadas.video-consulta {
+    background-color: #f99b9b!important;
+}
+.consultas-finalizadas.video-consulta.highlight,.consultas-finalizadas.video-consulta.with-parent.highlight .colx3 { 
+    background-color:  #ff6f6f!important;
+}

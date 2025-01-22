@@ -1,0 +1,111 @@
+#xmnu {
+
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #5F6F81;
+    font-family: 'Lato',Arial,sans-serif;
+    font-weight: 300!important;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+
+}
+
+#xmnu ul {
+	padding:0px;
+	margin:0px;
+	list-style:outside none	;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #5F6F81;
+    font-family: 'Lato',Arial,sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+	
+	
+}
+
+
+
+
+
+
+
+.xmnu-scroller {
+		position: absolute;
+		overflow-y: scroll;
+		width: 320px;
+		height: 100%;
+}
+
+#xmnu ul.gn-menu {
+		border-bottom: 1px solid #c6d0da;
+		text-align: left;
+		font-size: 18px;
+}
+#xmnu a {
+	color: #5F6F81;
+	cursor: pointer;
+	display: block!important;
+/*	height: 100%;*/
+	text-decoration: none;
+
+}
+.gn-menu li:not(:first-child),
+.gn-menu li li {
+		box-shadow: inset 0 1px #c6d0da
+}
+
+
+.gn-submenu  {
+	/*padding-left:20px !important;	*/
+}
+
+
+
+
+.gn-submenu li {
+		overflow: hidden;
+		font-size:0.8em;
+		-webkit-transition: height 0.3s;
+		-moz-transition: height 0.3s;
+		transition: height 0.3s;
+		
+}
+
+.gn-submenu li a {
+		color: #c1c9d1
+	
+}
+
+
+
+.gn-submenu.opened li {
+	height:30px;
+	line-height:30px;
+	padding:0.6em;
+}
+
+.gn-submenu.opened li a {
+	height:30px;
+	line-height:30px;
+	display:block;
+	padding:0px;
+}
+
+.gn-menu li:hover a {
+	color:#FFF !important;
+	background:#5F6F81 !important;
+}
+
+
+.gn-submenu li a {
+	color:#C1C9D1 !important;
+	background:#FFF !important;
+}
+
+.gn-submenu li:hover a {
+	color:#FFF !important;
+	background:#5F6F81 !important;
+}

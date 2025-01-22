@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="hom-nav">
+	<div class="okm-container">
+		<div class="okm-row">
+			<div class="hom-nav-logo">
+				<a href="/">
+					<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus">
+				</a>
+			</div>
+			<div class="hom-nav-menu">
+				<a href="#" id="hom-nav-rsp-trg" class="hom-nav-burger"><i class="icon-doctorplus-burger"></i></a>
+				<ul id="hom-nav-rsp-get">
+					<li><a href="#">Home</a></li>
+					<li><a data-lnk="hom-planes" href="#">Planes</a></li>
+					<li><a data-lnk="hom-contacto" href="#">Contáctenos</a></li>
+					<li><a data-lnk="hom-soporte" href="#">Soporte</a></li>
+					<li><a href="#">Crear una cuenta</a></li>
+					<li><a href="#" id="loginbtn">Iniciar sesión</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+	
+
+	
+	<!--Modales login	-->
+
+	<div class="modal fade usrlogin login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+				</div>
+				<div class="modal-body" id="login">
+					<h4 class="modal-title">Iniciar sesión</h4>
+					<form name="login">
+						<div class="login-form-row">
+							<input type="text" name="user" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+
+						</div>
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<div class="login-recordar">
+								<label class="checkbox">
+									<input type="checkbox" name="recordar" id="recordarme">
+									Recordarme
+								</label>
+							</div>
+							<div class="olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+
+					</form>
+					<div class="login-registro-row">
+						<span>¿No tenés una cuenta?</span>
+						<a href="#">Registrate</a>
+					</div>
+				</div>
+
+
+				<div class="modal-body" id="timeout">
+					<h4 class="modal-title-small">Para continuar confirma que eres</h4>
+					<span class="modal-user-name">Andrea</span>
+
+					<img src="imgs/temp/foto-perfil-110.jpg" class="modal-usr-picture" alt="usr"/>
+					<div class="modal-user-name-small">Andrea Sachse</div>
+					<div class="modal-user-mail">andrea@estudioasya.com</div>
+
+					<form name="login">
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						<div class="login-form-row">
+							<div class="olvide-pass timeout-olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="passrecovery">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+					<form name="pass-recovery">
+						<div class="login-form-row">
+							<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+						</div>
+						<div class="login-form-row">
+							<p>
+								Introduce la dirección de correo electrónico 
+								asociada a tu cuenta y te enviaremos un enlace 
+								para restablecer tu contraseña. 
+							</p>
+						</div>
+						<div class="login-form-row">
+
+							<input type="submit" id="sendpass" value="Enviar enlace"/>
+
+							<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+						</div>
+
+					</form>
+				</div>
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="recoverytext">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+
+					<div class="login-form-row">
+						<p>
+							Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+							Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+						</p>
+					</div>
+					<div class="login-form-row">
+						<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--timeout-->
+
+	<!--	Funciond emostrar ocultar en script.js linea 1303-->
+
+	<!--Modales login	-->	
+	
+
+	<section class="account-order hom-planes hom-planes-registros" >
+		<div class="container">
+			<h1 id="hom-planes" class="text-center">Planes y tipos de cuentas</h1>
+			<h2 class="text-center">Los planes más convenientes de acuerdo a sus necesidades</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<img src="imgs/graphic-computer.svg" alt="Tipos de cuenta">
+				</div>
+				<div class="col-md-7">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="highlight-box text-center">
+								<small>Cuenta Básica</small>
+								<div class="price">
+									<span>Gratis</span>
+									<span></span>
+								</div>
+								<a href="#" role="button">Adquirir</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="highlight-box text-center">
+								<small>Cuenta Básica</small>
+								<div class="price">
+									<span>$350</span>
+									<span>finales/MES</span>
+								</div>
+								<a href="#" role="button">Adquirir</a>
+							</div>
+						</div>
+					</div>
+					<div class="hom-planes-btn-box">
+						<button id="compare-btn" class="uppercase">Comparar planes</button>
+					</div>
+				</div>
+			</div>
+			<div id="comparison-table" class="comparison-table">
+				<table class="table table-rsp hom-planes-table">
+					<tr>
+						<th>Tipo de cuenta</th>
+						<th><span>Cuenta <br>Básica</span></th>
+						<th><span>Cuenta <br>Profesional</span></th>
+					</tr>
+					<tr>
+						<td>Agenda de Turnos on line</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Recordatorios de turnos por email y sms</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Acceso a la Info de Salud de sus pacientes desde cualquier dispositivo</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Registro de sus consultas médicas a distancia</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Consulta Express</td>
+						<td><span class="red">25% comisión<sup>(1)</sup></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Video Consulta</td>
+						<td><span class="red">25% comisión<sup>(1)</sup></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Gestión de pacientes</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+                    	<tr>
+						<td>Contacto con los médicos frecuentes del paciente</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Envío de consejos médicos</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Pacientes con servicio de CE bonificados (2)</td>
+						<td><span class="cross"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+					<tr>
+						<td>Soporte Técnico</td>
+						<td><span class="check"></span></td>
+						<td><span class="check"></span></td>
+					</tr>
+				</table>
+				<small class="pull-right">
+					<sup>(1)</sup>La comisión que percibe DoctorPlus por el servicio de Consulta Express y Video Consulta corresponde a un 25%  sobre el valor de la consulta.<br>
+					<sup>(2)</sup>Hasta 50 (cincuenta) pacientes bonificados para sus servicios de Consulta Express.
+				</small>			</div>
+		</div>
+	</section>	
+	
+	<section class="okm-container hom-contacto">
+		<h4 id="hom-contacto">Contáctenos</h4>
+		<div class="hom-servicios-bottom-action-box">
+			<i class="icon-doctorplus-arrow-down"></i>
+		</div>
+		<div class="hom-contacto-box">
+			<div id="hom-contacto-box" class="hom-contacto-box">
+				<form id="hom-contacto" name="hom-contacto" action="#" method="get">
+			<div class="hom-form-row">
+				<div class="hom-form-col-x2">
+					<label>Nombre<span>*</span></label>
+					<input type="text" name="nombre">
+					<small class="error">Este campo es obligatorio</small>
+				</div>
+			
+			<div class="hom-form-col-x2">
+				<label>Apellido<span>*</span></label>
+				<input type="text" name="apellido">
+				<small class="error">Este campo es obligatorio</small>
+			</div>
+				
+			</div>
+			
+			<div class="hom-form-row">
+				<div class="hom-form-col-x2">
+					<label>Correo electrónico<span>*</span></label>
+					<input type="text" name="mail">
+					<small class="error">Debe ingresar una dirección de correo válida</small>
+					<small class="error">Este campo es obligatorio</small>
+				</div>
+
+				<div class="hom-form-col-x2">
+					<label>Teléfono</label>
+					<input type="text" name="telefono">
+					<small class="error">Este campo es obligatorio</small>
+				</div>
+
+			</div>
+			
+			<div class="hom-form-row">
+				<div class="hom-form-col-x1">
+					<label>Mensaje</label>
+					<textarea name="mensaje"></textarea>
+				</div>
+			</div>
+			
+			<div class="hom-form-row hom-form-action">
+				<input class="btn-default" type="submit" value="Enviar">
+			</div>
+		
+		</form>
+			</div>
+			<div id="hom-contacto-msg" class="hom-contacto-msg">
+				<p>
+					Su consulta ha sido enviada.<br>
+					Nos pondremos en contacto con usted a la brevedad
+				</p>
+				<p>
+					El equipo de DoctorPlus
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="okm-container hom-soporte">
+		<h4 id="hom-soporte">Soporte</h4>
+		<p>¿Necesita ayuda?</p>
+		
+		<div class="hom-soporte-row hom-soporte-chat-vivo-row">
+			<div class="hom-soporte-col-x2">
+				<a href="#">
+					<div class="hom-chat-vivo"><img src="imgs/medico/chat-en-vivo.png" alt="Chat en vivo"/></div>
+					<label class="hom-chat-vivo-label">
+						<div>Chat en vivo</div>
+						<span>Estamos para ayudarlo</span>
+					</label>
+				</a>
+			</div>
+			
+			<div class="hom-soporte-col-x2">
+				<a href="#">
+					<figure><i class="icon-doctorplus-envelope"></i></figure>
+					<label>
+						<div>Escríbanos</div>
+						<span>soporte@doctorplus.com.ar</span>
+					</label>
+				</a>
+			</div>
+		</div>
+	</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<h4>Servicios</h4>
+				<ul>
+					<li><a href="#" title="Buscar Médicos">Buscar Médicos</a></li>
+					<li><a href="#" title="Solicitar Turnos">Solicitar Turnos</a></li>
+					<li><a href="#" title="Mi Salud">Mi Salud</a></li>
+					<li><a href="#" title="Consulta Express">Consulta Express</a></li>
+					<li><a href="#" title="Video Consultas">Video Consultas</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<h4>Atención al Cliente</h4>
+				<ul>
+					<li><a href="#" title="Servicio Técnico">Servicio Técnico</a></li>
+					<li><a href="#" title="Contáctenos">Contáctanos</a></li>
+					<li><a href="#" title="¿Cómo funciona?">¿Cómo funciona?</a></li>
+					<li><a href="#" title="Adquisición de Pines">Adquisición de Pines</a></li>
+					<li><a href="#" title="Medios de Pago">Medios de Pago</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-xs-12">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h4>Institucional</h4>
+						<ul>
+							<li><a href="#" title="Términos legales">Términos legales</a></li>
+							<li><a href="#" title="Comunicados de prensa">Comunicados de prensa</a></li>
+							<li><a href="#" title="Recursos Humanos">Recursos Humanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<div class="footer-logo">
+							<a href="/" title="DoctorPlus"><img src="imgs/doctorplus_logo_160.png" title="DoctorPlus" alt="DoctorPlus"></a>
+							<ul>
+								<li class="mail"><a href="mailto:info@doctorplus.com.ar" title="Contacto DoctorPlus">info@doctorplus.com.ar</a></li>
+								<li class="address">San Juan 952 CABA<br>CP (1238) Argentina</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	
+
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+});
+</script>		
+</body>
+</html>

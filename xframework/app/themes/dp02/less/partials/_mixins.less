@@ -1,0 +1,468 @@
+//transition
+.trans(@property, @duration){
+    -webkit-transition: @property @duration; /* For Safari 3.1 to 6.0 */
+    transition: @property @duration;
+}
+.trans-all(@t:0.2s, @ease:ease-out){
+    -webkit-transition: all @t @ease;
+    -o-transition: all @t @ease;
+    -moz-transition: all @t @ease;
+    -ms-transition: all @t @ease;
+    -kthtml-transition: all @t @ease;
+    transition: all @t @ease;
+}
+
+.center-y(){
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+.center-x(){
+    left: 50%;
+    bottom: auto;
+    transform: translateX(-50%);
+}
+.center-xy(){
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+}
+
+.box-shadow-top(){
+    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.5);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.5);
+}    
+
+.header-shadow(){
+    -webkit-box-shadow:0 5px 10px -5px #333;
+    -moz-box-shadow:0 5px 10px -5px #333;
+    box-shadow:0 5px 10px -5px #333;
+    position: relative;
+    z-index: 3;
+}
+
+.box-shadow-image(){
+    background: url('../imgs/box-shadow.png') center bottom no-repeat;
+    padding-bottom: 68px;
+}
+
+
+.shadow-z-1 {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-z-2 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+.shadow-z-2-hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+}
+.text-shadow-z-1{
+    text-shadow: 0 6px 7px rgba(0, 0, 0, 0.30);
+}
+
+// circulo inferior
+// Default green - espera un i adentro
+.subCircle(@radio:24,@unit:px, @bg:@green, @fg:@white, @br:none){
+    position: absolute;
+    bottom: unit((@radio/4)*-1, @unit);
+    right: unit((@radio/4)*-1, @unit);
+    width: unit(@radio,@unit);
+    height: unit(@radio,@unit);
+    border-radius: unit(@radio,@unit);
+    background: @bg;
+    color: @fg;
+    border: @br;
+    text-align: center;
+    line-height: unit(@radio,@unit);
+    & > i{
+        margin: 0;
+        font-size: unit(@radio - (@radio/4),@unit);
+    }
+}
+.doCircle(@radio, @unit:px){
+    display: block;
+    width: unit(@radio, @unit);
+    height: unit(@radio, @unit);
+    position: relative;
+    border-radius: 50%;
+
+}
+
+.breadcrum{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    & > li{
+        display: inline-block;
+        font-size: 14px;
+        &:after{
+            content: '/';
+            margin-left: 4px;
+        }
+        &:last-child{
+            &:after{
+                content: '';
+            }
+        }
+        & > a{
+            cursor: pointer;
+        }
+    }
+}
+
+
+.doArrow(@size,@unit,@fg){
+
+    @sizeb: @size/2;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    border-left: unit(@sizeb, @unit) solid @fg;
+    border-bottom: unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    position: relative;
+
+}
+
+.doArrow-left(@size,@unit,@fg){
+
+    @sizeb: @size/2;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    border-right: unit(@sizeb, @unit) solid @fg;
+    border-bottom: unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    position: relative;
+
+}
+
+.doArrowUp(@size,@unit,@fg){
+
+    @sizeb: @size/2;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    border-left:  unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    border-right:  unit(@sizeb, @unit) solid rgba(0, 0, 0, 0);
+    border-bottom: unit(@sizeb, @unit) solid @fg;
+    position: relative;
+
+}
+.clearFix(){
+    clear: both;
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.doSearch(@bg,@fg,@br){
+    width: 100%;
+    position: relative;
+    margin-bottom: 19px;
+
+    & > input[type="text"]{
+        background: @bg;
+        border: 1px @br solid;
+        font-size: 14px;
+        color: @fg;
+        padding: 0 12px;
+        padding-right: 42px;
+        line-height: 42px;
+        height: 42px;
+        display: block;
+        width: 100%;
+    }
+
+    & > button{
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+        top: 7px;
+        .trans-all;
+        &:hover{
+            color:tint(@fg,30%);
+        }
+    }
+
+}
+
+
+.doButton(@bg,@fg,@round:false){
+    box-sizing: border-box;
+    background: @bg;
+    color: @fg;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px !important;
+    & when(@round = true){
+        border-radius: 8px;
+    }
+    .trans-all;
+    &:hover{
+        background: tint(@bg, 30%) !important;
+        color: @fg;
+    }
+    & > i{
+        position: relative;
+        top: 1px;
+        margin-right: 4px;
+    }
+    &:visited,&:active,&:focus{
+        color: @fg;
+        background: @bg;
+    }
+    @media(max-width:600px){
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    @media(max-width:600px){
+        font-size: 14px;
+    }
+}
+
+//ratting
+
+.ratting (@i) when (@i > 0) {
+    &:nth-child(@{i}){
+        color: #f3d240;
+    }
+    .ratting(@i - 1);
+}
+
+.doGreenButton{
+    .doButton(#3DB4C0,#fff,true);
+}
+.doWhiteButton{
+    .doButton(#fff,@oil,true);
+    padding: 11px 23px;
+    border: 1px @oil solid;
+    &:hover{
+        color: #21b797;
+        border: 1px #21b797 solid;
+    }
+}
+.doLightButton{
+    .doButton(#fff,@oil,true);
+    padding: 11px 23px;
+    border: 1px #ccc solid;
+    &:hover{
+        color: #21b797;
+        border: 1px #21b797 solid;
+    }
+}
+.doRedButton{
+    .doButton(#ff6f6f,#fff,true);
+}
+
+.doBlackButton{
+    .doButton(@oil,#fff,true);
+}
+
+.doCancelButton{
+    .doButton(transparent,@oil,false);
+
+    & i{
+        top: 0;
+        font-size: 12px;
+    }
+
+    &:hover{
+        color: #21b797;
+    }
+}
+
+
+//sqare btns
+
+.doGreenButtonsquare{
+    .doButton(#21b797,#fff,false);
+}
+.doWhiteButtonsquare{
+    .doButton(#fff,@oil,false);
+    padding: 11px 23px;
+    border: 1px @oil solid;
+    &:hover{
+        color: #21b797;
+        border: 1px #21b797 solid;
+    }
+}
+.doLightButtonsqare{
+    .doButton(#fff,@oil,false);
+    padding: 11px 23px;
+    border: 1px #ccc solid;
+    &:hover{
+        color: #21b797;
+        border: 1px #21b797 solid;
+    }
+}
+.doRedButtonsquare{
+    .doButton(#ff6f6f,#fff,false);
+}
+
+.doBlackButtonsquare{
+    .doButton(@oil,#fff,false);
+}
+
+.doCancelButtonsquare{
+    .doButton(transparent,@oil,false);
+    &:hover{
+        color: #21b797;
+    }
+}
+
+.gutter{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+//forms
+
+
+.doGreenText(@btn:false){
+    position: relative;
+
+    &.focus{
+        & > input{
+            padding-left: 12px !important;
+        }
+
+        & > i{
+            display: none;
+        }
+    }
+
+    & > input[type="text"]{
+        display: block;
+        width: 100%;
+        background: #edfaf8;
+        border: 1px #69aaac solid;
+        font-size: 14px;
+        color: #415b70;
+        padding: 0 12px;
+
+        line-height: 42px;
+        display: block;
+        width: 100%;
+
+
+
+        & when(@btn = icon){
+            padding-left: 42px;
+            & + i{
+                position: absolute;
+                color: #8FA3AD;
+                left: 12px;
+                .center-y;
+                .trans-all;
+            }
+
+
+        }
+
+
+
+        & when(@btn = button){
+            padding-right: 42px;
+            & + button{
+                display: inline-block;
+                position: absolute;
+                right: 12px;
+                top: 7px;
+                .trans-all;
+                &:hover{
+                    color: tint(@oil, 30%);
+                }
+
+                @media(max-width:600px){
+
+                    font-size: 12px;
+                    right: 8px;
+                    top: 13px;
+
+                }
+            }
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: @oil;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: @oil;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: @oil;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: @oil;
+        }
+        &:focus{
+            outline: 0;
+
+        }
+    }
+
+    @media(max-width:600px){
+        //padding-right: 32px;
+        & > input[type="text"]{
+            font-size: 12px;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            font-size: 12px;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            font-size: 12px;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            font-size: 12px;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            font-size: 12px;
+        }
+
+    }
+
+}
+
+.doGreenSelect{
+    position: relative;
+    & > .select2-container{
+        width: 100%;
+        & > a{
+            background: #edfaf8;
+            border: 1px #69aaac solid;
+            border-radius: 0;
+            color: @oil;
+            padding: 0 12px;
+            padding-right: 42px;
+            line-height: 42px;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            & > .select2-arrow{
+                border-top-color: @oil;
+            }
+            & > .select2-chosen {
+                white-space: nowrap;
+            }
+            @media(max-width:600px){
+                font-size: 12px;
+            }
+        }
+
+
+    }
+}
+.pad{
+    padding: 16px;
+}
+
+

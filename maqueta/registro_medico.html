@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav class="hom-nav">
+		<div class="okm-container">
+			<div class="okm-row top-2-center-logo">
+				<div class="hom-nav-logo">
+					<a href="/">
+						<img src="imgs/extranet/logo_doctorplus_extranet.png" alt="Dr. Plus">
+					</a>
+				</div>
+				<div class="hom-nav-menu">
+					<a href="#" id="hom-nav-rsp-trg" class="hom-nav-burger"><i class="icon-doctorplus-burger"></i></a>
+					<ul id="hom-nav-rsp-get">
+						<li><a href="#">Crear una cuenta</a></li>
+						<li><a href="#" id="loginbtn">Iniciar sesión</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	
+	<!--Modales login	-->
+
+
+	<div class="modal fade usrlogin login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+				</div>
+				<div class="modal-body" id="login">
+					<h4 class="modal-title">Iniciar sesión</h4>
+					<form name="login">
+						<div class="login-form-row">
+							<input type="text" name="user" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+
+						</div>
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<div class="login-recordar">
+								<label class="checkbox">
+									<input type="checkbox" name="recordar" id="recordarme">
+									Recordarme
+								</label>
+							</div>
+							<div class="olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+
+					</form>
+					<div class="login-registro-row">
+						<span>¿No tenés una cuenta?</span>
+						<a href="#">Registrate</a>
+					</div>
+				</div>
+
+
+				<div class="modal-body" id="timeout">
+					<h4 class="modal-title-small">Para continuar confirma que eres</h4>
+					<span class="modal-user-name">Andrea</span>
+
+					<img src="imgs/temp/foto-perfil-110.jpg" class="modal-usr-picture" alt="usr"/>
+					<div class="modal-user-name-small">Andrea Sachse</div>
+					<div class="modal-user-mail">andrea@estudioasya.com</div>
+
+					<form name="login">
+						<div class="login-form-row">
+							<input type="password" name="pass" placeholder="Contraseña">
+							<i class="icon-doctorplus-lock"></i>
+						</div>
+						<div class="login-form-row">
+							<input type="submit" value="Inicia sesión"/>
+						</div>
+						<div class="login-form-row">
+							<div class="olvide-pass timeout-olvide-pass">
+								<a href="#" class="ForgotPassTrigger">Olvidé mi contraseña</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="passrecovery">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+					<form name="pass-recovery">
+						<div class="login-form-row">
+							<input type="text" name="mailrecovery" placeholder="Dirección de correo electrónico">
+							<i class="icon-doctorplus-envelope"></i>
+						</div>
+						<div class="login-form-row">
+							<p>
+								Introduce la dirección de correo electrónico 
+								asociada a tu cuenta y te enviaremos un enlace 
+								para restablecer tu contraseña. 
+							</p>
+						</div>
+						<div class="login-form-row">
+
+							<input type="submit" id="sendpass" value="Enviar enlace"/>
+
+							<!--							send ok muestra siguiente paso, ahora está forzado al click en script.js linea 1314-->
+						</div>
+
+					</form>
+				</div>
+
+				<!--				recuperar contraseña-->
+				<div class="modal-body" id="recoverytext">
+					<h4 class="modal-title">Restablecer tu contraseña</h4>
+
+					<div class="login-form-row">
+						<p>
+							Si ya hay una cuenta con esta dirección de correo electrónico, en breve te enviaremos instrucciones. 
+							Si no recibes el correo, ponete en contacto con el servicio de atención al cliente. 
+						</p>
+					</div>
+					<div class="login-form-row">
+						<button type="button" data-dismiss="modal" aria-label="Close">Cerrar</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--timeout-->
+	
+
+	
+<div class="plogin-header">
+	<h1>Crear una cuenta como</h1>
+	<h2>Profesional de la Salud</h2>
+	<h3>¡Una solución integral para las consultas fuera del consultorio!</h3>
+</div>
+	
+	<section class="plogin-registro">
+		
+		
+	
+		<div id="registroAccordon" class="mapc-registro-box pul-nuevo-paciente-accordion">
+			
+			
+			<h4 class="plogin-registro-accordios-title">REGISTRARME COMO PROFESIONAL</h4>	
+			
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Datos de cuenta
+						</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body">
+						<form name="usr-registro-cuenta">
+					
+							
+						<div class="okm-row">
+							<div class="pul-col-x2">
+								<div class="mapc-input-line">
+									<label class="mapc-label">Nombre</label>
+									<input type="text" class="error" name="nombre"/>
+								</div>
+							</div>
+							<div class="pul-col-x2">
+								<div class="mapc-input-line">
+									<label class="mapc-label">Apellido</label>
+									<input type="text" name="apellido"/>
+								</div>
+							</div>
+						</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row mapc-switch">
+										<div class="switch-large mul-sexo-switch">
+											<span class="mapc-switch-label-left">Sexo</span>
+											<input type="checkbox" class="switch-checkbox" data-on-text="MUJER" data-off-text="HOMBRE" />
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									<label class="mapc-label-upload">Foto de su DNI</label>
+									<div class="mapc-upload-box">
+										<a href="#">
+											<i class="icon-doctorplus-camera"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+
+									<div class="mapc-registro-form-row">
+										<label class="mapc-label">Contraseña</label>
+										<div class="mapc-input-line">
+											<input type="password" class="pul-np-dis" name="pass" placeholder="Contraseña de 6 caracteres"/>
+											<i class="icon-doctorplus-lock"></i>
+										</div>
+									</div>
+
+									<div class="mapc-registro-form-row">
+										<div class="mapc-input-line">
+											<input type="password" class="pul-np-dis" name="pass" placeholder="Repita contraseña"/>
+											<i class="icon-doctorplus-lock"></i>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="mapc-datos-de-sistema-box">
+									<h4>Datos para uso del sistema</h4>
+									<span>Estos datos no serán visibles para el paciente</span>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									
+									<div class="mapc-registro-form-row">
+										<label class="mapc-label">Correo electrónico</label>
+										<div class="mapc-input-line">
+											<input type="text" class="pul-np-dis" name="mail" placeholder="ej: su-nombre@dominio.com"/>
+											<i class="icon-doctorplus-envelope"></i>
+										</div>
+									</div>
+									
+									<div class="mapc-registro-form-row">
+										<div class="mapc-input-line">
+											<input type="text" class="pul-np-dis" name="mail2" placeholder="Repita correo electrónico"/>
+											<i class="icon-doctorplus-envelope"></i>
+										</div>
+									</div>
+									
+								</div>
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row">
+										<label class="mapc-label">Celular</label>
+										<div class="mapc-input-line">
+											<input type="text" class="pul-np-dis error" name="cel" placeholder="ej. 1139750001"/>
+											<i class="icon-doctorplus-cel"></i>
+											<small class="error">Debe ingresar un celular válido</small>
+											<p class="mapc-cel-disclaimer">El número debe ingresarse con el código de área sin 
+												el 0 ni el 15. Es decir, si para llamarlo marcan
+												0351+15+3101234 deberá ingresar 3513101234.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+							<div class="okm-row">
+								<div class="mapc-registro-form-row">
+									<button class="mapc-form-submit pul-np-form-submit" id="accordion-pul-trg">listo <i class="icon-doctorplus-check-thin"></i></button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Datos profesionales
+						</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">
+						<p class="mapc-accordion-sub-title">
+							Los datos solicitados por DoctorPlus tienen como finalidad verificar que los profesionales
+							que utilizan su plataforma cumplen con los requisitos legales y comerciales para ofrecer sus servicios 
+						</p>
+						
+						<form name="datos-paciente">
+						
+										
+						<div class="okm-row">
+							
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row pul-np-no-label">
+									<div class="mapc-input-line">
+										<input type="text" class="pul-np-oil-text pul-np-dis" name="especialidad" placeholder="Especialidad"/>
+										<i class="icon-doctorplus-search"></i>
+									</div>
+								</div>
+							</div>
+							
+							<div class="pul-col-x2">
+								<div class="okm-select-plus-box mdc-style mapc-style pul-np-no-label" id="idiomas-input">
+									<div class="okm-select-plus-select">
+										<select class="form-control select select-primary select-block" name="subespecialidad" id="subespecialidad">
+											<option value="Subespecialidad">Subespecialidad</option>
+											<option value="CIRUGIA-CARDIOVASCULAR">CIRUGIA CARDIOVASCULAR</option>
+											<option value="ESPECIALISTA-EN-VENAS">ESPECIALISTA EN VENAS</option>
+										</select>
+									</div>
+									<div class="okm-select-plus-btn mdc-style mapc-style">
+										<button class="okm-select-plus-plus"><i class="icon-doctorplus-plus"></i></button>
+									</div>
+								</div>
+								<div class="tagsinput-primary okm-tags-no-margin mapc-tags">
+									<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="CIRUGIA CARDIOVASCULAR, ESPECIALISTA EN VENAS Y ARTERI..., CARDIOLOGÍA GENERAL" />
+								</div>
+							</div>
+						</div>
+						<div class="okm-row">	
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row">
+									<label class="mapc-label">Matrícula NACIONAL</label>
+									<div class="mapc-input-line">
+										<input type="text" class="pul-np-dis" name="matricula-nacional" placeholder="ej: su-nombre@dominio.com"/>
+									</div>
+								</div>
+							</div>
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row">
+									<label class="mapc-label">Colegio donde se encuentra registrada la MN</label>
+									<div class="mapc-input-line">
+										<input type="text" class="pul-np-dis" name="colegio-registro-mn" placeholder="ej: su-nombre@dominio.com"/>
+									</div>
+								</div>
+								
+								</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row">
+										<label class="mapc-label">Matrícula PROVINCIAL</label>
+										<div class="mapc-input-line">
+											<input type="text" class="pul-np-dis" name="matricula-provincial" placeholder="ej: su-nombre@dominio.com"/>
+										</div>
+									</div>
+							</div>
+							<div class="pul-col-x2">
+								<div class="mapc-registro-form-row">
+									<label class="mapc-label">Colegio donde se encuentra registrada la MP</label>
+									<div class="mapc-input-line">
+										<input type="text" class="pul-np-dis" name="colegio-registro-mp" placeholder="ej: su-nombre@dominio.com"/>
+									</div>
+								</div>
+							</div>
+							</div>
+							
+							<div class="okm-row">
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row mapc-select mapc-select-light  pul-np-select">
+										<select name="provincia-prefesion" class="form-control select select-primary select-block mbl pul-np-dis">
+											<option value="0">Provincia donde ejerce la profesión</option>
+											<option value="1">valor 1</option>
+											<option value="2">valor 2</option>
+											<option value="3">valor 3</option>
+											<option value="4">valor 4</option>
+										</select>
+									</div>
+								</div>
+								<div class="pul-col-x2">
+									<div class="mapc-registro-form-row">
+										<label class="mapc-label">CUIT</label>
+										<div class="mapc-input-line">
+											<input type="text" class="pul-np-dis" name="cuit" placeholder="Ingrese su CUIT sin guiones"/>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+									<div class="mapc-registro-form-row">
+										<div class="recapcha-box-center">
+											<div class="recapcha-box">
+												<img src="imgs/temp/recapcha.png"/>
+											</div>
+										</div>
+								</div>
+							</div>
+							
+							<div class="okm-row">
+
+
+								<div class="mapc-politicas-box" id="politicas">
+
+									<div class="mapc-politicas-check-box">
+										<div class="mapc-politicas-check-holder">
+											<label class="checkbox">
+												<input type="checkbox" value="" data-toggle="checkbox">
+											</label>
+										</div>
+										<div class="mapc-politicas">
+											<p>He leído y acepto los Términos y condiciones de uso del sistema.
+												Ver <a href="#">Políticas de privacidad</a></p>
+										</div>
+									</div>
+									<div class="mapc-politicas-holder">
+										<figure>
+											<i class="icon-doctorplus-lock"></i>
+										</figure>
+										<div class="mapc-politicas">
+											<p>
+												La  información de registro de su cuenta de usuario se almacena 
+												encriptada en nuestra base de datos.
+											</p>
+											<p>Consulte nuestra <br> 
+												<a  href="#">política de privacidad</a> y <br><a  href="#"> protección de datos</a></p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							
+							
+								<div class="mapc-registro-form-row center">
+									<a href="#" id="nuevaCuenta" class="btn-default">Crear cuenta</a>
+<!--									scripts.js linea 1869-->
+								</div>
+
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		</div>
+		
+		<div class="plogin-mensaje-registro" id="mensajeRegistro">
+			<h3 class="medico">¡Gracias por registrarse en DoctorPlus!</h3>
+			<h4>Su cuenta está pendiente de validación.</h4>
+			<p class="plogin-envio-correo">
+				Los datos profesionales ingresados<br> serán chequeados por DoctorPlus.<br><br> 
+				Será notificado cuando su cuenta<br> como profesional haya sido validada.
+			</p>
+			
+			<p>
+				Recuerde poner a resguardo su información personal de ingreso al sistema 
+				(usuario y contraseña), la necesitará para administrar su cuenta. 
+				Existen aplicaciones para smartphones y tablets que sirven para almacenar
+				y cuidar todas las claves de modo seguro.
+			</p>
+			
+			<div class="plogin-mensaje-registro-actions">
+				<a href="#" class="btn-default">volver</a>
+			</div>
+			
+		</div>
+		
+		
+		
+
+		
+		
+	</section>
+	
+	<section class="mapc-solucion-integral">
+		<div class="okm-container">
+			<h4>Una solución integral para las consultas fuera del consultorio</h4>
+			<p>DoctorPlus le ofrece la portabilidad y accesibilidad al 
+				Perfil de Salud de sus pacientes
+				y la posibilidad de realizar 
+				Consultas Médicas pagas a distancia en un solo espacio de trabajo.</p>
+
+			<div class="okm-row">
+				<div class="col-x3">
+					<h5>Consulta Express y Video Consulta</h5>
+					<p class="mapc-solucion-integral-txt">
+						Capitalice las consultas que recibe fuera de su consultorio y 
+						atienda a sus pacientes a distancia pudiendo consultar su historial 
+						de visitas, prescripciones, tratamientos y los registros médicos de 
+						los profesionales frecuentes de su paciente.
+					</p>
+				</div>
+				<div class="col-x3">
+					<h5>La Salud de sus pacientes a su alcance en todo momento</h5>
+					<p class="mapc-solucion-integral-txt">
+						La información de salud de sus pacientes en un solo lugar y 
+						siempre a su alcance esté donde esté. Para poder acompañar y 
+						tener seguimiento de los tratamientos indicados.
+					</p>
+				</div>
+				<div class="col-x3">
+					<h5>Además si desea administre también su Agenda de Turnos</h5>
+					<p class="mapc-solucion-integral-txt">
+						¡Ofrezca sus turnos online las 24 hs todos los días! Reduzca
+						el ausentismo con recordatorios automáticos a sus pacientes
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<section class="professional features">
+		<div class="container">
+			<div id="app-features" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators icon-indicators">
+					<li class="medico-abono-icon-slide active" data-target="#app-features" data-slide-to="0" class="active"><i class="icon-doctorplus-chat"></i></li>
+					<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="1"><i class="icon-doctorplus-pacientes"></i></li>
+					<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="2"><i class="icon-doctorplus-calendar"></i></li>
+					<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="3"><i class="icon-doctorplus-video-call"></i></li>
+					<li class="medico-abono-icon-slide" data-target="#app-features" data-slide-to="4"><i class="icon-doctorplus-pharmaceutics"></i></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="row">
+							<div class="col-sm-6  col-xs-12">
+								<img class="img-responsive" src="imgs/medico/abono/slide-1.png" alt="Consulta Express">
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="content-wrapper">
+									<h4 class="slide-title">Consulta Express</h4>
+									<p>
+										La innovadora herramienta de consulta a distancia
+										que le permitirá capitalizar sus consejos y 
+										consultas médicas fuera de su consultorio
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<img class="img-responsive" src="imgs/medico/abono/slide-2.png" alt="Gestión de pacientes">
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="content-wrapper">
+									<h4 class="slide-title">Gestión de pacientes</h4>
+									<p>
+										Interactúe con sus pacientes sin necesidad de llamadas telefónicas:
+									</p>
+									<p>
+										Notificaciones por renovación de recetas.
+										Solicitud de certificados y aptos médicos
+										Recordatorios de próxima consulta, controles y chequeos
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<img class="img-responsive" src="imgs/medico/abono/slide-3.png" alt="Administre su Agenda de Turnos">
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="content-wrapper">
+									<h4 class="slide-title">Administre su Agenda de Turnos</h4>
+									<p>
+										¡Ofrezca sus turnos online las 24 hs todos los días! 
+										Reduzca el ausentismo con recordatorios automáticos a sus pacientes
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<img class="img-responsive" src="imgs/medico/abono/slide-4.png" alt="Video Consulta">
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="content-wrapper">
+									<h4 class="slide-title">Video Consulta</h4>
+									<p>
+										Capitalice las consultas que recibe fuera de su consultorio 
+										y atienda a sus pacientes a distancia pudiendo consultar su 
+										historial de visitas, prescripciones, tratamientos y más!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<img class="img-responsive" src="imgs/medico/abono/slide-5.png" alt="El Perfil de Salud de sus Pacientes">
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="content-wrapper">
+									<h4 class="slide-title">El Perfil de Salud de sus Pacientes</h4>
+									<p>
+										Acceda fácilmente al Perfil de Salud sus pacientes tanto desde 
+										su Consultorio como desde cualquier otro lugar, 
+										utilizando una computadora o dispositivo móvil (Consultorio Online)
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ol class="carousel-indicators default-indicators">
+					<li data-target="#app-features" data-slide-to="0" class="active"></li>
+					<li data-target="#app-features" data-slide-to="1"></li>
+					<li data-target="#app-features" data-slide-to="2"></li>
+					<li data-target="#app-features" data-slide-to="3"></li>
+					<li data-target="#app-features" data-slide-to="4"></li>
+				</ol>
+				<!-- Controls -->
+			</div>
+		</div>
+	</section>
+
+
+	
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+	
+	
+
+	<!-- Modal Privacidad -->
+	<div class="modal fade modal-type-2 modal-type-size-small" id="privacidad">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title"><h5>Privacidad</h5></div>
+					<span class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fui-cross"></i></span>
+				</div>
+				<form action="">
+					<div class="form-content">
+						<h4>¿Quién puede ver el Perfil de Salud de <br> <span>Carla Moresco</span>?</h4>
+
+						<ul class="lista-checks">
+							<li><label for="priv-1" class="checkbox"><input type="radio" id="priv-1" name="perfil-privado"> Nadie</label></li>
+							<li><label for="priv-2" class="checkbox"><input type="radio" id="priv-2" name="perfil-privado"> Médicos Frecuentes</label></li>
+							<li><label for="priv-3" class="checkbox"><input type="radio" id="priv-3" name="perfil-privado"> Todos los profesionales de DoctorPlus</label></li>
+						</ul>
+
+					</div>
+					<div class="modal-btns">
+						<button>guardar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+<script src="libs/bootstrap/typeahead.bundle.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(':radio, :checkbox').radiocheck();   
+	$('.switch-checkbox').bootstrapSwitch();
+});
+</script>		
+</body>
+</html>

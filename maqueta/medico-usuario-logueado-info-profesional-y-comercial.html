@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DoctorPlus - Extranet Pacientes - Buscador Centros Médicos y de Diagnóstico</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/flat-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-dp navbar-fixed-top mnu-extranet" role="navigation" id="menu">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="extranet-logo" href="#" title="DoctorPlus"><img src="imgs/extranet/logo_doctorplus_extranet.png" width="148" height="34"></a>
+				<div class="block-profile">
+					<img class="img-responsive img-circle" src="imgs/extranet/yannis.png" width="50" height="50">
+					<a href="#" class="user hidden-xs">Yannis Georgandelis</a>
+					<button type="button" class="navbar-toggle collapsed btntoggle-menu-extranet" data-toggle="collapse" data-target="menu-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" title="Ir al Home" class="home btn pull-right"></a>
+					<a href="#" title="Salir" class="logout btn pull-right hidden-xs"></a>
+				</div>
+			</div><!-- /.container -->
+		</nav>
+	</header>
+
+	<section class="user-actions">
+		<div class="container">
+			<ul>
+				<li><a href="#" class="dp-info"><p>Mi Cuenta</p></a></li>
+				<li><a href="#" class="dp-profile"><p>Perfil profesional</p></a></li>					
+				<li><a href="#" class="patients"><p>Mis Pacientes</p></a></li>
+				<li><a href="#" class="dp-agenda"><p>Mi Agenda</p></a></li>
+				<li><a href="#" class="dp-turno"><p>Turnos telefonicos</p></a></li>
+				<li><a href="#" class="dp-express"><p>Consulta Express</p> <span>3</span></a></li>
+				<li><a href="#" class="dp-email"><p>Notificaciones</p> <span>1</span></a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- /accesso directos menu -->
+	<section class="dc-header">
+			
+			<div class="dc-header-box">
+				<div class="okm-container">
+					<h1>Perfil Profesional</h1>
+				</div>
+			</div>
+			
+			<div class="dc-main-menu-box">
+				<div class="okm-container">
+					<div class="okm-row dc-main-menu-row">
+						<div class="dc-main-menu-col">
+							<a href="#" class="active section-swap-trg" data-info="profesional">
+								<figure class="dc-main-menu-icon">
+									<i class="icon-doctorplus-ficha-tecnica"></i>
+								</figure>
+								<span>Información<br>
+									profesional</span>
+								<figure class="dc-main-menu-number">
+									<span>20%</span>
+								</figure>
+							</a>
+						</div>
+						<div class="dc-main-menu-col">
+							<a href="#">
+								<figure class="dc-main-menu-icon">
+									<i class="icon-doctorplus-map-plus-rounded"></i>
+								</figure>
+								<span>Consultorios, tarifas y<br>	
+									coberturas médicas</span>
+								<figure class="dc-main-menu-number">
+									<span>99</span>
+								</figure>
+							</a>
+						</div>
+						<div class="dc-main-menu-col">
+							<a href="#" class="section-swap-trg" data-info="comercial">
+								<figure class="dc-main-menu-icon">
+									<i class="icon-doctorplus-pc-add"></i>
+								</figure>
+								<span>Datos comerciales</span>
+								<figure class="dc-main-menu-number">
+									<span>-</span>
+								</figure>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+	
+<div id="info-profesional" class="mul-form-type">		
+	<section class="form edit info-profesional-form">
+		<form name="info-profesional" method="post">
+		<div class="container">
+			<h2 class="text-center">Información Profesional</h2>
+			<div class="row">
+				<div class="col-md-4  col-md-offset-2 pul-np-image-holder mul-medico-info-profesional">
+					<figure class="pul-np-image-box">
+						<img src="imgs/temp/foto-perfil-110.jpg" alt="Paciente"/>
+					</figure>
+					<div class="pul-np-upload-box">
+						<label class="file-upload picture dz-clickable" for="picure-upload">Actualizar foto</label>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-xs-12">
+					<p class="disclaimer mul-picture-disclaimer">
+						<small>
+							Recuerde que es importante que cargue una foto actualizada. 
+							A los pacientes les gusta ver el rostro del profesional que los 
+							atenderán. (Imagen 400 x 235 px).
+						</small>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p class="mul-mod-disclaimer">
+						Para modificar los datos deshabilitados deberá ponerse en contacto con el Sector Administrativo de DoctorPlus. 
+						Se le solicitará la documentación necesaria para validación de los mismos.
+					</p>
+					<div class="mul-picture-disclaimer-action-box">
+						<a href="#">Solicitar modificación de datos</a>
+					</div>
+				</div>
+			</div>
+			
+
+		
+<div class="mul-group-set">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div class="mul-dr-input-select-box mul-dr-imput-label">
+						<label>Nombre</label>
+						<div class="mul-dr-select-holder">
+							<select class="form-control select select-primary select-block mbl" name="degree" id="degree">
+								<option value="doctor">Dr.</option>
+								<option value="doctora">Dra.</option>
+								<option value="licenciado">Lic.</option>
+								<option value="profesor">Prof.</option>
+								<option value="ninguno">Ninguno</option>
+							</select>
+						</div>
+						<div class="field-edit dp-edit doctor">
+							<input type="text" maxlength="50" placeholder="">
+							<button class="edit-field hidden">Editar</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label>Apellido</label>
+					<div class="field-edit dp-edit">
+						<input type="text" maxlength="50" placeholder="">
+						<button class="edit-field hidden">Editar Apellido</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div class="mapc-registro-form-row mapc-switch">
+						<div class="switch-large mul-sexo-switch">	
+							<input type="checkbox" class="switch-checkbox" data-on-text="MUJER" data-off-text="HOMBRE" />
+						</div>
+					</div>
+				</div>
+			</div>
+	
+	
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<label>DNI</label>
+					<div class="field-edit dp-edit">
+						<input type="text" maxlength="50" placeholder="">
+						<button class="edit-field hidden">Editar DNI</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="okm-select-plus-box mdc-style mul-select-spacer mul-no-label" id="idiomas-input">
+						<div class="okm-select">
+							<select class="form-control select select-primary select-block mbl" name="provincia" id="provincia">
+								<option value="prov-ejer">Provincia donde ejerce principalmente</option>
+								<option value="dato2">dato 2</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+
+					<div class="okm-select-plus-box mdc-style mul-select-spacer" id="idiomas-input">
+						<div class="okm-select-plus-select">
+							<select class="form-control select select-primary select-block mbl" name="idioma" id="idioma">
+								<option value="espanol">Español</option>
+								<option value="ingles">Inglés</option>
+								<option value="portugues">Portugués</option>
+								<option value="aleman">Alemán</option>
+								<option value="holandes">Holandes</option>
+								<option value="frances">Francés</option>
+								<option value="chino">Chino</option>
+							</select>
+						</div>
+						<div class="okm-select-plus-btn mdc-style">
+							<button class="okm-select-plus-plus"><i class="icon-doctorplus-plus"></i></button>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="col-md-4">
+					<div class="tagsinput-primary okm-tags-no-margin">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="Español, Inglés, Portugués, Alemán" />
+					</div>
+				</div>
+			</div>
+
+		</div>
+<div class="mul-group-set">		
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<label>Matrícula Nacional</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Matrícula Nacional</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label>Colegio donde se encuentra matriculado</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Colegio</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<label>Matrícula Provincial</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Matrícula Provincial</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label>Colegio donde se encuentra matriculado</label>
+					<div class="field-edit dp-edit">
+						<input type="text" placeholder="">
+						<button class="edit-field hidden">Editar Colegio</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div class="field-edit dp-edit tagsinput-primary mul-required-box" id="especialidad-input">
+						<input name="especialidad-input" type="text" class="especialidad-input"  placeholder="Especialidad">
+						<button class="edit-field hidden">Editar Especialidad</button>
+						<span class="mul-input-icon">
+							<i class="icon-doctorplus-search"></i>
+						</span>
+
+
+					</div>
+					<div class="tagsinput-primary okm-tags-no-margin">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="CIRUGIA CARDIOVASCULAR" />
+					</div>
+				</div>
+				<div class="col-md-4">
+
+					<div class="okm-select-plus-box mdc-style mul-select-spacer" id="idiomas-input">
+						<div class="okm-select-plus-select">
+							<select class="form-control select select-primary select-block mbl" name="subespecialidad" id="subespecialidad">
+								<option value="Subespecialidad">Subespecialidad</option>
+								<option value="CIRUGIA-CARDIOVASCULAR">CIRUGIA CARDIOVASCULAR</option>
+								<option value="ESPECIALISTA-EN-VENAS">ESPECIALISTA EN VENAS</option>
+							</select>
+						</div>
+						<div class="okm-select-plus-btn mdc-style">
+							<button class="okm-select-plus-plus"><i class="icon-doctorplus-plus"></i></button>
+						</div>
+					</div>
+
+					<div class="tagsinput-primary okm-tags-no-margin">
+						<input name="tagsinput" class="tagsinput" data-role="tagsinput" value="CIRUGIA CARDIOVASCULAR, ESPECIALISTA EN VENAS Y ARTERI..., CARDIOLOGÍA GENERAL" />
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="row">
+				<div class="col-md-9 col-md-offset-2">
+					<label class="mult-textarea-label" for="resume">CV / Formación académica y experiencia profesional</label>
+					<textarea class="resume" id="resume" name="resume" rows="10"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9 col-md-offset-2">
+					<label class="mult-textarea-label" for="memberships">Miembro de Asociaciones Médicas</label>
+					<textarea class="memberships" id="memberships" name="memberships" rows="10"></textarea>
+				</div>
+			</div>
+		</div>
+<div class="mul-submit-box">
+	<button class="save-data btn-default">Guardar</button>
+</div>
+
+<div class="row">
+<div class="col-md-9 col-md-offset-2">	
+<div class="mul-terms">
+	<div class="okm-row mul-row">
+		<div class="mul-terms-icon-box">
+			<label class="checkbox">
+				<input type="checkbox" value="terminosyconsiciones" data-toggle="checkbox">
+			</label>
+		</div>	
+		<p>Ya he declarado que he leído y aceptado los <a href="#">Términos y condiciones de uso del sistema</a>.</p>
+	</div>
+	<div class="okm-row mul-row">
+		<div class="mul-terms-icon-box">
+			<i class="icon-doctorplus-lock"></i>
+		</div>
+		<p>La información de registro de su cuenta de usuario se almacena encriptada en nuestra base de datos.<br>
+			Consulte nuestra politica de <a href="#">privacidad y protección de datos</a></p>
+	</div>
+</div>	
+</div>
+</div>
+</div>
+		</form>
+</section>
+</div>	
+
+<div id="info-comercial" class="mul-form-type">
+	<section class="form edit info-profesional-form">
+		<form name="info-profesional" method="post">
+			<div class="container">
+				<h2 class="text-center">Datos Comerciales</h2>
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<label>Razón Social</label>
+						<div class="field-edit dp-edit">
+							<input type="text" placeholder="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<label>Domicilio</label>
+						<div class="field-edit dp-edit">
+							<input type="text" placeholder="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<div class="okm-select-plus-box mdc-style mul-select-spacer mul-no-label" id="idiomas-input">
+						<div class="okm-select">
+							<select class="form-control select select-primary select-block mbl" name="iva" id="iva-trg">
+								<option value="iva">Condición de IVA</option>
+								<option data-type="ri" value="responsableInscripto">Responsable inscripto</option>
+							</select>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4">
+						<label>CUIT</label>
+						<div class="field-edit dp-edit mul-light-placeholder">
+							<input type="text" placeholder="Ingrese su CUIT sin guiones">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row"  id="condicion-iva">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="mul-check-col">
+							<label class="checkbox">
+								<input type="checkbox" id="extension-iva" value="condicioniva" data-toggle="checkbox">
+								Seleccione en caso de tener exenciones en IVA
+							</label>
+							</div>
+					</div>
+				</div>
+				
+				<div class="row" id="constancia-iva">
+					<div class="col-md-4  col-md-offset-2">
+						<div class="pul-np-upload-box mul-upload">
+							<label class="file-upload picture dz-clickable" for="picure-upload">Adjuntar constancia</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<div class="okm-select-plus-box mdc-style mul-select-spacer mul-no-label" id="idiomas-input">
+							<div class="okm-select">
+								<select class="form-control select select-primary select-block mbl" name="metodopago">
+									<option value="metodopago">Método de pago de sus fondos</option>
+									<option value="dato2">dato 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h4 class="mul-form-tittle">Datos Cuenta de pagos</h4>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<div class="okm-select-plus-box mdc-style mul-select-spacer mul-no-label" id="idiomas-input">
+							<div class="okm-select">
+								<select class="form-control select select-primary select-block mbl" name="entidadbancaria">
+									<option value="entidadbancaria">Entidad Bancaria</option>
+									<option value="dato2">dato 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="okm-select-plus-box mdc-style mul-select-spacer mul-no-label" id="idiomas-input">
+							<div class="okm-select">
+								<select class="form-control select select-primary select-block mbl" name="tipocienta">
+									<option value="tipocuenta">Tipo de Cuenta</option>
+									<option value="dato2">dato 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<label>CBU</label>
+						<div class="field-edit dp-edit mul-light-placeholder">
+							<input type="text" placeholder="Ingrese  los 22 números del CBU">
+							<button class="edit-field hidden">CBU</button>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<label>ALIAS DE CBU</label>
+						<div class="field-edit dp-edit mul-light-placeholder">
+							<input type="text" placeholder="Ingrese su Alias de CBU">
+							<button class="edit-field hidden">ALIAS DE CBU</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="mul-submit-box">
+					<button class="save-data btn-default">Guardar</button>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<p class="mul-end-text-disclaimer">
+							Los profesionales podrán solicitar los pagos de los resumenes 
+							a partir del primer día hábil siguiente al período (mes) reclamado.
+						</p>
+						<p class="mul-end-text-disclaimer">
+							Los pagos se encontrarán a disposición del interesado dentro del plazo de diez (10) días 
+							hábiles desde la recepción de la solicitud de pago.
+						</p>
+					</div>	 
+				</div>
+				
+			</div>
+		</form>
+	</section>
+</div>	
+	
+
+	<div class="footer-2">
+
+		<img class="footer-2-banner" src="imgs/footer-banner.jpg" alt="Doctor Plus"/>
+
+		<div class="okm-container footer-2-inner">
+			<div class="okm-row">
+				<div class="footer-col">
+					<a href="#">
+						<figure><i class="icon-doctorplus-envelope"></i></figure>
+						<span>info@doctorplus.com.ar</span>
+					</a>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-call-start"></i></figure>
+					<span>Tel. 4850-1389</span>
+					<span>Fax 4850-1201</span>
+				</div>
+				<div class="footer-col">
+					<figure><i class="icon-doctorplus-map-plus-rounded"></i></figure>
+					<span>Bouchard 599 Piso 20 CABA </span>
+					<span>(C1106ABG) Argentina</span>
+				</div>
+			</div>
+			<figure class="footer-img-box">
+				<a href="#">
+					<img src="imgs/drplus-logo-grey.png" alt="Dr. Plus"/>
+				</a>
+			</figure>
+		</div>
+		<div class="okm-row">
+			<div class="footer-copy">Copyright © 2016 DoctorPlus Todos los derechos reservados.</div>
+		</div>
+	</div>
+
+	<script src="libs/jquery-1.11.1.min.js"></script>
+	<script src="libs/Flat-UI-master/dist/js/flat-ui.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script>
+		$(function(){
+			$('.switch-checkbox').bootstrapSwitch();
+			$(':checkbox').radiocheck();
+		});
+	</script>
+</body>
+</html>
